@@ -1,385 +1,796 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe Pinto Cordova - Meta Ads Specialist Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        
-        .container {
-            background-color: white;
-            padding: 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        header {
-            text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 3px solid #2C5F8D;
-            margin-bottom: 40px;
-        }
-        
-        h1 {
-            color: #2C5F8D;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            font-size: 1.3em;
-            color: #555;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .contact-info {
-            color: #666;
-            font-size: 0.95em;
-        }
-        
-        h2 {
-            color: #2C5F8D;
-            font-size: 1.8em;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;
-        }
-        
-        h3 {
-            color: #555;
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-        
-        .summary {
-            font-size: 1.05em;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .skill-category {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        
-        .skill-category h4 {
-            color: #2C5F8D;
-            margin-bottom: 15px;
-        }
-        
-        .skill-category ul {
-            list-style-position: inside;
-            padding-left: 0;
-        }
-        
-        .skill-category li {
-            margin-bottom: 8px;
-        }
-        
-        .stats-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .stat-box {
-            background-color: #E8F4F8;
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: 8px;
-            border: 2px solid #2C5F8D;
-        }
-        
-        .stat-number {
-            font-size: 2.5em;
-            color: #2C5F8D;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            color: #555;
-            font-size: 1.1em;
-        }
-        
-        .case-study {
-            background-color: #f9f9f9;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-left: 4px solid #2C5F8D;
-            border-radius: 5px;
-        }
-        
-        .case-study h3 {
-            margin-top: 0;
-            color: #2C5F8D;
-        }
-        
-        .case-study p {
-            margin-bottom: 10px;
-        }
-        
-        .case-study strong {
-            color: #333;
-        }
-        
-        .result {
-            color: #008000;
-            font-weight: bold;
-        }
-        
-        .experience-item {
-            margin-bottom: 35px;
-        }
-        
-        .job-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .company {
-            color: #666;
-            font-style: italic;
-            margin: 5px 0;
-        }
-        
-        .date {
-            color: #888;
-            font-size: 0.9em;
-            margin-bottom: 15px;
-        }
-        
-        .experience-item ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        
-        .experience-item li {
-            margin-bottom: 8px;
-        }
-        
-        .cert-item {
-            margin-bottom: 20px;
-        }
-        
-        .cert-name {
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .cert-date {
-            color: #888;
-            font-style: italic;
-            font-size: 0.9em;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #e0e0e0;
-        }
-        
-        .cta {
-            font-size: 1.2em;
-            color: #2C5F8D;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats-container {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felipe Pinto — SEO & AEO Growth Engineer</title>
+  <meta name="description" content="I engineer organic growth systems that capture visibility across Google, ChatGPT, Perplexity, and AI Overviews. SEO & AEO specialist for US and Latin American businesses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0f;
+      --bg-2: #111118;
+      --bg-3: #16161f;
+      --border: rgba(255,255,255,0.07);
+      --text: #e8e8f0;
+      --text-muted: #7a7a9a;
+      --accent: #6c63ff;
+      --accent-2: #00d4aa;
+      --accent-glow: rgba(108,99,255,0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: opacity 0.2s !important;
+    }
+
+    .nav-cta:hover { opacity: 0.85; }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-glow);
+      border: 1px solid rgba(108,99,255,0.3);
+      color: var(--accent);
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .hero-tag::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent-2);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.85rem 1.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      padding: 0.85rem 1.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-1px); }
+
+    .stats {
+      padding: 3rem 2rem;
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    section { padding: 5rem 2rem; }
+
+    .section-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 540px;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    #services { background: var(--bg); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(108,99,255,0.35);
+      transform: translateY(-2px);
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent-glow);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .service-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
+
+    .service-price {
+      display: inline-block;
+      margin-top: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--accent-2);
+      background: rgba(0,212,170,0.08);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    #cases { background: var(--bg-2); }
+
+    .cases-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .case-card {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem 2.25rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      align-items: start;
+      transition: border-color 0.2s;
+    }
+
+    .case-card:hover { border-color: rgba(108,99,255,0.3); }
+
+    .case-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6rem;
+    }
+
+    .case-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; line-height: 1.3; }
+    .case-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+
+    .case-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    .tag {
+      font-size: 0.72rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .case-metrics { display: flex; flex-direction: column; gap: 0.75rem; min-width: 140px; }
+    .metric { text-align: right; }
+
+    .metric-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+
+    .metric-label { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+    #process { background: var(--bg); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .step { background: var(--bg-2); padding: 1.75rem; }
+    .step-num { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); margin-bottom: 0.75rem; }
+    .step h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .step p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+
+    #pricing { background: var(--bg-2); }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .pricing-card {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, rgba(108,99,255,0.08), var(--bg-3));
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.7rem; font-weight: 700;
+      padding: 0.2rem 0.7rem;
+      border-radius: 100px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .pricing-name { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+    .pricing-price { font-size: 2.2rem; font-weight: 800; line-height: 1; margin-bottom: 0.25rem; }
+    .pricing-period { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+
+    .pricing-features { list-style: none; margin-bottom: 1.75rem; }
+
+    .pricing-features li {
+      font-size: 0.85rem; color: var(--text-muted);
+      padding: 0.4rem 0;
+      display: flex; align-items: flex-start; gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pricing-features li:last-child { border-bottom: none; }
+    .pricing-features li::before { content: '→'; color: var(--accent-2); flex-shrink: 0; margin-top: 0.05rem; }
+
+    .btn-pricing {
+      display: block; text-align: center;
+      padding: 0.75rem; border-radius: 8px;
+      text-decoration: none; font-weight: 600; font-size: 0.875rem;
+      border: 1px solid var(--border); color: var(--text);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-pricing:hover { border-color: var(--accent); background: var(--accent-glow); }
+    .featured .btn-pricing { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .featured .btn-pricing:hover { opacity: 0.88; }
+
+    #contact { background: var(--bg); }
+
+    .contact-box {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%; transform: translateX(-50%);
+      width: 400px; height: 200px;
+      background: radial-gradient(ellipse, rgba(108,99,255,0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-box h2 { font-size: 2rem; margin-bottom: 0.75rem; }
+    .contact-box p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1rem; }
+
+    .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .contact-link {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-decoration: none; color: var(--text);
+      font-weight: 500; font-size: 0.875rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .contact-link:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+    footer {
+      padding: 2rem; text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted); font-size: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .case-card { grid-template-columns: 1fr; }
+      .case-metrics { flex-direction: row; justify-content: flex-start; }
+      .metric { text-align: left; }
+      .contact-box { padding: 2rem 1.5rem; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>FELIPE PINTO CORDOVA</h1>
-            <div class="subtitle">Meta Ads Specialist | Meta Blueprint Certified</div>
-            <div class="contact-info">
-                📧 felipe.p27.2001@gmail.com | 💼 linkedin.com/in/felipepintocordova | 📱 +593 996715226
-            </div>
-        </header>
 
-        <section>
-            <h2>Professional Summary</h2>
-            <p class="summary">
-                Meta Blueprint certified advertising specialist with 2 years of proven experience managing 
-                digital marketing campaigns for 14+ active clients across multiple industries. Specialized in 
-                Meta Ads optimization, social media management, and ROI-focused strategies that deliver 
-                measurable business results.
-            </p>
-        </section>
+<nav>
+  <div class="nav-logo">fp.growth</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#cases">Case Studies</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact" class="nav-cta">Work Together</a></li>
+  </ul>
+</nav>
 
-        <section>
-            <h2>Core Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Paid Advertising</h4>
-                    <ul>
-                        <li>Meta Ads (Facebook & Instagram)</li>
-                        <li>LinkedIn Advertising</li>
-                        <li>TikTok Ads</li>
-                        <li>Snapchat Ads</li>
-                        <li>Campaign optimization & A/B testing</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Additional Skills</h4>
-                    <ul>
-                        <li>Social Media Management</li>
-                        <li>SEO & Website Optimization</li>
-                        <li>Content Strategy</li>
-                        <li>Analytics & Reporting</li>
-                        <li>WordPress, Wix, Duda</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Proven Results</h2>
-            <div class="stats-container">
-                <div class="stat-box">
-                    <span class="stat-number">700K+</span>
-                    <span class="stat-label">Clicks Generated</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">$88K</span>
-                    <span class="stat-label">Cost Savings</span>
-                </div>
-                <div class="stat-box">
-                    <span class="stat-number">56%</span>
-                    <span class="stat-label">CPC Reduction</span>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Case Studies</h2>
-            
-            <div class="case-study">
-                <h3>Transportation Company - Meta Ads Optimization</h3>
-                <p><strong>Challenge:</strong> High cost per click and inefficient ad spend reducing ROI</p>
-                <p><strong>Solution:</strong> Implemented advanced audience targeting, optimized ad creative 
-                strategy, and continuous A/B testing</p>
-                <p><strong>Results:</strong> <span class="result">Reduced CPC by 56% ($0.41 → $0.18) while 
-                maintaining conversion quality</span></p>
-            </div>
-
-            <div class="case-study">
-                <h3>Staffing Agency - Social Media Growth</h3>
-                <p><strong>Challenge:</strong> Low engagement and limited organic reach on Facebook</p>
-                <p><strong>Solution:</strong> Developed content strategy, consistent posting schedule, and 
-                engagement tactics</p>
-                <p><strong>Results:</strong> <span class="result">Increased content interactions by 943% and 
-                generated 38.3K views</span></p>
-            </div>
-
-            <div class="case-study">
-                <h3>Warranty Services - Integrated Campaign</h3>
-                <p><strong>Challenge:</strong> Building brand awareness and driving website traffic</p>
-                <p><strong>Solution:</strong> Combined Meta Ads with organic social media management and SEO 
-                optimization</p>
-                <p><strong>Results:</strong> <span class="result">139K views, 6.6K interactions, and 397% 
-                follower growth</span></p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Professional Experience</h2>
-            
-            <div class="experience-item">
-                <div class="job-title">Digital Marketing Specialist</div>
-                <div class="company">Y Associates | Remote</div>
-                <div class="date">December 2024 - Present</div>
-                <ul>
-                    <li>Manage Meta Ads campaigns for 14+ clients with combined annual budget of $150K+</li>
-                    <li>Achieved 36% increase in click volume while reducing spend by 41%</li>
-                    <li>Improved average CPC across all accounts by 56%</li>
-                    <li>Create and manage 16+ social media posts monthly across multiple platforms</li>
-                    <li>Perform SEO audits, website optimization, and content strategy</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="job-title">Marketing Specialist</div>
-                <div class="company">AutoRex | Quito, Ecuador</div>
-                <div class="date">December 2023 - December 2024</div>
-                <ul>
-                    <li>Managed digital marketing initiatives for automotive parts distributor</li>
-                    <li>Developed social media strategy and content calendar</li>
-                    <li>Created marketing materials and managed brand presence</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Certifications & Education</h2>
-            
-            <div class="cert-item">
-                <div class="cert-name">Meta Blueprint Certification - Meta Advertising Associate</div>
-                <div class="cert-date">Issued 2024</div>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-name">Meta Media Buying Certification (In Progress)</div>
-                <div class="cert-date">Expected completion: December 2025</div>
-            </div>
-
-            <div class="cert-item">
-                <div class="cert-name">Bachelor of Engineering - Automotive Engineering</div>
-                <div class="cert-date">Universidad Internacional del Ecuador | Graduated December 2023</div>
-            </div>
-        </section>
-
-        <footer>
-            <p class="cta">Available for freelance projects and consultations</p>
-            <p>Contact me to discuss how I can help grow your business through effective digital marketing</p>
-        </footer>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">Available for new projects</div>
+    <h1>
+      I engineer organic growth systems.<br>
+      <span>Google + AI Answers.</span>
+    </h1>
+    <p class="hero-sub">
+      Most businesses optimize for Google. I build the architecture that captures
+      visibility across Google, ChatGPT, Perplexity, and AI Overviews —
+      compounding over time, not just ranking today.
+    </p>
+    <div class="hero-actions">
+      <a href="#cases" class="btn-primary">See Results</a>
+      <a href="#contact" class="btn-secondary">Start a Project</a>
     </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num">+140%</div>
+      <div class="stat-label">Organic clicks in 30 days</div>
+    </div>
+    <div>
+      <div class="stat-num">135</div>
+      <div class="stat-label">Programmatic pages deployed</div>
+    </div>
+    <div>
+      <div class="stat-num">2x</div>
+      <div class="stat-label">Visibility vs. top competitor</div>
+    </div>
+    <div>
+      <div class="stat-num">5+</div>
+      <div class="stat-label">Active US clients</div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="section-inner">
+    <div class="section-tag">// What I build</div>
+    <h2>Growth Systems, Not Campaigns</h2>
+    <p class="section-desc">Every engagement is engineered to compound. I don't deliver reports — I build infrastructure that keeps ranking.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>Technical SEO Audit</h3>
+        <p>Full crawl analysis, indexation strategy, Core Web Vitals, structured data gaps, and a prioritized fix list with implementation.</p>
+        <span class="service-price">From $400</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>AEO Architecture</h3>
+        <p>FAQ schema, conversational H2/H3 structure, E-E-A-T signals, and AI Overview optimization so AI engines cite your content.</p>
+        <span class="service-price">Included in retainers</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📍</div>
+        <h3>Programmatic SEO</h3>
+        <p>Location page networks, hub-and-spoke geo architecture, and bulk content systems for multi-location businesses.</p>
+        <span class="service-price">From $800</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📌</div>
+        <h3>Local SEO + GBP</h3>
+        <p>Google Business Profile optimization, NAP audits, local citation strategy, and local pack ranking system.</p>
+        <span class="service-price">From $300</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📈</div>
+        <h3>Monthly Growth Retainer</h3>
+        <p>Full-stack monthly execution: on-page, content, link building, GBP management, and automated reporting.</p>
+        <span class="service-price">From $600/mo</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Reporting Automation</h3>
+        <p>Automated pipelines that pull GSC, Moz, and GA4 data into clean monthly reports — no more manual exports.</p>
+        <span class="service-price">From $350</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="section-inner">
+    <div class="section-tag">// Results</div>
+    <h2>What Gets Built. What Gets Measured.</h2>
+    <p class="section-desc">Real results from real systems. No tools named, no clients exposed — just the architecture and the numbers.</p>
+    <div class="cases-list">
+
+      <div class="case-card">
+        <div>
+          <div class="case-tag">Programmatic SEO · South Florida</div>
+          <h3>135-Page Location System Drives 140% Traffic Surge in 30 Days</h3>
+          <p>A wholesale stone distributor had 56 existing pages with no keyword targeting and zero location coverage across their 27-city service area. I rebuilt all metadata via CMS API automation, then deployed a 135-page programmatic system (27 cities × 4 services) using a templated content architecture, structured internal linking, and bulk on-page optimization at scale. Month one results were immediate.</p>
+          <div class="case-tags">
+            <span class="tag">Programmatic SEO</span>
+            <span class="tag">Technical Audit</span>
+            <span class="tag">Local SEO</span>
+            <span class="tag">AEO Schema</span>
+            <span class="tag">E-commerce</span>
+          </div>
+        </div>
+        <div class="case-metrics">
+          <div class="metric">
+            <div class="metric-num">+140%</div>
+            <div class="metric-label">Clicks (MoM)</div>
+          </div>
+          <div class="metric">
+            <div class="metric-num">+115%</div>
+            <div class="metric-label">Impressions</div>
+          </div>
+          <div class="metric">
+            <div class="metric-num">11</div>
+            <div class="metric-label">Keywords at #1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div>
+          <div class="case-tag">Hub-and-Spoke Strategy · Pittsburgh IT Market</div>
+          <h3>2x Search Visibility vs. Main Competitor — With Half the Domain Authority</h3>
+          <p>An IT managed services provider was losing visibility to a competitor with 2x their domain authority. Instead of trying to match backlink volume, I built a hub-and-spoke geo page strategy across 3 target cities and integrated AEO-ready content — FAQ schema, conversational structure, AI Overview signals — across all service pages. Result: outranked in their core market on search visibility despite the DA gap.</p>
+          <div class="case-tags">
+            <span class="tag">Hub-and-Spoke</span>
+            <span class="tag">Geo Pages</span>
+            <span class="tag">AEO</span>
+            <span class="tag">Local SEO</span>
+            <span class="tag">B2B / IT Services</span>
+          </div>
+        </div>
+        <div class="case-metrics">
+          <div class="metric">
+            <div class="metric-num">2x</div>
+            <div class="metric-label">Search visibility</div>
+          </div>
+          <div class="metric">
+            <div class="metric-num">#1</div>
+            <div class="metric-label">3 core keywords</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div>
+          <div class="case-tag">AEO + Content Architecture · Professional Services</div>
+          <h3>AI-Ready Content Integration Across 5 Service Pages in a Competitive Market</h3>
+          <p>A professional services firm needed to capture emerging AI search traffic before competitors did. I integrated AEO-ready language, structured Q&A sections, and FAQ schema across 5 high-value service pages — targeting both traditional rankings and AI Overview eligibility. Also built 7 strategic redirects and launched geo pages for 3 target cities. New AI-focused keywords began tracking immediately after launch.</p>
+          <div class="case-tags">
+            <span class="tag">AEO</span>
+            <span class="tag">Schema Markup</span>
+            <span class="tag">Content Architecture</span>
+            <span class="tag">Technical SEO</span>
+            <span class="tag">Professional Services</span>
+          </div>
+        </div>
+        <div class="case-metrics">
+          <div class="metric">
+            <div class="metric-num">5</div>
+            <div class="metric-label">Pages AEO-optimized</div>
+          </div>
+          <div class="metric">
+            <div class="metric-num">7</div>
+            <div class="metric-label">Redirects + geo pages</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="section-inner">
+    <div class="section-tag">// How I work</div>
+    <h2>The System Behind the Results</h2>
+    <p class="section-desc">Every engagement follows the same engineering process — no guesswork, no filler tasks.</p>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">01 —</div>
+        <h3>Audit & Diagnose</h3>
+        <p>Full crawl, GSC data pull, ranking analysis. Identify exactly what's blocking growth before touching anything.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02 —</div>
+        <h3>Architect the System</h3>
+        <p>Keyword architecture, page structure, internal link graph, AEO content framework — designed to compound, not spike.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03 —</div>
+        <h3>Build at Scale</h3>
+        <p>Implement programmatically where possible. Metadata, schema, content, redirects — clean, fast, and durable.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04 —</div>
+        <h3>Measure & Iterate</h3>
+        <p>Automated reporting pipelines. Monthly GSC + ranking snapshots. Decisions based on data, not intuition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="section-inner">
+    <div class="section-tag">// Pricing</div>
+    <h2>Simple, Transparent Plans</h2>
+    <p class="section-desc">No hidden fees, no retainer lock-ins you can't exit. Built for businesses that want results, not invoices.</p>
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <div class="pricing-name">SEO Foundation</div>
+        <div class="pricing-price">$1,200</div>
+        <div class="pricing-period">3-month program · One-time</div>
+        <ul class="pricing-features">
+          <li>Full technical SEO audit</li>
+          <li>Metadata optimization (titles, meta, H1)</li>
+          <li>Schema markup + AEO structure</li>
+          <li>Google Business Profile setup</li>
+          <li>2 keyword pages optimized</li>
+          <li>Link building (2 months)</li>
+          <li>GSC + tracking setup</li>
+        </ul>
+        <a href="#contact" class="btn-pricing">Get Started</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-name">Growth Retainer</div>
+        <div class="pricing-price">$700<span style="font-size:1.1rem;font-weight:400">/mo</span></div>
+        <div class="pricing-period">Monthly · Cancel anytime</div>
+        <ul class="pricing-features">
+          <li>Everything in Foundation</li>
+          <li>Monthly on-page optimization</li>
+          <li>1 blog post (1,000+ words)</li>
+          <li>Link building every month</li>
+          <li>GBP management + posts</li>
+          <li>AEO updates + schema</li>
+          <li>Automated monthly report</li>
+        </ul>
+        <a href="#contact" class="btn-pricing">Start Growing</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-name">Growth Pro</div>
+        <div class="pricing-price">$950<span style="font-size:1.1rem;font-weight:400">/mo</span></div>
+        <div class="pricing-period">Monthly · Cancel anytime</div>
+        <ul class="pricing-features">
+          <li>Everything in Growth Retainer</li>
+          <li>Programmatic SEO system</li>
+          <li>Geo page network buildout</li>
+          <li>Multi-location management</li>
+          <li>Advanced AEO architecture</li>
+          <li>Competitor tracking + alerts</li>
+          <li>Priority turnaround</li>
+        </ul>
+        <a href="#contact" class="btn-pricing">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-box">
+      <h2>Ready to build your growth system?</h2>
+      <p>Let's talk about what your site needs. I respond within 24 hours.</p>
+      <div class="contact-links">
+        <a href="mailto:felipe.p27.2001@gmail.com" class="contact-link">✉ Email Me</a>
+        <a href="https://www.linkedin.com/in/felipepintocordova/" target="_blank" class="contact-link">💼 LinkedIn</a>
+        <a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" class="contact-link">🔗 Upwork</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Felipe Pinto · SEO & AEO Growth Engineer · © 2026</p>
+</footer>
+
 </body>
 </html>
