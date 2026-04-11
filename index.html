@@ -34,6 +34,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -81,6 +82,7 @@
 
     .nav-cta:hover { opacity: 0.85; }
 
+    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -195,6 +197,7 @@
 
     .btn-secondary:hover { border-color: rgba(255,255,255,0.2); transform: translateY(-1px); }
 
+    /* STATS */
     .stats {
       padding: 3rem 2rem;
       background: var(--bg-2);
@@ -230,7 +233,10 @@
       text-transform: uppercase;
     }
 
-    section { padding: 5rem 2rem; }
+    /* SECTIONS */
+    section {
+      padding: 5rem 2rem;
+    }
 
     .section-inner {
       max-width: 960px;
@@ -261,6 +267,7 @@
       line-height: 1.7;
     }
 
+    /* SERVICES */
     #services { background: var(--bg); }
 
     .services-grid {
@@ -294,8 +301,17 @@
       margin-bottom: 1rem;
     }
 
-    .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .service-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
+    .service-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
 
     .service-price {
       display: inline-block;
@@ -308,9 +324,14 @@
       border-radius: 4px;
     }
 
+    /* CASE STUDIES */
     #cases { background: var(--bg-2); }
 
-    .cases-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .cases-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
 
     .case-card {
       background: var(--bg-3);
@@ -335,10 +356,25 @@
       margin-bottom: 0.6rem;
     }
 
-    .case-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem; line-height: 1.3; }
-    .case-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+    .case-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
 
-    .case-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .case-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
 
     .tag {
       font-size: 0.72rem;
@@ -349,8 +385,16 @@
       border: 1px solid var(--border);
     }
 
-    .case-metrics { display: flex; flex-direction: column; gap: 0.75rem; min-width: 140px; }
-    .metric { text-align: right; }
+    .case-metrics {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-width: 140px;
+    }
+
+    .metric {
+      text-align: right;
+    }
 
     .metric-num {
       font-size: 1.6rem;
@@ -362,8 +406,13 @@
       line-height: 1;
     }
 
-    .metric-label { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.15rem; }
+    .metric-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
 
+    /* PROCESS */
     #process { background: var(--bg); }
 
     .process-steps {
@@ -376,11 +425,31 @@
       overflow: hidden;
     }
 
-    .step { background: var(--bg-2); padding: 1.75rem; }
-    .step-num { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--accent); margin-bottom: 0.75rem; }
-    .step h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .step p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+    .step {
+      background: var(--bg-2);
+      padding: 1.75rem;
+    }
 
+    .step-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .step h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .step p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* PRICING */
     #pricing { background: var(--bg-2); }
 
     .pricing-grid {
@@ -404,10 +473,13 @@
 
     .pricing-badge {
       position: absolute;
-      top: -12px; left: 50%; transform: translateX(-50%);
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
       background: var(--accent);
       color: #fff;
-      font-size: 0.7rem; font-weight: 700;
+      font-size: 0.7rem;
+      font-weight: 700;
       padding: 0.2rem 0.7rem;
       border-radius: 100px;
       letter-spacing: 0.06em;
@@ -415,34 +487,79 @@
       white-space: nowrap;
     }
 
-    .pricing-name { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
-    .pricing-price { font-size: 2.2rem; font-weight: 800; line-height: 1; margin-bottom: 0.25rem; }
-    .pricing-period { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .pricing-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
 
-    .pricing-features { list-style: none; margin-bottom: 1.75rem; }
+    .pricing-price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-period {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 1.75rem;
+    }
 
     .pricing-features li {
-      font-size: 0.85rem; color: var(--text-muted);
+      font-size: 0.85rem;
+      color: var(--text-muted);
       padding: 0.4rem 0;
-      display: flex; align-items: flex-start; gap: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
       border-bottom: 1px solid var(--border);
     }
 
     .pricing-features li:last-child { border-bottom: none; }
-    .pricing-features li::before { content: '→'; color: var(--accent-2); flex-shrink: 0; margin-top: 0.05rem; }
+
+    .pricing-features li::before {
+      content: '→';
+      color: var(--accent-2);
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
 
     .btn-pricing {
-      display: block; text-align: center;
-      padding: 0.75rem; border-radius: 8px;
-      text-decoration: none; font-weight: 600; font-size: 0.875rem;
-      border: 1px solid var(--border); color: var(--text);
+      display: block;
+      text-align: center;
+      padding: 0.75rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      border: 1px solid var(--border);
+      color: var(--text);
       transition: border-color 0.2s, background 0.2s;
     }
 
-    .btn-pricing:hover { border-color: var(--accent); background: var(--accent-glow); }
-    .featured .btn-pricing { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn-pricing:hover {
+      border-color: var(--accent);
+      background: var(--accent-glow);
+    }
+
+    .featured .btn-pricing {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
     .featured .btn-pricing:hover { opacity: 0.88; }
 
+    /* CONTACT */
     #contact { background: var(--bg); }
 
     .contact-box {
@@ -464,29 +581,53 @@
       pointer-events: none;
     }
 
-    .contact-box h2 { font-size: 2rem; margin-bottom: 0.75rem; }
-    .contact-box p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1rem; }
+    .contact-box h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
 
-    .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .contact-box p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
     .contact-link {
-      display: flex; align-items: center; gap: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
       border: 1px solid var(--border);
-      text-decoration: none; color: var(--text);
-      font-weight: 500; font-size: 0.875rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.875rem;
       transition: border-color 0.2s, transform 0.2s;
     }
 
-    .contact-link:hover { border-color: var(--accent); transform: translateY(-1px); }
-
-    footer {
-      padding: 2rem; text-align: center;
-      border-top: 1px solid var(--border);
-      color: var(--text-muted); font-size: 0.8rem;
+    .contact-link:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
     }
 
+    /* FOOTER */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .case-card { grid-template-columns: 1fr; }
@@ -498,6 +639,7 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-logo">fp.growth</div>
   <ul class="nav-links">
@@ -509,6 +651,7 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-tag">Available for new projects</div>
@@ -518,16 +661,17 @@
     </h1>
     <p class="hero-sub">
       Most businesses optimize for Google. I build the architecture that captures
-      visibility across Google, ChatGPT, Perplexity, and AI Overviews —
+      visibility across Google, ChatGPT, Perplexity, and AI Overviews &mdash;
       compounding over time, not just ranking today.
     </p>
     <div class="hero-actions">
-      <a href="#audit" class="btn-primary">Get Free SEO Audit</a>
-      <a href="#cases" class="btn-secondary">See Results</a>
+      <a href="#cases" class="btn-primary">See Results</a>
+      <a href="#contact" class="btn-secondary">Start a Project</a>
     </div>
   </div>
 </section>
 
+<!-- STATS -->
 <div class="stats">
   <div class="stats-grid">
     <div>
@@ -549,57 +693,65 @@
   </div>
 </div>
 
+<!-- SERVICES -->
 <section id="services">
   <div class="section-inner">
     <div class="section-tag">// What I build</div>
     <h2>Growth Systems, Not Campaigns</h2>
-    <p class="section-desc">Every engagement is engineered to compound. I don't deliver reports — I build infrastructure that keeps ranking.</p>
+    <p class="section-desc">
+      Every engagement is engineered to compound. I don't deliver reports &mdash;
+      I build infrastructure that keeps ranking.
+    </p>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon">⚙️</div>
+        <div class="service-icon">&#9881;&#65039;</div>
         <h3>Technical SEO Audit</h3>
         <p>Full crawl analysis, indexation strategy, Core Web Vitals, structured data gaps, and a prioritized fix list with implementation.</p>
         <span class="service-price">From $400</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">🤖</div>
+        <div class="service-icon">&#129302;</div>
         <h3>AEO Architecture</h3>
         <p>FAQ schema, conversational H2/H3 structure, E-E-A-T signals, and AI Overview optimization so AI engines cite your content.</p>
         <span class="service-price">Included in retainers</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">📍</div>
+        <div class="service-icon">&#128205;</div>
         <h3>Programmatic SEO</h3>
         <p>Location page networks, hub-and-spoke geo architecture, and bulk content systems for multi-location businesses.</p>
         <span class="service-price">From $800</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">📌</div>
+        <div class="service-icon">&#128204;</div>
         <h3>Local SEO + GBP</h3>
         <p>Google Business Profile optimization, NAP audits, local citation strategy, and local pack ranking system.</p>
         <span class="service-price">From $300</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">📈</div>
+        <div class="service-icon">&#128200;</div>
         <h3>Monthly Growth Retainer</h3>
-        <p>Full-stack monthly execution: on-page, content, link building, GBP management, and automated reporting.</p>
+        <p>Full-stack monthly execution: on-page, content, link building, GBP management, and automated GSC + Moz reporting.</p>
         <span class="service-price">From $600/mo</span>
       </div>
       <div class="service-card">
-        <div class="service-icon">⚡</div>
+        <div class="service-icon">&#9889;</div>
         <h3>Reporting Automation</h3>
-        <p>Automated pipelines that pull GSC, Moz, and GA4 data into clean monthly reports — no more manual exports.</p>
+        <p>Automated pipelines that pull GSC, Moz, and GA4 data into clean monthly reports &mdash; no more manual exports.</p>
         <span class="service-price">From $350</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CASE STUDIES -->
 <section id="cases">
   <div class="section-inner">
     <div class="section-tag">// Results</div>
     <h2>What Gets Built. What Gets Measured.</h2>
-    <p class="section-desc">Real results from real systems. No tools named, no clients exposed — just the architecture and the numbers.</p>
+    <p class="section-desc">
+      Real results from real systems. No tools named, no clients exposed &mdash;
+      just the architecture and the numbers.
+    </p>
     <div class="cases-list">
 
       <div class="case-card">
@@ -634,8 +786,8 @@
       <div class="case-card">
         <div>
           <div class="case-tag">Hub-and-Spoke Strategy · Pittsburgh IT Market</div>
-          <h3>2x Search Visibility vs. Main Competitor — With Half the Domain Authority</h3>
-          <p>An IT managed services provider was losing visibility to a competitor with 2x their domain authority. Instead of trying to match backlink volume, I built a hub-and-spoke geo page strategy across 3 target cities and integrated AEO-ready content — FAQ schema, conversational structure, AI Overview signals — across all service pages. Result: outranked in their core market on search visibility despite the DA gap.</p>
+          <h3>2x Search Visibility vs. Main Competitor &mdash; With Half the Domain Authority</h3>
+          <p>An IT managed services provider was losing visibility to a competitor with 2x their domain authority. Instead of trying to match backlink volume, I built a hub-and-spoke geo page strategy (Pittsburgh, Murrysville, Monroeville) and integrated AEO-ready content &mdash; FAQ schema, conversational structure, AI Overview signals &mdash; across all service pages. Result: outranked in their core market on search visibility despite the DA gap.</p>
           <div class="case-tags">
             <span class="tag">Hub-and-Spoke</span>
             <span class="tag">Geo Pages</span>
@@ -660,7 +812,7 @@
         <div>
           <div class="case-tag">AEO + Content Architecture · Professional Services</div>
           <h3>AI-Ready Content Integration Across 5 Service Pages in a Competitive Market</h3>
-          <p>A professional services firm needed to capture emerging AI search traffic before competitors did. I integrated AEO-ready language, structured Q&A sections, and FAQ schema across 5 high-value service pages — targeting both traditional rankings and AI Overview eligibility. Also built 7 strategic redirects and launched geo pages for 3 target cities. New AI-focused keywords began tracking immediately after launch.</p>
+          <p>A professional services firm needed to capture emerging AI search traffic before competitors did. I integrated AEO-ready language, structured Q&amp;A sections, and FAQ schema across 5 high-value service pages &mdash; targeting both traditional rankings and AI Overview eligibility. Also built 7 strategic redirects and launched geo pages for 3 target cities. New AI-focused keywords added to tracking immediately after launch.</p>
           <div class="case-tags">
             <span class="tag">AEO</span>
             <span class="tag">Schema Markup</span>
@@ -685,36 +837,38 @@
   </div>
 </section>
 
+<!-- PROCESS -->
 <section id="process">
   <div class="section-inner">
     <div class="section-tag">// How I work</div>
     <h2>The System Behind the Results</h2>
-    <p class="section-desc">Every engagement follows the same engineering process — no guesswork, no filler tasks.</p>
+    <p class="section-desc">Every engagement follows the same engineering process &mdash; no guesswork, no filler tasks.</p>
     <div class="process-steps">
       <div class="step">
-        <div class="step-num">01 —</div>
-        <h3>Audit & Diagnose</h3>
-        <p>Full crawl, GSC data pull, ranking analysis. Identify exactly what's blocking growth before touching anything.</p>
+        <div class="step-num">01 &mdash;</div>
+        <h3>Audit &amp; Diagnose</h3>
+        <p>Full crawl, GSC data pull, Moz ranking analysis. Identify exactly what's blocking growth before touching anything.</p>
       </div>
       <div class="step">
-        <div class="step-num">02 —</div>
+        <div class="step-num">02 &mdash;</div>
         <h3>Architect the System</h3>
-        <p>Keyword architecture, page structure, internal link graph, AEO content framework — designed to compound, not spike.</p>
+        <p>Keyword architecture, page structure, internal link graph, AEO content framework &mdash; designed to compound, not spike.</p>
       </div>
       <div class="step">
-        <div class="step-num">03 —</div>
+        <div class="step-num">03 &mdash;</div>
         <h3>Build at Scale</h3>
-        <p>Implement programmatically where possible. Metadata, schema, content, redirects — clean, fast, and durable.</p>
+        <p>Implement programmatically where possible. Metadata, schema, content, redirects &mdash; clean, fast, and durable.</p>
       </div>
       <div class="step">
-        <div class="step-num">04 —</div>
-        <h3>Measure & Iterate</h3>
-        <p>Automated reporting pipelines. Monthly GSC + ranking snapshots. Decisions based on data, not intuition.</p>
+        <div class="step-num">04 &mdash;</div>
+        <h3>Measure &amp; Iterate</h3>
+        <p>Automated reporting pipelines. Monthly GSC + Moz snapshots. Decisions based on data, not intuition.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PRICING -->
 <section id="pricing">
   <div class="section-inner">
     <div class="section-tag">// Pricing</div>
@@ -725,7 +879,7 @@
       <div class="pricing-card">
         <div class="pricing-name">SEO Foundation</div>
         <div class="pricing-price">$1,200</div>
-        <div class="pricing-period">3-month program · One-time</div>
+        <div class="pricing-period">3-month program &middot; One-time</div>
         <ul class="pricing-features">
           <li>Full technical SEO audit</li>
           <li>Metadata optimization (titles, meta, H1)</li>
@@ -742,7 +896,7 @@
         <div class="pricing-badge">Most Popular</div>
         <div class="pricing-name">Growth Retainer</div>
         <div class="pricing-price">$700<span style="font-size:1.1rem;font-weight:400">/mo</span></div>
-        <div class="pricing-period">Monthly · Cancel anytime</div>
+        <div class="pricing-period">Monthly &middot; Cancel anytime</div>
         <ul class="pricing-features">
           <li>Everything in Foundation</li>
           <li>Monthly on-page optimization</li>
@@ -758,7 +912,7 @@
       <div class="pricing-card">
         <div class="pricing-name">Growth Pro</div>
         <div class="pricing-price">$950<span style="font-size:1.1rem;font-weight:400">/mo</span></div>
-        <div class="pricing-period">Monthly · Cancel anytime</div>
+        <div class="pricing-period">Monthly &middot; Cancel anytime</div>
         <ul class="pricing-features">
           <li>Everything in Growth Retainer</li>
           <li>Programmatic SEO system</li>
@@ -778,11 +932,40 @@
 <!-- FREE AUDIT FORM -->
 <section id="audit" style="background: var(--bg-2);">
   <div class="section-inner">
-    <div class="section-tag">// Free audit</div>
-    <h2>Get Your Free SEO Audit Report</h2>
-    <p class="section-desc">Enter your URL and get a full technical audit — on-page health, keyword opportunities, and a personalized action plan. Delivered as a PDF within 24 hours.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
 
-    <div id="audit-form-wrap" style="max-width:560px;">
+      <!-- LEFT: copy -->
+      <div>
+        <div class="section-tag">// Free audit</div>
+        <h2 style="margin-bottom:1.2rem;">Get Your Free SEO Audit Report</h2>
+        <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.7; margin-bottom:2rem;">Enter your URL and get a full technical audit &mdash; on-page health, keyword opportunities, and a personalized action plan. Delivered as a PDF within 24 hours.</p>
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+            <span style="color:var(--accent-2); font-weight:700; margin-top:0.1rem;">&#10003;</span>
+            <div>
+              <div style="font-weight:600; font-size:0.9rem;">Technical SEO health scan</div>
+              <div style="font-size:0.82rem; color:var(--text-muted);">Page speed, crawlability, metadata, schema</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+            <span style="color:var(--accent-2); font-weight:700; margin-top:0.1rem;">&#10003;</span>
+            <div>
+              <div style="font-weight:600; font-size:0.9rem;">Keyword &amp; backlink snapshot</div>
+              <div style="font-size:0.82rem; color:var(--text-muted);">Domain authority, top keywords, link profile</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+            <span style="color:var(--accent-2); font-weight:700; margin-top:0.1rem;">&#10003;</span>
+            <div>
+              <div style="font-weight:600; font-size:0.9rem;">Prioritized action plan</div>
+              <div style="font-size:0.82rem; color:var(--text-muted);">P1/P2/P3 fixes with estimated impact</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div id="audit-form-wrap">
       <form id="audit-form" onsubmit="submitAudit(event)" novalidate>
         <div style="display:flex; flex-direction:column; gap:1rem;">
 
@@ -832,34 +1015,47 @@
             onmouseover="this.style.opacity='0.88'"
             onmouseout="this.style.opacity='1'"
           >
-            Run My Free Audit →
+            Run My Free Audit &rarr;
           </button>
 
         </div>
       </form>
 
+      <!-- Estado: procesando -->
       <div id="audit-loading" style="display:none; padding:2rem; text-align:center; border:1px solid var(--border); border-radius:12px; background:var(--bg-3);">
-        <div style="font-size:1.5rem; margin-bottom:0.75rem;">⚙️</div>
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">&#9881;&#65039;</div>
         <div style="font-weight:700; margin-bottom:0.4rem;">Auditing your site...</div>
         <div style="font-size:0.85rem; color:var(--text-muted);">This takes about 60 seconds. You'll receive the PDF report by email within 24 hours.</div>
       </div>
 
+      <!-- Estado: éxito -->
       <div id="audit-success" style="display:none; padding:2rem; text-align:center; border:1px solid rgba(0,212,170,0.3); border-radius:12px; background:rgba(0,212,170,0.05);">
-        <div style="font-size:1.5rem; margin-bottom:0.75rem;">✅</div>
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">&#9989;</div>
         <div style="font-weight:700; margin-bottom:0.4rem; color:var(--accent-2);">Audit submitted successfully.</div>
         <div style="font-size:0.85rem; color:var(--text-muted);">I'll review your report and send it to your email within 24 hours.</div>
       </div>
 
+      <!-- Estado: error -->
       <div id="audit-error" style="display:none; padding:2rem; text-align:center; border:1px solid rgba(255,80,80,0.3); border-radius:12px; background:rgba(255,80,80,0.05);">
-        <div style="font-size:1.5rem; margin-bottom:0.75rem;">⚠️</div>
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">&#9888;&#65039;</div>
         <div style="font-weight:700; margin-bottom:0.4rem; color:#ff6b6b;">Something went wrong.</div>
         <div style="font-size:0.85rem; color:var(--text-muted);">Please email me directly at <a href="mailto:felipe.p27.2001@gmail.com" style="color:var(--accent);">felipe.p27.2001@gmail.com</a></div>
       </div>
 
       <p style="font-size:0.75rem; color:var(--text-muted); margin-top:1rem;">No spam. No sales call required. Just the audit.</p>
-    </div>
+    </div><!-- /audit-form-wrap -->
+
+    </div><!-- /two-col grid -->
   </div>
 </section>
+<style>
+@media (max-width: 768px) {
+  #audit .section-inner > div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+}
+</style>
 
 <script>
 async function submitAudit(e) {
@@ -871,6 +1067,7 @@ async function submitAudit(e) {
 
   if (!url || !name || !email) return;
 
+  // Limpiar protocolo si lo pegan con https://
   const cleanUrl = url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
   document.getElementById('audit-form').style.display = 'none';
@@ -908,16 +1105,22 @@ async function submitAudit(e) {
       <h2>Ready to build your growth system?</h2>
       <p>Let's talk about what your site needs. I respond within 24 hours.</p>
       <div class="contact-links">
-        <a href="mailto:felipe.p27.2001@gmail.com" class="contact-link">✉ Email Me</a>
-        <a href="https://www.linkedin.com/in/felipepintocordova/" target="_blank" class="contact-link">💼 LinkedIn</a>
-        <a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" class="contact-link">🔗 Upwork</a>
+        <a href="mailto:felipe.p27.2001@gmail.com" class="contact-link">
+          &#9993; Email Me
+        </a>
+        <a href="https://www.linkedin.com/in/felipepintocordova/" target="_blank" class="contact-link">
+          &#128188; LinkedIn
+        </a>
+        <a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" class="contact-link">
+          &#128279; Upwork
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>Felipe Pinto · SEO & AEO Growth Engineer · © 2026</p>
+  <p>Felipe Pinto &middot; SEO &amp; AEO Growth Engineer &middot; &copy; 2026</p>
 </footer>
 
 </body>
