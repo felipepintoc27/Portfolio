@@ -504,6 +504,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#cases">Case Studies</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#audit">Free Audit</a></li>
     <li><a href="#contact" class="nav-cta">Work Together</a></li>
   </ul>
 </nav>
@@ -521,8 +522,8 @@
       compounding over time, not just ranking today.
     </p>
     <div class="hero-actions">
-      <a href="#cases" class="btn-primary">See Results</a>
-      <a href="#contact" class="btn-secondary">Start a Project</a>
+      <a href="#audit" class="btn-primary">Get Free SEO Audit</a>
+      <a href="#cases" class="btn-secondary">See Results</a>
     </div>
   </div>
 </section>
@@ -734,7 +735,7 @@
           <li>Link building (2 months)</li>
           <li>GSC + tracking setup</li>
         </ul>
-        <a href="#contact" class="btn-pricing">Get Started</a>
+        <a href="#audit" class="btn-pricing">Get Started</a>
       </div>
 
       <div class="pricing-card featured">
@@ -751,7 +752,7 @@
           <li>AEO updates + schema</li>
           <li>Automated monthly report</li>
         </ul>
-        <a href="#contact" class="btn-pricing">Start Growing</a>
+        <a href="#audit" class="btn-pricing">Start Growing</a>
       </div>
 
       <div class="pricing-card">
@@ -767,13 +768,140 @@
           <li>Competitor tracking + alerts</li>
           <li>Priority turnaround</li>
         </ul>
-        <a href="#contact" class="btn-pricing">Get Started</a>
+        <a href="#audit" class="btn-pricing">Get Started</a>
       </div>
 
     </div>
   </div>
 </section>
 
+<!-- FREE AUDIT FORM -->
+<section id="audit" style="background: var(--bg-2);">
+  <div class="section-inner">
+    <div class="section-tag">// Free audit</div>
+    <h2>Get Your Free SEO Audit Report</h2>
+    <p class="section-desc">Enter your URL and get a full technical audit — on-page health, keyword opportunities, and a personalized action plan. Delivered as a PDF within 24 hours.</p>
+
+    <div id="audit-form-wrap" style="max-width:560px;">
+      <form id="audit-form" onsubmit="submitAudit(event)" novalidate>
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+
+          <div>
+            <label style="font-size:0.8rem; font-weight:600; color:var(--text-muted); letter-spacing:0.06em; text-transform:uppercase; display:block; margin-bottom:0.4rem;">Your Website URL</label>
+            <input
+              type="text"
+              id="audit-url"
+              placeholder="yoursite.com"
+              required
+              style="width:100%; background:var(--bg-3); border:1px solid var(--border); border-radius:8px; padding:0.85rem 1rem; color:var(--text); font-size:0.95rem; font-family:inherit; outline:none; transition:border-color 0.2s;"
+              onfocus="this.style.borderColor='rgba(108,99,255,0.5)'"
+              onblur="this.style.borderColor='rgba(255,255,255,0.07)'"
+            />
+          </div>
+
+          <div>
+            <label style="font-size:0.8rem; font-weight:600; color:var(--text-muted); letter-spacing:0.06em; text-transform:uppercase; display:block; margin-bottom:0.4rem;">Your Name / Company</label>
+            <input
+              type="text"
+              id="audit-name"
+              placeholder="Jane at Acme Co."
+              required
+              style="width:100%; background:var(--bg-3); border:1px solid var(--border); border-radius:8px; padding:0.85rem 1rem; color:var(--text); font-size:0.95rem; font-family:inherit; outline:none; transition:border-color 0.2s;"
+              onfocus="this.style.borderColor='rgba(108,99,255,0.5)'"
+              onblur="this.style.borderColor='rgba(255,255,255,0.07)'"
+            />
+          </div>
+
+          <div>
+            <label style="font-size:0.8rem; font-weight:600; color:var(--text-muted); letter-spacing:0.06em; text-transform:uppercase; display:block; margin-bottom:0.4rem;">Your Email</label>
+            <input
+              type="email"
+              id="audit-email"
+              placeholder="you@company.com"
+              required
+              style="width:100%; background:var(--bg-3); border:1px solid var(--border); border-radius:8px; padding:0.85rem 1rem; color:var(--text); font-size:0.95rem; font-family:inherit; outline:none; transition:border-color 0.2s;"
+              onfocus="this.style.borderColor='rgba(108,99,255,0.5)'"
+              onblur="this.style.borderColor='rgba(255,255,255,0.07)'"
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="audit-btn"
+            style="background:var(--accent); color:#fff; border:none; border-radius:8px; padding:0.9rem 1.8rem; font-size:0.95rem; font-weight:700; font-family:inherit; cursor:pointer; transition:opacity 0.2s, transform 0.2s; text-align:center;"
+            onmouseover="this.style.opacity='0.88'"
+            onmouseout="this.style.opacity='1'"
+          >
+            Run My Free Audit →
+          </button>
+
+        </div>
+      </form>
+
+      <div id="audit-loading" style="display:none; padding:2rem; text-align:center; border:1px solid var(--border); border-radius:12px; background:var(--bg-3);">
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">⚙️</div>
+        <div style="font-weight:700; margin-bottom:0.4rem;">Auditing your site...</div>
+        <div style="font-size:0.85rem; color:var(--text-muted);">This takes about 60 seconds. You'll receive the PDF report by email within 24 hours.</div>
+      </div>
+
+      <div id="audit-success" style="display:none; padding:2rem; text-align:center; border:1px solid rgba(0,212,170,0.3); border-radius:12px; background:rgba(0,212,170,0.05);">
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">✅</div>
+        <div style="font-weight:700; margin-bottom:0.4rem; color:var(--accent-2);">Audit submitted successfully.</div>
+        <div style="font-size:0.85rem; color:var(--text-muted);">I'll review your report and send it to your email within 24 hours.</div>
+      </div>
+
+      <div id="audit-error" style="display:none; padding:2rem; text-align:center; border:1px solid rgba(255,80,80,0.3); border-radius:12px; background:rgba(255,80,80,0.05);">
+        <div style="font-size:1.5rem; margin-bottom:0.75rem;">⚠️</div>
+        <div style="font-weight:700; margin-bottom:0.4rem; color:#ff6b6b;">Something went wrong.</div>
+        <div style="font-size:0.85rem; color:var(--text-muted);">Please email me directly at <a href="mailto:felipe.p27.2001@gmail.com" style="color:var(--accent);">felipe.p27.2001@gmail.com</a></div>
+      </div>
+
+      <p style="font-size:0.75rem; color:var(--text-muted); margin-top:1rem;">No spam. No sales call required. Just the audit.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+async function submitAudit(e) {
+  e.preventDefault();
+
+  const url   = document.getElementById('audit-url').value.trim();
+  const name  = document.getElementById('audit-name').value.trim();
+  const email = document.getElementById('audit-email').value.trim();
+
+  if (!url || !name || !email) return;
+
+  const cleanUrl = url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+
+  document.getElementById('audit-form').style.display = 'none';
+  document.getElementById('audit-loading').style.display = 'block';
+
+  try {
+    const res = await fetch('https://n8n.157.245.245.23.nip.io/webhook/seo-audit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        prospect_url: cleanUrl,
+        prospect_name: name,
+        prospect_email: email
+      })
+    });
+
+    document.getElementById('audit-loading').style.display = 'none';
+
+    if (res.ok) {
+      document.getElementById('audit-success').style.display = 'block';
+    } else {
+      document.getElementById('audit-error').style.display = 'block';
+    }
+  } catch (err) {
+    document.getElementById('audit-loading').style.display = 'none';
+    document.getElementById('audit-error').style.display = 'block';
+  }
+}
+</script>
+
+<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="contact-box">
