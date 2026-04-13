@@ -38,7 +38,7 @@
 
     /* Utilities */
     .text-grad { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 2rem; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; }
     .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 1.8rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; letter-spacing: -0.01em; }
     .btn-primary { background: var(--brand-1); color: #fff; box-shadow: 0 8px 20px rgba(79,70,229,0.25); }
     .btn-primary:hover { background: var(--grad-primary); transform: translateY(-2px); box-shadow: 0 12px 25px rgba(225,29,72,0.3); }
@@ -140,6 +140,38 @@
     .msg-ok { background: #ECFDF5; color: #059669; }
     .msg-err { background: #FEF2F2; color: #DC2626; }
 
+    /* CTA STRIP */
+    .cta-strip { background: var(--grad-primary); padding: 3.5rem 0; }
+    .cta-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .cta-strip h2 { font-size: 1.7rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin-bottom: 0.3rem; }
+    .cta-strip p { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+    .btn-white { background: #fff; color: var(--brand-1); font-weight: 700; white-space: nowrap; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+
+    /* INDUSTRIES */
+    .industries-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 3rem; }
+    @media (max-width: 900px) { .industries-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 560px) { .industries-grid { grid-template-columns: 1fr; } }
+    .industry-card { background: var(--bg-white); border-radius: 12px; padding: 1.75rem 1.5rem; border: 1px solid #E4E4E7; transition: border-color 0.2s, box-shadow 0.2s; }
+    .industry-card:hover { border-color: var(--brand-1); box-shadow: var(--shadow-sm); }
+    .ind-icon { font-size: 1.6rem; margin-bottom: 0.8rem; }
+    .industry-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.3rem; }
+    .industry-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; }
+    .perfect-box { background: var(--grad-subtle); border-radius: 12px; padding: 2rem 2.5rem; border: 1px solid rgba(79,70,229,0.08); }
+    .perfect-box h3 { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 1.2rem; text-align: center; }
+    .perfect-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 0.6rem; }
+    @media (max-width: 600px) { .perfect-list { grid-template-columns: 1fr; } }
+    .perfect-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+    .perfect-item::before { content: '✓'; color: var(--brand-1); font-weight: 800; flex-shrink: 0; }
+
+    /* WHY ME */
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
+    .why-card { padding: 2rem; border-radius: 12px; background: var(--bg-white); border: 1px solid #E4E4E7; }
+    .why-num { font-size: 2rem; font-weight: 900; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -0.04em; margin-bottom: 0.75rem; line-height: 1; }
+    .why-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-dark); }
+    .why-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
+
     /* FOOTER */
     footer { background: var(--bg-white); padding: 3rem 0 2rem; text-align: center; border-top: 1px solid rgba(0,0,0,0.03); }
     .footer-logo { font-size: 1.1rem; font-weight: 800; color: var(--text-dark); text-decoration: none; display: inline-block; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
@@ -157,6 +189,7 @@
     <ul class="nav-links">
       <li><a href="#services" data-i18n="nav_svc">Services</a></li>
       <li><a href="#results" data-i18n="nav_res">Results</a></li>
+      <li><a href="#why" data-i18n="nav_why">Why Me</a></li>
       <li><a href="#about" data-i18n="nav_about">About</a></li>
     </ul>
 
@@ -176,10 +209,10 @@
     <div class="hero-text">
       <div class="hero-badge"><span class="badge-dot"></span><span data-i18n="badge">Open to new clients</span></div>
       <h1>
-        <span data-i18n="h1_l1">Rankings don't lie.</span><br>
-        <span class="text-grad" data-i18n="h1_l2">Neither do I.</span>
+        <span data-i18n="h1_l1">Dominate Google.</span><br>
+        <span class="text-grad" data-i18n="h1_l2">Expand Your Reach.</span>
       </h1>
-      <p data-i18n="h_sub">I'm a Technical SEO Engineer who builds systems that rank — and keep ranking. From technical audits to programmatic pages at scale, everything is measured, documented, and tied to real traffic growth.</p>
+      <p data-i18n="h_sub">I turn search into a lead generation machine. Real strategy, hands-on implementation, measurable growth — tracked in Google Search Console and reported every month.</p>
       <div class="hero-actions">
         <a href="#audit" class="btn btn-primary" data-i18n="cta_hero">Get Free Audit</a>
         <a href="#results" class="btn btn-secondary" data-i18n="cta_sec">See Real Results</a>
@@ -206,6 +239,19 @@
           <div style="font-size:0.75rem; color:var(--text-muted);" data-i18n="hs4_l">Visibility vs Competitor</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="container">
+    <div class="cta-strip-inner">
+      <div>
+        <h2 data-i18n="strip_h">Ready to Dominate Your Market?</h2>
+        <p data-i18n="strip_p">More Leads. Less Hassle. Real Growth. Let's build your SEO engine.</p>
+      </div>
+      <a href="#audit" class="btn btn-white" data-i18n="strip_btn">Get Free Audit →</a>
     </div>
   </div>
 </section>
@@ -238,8 +284,62 @@
   </div>
 </section>
 
+<!-- INDUSTRIES -->
+<section id="industries" class="section-pad">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag" data-i18n="ind_tag">Who I Work With</span>
+      <h2 data-i18n="ind_h">All Types of Websites & Businesses</h2>
+      <p data-i18n="ind_p">From local service providers to e-commerce brands, SEO strategy adapts to your model and market.</p>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-card">
+        <div class="ind-icon">📍</div>
+        <h3 data-i18n="i1_h">Local Businesses</h3>
+        <p data-i18n="i1_p">Restaurants, retail, stone & tile, contractors. Dominate the map pack and local search results in your area.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon">💼</div>
+        <h3 data-i18n="i2_h">Professional Services</h3>
+        <p data-i18n="i2_p">Law firms, consulting, finance, real estate. High-intent keywords that bring in qualified leads ready to hire.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon">🛒</div>
+        <h3 data-i18n="i3_h">E-Commerce</h3>
+        <p data-i18n="i3_p">Product pages, category architecture, and technical SEO for WooCommerce and Shopify stores at scale.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon">🔧</div>
+        <h3 data-i18n="i4_h">HVAC & Home Services</h3>
+        <p data-i18n="i4_p">Service-area pages, GBP optimization, and seasonal keyword strategies that drive calls year-round.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon">🏥</div>
+        <h3 data-i18n="i5_h">Healthcare & Wellness</h3>
+        <p data-i18n="i5_p">Dental, therapy, fitness, wellness studios. E-E-A-T optimized content that earns patient trust and ranks.</p>
+      </div>
+      <div class="industry-card">
+        <div class="ind-icon">💻</div>
+        <h3 data-i18n="i6_h">IT & Tech Services</h3>
+        <p data-i18n="i6_p">MSPs, SaaS, cybersecurity, staffing. Hub-and-spoke geo strategies that outrank bigger competitors locally.</p>
+      </div>
+    </div>
+    <div class="perfect-box">
+      <h3 data-i18n="perf_h">Perfect For Businesses That Want To:</h3>
+      <div class="perfect-list">
+        <div class="perfect-item" data-i18n="perf1">Rank on the first page of Google</div>
+        <div class="perfect-item" data-i18n="perf2">Get more qualified organic traffic</div>
+        <div class="perfect-item" data-i18n="perf3">Fix technical issues hurting their rankings</div>
+        <div class="perfect-item" data-i18n="perf4">Stop paying for every single click</div>
+        <div class="perfect-item" data-i18n="perf5">Scale with programmatic page strategies</div>
+        <div class="perfect-item" data-i18n="perf6">Build a sustainable long-term search presence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- RESULTS -->
-<section id="results" class="section-pad">
+<section id="results" class="section-pad bg-subtle">
   <div class="container">
     <div class="sec-header">
       <span class="sec-tag" data-i18n="r_tag">Case Studies</span>
@@ -276,6 +376,33 @@
           <h4>5</h4>
           <span data-i18n="rm_biz">Businesses Ranking Within 90 Days</span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section id="why" class="section-pad">
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-tag" data-i18n="why_tag">Why Felipe</span>
+      <h2 data-i18n="why_h">What Makes the Difference</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num" data-i18n="w1_n">6+</div>
+        <h3 data-i18n="w1_h">Active Monthly Clients</h3>
+        <p data-i18n="w1_p">I manage SEO for 6+ businesses every month — stone & countertops, IT services, HVAC, and power equipment. Every account gets full strategy and hands-on execution.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num" data-i18n="w2_n">135</div>
+        <h3 data-i18n="w2_h">Location Pages Built in One Project</h3>
+        <p data-i18n="w2_p">When a client needed programmatic SEO at scale, I built 135 geo-targeted pages covering 27 cities — with custom content, images, and schema on every single page.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num" data-i18n="w3_n">100%</div>
+        <h3 data-i18n="w3_h">Execution, Not Just Strategy</h3>
+        <p data-i18n="w3_p">I don't deliver a deck with recommendations. I write the actual implementation. Every change I recommend, I can execute myself — and every result is tracked in GSC before it ships.</p>
       </div>
     </div>
   </div>
@@ -359,13 +486,37 @@
 <script>
 const T = {
   en: {
-    nav_svc: "Services", nav_res: "Results", nav_about: "About", nav_cta: "Free Audit",
+    nav_svc: "Services", nav_res: "Results", nav_why: "Why Me", nav_about: "About", nav_cta: "Free Audit",
     badge: "Open to new clients",
-    h1_l1: "Rankings don't lie.", h1_l2: "Neither do I.",
-    h_sub: "I'm a Technical SEO Engineer who builds systems that rank — and keep ranking. From technical audits to programmatic pages at scale, everything is measured, documented, and tied to real traffic growth.",
+    h1_l1: "Dominate Google.", h1_l2: "Expand Your Reach.",
+    h_sub: "I turn search into a lead generation machine. Real strategy, hands-on implementation, measurable growth — tracked in Google Search Console and reported every month.",
+    strip_h: "Ready to Dominate Your Market?",
+    strip_p: "More Leads. Less Hassle. Real Growth. Let's build your SEO engine.",
+    strip_btn: "Get Free Audit →",
     cta_hero: "Get Free Audit", cta_sec: "See Real Results",
     hs1_l: "Organic Clicks · MoM Growth", hs1_s: "Stone & Surfaces Co. · South Florida",
     hs2_l: "Keywords at #1", hs3_l: "Location Pages Built", hs4_l: "Visibility vs Competitor",
+
+    ind_tag: "Who I Work With", ind_h: "All Types of Websites & Businesses",
+    ind_p: "From local service providers to e-commerce brands, SEO strategy adapts to your model and market.",
+    i1_h: "Local Businesses", i1_p: "Restaurants, retail, stone & tile, contractors. Dominate the map pack and local search results in your area.",
+    i2_h: "Professional Services", i2_p: "Law firms, consulting, finance, real estate. High-intent keywords that bring in qualified leads ready to hire.",
+    i3_h: "E-Commerce", i3_p: "Product pages, category architecture, and technical SEO for WooCommerce and Shopify stores at scale.",
+    i4_h: "HVAC & Home Services", i4_p: "Service-area pages, GBP optimization, and seasonal keyword strategies that drive calls year-round.",
+    i5_h: "Healthcare & Wellness", i5_p: "Dental, therapy, fitness, wellness studios. E-E-A-T optimized content that earns patient trust and ranks.",
+    i6_h: "IT & Tech Services", i6_p: "MSPs, SaaS, cybersecurity, staffing. Hub-and-spoke geo strategies that outrank bigger competitors locally.",
+    perf_h: "Perfect For Businesses That Want To:",
+    perf1: "Rank on the first page of Google", perf2: "Get more qualified organic traffic",
+    perf3: "Fix technical issues hurting their rankings", perf4: "Stop paying for every single click",
+    perf5: "Scale with programmatic page strategies", perf6: "Build a sustainable long-term search presence",
+
+    why_tag: "Why Felipe", why_h: "What Makes the Difference",
+    w1_n: "6+", w1_h: "Active Monthly Clients",
+    w1_p: "I manage SEO for 6+ businesses every month — stone & countertops, IT services, HVAC, and power equipment. Every account gets full strategy and hands-on execution.",
+    w2_n: "135", w2_h: "Location Pages Built in One Project",
+    w2_p: "When a client needed programmatic SEO at scale, I built 135 geo-targeted pages covering 27 cities — with custom content, images, and schema on every single page.",
+    w3_n: "100%", w3_h: "Execution, Not Just Strategy",
+    w3_p: "I don't deliver a deck with recommendations. I write the actual implementation. Every change I recommend, I can execute myself — and every result is tracked in GSC before it ships.",
 
     s_tag: "What I Do", s_h: "SEO That Compounds Month After Month",
     s_p: "I don't send reports and disappear. I build and maintain search systems that grow traffic, rankings, and revenue over time.",
@@ -402,13 +553,37 @@ const T = {
     ft_copy: "© 2026 Felipe Pinto · Technical SEO Engineer"
   },
   es: {
-    nav_svc: "Servicios", nav_res: "Resultados", nav_about: "Sobre Mí", nav_cta: "Auditoría Gratis",
+    nav_svc: "Servicios", nav_res: "Resultados", nav_why: "Por Qué Yo", nav_about: "Sobre Mí", nav_cta: "Auditoría Gratis",
     badge: "Disponible para nuevos clientes",
-    h1_l1: "Los rankings no mienten.", h1_l2: "Yo tampoco.",
-    h_sub: "Soy un Ingeniero SEO Técnico que construye sistemas que posicionan — y se mantienen posicionados. Desde auditorías técnicas hasta páginas programáticas a escala, todo se mide, documenta y vincula a crecimiento real de tráfico.",
+    h1_l1: "Domina Google.", h1_l2: "Expande tu Alcance.",
+    h_sub: "Convierto la búsqueda orgánica en una máquina de generación de leads. Estrategia real, implementación real, resultados medibles — rastreados en Google Search Console y reportados cada mes.",
+    strip_h: "¿Listo para Dominar tu Mercado?",
+    strip_p: "Más Leads. Menos Complicaciones. Crecimiento Real. Construyamos tu motor SEO.",
+    strip_btn: "Auditoría Gratis →",
     cta_hero: "Auditoría Gratis", cta_sec: "Ver Resultados Reales",
     hs1_l: "Clics Orgánicos · Crecimiento MoM", hs1_s: "Empresa Stone & Surfaces · Sur de Florida",
     hs2_l: "Keywords en #1", hs3_l: "Páginas de Ubicación Construidas", hs4_l: "Visibilidad vs Competidor",
+
+    ind_tag: "Con Quién Trabajo", ind_h: "Todo Tipo de Sitios y Negocios",
+    ind_p: "Desde servicios locales hasta tiendas e-commerce, la estrategia SEO se adapta a tu modelo y mercado.",
+    i1_h: "Negocios Locales", i1_p: "Restaurantes, retail, stone & tile, contratistas. Domina el map pack y los resultados de búsqueda local.",
+    i2_h: "Servicios Profesionales", i2_p: "Firmas legales, consultoría, finanzas, real estate. Keywords de alta intención que atraen leads calificados.",
+    i3_h: "E-Commerce", i3_p: "Páginas de productos, arquitectura de categorías y SEO técnico para tiendas WooCommerce y Shopify.",
+    i4_h: "HVAC & Servicios del Hogar", i4_p: "Páginas de área de servicio, optimización GBP y estrategias de keywords estacionales que generan llamadas todo el año.",
+    i5_h: "Salud & Bienestar", i5_p: "Dental, terapia, fitness, wellness studios. Contenido E-E-A-T que genera confianza y posiciona.",
+    i6_h: "IT & Tecnología", i6_p: "MSPs, SaaS, ciberseguridad, staffing. Estrategias hub-and-spoke que superan a competidores más grandes localmente.",
+    perf_h: "Ideal Para Negocios Que Quieren:",
+    perf1: "Aparecer en la primera página de Google", perf2: "Obtener más tráfico orgánico calificado",
+    perf3: "Corregir problemas técnicos que afectan rankings", perf4: "Dejar de pagar por cada clic",
+    perf5: "Escalar con estrategias de páginas programáticas", perf6: "Construir presencia de búsqueda sostenible a largo plazo",
+
+    why_tag: "Por Qué Felipe", why_h: "Lo Que Hace la Diferencia",
+    w1_n: "6+", w1_h: "Clientes Mensuales Activos",
+    w1_p: "Gestiono SEO para 6+ negocios cada mes — stone & superficies, IT, HVAC y equipos industriales. Cada cuenta recibe estrategia completa e implementación directa.",
+    w2_n: "135", w2_h: "Páginas de Ubicación en un Solo Proyecto",
+    w2_p: "Cuando un cliente necesitó SEO programático a escala, construí 135 páginas geo-dirigidas cubriendo 27 ciudades — con contenido, imágenes y schema en cada una.",
+    w3_n: "100%", w3_h: "Ejecución, No Solo Estrategia",
+    w3_p: "No entrego un documento con recomendaciones. Escribo la implementación real. Cada cambio que recomiendo, lo ejecuto yo mismo — y cada resultado se verifica en GSC antes de enviarse.",
 
     s_tag: "Lo Que Hago", s_h: "SEO Que Se Acumula Mes a Mes",
     s_p: "No envío reportes y desaparezco. Construyo y mantengo sistemas de búsqueda que crecen en tráfico, rankings e ingresos con el tiempo.",
