@@ -82,15 +82,29 @@
 
     /* SERVICES */
     #services { background: var(--navy); }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.4rem; }
-    .service-card { background: var(--navy-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.85rem; transition: border-color 0.2s, transform 0.18s, box-shadow 0.2s; position: relative; overflow: hidden; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.4rem; align-items: start; }
+    .service-card { background: var(--navy-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.85rem; transition: border-color 0.2s, transform 0.18s, box-shadow 0.2s; position: relative; overflow: hidden; display: flex; flex-direction: column; }
     .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--gold),transparent); opacity:0; transition:opacity 0.2s; }
     .service-card:hover { border-color: var(--gold-border); transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.28); }
     .service-card:hover::before { opacity: 1; }
+    /* Featured card */
+    .service-card.featured { border-color: var(--gold-border); box-shadow: 0 0 0 1px var(--gold-border), 0 12px 36px rgba(0,0,0,0.35); }
+    .service-card.featured::before { opacity: 1; }
+    .card-badge { display: inline-flex; align-items: center; gap: 0.35rem; background: var(--gold); color: var(--navy); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.22rem 0.65rem; border-radius: 4px; margin-bottom: 1rem; width: fit-content; }
+    .card-badge.secondary { background: var(--navy-light); color: var(--text-muted); border: 1px solid var(--border); }
     .service-icon { width: 42px; height: 42px; background: var(--gold-dim); border: 1px solid var(--gold-border); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.1rem; }
     .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.55rem; letter-spacing: -0.01em; }
     .service-card p { font-size: 0.855rem; color: var(--text-muted); line-height: 1.7; }
-    .service-price { display: inline-block; margin-top: 1.1rem; font-size: 0.78rem; font-weight: 700; color: var(--gold); background: var(--gold-dim); border: 1px solid var(--gold-border); padding: 0.28rem 0.7rem; border-radius: 4px; }
+    .service-price { display: block; margin-top: 0.9rem; font-size: 1.3rem; font-weight: 900; color: var(--gold); letter-spacing: -0.02em; }
+    .service-price-sub { font-size: 0.75rem; color: var(--text-dim); font-weight: 400; margin-top: 0.1rem; }
+    .service-includes { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+    .service-includes li { font-size: 0.82rem; color: var(--text-muted); list-style: none; display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.4; }
+    .service-includes li::before { content: '→'; color: var(--gold); font-weight: 700; flex-shrink: 0; font-size: 0.78rem; margin-top: 0.05rem; }
+    .service-cta { display: block; text-align: center; margin-top: 1.5rem; padding: 0.7rem 1rem; border-radius: 7px; font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: opacity 0.2s, transform 0.15s; }
+    .service-cta.primary { background: var(--gold); color: var(--navy); }
+    .service-cta.primary:hover { opacity: 0.88; transform: translateY(-1px); }
+    .service-cta.ghost { border: 1px solid var(--border); color: var(--text-muted); }
+    .service-cta.ghost:hover { border-color: var(--gold-border); color: var(--text); }
 
     /* CASES */
     #cases { background: var(--navy-mid); }
@@ -239,42 +253,110 @@
       <p class="section-desc" data-i18n="svc_desc">Every engagement is a long-term system — not a one-time report. I build SEO that compounds month after month.</p>
     </div>
     <div class="services-grid">
+
+      <!-- Foundation Package — Best Start -->
+      <div class="service-card reveal">
+        <div class="card-badge secondary" data-i18n="badge_start">Quick Start</div>
+        <div class="service-icon">🚀</div>
+        <h3 data-i18n="s4t">Foundation Package</h3>
+        <div class="service-price" data-i18n="s4pr">$1,530</div>
+        <div class="service-price-sub" data-i18n="s4sub">3-month sprint · one-time</div>
+        <ul class="service-includes">
+          <li data-i18n="s4i1">Google Business Profile setup & optimization</li>
+          <li data-i18n="s4i2">Full sitewide metadata optimization</li>
+          <li data-i18n="s4i3">Keyword strategy for your core services</li>
+          <li data-i18n="s4i4">Schema markup implementation</li>
+          <li data-i18n="s4i5">Foundational link building campaign</li>
+          <li data-i18n="s4i6">Final rankings & visibility report</li>
+        </ul>
+        <a href="#audit" class="service-cta ghost" data-i18n="s_cta_audit">Get Free Audit First →</a>
+      </div>
+
+      <!-- Monthly Retainer — Most Popular -->
+      <div class="service-card featured reveal">
+        <div class="card-badge" data-i18n="badge_pop">⭐ Most Popular</div>
+        <div class="service-icon">📊</div>
+        <h3 data-i18n="s5t">Monthly SEO Retainer</h3>
+        <div class="service-price" data-i18n="s5pr">$750 <span style="font-size:0.9rem;font-weight:600">/ mo</span></div>
+        <div class="service-price-sub" data-i18n="s5sub">Month-to-month · cancel anytime</div>
+        <ul class="service-includes">
+          <li data-i18n="s5i1">Monthly technical crawl + fixes</li>
+          <li data-i18n="s5i2">On-page content & metadata updates</li>
+          <li data-i18n="s5i3">Link building & citation management</li>
+          <li data-i18n="s5i4">GBP optimization & review strategy</li>
+          <li data-i18n="s5i5">Monthly performance report (GSC + rankings)</li>
+          <li data-i18n="s5i6">Keyword tracking & competitor monitoring</li>
+        </ul>
+        <a href="mailto:felipe.p27.2001@gmail.com?subject=Monthly%20SEO%20Retainer%20Inquiry" class="service-cta primary" data-i18n="s_cta_call">Book a Strategy Call →</a>
+      </div>
+
+      <!-- Technical SEO Audit -->
       <div class="service-card reveal">
         <div class="service-icon">🔧</div>
-        <h3 data-i18n="s1t">Technical SEO Audit & Implementation</h3>
-        <p data-i18n="s1p">In-depth crawl analysis, Core Web Vitals, indexation, structured data, and site architecture review. I don't just deliver a PDF — I implement the fixes.</p>
-        <span class="service-price" data-i18n="s1pr">From $800 / one-time</span>
+        <h3 data-i18n="s1t">Technical SEO Audit & Fix</h3>
+        <div class="service-price" data-i18n="s1pr">From $800</div>
+        <div class="service-price-sub" data-i18n="s1sub">One-time project</div>
+        <ul class="service-includes">
+          <li data-i18n="s1i1">Full site crawl & error report</li>
+          <li data-i18n="s1i2">Core Web Vitals & page speed analysis</li>
+          <li data-i18n="s1i3">Indexation & crawlability fixes</li>
+          <li data-i18n="s1i4">Schema markup & structured data</li>
+          <li data-i18n="s1i5">Site architecture recommendations</li>
+          <li data-i18n="s1i6">Prioritized fix implementation</li>
+        </ul>
+        <a href="#audit" class="service-cta ghost" data-i18n="s_cta_audit">Get Free Audit First →</a>
       </div>
+
+      <!-- Local SEO -->
       <div class="service-card reveal">
         <div class="service-icon">📍</div>
         <h3 data-i18n="s2t">Local SEO & Google Business Profile</h3>
-        <p data-i18n="s2p">GBP setup and optimization, local citation building, geo-page strategy, and review management. Built to dominate "near me" searches and the maps pack in your service area.</p>
-        <span class="service-price" data-i18n="s2pr">From $500 / mo</span>
+        <div class="service-price" data-i18n="s2pr">From $500 <span style="font-size:0.9rem;font-weight:600">/ mo</span></div>
+        <div class="service-price-sub" data-i18n="s2sub">Ideal for service-area businesses</div>
+        <ul class="service-includes">
+          <li data-i18n="s2i1">GBP setup, optimization & posting</li>
+          <li data-i18n="s2i2">Local citation building & cleanup</li>
+          <li data-i18n="s2i3">Geo-targeted landing pages</li>
+          <li data-i18n="s2i4">Review generation strategy</li>
+          <li data-i18n="s2i5">Maps pack & "near me" targeting</li>
+        </ul>
+        <a href="#audit" class="service-cta ghost" data-i18n="s_cta_audit">Get Free Audit First →</a>
       </div>
+
+      <!-- Programmatic SEO -->
       <div class="service-card reveal">
+        <div class="card-badge secondary" data-i18n="badge_scale">For Multi-Location</div>
         <div class="service-icon">⚡</div>
         <h3 data-i18n="s3t">Programmatic SEO at Scale</h3>
-        <p data-i18n="s3p">I design and deploy location page systems at scale for businesses serving multiple cities. One client went from zero to 135 geo-targeted pages — MoM clicks jumped +140%.</p>
-        <span class="service-price" data-i18n="s3pr">From $1,200 / project</span>
+        <div class="service-price" data-i18n="s3pr">From $1,200</div>
+        <div class="service-price-sub" data-i18n="s3sub">One-time build · +retainer optional</div>
+        <ul class="service-includes">
+          <li data-i18n="s3i1">Location page architecture design</li>
+          <li data-i18n="s3i2">Geo-targeted content at scale (50–200+ pages)</li>
+          <li data-i18n="s3i3">Internal linking cluster strategy</li>
+          <li data-i18n="s3i4">Schema + metadata for every page</li>
+          <li data-i18n="s3i5">WordPress/Wix deployment & QA</li>
+        </ul>
+        <a href="#audit" class="service-cta ghost" data-i18n="s_cta_audit">Get Free Audit First →</a>
       </div>
+
+      <!-- Free Audit -->
       <div class="service-card reveal">
-        <div class="service-icon">🚀</div>
-        <h3 data-i18n="s4t">Foundation Package — 90 Days</h3>
-        <p data-i18n="s4p">Everything a business needs to start ranking: GBP setup, full metadata optimization, keyword strategy, schema markup, and foundational backlinks. Delivered in 3 months.</p>
-        <span class="service-price" data-i18n="s4pr">$1,530 / 3 months</span>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon">📊</div>
-        <h3 data-i18n="s5t">Monthly SEO Retainer</h3>
-        <p data-i18n="s5p">A 4-pillar monthly system: technical health + on-page content + link authority + local signals. Full reporting every month. You see every number, every change, every result.</p>
-        <span class="service-price" data-i18n="s5pr">From $750 / mo</span>
-      </div>
-      <div class="service-card reveal">
+        <div class="card-badge secondary" data-i18n="badge_free">No Cost</div>
         <div class="service-icon">🎯</div>
         <h3 data-i18n="s6t">Free AI-Powered SEO Audit</h3>
-        <p data-i18n="s6p">I analyze your website, rankings, and competitors and deliver a branded report with your top 3 growth opportunities. No cost, no commitment — just a clear picture of where you stand.</p>
-        <span class="service-price" data-i18n="s6pr">100% Free → Apply Below</span>
+        <div class="service-price" data-i18n="s6pr">$0</div>
+        <div class="service-price-sub" data-i18n="s6sub">Delivered within 24 hours</div>
+        <ul class="service-includes">
+          <li data-i18n="s6i1">Technical health scan of your website</li>
+          <li data-i18n="s6i2">Keyword gap analysis vs competitors</li>
+          <li data-i18n="s6i3">Backlink & authority assessment</li>
+          <li data-i18n="s6i4">Top 3 growth opportunities identified</li>
+          <li data-i18n="s6i5">Branded PDF report, no strings attached</li>
+        </ul>
+        <a href="#audit" class="service-cta primary" data-i18n="s_cta_free">Get My Free Audit →</a>
       </div>
+
     </div>
   </div>
 </section>
@@ -452,7 +534,7 @@
       <h2><span data-i18n="ct_h1">Ready to Rank Above</span><br><span class="accent" data-i18n="ct_h2">Your Competitors?</span></h2>
       <p data-i18n="ct_p">Book a 30-minute strategy call. I'll review your rankings, identify your biggest SEO opportunity, and tell you exactly what I'd do in month one. No decks, just clear strategy.</p>
       <div class="cta-actions">
-        <a href="https://calendly.com/felipepintocordova" class="btn-primary" target="_blank" rel="noopener" data-i18n="ct_b1">Book a Strategy Call →</a>
+        <a href="mailto:felipe.p27.2001@gmail.com?subject=Strategy%20Call%20Request&body=Hi%20Felipe%2C%20I%27d%20like%20to%20book%20a%20strategy%20call." class="btn-primary" target="_blank" rel="noopener" data-i18n="ct_b1">Book a Strategy Call →</a>
         <a href="https://www.linkedin.com/in/felipepintocordova" class="btn-secondary" target="_blank" rel="noopener" data-i18n="ct_b2">Connect on LinkedIn</a>
       </div>
       <p class="cta-sub" data-i18n="ct_sub">Or email directly: <a href="mailto:felipe.p27.2001@gmail.com">felipe.p27.2001@gmail.com</a></p>
@@ -485,12 +567,20 @@ const T = {
     st1:"MoM Organic Clicks", st2:"Location Pages Deployed", st3:"Search Visibility", st4:"High-Intent Rankings",
     svc_tag:"Services", svc_h2:"SEO Built as Infrastructure",
     svc_desc:"Every engagement is a long-term system — not a one-time report. I build SEO that compounds month after month.",
-    s1t:"Technical SEO Audit & Implementation", s1p:"In-depth crawl analysis, Core Web Vitals, indexation, structured data, and site architecture review. I don't just deliver a PDF — I implement the fixes.", s1pr:"From $800 / one-time",
-    s2t:"Local SEO & Google Business Profile", s2p:"GBP setup and optimization, local citation building, geo-page strategy, and review management. Built to dominate \"near me\" searches and the maps pack in your service area.", s2pr:"From $500 / mo",
-    s3t:"Programmatic SEO at Scale", s3p:"I design and deploy location page systems at scale for businesses serving multiple cities. One client went from zero to 135 geo-targeted pages — MoM clicks jumped +140%.", s3pr:"From $1,200 / project",
-    s4t:"Foundation Package — 90 Days", s4p:"Everything a business needs to start ranking: GBP setup, full metadata optimization, keyword strategy, schema markup, and foundational backlinks. Delivered in 3 months.", s4pr:"$1,530 / 3 months",
-    s5t:"Monthly SEO Retainer", s5p:"A 4-pillar monthly system: technical health + on-page content + link authority + local signals. Full reporting every month. You see every number, every change, every result.", s5pr:"From $750 / mo",
-    s6t:"Free AI-Powered SEO Audit", s6p:"I analyze your website, rankings, and competitors and deliver a branded report with your top 3 growth opportunities. No cost, no commitment — just a clear picture of where you stand.", s6pr:"100% Free → Apply Below",
+    badge_start:"Quick Start", badge_pop:"⭐ Most Popular", badge_scale:"For Multi-Location", badge_free:"No Cost",
+    s1t:"Technical SEO Audit & Fix", s1pr:"From $800", s1sub:"One-time project",
+    s1i1:"Full site crawl & error report", s1i2:"Core Web Vitals & page speed analysis", s1i3:"Indexation & crawlability fixes", s1i4:"Schema markup & structured data", s1i5:"Site architecture recommendations", s1i6:"Prioritized fix implementation",
+    s2t:"Local SEO & Google Business Profile", s2pr:"From $500", s2sub:"Ideal for service-area businesses",
+    s2i1:"GBP setup, optimization & posting", s2i2:"Local citation building & cleanup", s2i3:"Geo-targeted landing pages", s2i4:"Review generation strategy", s2i5:'Maps pack & "near me" targeting',
+    s3t:"Programmatic SEO at Scale", s3pr:"From $1,200", s3sub:"One-time build · +retainer optional",
+    s3i1:"Location page architecture design", s3i2:"Geo-targeted content at scale (50–200+ pages)", s3i3:"Internal linking cluster strategy", s3i4:"Schema + metadata for every page", s3i5:"WordPress/Wix deployment & QA",
+    s4t:"Foundation Package", s4pr:"$1,530", s4sub:"3-month sprint · one-time",
+    s4i1:"Google Business Profile setup & optimization", s4i2:"Full sitewide metadata optimization", s4i3:"Keyword strategy for your core services", s4i4:"Schema markup implementation", s4i5:"Foundational link building campaign", s4i6:"Final rankings & visibility report",
+    s5t:"Monthly SEO Retainer", s5pr:"$750", s5sub:"Month-to-month · cancel anytime",
+    s5i1:"Monthly technical crawl + fixes", s5i2:"On-page content & metadata updates", s5i3:"Link building & citation management", s5i4:"GBP optimization & review strategy", s5i5:"Monthly performance report (GSC + rankings)", s5i6:"Keyword tracking & competitor monitoring",
+    s6t:"Free AI-Powered SEO Audit", s6pr:"$0", s6sub:"Delivered within 24 hours",
+    s6i1:"Technical health scan of your website", s6i2:"Keyword gap analysis vs competitors", s6i3:"Backlink & authority assessment", s6i4:"Top 3 growth opportunities identified", s6i5:"Branded PDF report, no strings attached",
+    s_cta_call:"Book a Strategy Call →", s_cta_audit:"Get Free Audit First →", s_cta_free:"Get My Free Audit →",
     cs_tag:"Case Studies", cs_h2:"Real Results. Verified Data.", cs_desc:"All results come from live client accounts. GSC data, rank trackers, no fabricated numbers.",
     c1l:"Stone & Surfaces Company · South Florida · Programmatic SEO",
     c1h:"135 Location Pages → +140% MoM Clicks, 11 Keywords at #1",
@@ -526,7 +616,7 @@ const T = {
     ferr:"Something went wrong. Email me at felipe.p27.2001@gmail.com",
     ct_tag:"Work Together", ct_h1:"Ready to Rank Above", ct_h2:"Your Competitors?",
     ct_p:"Book a 30-minute strategy call. I'll review your rankings, identify your biggest SEO opportunity, and tell you exactly what I'd do in month one. No decks, just clear strategy.",
-    ct_b1:"Book a Strategy Call →", ct_b2:"Connect on LinkedIn",
+    ct_b1:"Email Me to Get Started →", ct_b2:"Connect on LinkedIn",
     ct_sub:'Or email directly: <a href="mailto:felipe.p27.2001@gmail.com">felipe.p27.2001@gmail.com</a>',
   },
   es: {
@@ -539,12 +629,20 @@ const T = {
     st1:"Clics Orgánicos MoM", st2:"Páginas de Ubicación", st3:"Visibilidad en Búsqueda", st4:"Rankings High-Intent",
     svc_tag:"Servicios", svc_h2:"SEO Construido como Infraestructura",
     svc_desc:"Cada proyecto es un sistema a largo plazo — no un reporte de una sola vez. Construyo SEO que se acumula mes a mes.",
-    s1t:"Auditoría SEO Técnico e Implementación", s1p:"Análisis profundo de crawl, Core Web Vitals, indexación, datos estructurados y arquitectura. No solo entrego un PDF — implemento las correcciones.", s1pr:"Desde $800 / único",
-    s2t:"SEO Local & Google Business Profile", s2p:"Configuración y optimización de GBP, construcción de citas locales, estrategia de páginas geo y gestión de reseñas. Para dominar 'cerca de mí' y el pack de mapas.", s2pr:"Desde $500 / mes",
-    s3t:"SEO Programático a Escala", s3p:"Diseño y despliego sistemas de páginas por ubicación para negocios que operan en múltiples ciudades. Un cliente pasó de cero a 135 páginas geo-targeted — clics MoM: +140%.", s3pr:"Desde $1,200 / proyecto",
-    s4t:"Foundation Package — 90 Días", s4p:"Todo lo que un negocio necesita para empezar a rankear: GBP, metadata completa, estrategia de keywords, schema markup y backlinks fundamentales en 3 meses.", s4pr:"$1,530 / 3 meses",
-    s5t:"Retainer SEO Mensual", s5p:"Sistema mensual de 4 pilares: salud técnica + contenido on-page + autoridad de links + señales locales. Reporte completo cada mes. Ves todo.", s5pr:"Desde $750 / mes",
-    s6t:"Auditoría SEO Gratis con IA", s6p:"Analizo tu sitio, rankings y competidores y entrego un reporte con tus 3 principales oportunidades de crecimiento. Sin costo, sin compromiso.", s6pr:"100% Gratis → Aplica Abajo",
+    badge_start:"Inicio Rápido", badge_pop:"⭐ Más Popular", badge_scale:"Multi-Ubicación", badge_free:"Sin Costo",
+    s1t:"Auditoría SEO Técnico y Corrección", s1pr:"Desde $800", s1sub:"Proyecto único",
+    s1i1:"Crawl completo y reporte de errores", s1i2:"Core Web Vitals y velocidad de carga", s1i3:"Correcciones de indexación y crawlabilidad", s1i4:"Schema markup y datos estructurados", s1i5:"Recomendaciones de arquitectura", s1i6:"Implementación de correcciones priorizadas",
+    s2t:"SEO Local & Google Business Profile", s2pr:"Desde $500", s2sub:"Ideal para negocios de área de servicio",
+    s2i1:"Configuración y optimización de GBP", s2i2:"Construcción y limpieza de citas locales", s2i3:"Landing pages geo-targeted", s2i4:"Estrategia de generación de reseñas", s2i5:'Targeting de búsquedas "cerca de mí" y maps',
+    s3t:"SEO Programático a Escala", s3pr:"Desde $1,200", s3sub:"Build único · +retainer opcional",
+    s3i1:"Diseño de arquitectura de páginas por ubicación", s3i2:"Contenido geo-targeted a escala (50–200+ páginas)", s3i3:"Estrategia de clusters de enlaces internos", s3i4:"Schema + metadata para cada página", s3i5:"Despliegue en WordPress/Wix + QA",
+    s4t:"Foundation Package", s4pr:"$1,530", s4sub:"Sprint 3 meses · pago único",
+    s4i1:"Configuración y optimización de GBP", s4i2:"Optimización completa de metadata del sitio", s4i3:"Estrategia de keywords para tus servicios principales", s4i4:"Implementación de schema markup", s4i5:"Campaña de link building inicial", s4i6:"Reporte final de rankings y visibilidad",
+    s5t:"Retainer SEO Mensual", s5pr:"$750", s5sub:"Mes a mes · cancela cuando quieras",
+    s5i1:"Crawl técnico mensual + correcciones", s5i2:"Actualizaciones de contenido on-page y metadata", s5i3:"Link building y gestión de citas", s5i4:"Optimización GBP y estrategia de reseñas", s5i5:"Reporte mensual de performance (GSC + rankings)", s5i6:"Seguimiento de keywords y monitoreo de competidores",
+    s6t:"Auditoría SEO Gratis con IA", s6pr:"$0", s6sub:"Entregada en 24 horas",
+    s6i1:"Análisis de salud técnica de tu sitio", s6i2:"Análisis de brechas de keywords vs competidores", s6i3:"Evaluación de backlinks y autoridad", s6i4:"Top 3 oportunidades de crecimiento identificadas", s6i5:"Reporte PDF, sin compromisos",
+    s_cta_call:"Agendar Llamada Estratégica →", s_cta_audit:"Auditoría Gratis Primero →", s_cta_free:"Obtener mi Auditoría Gratis →",
     cs_tag:"Casos de Estudio", cs_h2:"Resultados Reales. Datos Verificados.", cs_desc:"Todos los resultados provienen de cuentas activas de clientes. Datos de GSC y rastreadores de rankings.",
     c1l:"Empresa de Piedra & Superficies · Sur de Florida · SEO Programático",
     c1h:"135 Páginas de Ubicación → +140% Clics MoM, 11 Keywords en #1",
@@ -580,7 +678,7 @@ const T = {
     ferr:"Algo salió mal. Escríbeme a felipe.p27.2001@gmail.com",
     ct_tag:"Trabajemos Juntos", ct_h1:"¿Listo para Rankear Sobre", ct_h2:"tus Competidores?",
     ct_p:"Agenda una llamada estratégica de 30 minutos. Revisaré tus rankings, identificaré tu mayor oportunidad SEO y te diré exactamente qué haría en el primer mes. Sin presentaciones, solo estrategia clara.",
-    ct_b1:"Agendar Llamada →", ct_b2:"Conectar en LinkedIn",
+    ct_b1:"Escríbeme para Empezar →", ct_b2:"Conectar en LinkedIn",
     ct_sub:'O escríbeme: <a href="mailto:felipe.p27.2001@gmail.com">felipe.p27.2001@gmail.com</a>',
   }
 };
