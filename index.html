@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Felipe Pinto — B2B Growth Engineer | AI Automation & SEO</title>
-  <meta name="description" content="I build AI-powered B2B growth systems. n8n automation, technical SEO, and Claude AI pipelines that turn your market into qualified revenue." />
+  <title>Felipe Pinto — Technical SEO & AI Automation Engineer</title>
+  <meta name="description" content="Technical SEO specialist and AI automation engineer. I build programmatic SEO systems, local search dominance, and n8n automation pipelines for US B2B companies." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,22 +12,22 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:       #0D1B2A;
-      --navy-mid:   #162030;
-      --navy-light: #1E2D3D;
-      --navy-card:  #172130;
-      --gold:       #F2DB08;
-      --gold-dim:   rgba(242,219,8,0.12);
-      --gold-border:rgba(242,219,8,0.25);
-      --text:       #E8ECF0;
-      --text-muted: #7B8FA0;
-      --text-dim:   #4A5B6C;
-      --border:     rgba(255,255,255,0.07);
-      --white:      #FFFFFF;
+      --navy:        #0D1B2A;
+      --navy-mid:    #162030;
+      --navy-light:  #1E2D3D;
+      --navy-card:   #172130;
+      --gold:        #F2DB08;
+      --gold-dim:    rgba(242,219,8,0.10);
+      --gold-border: rgba(242,219,8,0.22);
+      --text:        #E8ECF0;
+      --text-muted:  #7B8FA0;
+      --text-dim:    #4A5B6C;
+      --border:      rgba(255,255,255,0.07);
+      --green:       #22c55e;
+      --green-dim:   rgba(34,197,94,0.10);
     }
 
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--navy);
       color: var(--text);
@@ -40,663 +40,247 @@
 
     /* ── NAV ── */
     nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 200;
-      padding: 1.1rem 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(13,27,42,0.92);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      padding: 1rem 2.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(13,27,42,0.94);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
-      transition: background 0.3s;
     }
-
-    .nav-logo {
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -0.02em;
-      text-decoration: none;
-    }
+    .nav-logo { font-size: 1rem; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -0.02em; }
     .nav-logo span { color: var(--gold); }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.8rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-      data-i18n-attr: true;
-    }
+    .nav-right { display: flex; align-items: center; gap: 1.75rem; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--text); }
-
-    /* Language toggle */
-    .lang-toggle {
-      display: flex;
-      background: var(--navy-light);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-    .lang-btn {
-      padding: 0.35rem 0.7rem;
-      cursor: pointer;
-      color: var(--text-muted);
-      transition: background 0.15s, color 0.15s;
-      border: none;
-      background: transparent;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-    .lang-btn.active {
-      background: var(--gold);
-      color: var(--navy);
-    }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--navy);
-      padding: 0.55rem 1.3rem;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-decoration: none;
-      transition: opacity 0.2s, transform 0.15s;
-      white-space: nowrap;
-    }
-    .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      nav { padding: 1rem 1.5rem; }
-    }
+    .lang-toggle { display: flex; background: var(--navy-light); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .lang-btn { padding: 0.32rem 0.65rem; cursor: pointer; color: var(--text-muted); border: none; background: transparent; font-family: 'Inter',sans-serif; font-size: 0.75rem; font-weight: 700; transition: background 0.15s, color 0.15s; }
+    .lang-btn.active { background: var(--gold); color: var(--navy); }
+    .nav-cta { background: var(--gold); color: var(--navy); padding: 0.5rem 1.2rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: opacity 0.2s, transform 0.15s; white-space: nowrap; }
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+    @media (max-width: 768px) { .nav-links { display: none; } nav { padding: 1rem 1.5rem; } }
 
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
-      display: flex;
-      align-items: center;
+      display: flex; align-items: center;
       padding: 9rem 2.5rem 5rem;
-      position: relative;
-      overflow: hidden;
-      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(242,219,8,0.06) 0%, transparent 60%),
-                  var(--navy);
+      position: relative; overflow: hidden;
+      background: radial-gradient(ellipse 80% 55% at 50% -5%, rgba(242,219,8,0.055) 0%, transparent 65%), var(--navy);
     }
-
     .hero-grid-bg {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black, transparent);
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 70% 55% at 50% 0%, black, transparent);
       pointer-events: none;
     }
-
-    .hero-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
+    .hero-inner { max-width: 880px; margin: 0 auto; position: relative; z-index: 1; }
 
     .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--gold-dim);
-      border: 1px solid var(--gold-border);
-      color: var(--gold);
-      padding: 0.4rem 1rem;
-      border-radius: 100px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-      animation: fadeUp 0.6s ease both;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      color: var(--gold); padding: 0.38rem 1rem; border-radius: 100px;
+      font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      margin-bottom: 1.75rem;
+      animation: fadeUp 0.55s ease both;
     }
+    .badge-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: pulse 2.5s infinite; }
 
-    .badge-dot {
-      width: 6px; height: 6px;
-      background: var(--gold);
-      border-radius: 50%;
-      animation: pulse 2.5s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.85); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.45;transform:scale(0.8)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
 
     h1.hero-h1 {
-      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.6s 0.1s ease both;
+      font-size: clamp(2.5rem, 5.2vw, 4rem); font-weight: 900;
+      line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 1.4rem;
+      animation: fadeUp 0.55s 0.08s ease both;
     }
-
     h1.hero-h1 .accent { color: var(--gold); }
-
     .hero-sub {
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: var(--text-muted);
-      max-width: 600px;
-      margin-bottom: 2.75rem;
-      line-height: 1.75;
-      animation: fadeUp 0.6s 0.2s ease both;
+      font-size: clamp(1rem, 1.7vw, 1.15rem); color: var(--text-muted);
+      max-width: 590px; margin-bottom: 2.5rem; line-height: 1.78;
+      animation: fadeUp 0.55s 0.16s ease both;
     }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      animation: fadeUp 0.6s 0.3s ease both;
-    }
-
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.55s 0.24s ease both; }
     .btn-primary {
-      background: var(--gold);
-      color: var(--navy);
-      padding: 0.9rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 0.95rem;
-      letter-spacing: -0.01em;
+      background: var(--gold); color: var(--navy); padding: 0.88rem 2rem;
+      border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.94rem;
       transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
     }
-    .btn-primary:hover {
-      opacity: 0.92;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(242,219,8,0.25);
-    }
-
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(242,219,8,0.22); }
     .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      padding: 0.9rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: 1px solid var(--border);
-      transition: border-color 0.2s, transform 0.15s;
+      background: transparent; color: var(--text); padding: 0.88rem 2rem;
+      border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.94rem;
+      border: 1px solid var(--border); transition: border-color 0.2s, transform 0.15s;
     }
-    .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.25);
-      transform: translateY(-2px);
-    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.22); transform: translateY(-2px); }
 
-    .hero-proof {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-      animation: fadeUp 0.6s 0.4s ease both;
-    }
-
-    .proof-avatars {
-      display: flex;
-    }
+    .hero-proof { display: flex; align-items: center; gap: 1.25rem; margin-top: 3rem; animation: fadeUp 0.55s 0.32s ease both; }
+    .proof-avatars { display: flex; }
     .proof-avatar {
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      border: 2px solid var(--navy);
-      background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.75rem; font-weight: 700; color: var(--gold);
-      margin-left: -8px;
+      width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--navy);
+      background: var(--navy-light); display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 700; color: var(--gold); margin-left: -7px;
     }
     .proof-avatar:first-child { margin-left: 0; }
-
-    .proof-text {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+    .proof-text { font-size: 0.83rem; color: var(--text-muted); }
     .proof-text strong { color: var(--text); }
 
-    /* ── STATS STRIP ── */
-    .stats-strip {
-      background: var(--navy-mid);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 2.5rem;
-    }
+    /* ── STATS ── */
+    .stats-strip { background: var(--navy-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2.5rem 2.5rem; }
+    .stats-grid { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; text-align: center; }
+    @media(max-width:640px){ .stats-grid{grid-template-columns:repeat(2,1fr);} }
+    .stat-num { font-size: 2.3rem; font-weight: 900; color: var(--gold); line-height: 1; letter-spacing: -0.03em; }
+    .stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
 
-    .stats-grid {
-      max-width: 960px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      text-align: center;
-    }
-
-    @media (max-width: 640px) {
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    .stat-num {
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--gold);
-      line-height: 1;
-      letter-spacing: -0.03em;
-    }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 0.35rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    /* ── SECTION COMMONS ── */
+    /* ── SECTIONS ── */
     section { padding: 5.5rem 2.5rem; }
-
     .section-inner { max-width: 960px; margin: 0 auto; }
-
     .section-tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--gold);
-      background: var(--gold-dim);
-      border: 1px solid var(--gold-border);
-      padding: 0.3rem 0.8rem;
-      border-radius: 4px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
+      display: inline-block; font-size: 0.7rem; font-weight: 700; color: var(--gold);
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      padding: 0.28rem 0.75rem; border-radius: 4px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.9rem;
     }
-
-    h2.section-h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-
-    .section-desc {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      max-width: 560px;
-      margin-bottom: 3.5rem;
-      line-height: 1.75;
-    }
+    h2.section-h2 { font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 0.9rem; }
+    .section-desc { color: var(--text-muted); font-size: 1.02rem; max-width: 550px; margin-bottom: 3rem; line-height: 1.75; }
 
     /* ── SERVICES ── */
     #services { background: var(--navy); }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.4rem; }
     .service-card {
-      background: var(--navy-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 2rem;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      position: relative;
-      overflow: hidden;
+      background: var(--navy-card); border: 1px solid var(--border); border-radius: 14px; padding: 1.85rem;
+      transition: border-color 0.2s, transform 0.18s, box-shadow 0.2s; position: relative; overflow: hidden;
     }
     .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      opacity: 0;
-      transition: opacity 0.2s;
+      opacity: 0; transition: opacity 0.2s;
     }
-    .service-card:hover {
-      border-color: var(--gold-border);
-      transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
-    }
+    .service-card:hover { border-color: var(--gold-border); transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.28); }
     .service-card:hover::before { opacity: 1; }
+    .service-icon { width: 42px; height: 42px; background: var(--gold-dim); border: 1px solid var(--gold-border); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 1.1rem; }
+    .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.55rem; letter-spacing: -0.01em; }
+    .service-card p { font-size: 0.855rem; color: var(--text-muted); line-height: 1.7; }
+    .service-price { display: inline-block; margin-top: 1.1rem; font-size: 0.78rem; font-weight: 700; color: var(--gold); background: var(--gold-dim); border: 1px solid var(--gold-border); padding: 0.28rem 0.7rem; border-radius: 4px; }
 
-    .service-icon {
-      width: 44px; height: 44px;
-      background: var(--gold-dim);
-      border: 1px solid var(--gold-border);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-      letter-spacing: -0.01em;
-    }
-
-    .service-card p {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-
-    .service-price {
-      display: inline-block;
-      margin-top: 1.25rem;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--gold);
-      background: var(--gold-dim);
-      border: 1px solid var(--gold-border);
-      padding: 0.3rem 0.75rem;
-      border-radius: 4px;
-      letter-spacing: 0.02em;
-    }
-
-    /* ── CASE STUDIES ── */
+    /* ── CASES ── */
     #cases { background: var(--navy-mid); }
-
-    .cases-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
+    .cases-list { display: flex; flex-direction: column; gap: 1.4rem; }
     .case-card {
-      background: var(--navy-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 2.25rem 2.5rem;
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 2rem;
-      align-items: center;
-      transition: border-color 0.2s, transform 0.2s;
+      background: var(--navy-card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 2rem 2.25rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center;
+      transition: border-color 0.2s, transform 0.18s;
     }
-    .case-card:hover {
-      border-color: var(--gold-border);
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 640px) {
-      .case-card { grid-template-columns: 1fr; }
-    }
-
-    .case-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.6rem;
-    }
-
-    .case-card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
-    }
-
-    .case-card p {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
-
-    .case-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .tag {
-      font-size: 0.72rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      background: rgba(255,255,255,0.04);
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-    }
-
-    .case-metrics {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      min-width: 130px;
-    }
-
+    .case-card:hover { border-color: var(--gold-border); transform: translateY(-2px); }
+    @media(max-width:640px){ .case-card{grid-template-columns:1fr;} }
+    .case-label { font-size: 0.7rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.55rem; }
+    .case-card h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.45rem; }
+    .case-card p { font-size: 0.855rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 0.9rem; }
+    .case-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag { font-size: 0.7rem; padding: 0.22rem 0.55rem; border-radius: 4px; background: rgba(255,255,255,0.04); color: var(--text-muted); border: 1px solid var(--border); }
+    .case-metrics { display: flex; flex-direction: column; gap: 1.1rem; min-width: 120px; }
     .metric { text-align: right; }
-
-    .metric-num {
-      font-size: 1.9rem;
-      font-weight: 900;
-      color: var(--gold);
-      line-height: 1;
-      letter-spacing: -0.03em;
-    }
-
-    .metric-label {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      margin-top: 0.2rem;
-      font-weight: 500;
-    }
+    .metric-num { font-size: 1.8rem; font-weight: 900; color: var(--gold); line-height: 1; letter-spacing: -0.03em; }
+    .metric-label { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.18rem; }
 
     /* ── PROCESS ── */
     #process { background: var(--navy); }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .step {
-      background: var(--navy-card);
-      padding: 2rem;
-      position: relative;
-      transition: background 0.2s;
-    }
+    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .step { background: var(--navy-card); padding: 1.85rem; transition: background 0.2s; }
     .step:hover { background: var(--navy-light); }
+    .step-num { font-size: 0.68rem; font-weight: 700; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.7rem; opacity: 0.8; }
+    .step h3 { font-size: 0.93rem; font-weight: 700; margin-bottom: 0.45rem; }
+    .step p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.65; }
 
-    .step-num {
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-      opacity: 0.8;
-    }
-
-    .step h3 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-    }
-
-    .step p {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    /* ── TECH STACK ── */
+    /* ── STACK ── */
     #stack { background: var(--navy-mid); }
+    .stack-group { margin-bottom: 2rem; }
+    .stack-group-label { font-size: 0.72rem; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+    .stack-pills { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .stack-pill {
+      background: var(--navy-card); border: 1px solid var(--border); border-radius: 8px;
+      padding: 0.55rem 1.1rem; font-size: 0.83rem; font-weight: 600; color: var(--text);
+      display: flex; align-items: center; gap: 0.5rem; transition: border-color 0.2s, transform 0.15s;
+    }
+    .stack-pill:hover { border-color: var(--gold-border); transform: translateY(-1px); }
+    .stack-dot { width: 7px; height: 7px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
 
-    .stack-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: center;
+    /* ── AUDIT FORM ── */
+    #audit { background: var(--navy); }
+    .audit-wrap {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
     }
+    @media(max-width:768px){ .audit-wrap{grid-template-columns:1fr; gap:2.5rem;} }
 
-    .stack-item {
-      background: var(--navy-card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.75rem 1.4rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      transition: border-color 0.2s, transform 0.15s;
-    }
-    .stack-item:hover {
-      border-color: var(--gold-border);
-      transform: translateY(-2px);
-    }
-    .stack-item .stack-dot {
-      width: 8px; height: 8px;
-      background: var(--gold);
-      border-radius: 50%;
-    }
+    .audit-pitch h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1rem; }
+    .audit-pitch h2 .accent { color: var(--gold); }
+    .audit-pitch p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.78; margin-bottom: 1.5rem; }
+    .audit-bullets { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1.5rem; }
+    .audit-bullet { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.875rem; color: var(--text-muted); }
+    .audit-bullet::before { content: '✓'; color: var(--gold); font-weight: 800; flex-shrink: 0; margin-top: 0.05rem; }
+    .audit-note { font-size: 0.78rem; color: var(--text-dim); }
 
-    /* ── CTA FINAL ── */
-    #contact {
-      background: var(--navy-mid);
-      border-top: 1px solid var(--border);
+    /* Form card */
+    .audit-form-card {
+      background: var(--navy-card); border: 1px solid var(--border); border-radius: 16px; padding: 2.25rem;
     }
-
-    .cta-block {
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 2rem 0;
+    .form-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .form-sub { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 1.75rem; }
+    .form-group { margin-bottom: 1.1rem; }
+    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .form-group input, .form-group select {
+      width: 100%; background: var(--navy-light); border: 1px solid var(--border); border-radius: 8px;
+      padding: 0.75rem 1rem; color: var(--text); font-family: 'Inter', sans-serif; font-size: 0.9rem;
+      transition: border-color 0.2s, box-shadow 0.2s; outline: none;
     }
-
-    .cta-block h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.25rem;
-      line-height: 1.1;
+    .form-group input::placeholder { color: var(--text-dim); }
+    .form-group input:focus, .form-group select:focus { border-color: var(--gold-border); box-shadow: 0 0 0 3px rgba(242,219,8,0.08); }
+    .form-group select option { background: var(--navy-card); }
+    .form-submit {
+      width: 100%; background: var(--gold); color: var(--navy); border: none; border-radius: 8px;
+      padding: 0.95rem; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 800;
+      cursor: pointer; transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s; margin-top: 0.5rem;
     }
+    .form-submit:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(242,219,8,0.22); }
+    .form-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
+    /* States */
+    .form-status { display: none; margin-top: 1rem; padding: 0.85rem 1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 500; }
+    .form-status.success { display: flex; align-items: center; gap: 0.5rem; background: var(--green-dim); border: 1px solid rgba(34,197,94,0.25); color: var(--green); }
+    .form-status.error { display: flex; align-items: center; gap: 0.5rem; background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); color: #f87171; }
+    .form-loading { display: none; text-align: center; padding: 0.85rem; font-size: 0.85rem; color: var(--text-muted); }
+
+    .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(242,219,8,0.3); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.7s linear infinite; margin-right: 0.5rem; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── CTA ── */
+    #contact { background: var(--navy-mid); border-top: 1px solid var(--border); }
+    .cta-block { max-width: 700px; margin: 0 auto; text-align: center; padding: 2rem 0; }
+    .cta-block h2 { font-size: clamp(1.9rem, 3.8vw, 2.9rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 1.1rem; line-height: 1.1; }
     .cta-block h2 .accent { color: var(--gold); }
-
-    .cta-block p {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 480px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.75;
-    }
-
-    .cta-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .cta-sub {
-      margin-top: 1.5rem;
-      font-size: 0.82rem;
-      color: var(--text-dim);
-    }
-    .cta-sub a {
-      color: var(--text-muted);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
+    .cta-block p { font-size: 1rem; color: var(--text-muted); max-width: 460px; margin: 0 auto 2.25rem; line-height: 1.75; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .cta-sub { margin-top: 1.4rem; font-size: 0.8rem; color: var(--text-dim); }
+    .cta-sub a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
 
     /* ── FOOTER ── */
-    footer {
-      background: var(--navy);
-      border-top: 1px solid var(--border);
-      padding: 2.5rem 2.5rem;
-    }
-
-    .footer-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-logo {
-      font-size: 0.9rem;
-      font-weight: 800;
-      color: var(--text-muted);
-    }
+    footer { background: var(--navy); border-top: 1px solid var(--border); padding: 2.25rem 2.5rem; }
+    .footer-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-logo { font-size: 0.88rem; font-weight: 800; color: var(--text-muted); }
     .footer-logo span { color: var(--gold); }
-
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
-    .footer-links a {
-      color: var(--text-dim);
-      text-decoration: none;
-      font-size: 0.82rem;
-      transition: color 0.2s;
-    }
+    .footer-links { display: flex; gap: 1.4rem; list-style: none; }
+    .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
     .footer-links a:hover { color: var(--text-muted); }
+    .footer-copy { font-size: 0.76rem; color: var(--text-dim); }
 
-    .footer-copy {
-      font-size: 0.78rem;
-      color: var(--text-dim);
-    }
-
-    /* ── SCROLL REVEAL ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    /* ── REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
 
-<!-- ─── NAV ─── -->
+<!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">FP<span>.</span></a>
   <div class="nav-right">
@@ -704,55 +288,50 @@
       <li><a href="#services" data-i18n="nav_services">Services</a></li>
       <li><a href="#cases" data-i18n="nav_cases">Case Studies</a></li>
       <li><a href="#process" data-i18n="nav_process">Process</a></li>
-      <li><a href="#stack" data-i18n="nav_stack">Tech Stack</a></li>
+      <li><a href="#audit" data-i18n="nav_audit">Free Audit</a></li>
     </ul>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
     </div>
-    <a href="#contact" class="nav-cta" data-i18n="nav_cta">Book a Call</a>
+    <a href="#audit" class="nav-cta" data-i18n="nav_cta">Get Free Audit</a>
   </div>
 </nav>
 
-<!-- ─── HERO ─── -->
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-grid-bg"></div>
   <div class="hero-inner">
     <div class="hero-badge">
       <span class="badge-dot"></span>
-      <span data-i18n="badge">Available for new projects</span>
+      <span data-i18n="badge">Available for US clients</span>
     </div>
-
     <h1 class="hero-h1">
-      <span data-i18n="hero_h1_line1">Dominate Your Market.</span><br>
-      <span class="accent" data-i18n="hero_h1_line2">Scale with AI.</span>
+      <span data-i18n="hero_h1_1">Technical SEO &</span><br>
+      <span class="accent" data-i18n="hero_h1_2">AI-Powered Growth.</span>
     </h1>
-
     <p class="hero-sub" data-i18n="hero_sub">
-      I'm not a traditional SEO consultant. I'm a Growth Engineer who builds
-      AI-powered B2B ecosystems — n8n automation pipelines, technical SEO
-      infrastructure, and Claude AI systems that convert visibility into revenue.
+      I'm a Technical SEO Engineer who builds programmatic SEO systems, local search dominance, and n8n automation pipelines that turn your market into predictable organic revenue — without paid ads.
     </p>
-
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary" data-i18n="hero_cta1">Start Growing →</a>
-      <a href="#cases" class="btn-secondary" data-i18n="hero_cta2">View Case Studies</a>
+      <a href="#audit" class="btn-primary" data-i18n="hero_cta1">Get Your Free AI Audit →</a>
+      <a href="#cases" class="btn-secondary" data-i18n="hero_cta2">See Results</a>
     </div>
-
     <div class="hero-proof">
       <div class="proof-avatars">
         <div class="proof-avatar">AS</div>
         <div class="proof-avatar">SP</div>
-        <div class="proof-avatar">+5</div>
+        <div class="proof-avatar">MR</div>
+        <div class="proof-avatar">+4</div>
       </div>
       <p class="proof-text" data-i18n="hero_proof">
-        <strong>7+ B2B clients</strong> grew organically with AI-powered systems
+        <strong>7+ US B2B clients</strong> ranking on page 1 with zero paid ads
       </p>
     </div>
   </div>
 </section>
 
-<!-- ─── STATS STRIP ─── -->
+<!-- STATS -->
 <div class="stats-strip">
   <div class="stats-grid">
     <div class="reveal">
@@ -760,12 +339,12 @@
       <div class="stat-label" data-i18n="stat1">MoM Organic Clicks</div>
     </div>
     <div class="reveal">
-      <div class="stat-num">2x</div>
-      <div class="stat-label" data-i18n="stat2">Search Visibility</div>
+      <div class="stat-num">135</div>
+      <div class="stat-label" data-i18n="stat2">Location Pages Built</div>
     </div>
     <div class="reveal">
-      <div class="stat-num">135</div>
-      <div class="stat-label" data-i18n="stat3">Location Pages Built</div>
+      <div class="stat-num">2x</div>
+      <div class="stat-label" data-i18n="stat3">Search Visibility</div>
     </div>
     <div class="reveal">
       <div class="stat-num">#1</div>
@@ -774,430 +353,512 @@
   </div>
 </div>
 
-<!-- ─── SERVICES ─── -->
+<!-- SERVICES -->
 <section id="services">
   <div class="section-inner">
     <div class="reveal">
-      <span class="section-tag" data-i18n="services_tag">What I Build</span>
-      <h2 class="section-h2" data-i18n="services_h2">Growth Systems, Not Band-Aids</h2>
-      <p class="section-desc" data-i18n="services_desc">
-        Every engagement is an infrastructure project. I design, build, and
-        deploy AI-powered systems that compound over time.
+      <span class="section-tag" data-i18n="svc_tag">What I Do</span>
+      <h2 class="section-h2" data-i18n="svc_h2">SEO That Compounds. Not Just Reports.</h2>
+      <p class="section-desc" data-i18n="svc_desc">
+        Every engagement is built as infrastructure — systems that generate traffic and leads month after month, not one-off fixes.
       </p>
     </div>
-
     <div class="services-grid">
       <div class="service-card reveal">
-        <div class="service-icon">🤖</div>
-        <h3 data-i18n="svc1_title">AI-CRM B2B Automation</h3>
-        <p data-i18n="svc1_desc">
-          Custom n8n pipelines + Claude AI that automate prospect research,
-          personalized outreach, and CRM enrichment. Built to run 24/7.
-        </p>
-        <span class="service-price" data-i18n="svc1_price">From $2,500 / setup</span>
+        <div class="service-icon">🔧</div>
+        <h3 data-i18n="svc1_t">Technical SEO Audit & Fix</h3>
+        <p data-i18n="svc1_p">Full Screaming Frog crawl, GSC analysis, Core Web Vitals, indexation issues, schema markup, site architecture. I deliver a prioritized fix list and implement it — not just a PDF.</p>
+        <span class="service-price" data-i18n="svc1_price">From $800 / one-time</span>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">🔍</div>
-        <h3 data-i18n="svc2_title">Technical SEO Infrastructure</h3>
-        <p data-i18n="svc2_desc">
-          Programmatic location pages, schema markup, Core Web Vitals
-          optimization, and AI-powered content systems that capture high-intent
-          queries at scale.
-        </p>
-        <span class="service-price" data-i18n="svc2_price">From $1,800 / project</span>
+        <div class="service-icon">📍</div>
+        <h3 data-i18n="svc2_t">Local SEO & Google Business Profile</h3>
+        <p data-i18n="svc2_p">GBP setup and optimization, Moz Local citations, geo-page strategy, review management. Dominate "near me" searches and maps pack in your service area.</p>
+        <span class="service-price" data-i18n="svc2_price">From $500 / mo</span>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">⚡</div>
-        <h3 data-i18n="svc3_title">Growth Intelligence Dashboard</h3>
-        <p data-i18n="svc3_desc">
-          DataForSEO + n8n pipelines delivering live competitor insights,
-          ranking alerts, and keyword opportunity reports straight to your
-          Slack or email.
-        </p>
-        <span class="service-price" data-i18n="svc3_price">From $900 / mo</span>
+        <h3 data-i18n="svc3_t">Programmatic SEO at Scale</h3>
+        <p data-i18n="svc3_p">I build location page systems in WordPress/Wix using PHP and DataForSEO data. Deployed 135 pages for one client — MoM clicks jumped +140%. For businesses targeting multiple cities.</p>
+        <span class="service-price" data-i18n="svc3_price">From $1,200 / project</span>
       </div>
       <div class="service-card reveal">
-        <div class="service-icon">🎯</div>
-        <h3 data-i18n="svc4_title">Free AI Prospect Audit</h3>
-        <p data-i18n="svc4_desc">
-          I run a full AI-powered SEO & visibility audit on your site and
-          deliver a branded report with 3 high-impact fixes. Zero commitment.
-        </p>
-        <span class="service-price" data-i18n="svc4_price">Free → Qualify Below</span>
+        <div class="service-icon">🚀</div>
+        <h3 data-i18n="svc4_t">Foundation Package — 3 Months</h3>
+        <p data-i18n="svc4_p">GBP setup, complete metadata optimization, keyword strategy, schema markup, and foundational backlinks. Everything a business needs to start ranking — delivered in 90 days.</p>
+        <span class="service-price" data-i18n="svc4_price">$1,530 / 3 months</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📊</div>
+        <h3 data-i18n="svc5_t">Monthly SEO Retainer</h3>
+        <p data-i18n="svc5_p">4-pillar monthly cycle: technical fixes + on-page content + link building + local signals. Reporting via Agency Analytics. Full transparency, no fluff.</p>
+        <span class="service-price" data-i18n="svc5_price">From $750 / mo</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🤖</div>
+        <h3 data-i18n="svc6_t">AI Automation + SEO Pipeline</h3>
+        <p data-i18n="svc6_p">n8n workflows + Claude AI that automate prospect audits, rank tracking alerts, competitor monitoring, and content pipelines. Built on top of your existing SEO strategy.</p>
+        <span class="service-price" data-i18n="svc6_price">From $1,500 / setup</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── CASE STUDIES ─── -->
+<!-- CASES -->
 <section id="cases">
   <div class="section-inner">
     <div class="reveal">
       <span class="section-tag" data-i18n="cases_tag">Proof of Work</span>
-      <h2 class="section-h2" data-i18n="cases_h2">Results That Compound</h2>
-      <p class="section-desc" data-i18n="cases_desc">
-        Real numbers from real B2B clients. No vanity metrics.
-      </p>
+      <h2 class="section-h2" data-i18n="cases_h2">Real Results. Real Clients.</h2>
+      <p class="section-desc" data-i18n="cases_desc">All US-based B2B clients. No vanity metrics — just GSC data and ranking screenshots.</p>
     </div>
-
     <div class="cases-list">
+
       <div class="case-card reveal">
         <div class="case-body">
-          <div class="case-label" data-i18n="case1_label">Stone & Construction · B2B Local SEO</div>
-          <h3 data-i18n="case1_title">Armina Stone — Programmatic Location Dominance</h3>
-          <p data-i18n="case1_desc">
-            Architected 135 geo-targeted location pages using programmatic SEO.
-            Implemented structured data, internal linking clusters, and a
-            content pipeline powered by DataForSEO + Python. Result: explosive
-            MoM growth with zero paid ads.
-          </p>
+          <div class="case-label" data-i18n="c1_label">Stone Countertops · South Florida · Programmatic SEO</div>
+          <h3 data-i18n="c1_h">Armina Stone — 135 Location Pages, +140% MoM Clicks</h3>
+          <p data-i18n="c1_p">Built 135 geo-targeted pages from scratch using PHP/Code Snippets in WordPress (27 hub pages + 108 service pages across 27 South Florida cities). Optimized 56 pages of metadata using WordPress API. Fixed Elementor attachment bug on 54 pages. Result: explosive MoM growth with zero paid ads.</p>
           <div class="case-tags">
             <span class="tag">Programmatic SEO</span>
-            <span class="tag">Python</span>
+            <span class="tag">WordPress / PHP</span>
             <span class="tag">DataForSEO</span>
             <span class="tag">Schema Markup</span>
             <span class="tag">135 Pages</span>
           </div>
         </div>
         <div class="case-metrics">
-          <div class="metric">
-            <div class="metric-num">+140.6%</div>
-            <div class="metric-label" data-i18n="case1_m1">MoM Clicks</div>
-          </div>
-          <div class="metric">
-            <div class="metric-num">135</div>
-            <div class="metric-label" data-i18n="case1_m2">Pages Deployed</div>
-          </div>
+          <div class="metric"><div class="metric-num">+140%</div><div class="metric-label" data-i18n="c1_m1">MoM Clicks</div></div>
+          <div class="metric"><div class="metric-num">50%</div><div class="metric-label" data-i18n="c1_m2">KWs in Top 10</div></div>
+          <div class="metric"><div class="metric-num">11</div><div class="metric-label" data-i18n="c1_m3">#1 Rankings</div></div>
         </div>
       </div>
 
       <div class="case-card reveal">
         <div class="case-body">
-          <div class="case-label" data-i18n="case2_label">Professional Services · B2B SEO</div>
-          <h3 data-i18n="case2_title">Spera Partners — 2x Search Visibility</h3>
-          <p data-i18n="case2_desc">
-            Full technical SEO overhaul: site architecture restructure,
-            E-E-A-T content refresh, and high-intent keyword strategy.
-            Doubled organic search visibility and secured #1 rankings on
-            primary conversion keywords within 90 days.
-          </p>
+          <div class="case-label" data-i18n="c2_label">IT Managed Services · Pittsburgh PA · Local SEO</div>
+          <h3 data-i18n="c2_h">Spera Partners — 2x Visibility, Beats Competitor with Higher DA</h3>
+          <p data-i18n="c2_p">Designed a hub-and-spoke geo page strategy (Pittsburgh, Murrysville, Monroeville). Integrated AI keywords across 5 service pages. Result: doubled search visibility vs main competitor Wolf Consulting despite lower domain authority. Now dominates #1 on primary conversion keywords.</p>
           <div class="case-tags">
-            <span class="tag">Technical SEO</span>
-            <span class="tag">E-E-A-T</span>
-            <span class="tag">Keyword Strategy</span>
-            <span class="tag">#1 Rankings</span>
+            <span class="tag">Local SEO</span>
+            <span class="tag">Geo Pages</span>
+            <span class="tag">E-E-A-T Content</span>
+            <span class="tag">AI Keywords</span>
           </div>
         </div>
         <div class="case-metrics">
-          <div class="metric">
-            <div class="metric-num">2x</div>
-            <div class="metric-label" data-i18n="case2_m1">Search Visibility</div>
+          <div class="metric"><div class="metric-num">2x</div><div class="metric-label" data-i18n="c2_m1">Search Visibility</div></div>
+          <div class="metric"><div class="metric-num">#1</div><div class="metric-label" data-i18n="c2_m2">Key Conversions</div></div>
+        </div>
+      </div>
+
+      <div class="case-card reveal">
+        <div class="case-body">
+          <div class="case-label" data-i18n="c3_label">Foundation Package · Multiple Clients · 3-Month Sprint</div>
+          <h3 data-i18n="c3_h">Third Fox Referrals — 5 Clients, Foundation Built in 90 Days</h3>
+          <p data-i18n="c3_p">Delivered the Foundation Package to 5 clients simultaneously: 1331 Studios, RH Nature Reconnect, Electric Cat, Eisenwood, Enlightened Assessment. Each received GBP setup, complete metadata, keyword optimization, schema markup, and foundational backlinks in 3 months.</p>
+          <div class="case-tags">
+            <span class="tag">GBP Setup</span>
+            <span class="tag">Metadata Optimization</span>
+            <span class="tag">Schema</span>
+            <span class="tag">Link Building</span>
           </div>
-          <div class="metric">
-            <div class="metric-num">#1</div>
-            <div class="metric-label" data-i18n="case2_m2">High-Intent KWs</div>
-          </div>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="metric-num">5</div><div class="metric-label" data-i18n="c3_m1">Clients / Batch</div></div>
+          <div class="metric"><div class="metric-num">90d</div><div class="metric-label" data-i18n="c3_m2">Delivery</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-tag" data-i18n="proc_tag">How I Work</span>
+      <h2 class="section-h2" data-i18n="proc_h2">The Monthly SEO Cycle</h2>
+      <p class="section-desc" data-i18n="proc_desc">A 4-pillar repeatable system. Every month, every client.</p>
+    </div>
+    <div class="process-grid reveal">
+      <div class="step">
+        <div class="step-num" data-i18n="s1n">01 — Technical</div>
+        <h3 data-i18n="s1h">Crawl & Fix</h3>
+        <p data-i18n="s1p">Screaming Frog crawl, GSC error review, CWV audit, indexation fixes, internal linking, schema updates.</p>
+      </div>
+      <div class="step">
+        <div class="step-num" data-i18n="s2n">02 — On-Page</div>
+        <h3 data-i18n="s2h">Content & Keywords</h3>
+        <p data-i18n="s2p">Keyword research with Moz/DataForSEO, metadata optimization, content refresh, E-E-A-T improvements, new landing pages.</p>
+      </div>
+      <div class="step">
+        <div class="step-num" data-i18n="s3n">03 — Authority</div>
+        <h3 data-i18n="s3h">Links & Citations</h3>
+        <p data-i18n="s3p">Boostability link building, Moz Local citation management, GBP optimization, review strategy, NAP consistency.</p>
+      </div>
+      <div class="step">
+        <div class="step-num" data-i18n="s4n">04 — Report</div>
+        <h3 data-i18n="s4h">Data & Strategy</h3>
+        <p data-i18n="s4p">Agency Analytics dashboard, GSC/GA4 MoM analysis, rank tracking, next-month priorities. You see everything.</p>
+      </div>
+      <div class="step">
+        <div class="step-num" data-i18n="s5n">+ AI Layer</div>
+        <h3 data-i18n="s5h">Automation</h3>
+        <p data-i18n="s5p">n8n pipelines run competitor monitoring, rank alerts, and content opportunities automatically. Less manual work, faster decisions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-tag" data-i18n="stack_tag">Tools</span>
+      <h2 class="section-h2" data-i18n="stack_h2">The Full Toolset</h2>
+    </div>
+    <div class="reveal">
+      <div class="stack-group">
+        <div class="stack-group-label" data-i18n="sg1">SEO & Analytics</div>
+        <div class="stack-pills">
+          <div class="stack-pill"><span class="stack-dot"></span>Screaming Frog</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Moz Pro</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Moz Local</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Google Search Console</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Google Analytics 4</div>
+          <div class="stack-pill"><span class="stack-dot"></span>DataForSEO</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Agency Analytics</div>
+        </div>
+      </div>
+      <div class="stack-group">
+        <div class="stack-group-label" data-i18n="sg2">CMS & Development</div>
+        <div class="stack-pills">
+          <div class="stack-pill"><span class="stack-dot"></span>WordPress</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Elementor</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Yoast / RankMath</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Wix</div>
+          <div class="stack-pill"><span class="stack-dot"></span>PHP / Code Snippets</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Python</div>
+        </div>
+      </div>
+      <div class="stack-group">
+        <div class="stack-group-label" data-i18n="sg3">AI & Automation</div>
+        <div class="stack-pills">
+          <div class="stack-pill"><span class="stack-dot"></span>n8n</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Claude AI (Anthropic)</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Jina AI</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Google Ads</div>
+          <div class="stack-pill"><span class="stack-dot"></span>Mailchimp</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── PROCESS ─── -->
-<section id="process">
+<!-- FREE AUDIT FORM -->
+<section id="audit">
   <div class="section-inner">
-    <div class="reveal">
-      <span class="section-tag" data-i18n="process_tag">The Machine</span>
-      <h2 class="section-h2" data-i18n="process_h2">How the AI-CRM B2B System Works</h2>
-      <p class="section-desc" data-i18n="process_desc">
-        A repeatable 5-step framework that turns any market into a pipeline.
-      </p>
-    </div>
+    <div class="audit-wrap">
 
-    <div class="process-grid reveal">
-      <div class="step">
-        <div class="step-num" data-i18n="step1_n">01 — Audit</div>
-        <h3 data-i18n="step1_h">Technical Deep Scan</h3>
-        <p data-i18n="step1_p">Automated crawl via DataForSEO. Identify gaps: Core Web Vitals, indexation, schema, site architecture.</p>
+      <div class="audit-pitch reveal">
+        <span class="section-tag" data-i18n="audit_tag">Free AI Audit</span>
+        <h2><span data-i18n="audit_h1">Get Your</span> <span class="accent" data-i18n="audit_h2">Free SEO Audit</span></h2>
+        <p data-i18n="audit_p">I run a full AI-powered technical and visibility analysis on your website and deliver a branded report with your top 3 growth opportunities. Powered by DataForSEO + Claude AI. No commitment, no pitch call required.</p>
+        <div class="audit-bullets">
+          <div class="audit-bullet" data-i18n="ab1">Technical issues (crawl errors, CWV, indexation, schema)</div>
+          <div class="audit-bullet" data-i18n="ab2">Keyword gaps and ranking opportunities vs your competitors</div>
+          <div class="audit-bullet" data-i18n="ab3">Backlink profile analysis and authority gaps</div>
+          <div class="audit-bullet" data-i18n="ab4">Personalized 3-action growth plan for your market</div>
+        </div>
+        <p class="audit-note" data-i18n="audit_note">Delivered to your email within 24 hours. 100% free, no strings attached.</p>
       </div>
-      <div class="step">
-        <div class="step-num" data-i18n="step2_n">02 — Research</div>
-        <h3 data-i18n="step2_h">AI Market Intelligence</h3>
-        <p data-i18n="step2_p">Jina AI + Claude extract competitor strategies, keyword opportunities, and buyer intent signals at scale.</p>
+
+      <div class="audit-form-card reveal">
+        <p class="form-title" data-i18n="form_title">Request Your Free Audit</p>
+        <p class="form-sub" data-i18n="form_sub">Takes 30 seconds. Results in your inbox within 24h.</p>
+
+        <form id="auditForm" novalidate>
+          <div class="form-group">
+            <label data-i18n="fl_name">Your Name</label>
+            <input type="text" id="f_name" placeholder="John Smith" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="fl_biz">Business Name</label>
+            <input type="text" id="f_biz" placeholder="Acme Plumbing Pittsburgh" required />
+          </div>
+          <div class="form-group">
+            <label data-i18n="fl_url">Website URL</label>
+            <input type="url" id="f_url" placeholder="https://yourwebsite.com" required />
+          </div>
+          <div class="form-group">
+            <label data-i18n="fl_email">Email Address</label>
+            <input type="email" id="f_email" placeholder="john@yourcompany.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="fl_goal">Main SEO Goal</label>
+            <select id="f_goal">
+              <option value="" data-i18n="fg_ph">Select your goal...</option>
+              <option value="more_leads" data-i18n="fg1">Get more local leads</option>
+              <option value="rank_kw" data-i18n="fg2">Rank for specific keywords</option>
+              <option value="beat_comp" data-i18n="fg3">Beat a specific competitor</option>
+              <option value="fix_tech" data-i18n="fg4">Fix technical SEO issues</option>
+              <option value="programmatic" data-i18n="fg5">Build location pages at scale</option>
+            </select>
+          </div>
+          <button type="submit" class="form-submit" id="formBtn">
+            <span data-i18n="form_btn">Run My Free AI Audit →</span>
+          </button>
+        </form>
+
+        <div class="form-loading" id="formLoading">
+          <span class="spinner"></span>
+          <span data-i18n="form_loading">Running your audit… this takes about 30 seconds.</span>
+        </div>
+        <div class="form-status" id="formSuccess">
+          ✓ <span data-i18n="form_ok">Audit running! Check your inbox in the next 24 hours.</span>
+        </div>
+        <div class="form-status" id="formError">
+          ✗ <span id="errorMsg" data-i18n="form_err">Something went wrong. Email me directly at armndigital@gmail.com</span>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-num" data-i18n="step3_n">03 — Build</div>
-        <h3 data-i18n="step3_h">Infrastructure Deployment</h3>
-        <p data-i18n="step3_p">n8n pipelines, programmatic page builders, and content systems deployed. Everything automated, nothing manual.</p>
-      </div>
-      <div class="step">
-        <div class="step-num" data-i18n="step4_n">04 — Outreach</div>
-        <h3 data-i18n="step4_h">Personalized at Scale</h3>
-        <p data-i18n="step4_p">AI-generated, human-reviewed outreach sequences triggered by behavior signals. CRM auto-enriched via n8n.</p>
-      </div>
-      <div class="step">
-        <div class="step-num" data-i18n="step5_n">05 — Compound</div>
-        <h3 data-i18n="step5_h">Monitor & Amplify</h3>
-        <p data-i18n="step5_p">Live dashboards track rankings, clicks, and leads. The system self-optimizes. Growth compounds monthly.</p>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ─── TECH STACK ─── -->
-<section id="stack">
-  <div class="section-inner">
-    <div class="reveal">
-      <span class="section-tag" data-i18n="stack_tag">Technology</span>
-      <h2 class="section-h2" data-i18n="stack_h2">Built on the Right Tools</h2>
-      <p class="section-desc" data-i18n="stack_desc">
-        Enterprise-grade stack. Open-source where possible. Always battle-tested.
-      </p>
-    </div>
-    <div class="stack-grid reveal">
-      <div class="stack-item"><span class="stack-dot"></span>n8n Automation</div>
-      <div class="stack-item"><span class="stack-dot"></span>Claude AI (Anthropic)</div>
-      <div class="stack-item"><span class="stack-dot"></span>DataForSEO API</div>
-      <div class="stack-item"><span class="stack-dot"></span>Python</div>
-      <div class="stack-item"><span class="stack-dot"></span>Jina AI</div>
-      <div class="stack-item"><span class="stack-dot"></span>WordPress</div>
-      <div class="stack-item"><span class="stack-dot"></span>Google Search Console</div>
-      <div class="stack-item"><span class="stack-dot"></span>Ahrefs / Semrush</div>
-      <div class="stack-item"><span class="stack-dot"></span>Telegram Bots</div>
-      <div class="stack-item"><span class="stack-dot"></span>GitHub Pages</div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── CTA ─── -->
+<!-- CTA -->
 <section id="contact">
   <div class="section-inner">
     <div class="cta-block reveal">
-      <span class="section-tag" data-i18n="cta_tag">Let's Build</span>
-      <h2><span data-i18n="cta_h2_1">Ready to Dominate</span><br><span class="accent" data-i18n="cta_h2_2">Your Market?</span></h2>
-      <p data-i18n="cta_desc">
-        Book a 30-minute strategy call. I'll analyze your market,
-        identify your biggest growth lever, and tell you exactly what
-        I'd build. No pitch decks. Just strategy.
-      </p>
+      <span class="section-tag" data-i18n="cta_tag">Let's Work</span>
+      <h2><span data-i18n="cta_h1">Ready to Rank</span><br><span class="accent" data-i18n="cta_h2">Above Your Competitors?</span></h2>
+      <p data-i18n="cta_p">Book a 30-minute strategy call. I'll review your current rankings, identify your biggest SEO gap, and tell you exactly what I'd do in month one. No decks. Just actionable strategy.</p>
       <div class="cta-actions">
         <a href="https://calendly.com/felipepintocordova" class="btn-primary" target="_blank" rel="noopener" data-i18n="cta_btn1">Book Strategy Call →</a>
         <a href="https://www.linkedin.com/in/felipepintocordova" class="btn-secondary" target="_blank" rel="noopener" data-i18n="cta_btn2">Connect on LinkedIn</a>
       </div>
-      <p class="cta-sub" data-i18n="cta_sub">
-        Or email me directly at <a href="mailto:armndigital@gmail.com">armndigital@gmail.com</a>
-      </p>
+      <p class="cta-sub" data-i18n="cta_sub">Or email directly: <a href="mailto:armndigital@gmail.com">armndigital@gmail.com</a></p>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Felipe Pinto<span>.</span></div>
     <ul class="footer-links">
       <li><a href="https://www.linkedin.com/in/felipepintocordova" target="_blank" rel="noopener">LinkedIn</a></li>
       <li><a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" rel="noopener">Upwork</a></li>
-      <li><a href="https://felipepintoc27.github.io/Portfolio/" target="_blank" rel="noopener">Portfolio</a></li>
+      <li><a href="mailto:armndigital@gmail.com">Email</a></li>
     </ul>
-    <p class="footer-copy">© 2026 Felipe Pinto SP · Growth Engineer</p>
+    <p class="footer-copy">© 2026 Felipe Pinto · Technical SEO & AI Automation</p>
   </div>
 </footer>
 
-<!-- ─── JS: i18n + Scroll Reveal ─── -->
 <script>
-const TRANSLATIONS = {
+// ── TRANSLATIONS ──
+const T = {
   en: {
-    nav_services: "Services",
-    nav_cases: "Case Studies",
-    nav_process: "Process",
-    nav_stack: "Tech Stack",
-    nav_cta: "Book a Call",
-    badge: "Available for new projects",
-    hero_h1_line1: "Dominate Your Market.",
-    hero_h1_line2: "Scale with AI.",
-    hero_sub: "I'm not a traditional SEO consultant. I'm a Growth Engineer who builds AI-powered B2B ecosystems — n8n automation pipelines, technical SEO infrastructure, and Claude AI systems that convert visibility into revenue.",
-    hero_cta1: "Start Growing →",
-    hero_cta2: "View Case Studies",
-    hero_proof: "<strong>7+ B2B clients</strong> grew organically with AI-powered systems",
-    stat1: "MoM Organic Clicks",
-    stat2: "Search Visibility",
-    stat3: "Location Pages Built",
-    stat4: "High-Intent Rankings",
-    services_tag: "What I Build",
-    services_h2: "Growth Systems, Not Band-Aids",
-    services_desc: "Every engagement is an infrastructure project. I design, build, and deploy AI-powered systems that compound over time.",
-    svc1_title: "AI-CRM B2B Automation",
-    svc1_desc: "Custom n8n pipelines + Claude AI that automate prospect research, personalized outreach, and CRM enrichment. Built to run 24/7.",
-    svc1_price: "From $2,500 / setup",
-    svc2_title: "Technical SEO Infrastructure",
-    svc2_desc: "Programmatic location pages, schema markup, Core Web Vitals optimization, and AI-powered content systems that capture high-intent queries at scale.",
-    svc2_price: "From $1,800 / project",
-    svc3_title: "Growth Intelligence Dashboard",
-    svc3_desc: "DataForSEO + n8n pipelines delivering live competitor insights, ranking alerts, and keyword opportunity reports straight to your Slack or email.",
-    svc3_price: "From $900 / mo",
-    svc4_title: "Free AI Prospect Audit",
-    svc4_desc: "I run a full AI-powered SEO & visibility audit on your site and deliver a branded report with 3 high-impact fixes. Zero commitment.",
-    svc4_price: "Free → Qualify Below",
-    cases_tag: "Proof of Work",
-    cases_h2: "Results That Compound",
-    cases_desc: "Real numbers from real B2B clients. No vanity metrics.",
-    case1_label: "Stone & Construction · B2B Local SEO",
-    case1_title: "Armina Stone — Programmatic Location Dominance",
-    case1_desc: "Architected 135 geo-targeted location pages using programmatic SEO. Implemented structured data, internal linking clusters, and a content pipeline powered by DataForSEO + Python. Result: explosive MoM growth with zero paid ads.",
-    case1_m1: "MoM Clicks",
-    case1_m2: "Pages Deployed",
-    case2_label: "Professional Services · B2B SEO",
-    case2_title: "Spera Partners — 2x Search Visibility",
-    case2_desc: "Full technical SEO overhaul: site architecture restructure, E-E-A-T content refresh, and high-intent keyword strategy. Doubled organic search visibility and secured #1 rankings on primary conversion keywords within 90 days.",
-    case2_m1: "Search Visibility",
-    case2_m2: "High-Intent KWs",
-    process_tag: "The Machine",
-    process_h2: "How the AI-CRM B2B System Works",
-    process_desc: "A repeatable 5-step framework that turns any market into a pipeline.",
-    step1_n: "01 — Audit",
-    step1_h: "Technical Deep Scan",
-    step1_p: "Automated crawl via DataForSEO. Identify gaps: Core Web Vitals, indexation, schema, site architecture.",
-    step2_n: "02 — Research",
-    step2_h: "AI Market Intelligence",
-    step2_p: "Jina AI + Claude extract competitor strategies, keyword opportunities, and buyer intent signals at scale.",
-    step3_n: "03 — Build",
-    step3_h: "Infrastructure Deployment",
-    step3_p: "n8n pipelines, programmatic page builders, and content systems deployed. Everything automated, nothing manual.",
-    step4_n: "04 — Outreach",
-    step4_h: "Personalized at Scale",
-    step4_p: "AI-generated, human-reviewed outreach sequences triggered by behavior signals. CRM auto-enriched via n8n.",
-    step5_n: "05 — Compound",
-    step5_h: "Monitor & Amplify",
-    step5_p: "Live dashboards track rankings, clicks, and leads. The system self-optimizes. Growth compounds monthly.",
-    stack_tag: "Technology",
-    stack_h2: "Built on the Right Tools",
-    stack_desc: "Enterprise-grade stack. Open-source where possible. Always battle-tested.",
-    cta_tag: "Let's Build",
-    cta_h2_1: "Ready to Dominate",
-    cta_h2_2: "Your Market?",
-    cta_desc: "Book a 30-minute strategy call. I'll analyze your market, identify your biggest growth lever, and tell you exactly what I'd build. No pitch decks. Just strategy.",
-    cta_btn1: "Book Strategy Call →",
-    cta_btn2: "Connect on LinkedIn",
-    cta_sub: 'Or email me directly at <a href="mailto:armndigital@gmail.com">armndigital@gmail.com</a>',
+    nav_services:"Services", nav_cases:"Case Studies", nav_process:"Process", nav_audit:"Free Audit", nav_cta:"Get Free Audit",
+    badge:"Available for US clients",
+    hero_h1_1:"Technical SEO &", hero_h1_2:"AI-Powered Growth.",
+    hero_sub:"I'm a Technical SEO Engineer who builds programmatic SEO systems, local search dominance, and n8n automation pipelines that turn your market into predictable organic revenue — without paid ads.",
+    hero_cta1:"Get Your Free AI Audit →", hero_cta2:"See Results",
+    hero_proof:"<strong>7+ US B2B clients</strong> ranking on page 1 with zero paid ads",
+    stat1:"MoM Organic Clicks", stat2:"Location Pages Built", stat3:"Search Visibility", stat4:"High-Intent Rankings",
+    svc_tag:"What I Do", svc_h2:"SEO That Compounds. Not Just Reports.",
+    svc_desc:"Every engagement is built as infrastructure — systems that generate traffic and leads month after month, not one-off fixes.",
+    svc1_t:"Technical SEO Audit & Fix", svc1_p:"Full Screaming Frog crawl, GSC analysis, Core Web Vitals, indexation issues, schema markup, site architecture. I deliver a prioritized fix list and implement it — not just a PDF.", svc1_price:"From $800 / one-time",
+    svc2_t:"Local SEO & Google Business Profile", svc2_p:"GBP setup and optimization, Moz Local citations, geo-page strategy, review management. Dominate \"near me\" searches and maps pack in your service area.", svc2_price:"From $500 / mo",
+    svc3_t:"Programmatic SEO at Scale", svc3_p:"I build location page systems in WordPress/Wix using PHP and DataForSEO data. Deployed 135 pages for one client — MoM clicks jumped +140%. For businesses targeting multiple cities.", svc3_price:"From $1,200 / project",
+    svc4_t:"Foundation Package — 3 Months", svc4_p:"GBP setup, complete metadata optimization, keyword strategy, schema markup, and foundational backlinks. Everything a business needs to start ranking — delivered in 90 days.", svc4_price:"$1,530 / 3 months",
+    svc5_t:"Monthly SEO Retainer", svc5_p:"4-pillar monthly cycle: technical fixes + on-page content + link building + local signals. Reporting via Agency Analytics. Full transparency, no fluff.", svc5_price:"From $750 / mo",
+    svc6_t:"AI Automation + SEO Pipeline", svc6_p:"n8n workflows + Claude AI that automate prospect audits, rank tracking alerts, competitor monitoring, and content pipelines. Built on top of your existing SEO strategy.", svc6_price:"From $1,500 / setup",
+    cases_tag:"Proof of Work", cases_h2:"Real Results. Real Clients.", cases_desc:"All US-based B2B clients. No vanity metrics — just GSC data and ranking screenshots.",
+    c1_label:"Stone Countertops · South Florida · Programmatic SEO", c1_h:"Armina Stone — 135 Location Pages, +140% MoM Clicks",
+    c1_p:"Built 135 geo-targeted pages from scratch using PHP/Code Snippets in WordPress (27 hub pages + 108 service pages across 27 South Florida cities). Optimized 56 pages of metadata using WordPress API. Fixed Elementor attachment bug on 54 pages. Result: explosive MoM growth with zero paid ads.",
+    c1_m1:"MoM Clicks", c1_m2:"KWs in Top 10", c1_m3:"#1 Rankings",
+    c2_label:"IT Managed Services · Pittsburgh PA · Local SEO", c2_h:"Spera Partners — 2x Visibility, Beats Competitor with Higher DA",
+    c2_p:"Designed a hub-and-spoke geo page strategy (Pittsburgh, Murrysville, Monroeville). Integrated AI keywords across 5 service pages. Result: doubled search visibility vs main competitor Wolf Consulting despite lower domain authority.",
+    c2_m1:"Search Visibility", c2_m2:"Key Conversions",
+    c3_label:"Foundation Package · Multiple Clients · 3-Month Sprint", c3_h:"Third Fox Referrals — 5 Clients, Foundation Built in 90 Days",
+    c3_p:"Delivered the Foundation Package to 5 clients simultaneously: 1331 Studios, RH Nature Reconnect, Electric Cat, Eisenwood, Enlightened Assessment. Each received GBP setup, complete metadata, keyword optimization, schema markup, and foundational backlinks.",
+    c3_m1:"Clients / Batch", c3_m2:"Delivery",
+    proc_tag:"How I Work", proc_h2:"The Monthly SEO Cycle", proc_desc:"A 4-pillar repeatable system. Every month, every client.",
+    s1n:"01 — Technical", s1h:"Crawl & Fix", s1p:"Screaming Frog crawl, GSC error review, CWV audit, indexation fixes, internal linking, schema updates.",
+    s2n:"02 — On-Page", s2h:"Content & Keywords", s2p:"Keyword research with Moz/DataForSEO, metadata optimization, content refresh, E-E-A-T improvements, new landing pages.",
+    s3n:"03 — Authority", s3h:"Links & Citations", s3p:"Boostability link building, Moz Local citation management, GBP optimization, review strategy, NAP consistency.",
+    s4n:"04 — Report", s4h:"Data & Strategy", s4p:"Agency Analytics dashboard, GSC/GA4 MoM analysis, rank tracking, next-month priorities. You see everything.",
+    s5n:"+ AI Layer", s5h:"Automation", s5p:"n8n pipelines run competitor monitoring, rank alerts, and content opportunities automatically. Less manual work, faster decisions.",
+    stack_tag:"Tools", stack_h2:"The Full Toolset", sg1:"SEO & Analytics", sg2:"CMS & Development", sg3:"AI & Automation",
+    audit_tag:"Free AI Audit", audit_h1:"Get Your", audit_h2:"Free SEO Audit",
+    audit_p:"I run a full AI-powered technical and visibility analysis on your website and deliver a branded report with your top 3 growth opportunities. Powered by DataForSEO + Claude AI. No commitment, no pitch call required.",
+    ab1:"Technical issues (crawl errors, CWV, indexation, schema)",
+    ab2:"Keyword gaps and ranking opportunities vs your competitors",
+    ab3:"Backlink profile analysis and authority gaps",
+    ab4:"Personalized 3-action growth plan for your market",
+    audit_note:"Delivered to your email within 24 hours. 100% free, no strings attached.",
+    form_title:"Request Your Free Audit", form_sub:"Takes 30 seconds. Results in your inbox within 24h.",
+    fl_name:"Your Name", fl_biz:"Business Name", fl_url:"Website URL", fl_email:"Email Address", fl_goal:"Main SEO Goal",
+    fg_ph:"Select your goal...", fg1:"Get more local leads", fg2:"Rank for specific keywords", fg3:"Beat a specific competitor", fg4:"Fix technical SEO issues", fg5:"Build location pages at scale",
+    form_btn:"Run My Free AI Audit →",
+    form_loading:"Running your audit… this takes about 30 seconds.",
+    form_ok:"Audit running! Check your inbox in the next 24 hours.",
+    form_err:"Something went wrong. Email me directly at armndigital@gmail.com",
+    cta_tag:"Let's Work", cta_h1:"Ready to Rank", cta_h2:"Above Your Competitors?",
+    cta_p:"Book a 30-minute strategy call. I'll review your current rankings, identify your biggest SEO gap, and tell you exactly what I'd do in month one. No decks. Just actionable strategy.",
+    cta_btn1:"Book Strategy Call →", cta_btn2:"Connect on LinkedIn",
+    cta_sub:'Or email directly: <a href="mailto:armndigital@gmail.com">armndigital@gmail.com</a>',
   },
   es: {
-    nav_services: "Servicios",
-    nav_cases: "Casos de Éxito",
-    nav_process: "Proceso",
-    nav_stack: "Stack",
-    nav_cta: "Agendar Llamada",
-    badge: "Disponible para nuevos proyectos",
-    hero_h1_line1: "Domina tu Mercado.",
-    hero_h1_line2: "Escala con IA.",
-    hero_sub: "No soy un consultor SEO tradicional. Soy un Growth Engineer que construye ecosistemas B2B potenciados por IA — pipelines n8n, infraestructura SEO técnica y sistemas Claude AI que convierten visibilidad en ingresos.",
-    hero_cta1: "Empezar a Crecer →",
-    hero_cta2: "Ver Casos de Éxito",
-    hero_proof: "<strong>+7 clientes B2B</strong> crecieron orgánicamente con sistemas de IA",
-    stat1: "Clics Orgánicos MoM",
-    stat2: "Visibilidad en Búsqueda",
-    stat3: "Páginas de Ubicación",
-    stat4: "Rankings High-Intent",
-    services_tag: "Qué Construyo",
-    services_h2: "Sistemas de Crecimiento, No Parches",
-    services_desc: "Cada proyecto es infraestructura. Diseño, construyo y despliego sistemas potenciados por IA que se acumulan con el tiempo.",
-    svc1_title: "Automatización AI-CRM B2B",
-    svc1_desc: "Pipelines n8n + Claude AI que automatizan investigación de prospectos, outreach personalizado y enriquecimiento de CRM. Funcionan 24/7.",
-    svc1_price: "Desde $2,500 / configuración",
-    svc2_title: "Infraestructura SEO Técnico",
-    svc2_desc: "Páginas de ubicación programáticas, schema markup, optimización de Core Web Vitals y sistemas de contenido IA que capturan búsquedas de alto valor.",
-    svc2_price: "Desde $1,800 / proyecto",
-    svc3_title: "Dashboard de Inteligencia de Crecimiento",
-    svc3_desc: "Pipelines DataForSEO + n8n que entregan insights de competidores en vivo, alertas de rankings y reportes de oportunidades a tu Slack o email.",
-    svc3_price: "Desde $900 / mes",
-    svc4_title: "Auditoría IA Gratuita",
-    svc4_desc: "Ejecuto una auditoría SEO completa con IA en tu sitio y entrego un reporte con 3 correcciones de alto impacto. Sin compromiso.",
-    svc4_price: "Gratis → Califica Abajo",
-    cases_tag: "Prueba de Trabajo",
-    cases_h2: "Resultados que se Acumulan",
-    cases_desc: "Números reales de clientes B2B reales. Sin métricas de vanidad.",
-    case1_label: "Construcción & Piedra · SEO Local B2B",
-    case1_title: "Armina Stone — Dominancia Programática por Ubicación",
-    case1_desc: "Construí 135 páginas geolocalizadas con SEO programático. Implementé datos estructurados, clusters de enlaces internos y un pipeline de contenido con DataForSEO + Python. Resultado: crecimiento explosivo MoM sin publicidad pagada.",
-    case1_m1: "Clics MoM",
-    case1_m2: "Páginas Desplegadas",
-    case2_label: "Servicios Profesionales · SEO B2B",
-    case2_title: "Spera Partners — 2x Visibilidad en Búsqueda",
-    case2_desc: "Renovación técnica SEO completa: reestructura de arquitectura, actualización de contenido E-E-A-T y estrategia de keywords de alta intención. Doblé la visibilidad orgánica y obtuve rankings #1 en keywords de conversión en 90 días.",
-    case2_m1: "Visibilidad",
-    case2_m2: "Keywords #1",
-    process_tag: "La Máquina",
-    process_h2: "Cómo Funciona el Sistema AI-CRM B2B",
-    process_desc: "Un framework de 5 pasos repetible que convierte cualquier mercado en un pipeline.",
-    step1_n: "01 — Auditoría",
-    step1_h: "Análisis Técnico Profundo",
-    step1_p: "Crawl automatizado con DataForSEO. Identifica brechas: Core Web Vitals, indexación, schema, arquitectura.",
-    step2_n: "02 — Investigación",
-    step2_h: "Inteligencia de Mercado con IA",
-    step2_p: "Jina AI + Claude extraen estrategias de competidores, oportunidades de keywords y señales de intención a escala.",
-    step3_n: "03 — Construcción",
-    step3_h: "Despliegue de Infraestructura",
-    step3_p: "Pipelines n8n, constructores de páginas programáticas y sistemas de contenido desplegados. Todo automatizado.",
-    step4_n: "04 — Outreach",
-    step4_h: "Personalizado a Escala",
-    step4_p: "Secuencias de outreach generadas por IA, revisadas por humanos y activadas por señales de comportamiento. CRM enriquecido automáticamente.",
-    step5_n: "05 — Componer",
-    step5_h: "Monitorear y Amplificar",
-    step5_p: "Dashboards en vivo monitorizan rankings, clics y leads. El sistema se auto-optimiza. El crecimiento se acumula mensualmente.",
-    stack_tag: "Tecnología",
-    stack_h2: "Construido con las Herramientas Correctas",
-    stack_desc: "Stack de nivel empresarial. Open-source donde es posible. Siempre battle-tested.",
-    cta_tag: "Construyamos",
-    cta_h2_1: "¿Listo para Dominar",
-    cta_h2_2: "tu Mercado?",
-    cta_desc: "Agenda una llamada estratégica de 30 minutos. Analizaré tu mercado, identificaré tu mayor palanca de crecimiento y te diré exactamente qué construiría. Sin presentaciones. Solo estrategia.",
-    cta_btn1: "Agendar Llamada →",
-    cta_btn2: "Conectar en LinkedIn",
-    cta_sub: 'O escríbeme a <a href="mailto:armndigital@gmail.com">armndigital@gmail.com</a>',
+    nav_services:"Servicios", nav_cases:"Casos de Éxito", nav_process:"Proceso", nav_audit:"Auditoría Gratis", nav_cta:"Auditoría Gratis",
+    badge:"Disponible para clientes en EE.UU.",
+    hero_h1_1:"SEO Técnico &", hero_h1_2:"Crecimiento con IA.",
+    hero_sub:"Soy un Ingeniero SEO Técnico que construye sistemas SEO programáticos, dominancia en búsqueda local, y pipelines de automatización n8n que convierten tu mercado en ingresos orgánicos predecibles — sin publicidad pagada.",
+    hero_cta1:"Obtén tu Auditoría IA Gratis →", hero_cta2:"Ver Resultados",
+    hero_proof:"<strong>+7 clientes B2B en EE.UU.</strong> en página 1 sin publicidad pagada",
+    stat1:"Clics Orgánicos MoM", stat2:"Páginas de Ubicación", stat3:"Visibilidad en Búsqueda", stat4:"Rankings High-Intent",
+    svc_tag:"Qué Hago", svc_h2:"SEO que se Acumula. No Solo Reportes.",
+    svc_desc:"Cada proyecto es infraestructura — sistemas que generan tráfico y leads mes tras mes, no correcciones puntuales.",
+    svc1_t:"Auditoría y Corrección SEO Técnico", svc1_p:"Crawl completo con Screaming Frog, análisis GSC, Core Web Vitals, indexación, schema markup, arquitectura. Entrego una lista de correcciones priorizada y la implemento — no solo un PDF.", svc1_price:"Desde $800 / único",
+    svc2_t:"SEO Local & Google Business Profile", svc2_p:"Configuración y optimización de GBP, citas con Moz Local, estrategia de páginas geo, gestión de reseñas. Domina las búsquedas 'cerca de mí' y el pack de mapas.", svc2_price:"Desde $500 / mes",
+    svc3_t:"SEO Programático a Escala", svc3_p:"Construyo sistemas de páginas de ubicación en WordPress/Wix con PHP y datos de DataForSEO. Desplegué 135 páginas para un cliente — los clics MoM saltaron +140%.", svc3_price:"Desde $1,200 / proyecto",
+    svc4_t:"Foundation Package — 3 Meses", svc4_p:"Configuración GBP, optimización completa de metadata, estrategia de keywords, schema markup y backlinks fundamentales. Todo lo que un negocio necesita para empezar a rankear en 90 días.", svc4_price:"$1,530 / 3 meses",
+    svc5_t:"Retainer SEO Mensual", svc5_p:"Ciclo mensual de 4 pilares: correcciones técnicas + contenido on-page + link building + señales locales. Reportes vía Agency Analytics. Transparencia total.", svc5_price:"Desde $750 / mes",
+    svc6_t:"Automatización IA + Pipeline SEO", svc6_p:"Flujos n8n + Claude AI que automatizan auditorías de prospectos, alertas de rankings, monitoreo de competidores y pipelines de contenido. Sobre tu estrategia SEO existente.", svc6_price:"Desde $1,500 / setup",
+    cases_tag:"Prueba de Trabajo", cases_h2:"Resultados Reales. Clientes Reales.", cases_desc:"Todos clientes B2B en EE.UU. Sin métricas de vanidad — solo datos de GSC y capturas de rankings.",
+    c1_label:"Encimeras de Piedra · Sur de Florida · SEO Programático", c1_h:"Armina Stone — 135 Páginas de Ubicación, +140% Clics MoM",
+    c1_p:"Construí 135 páginas geo-targeted desde cero con PHP/Code Snippets en WordPress (27 hub pages + 108 service pages en 27 ciudades del Sur de Florida). Optimicé 56 páginas de metadata con WordPress API. Corregí bug de Elementor en 54 páginas. Resultado: crecimiento explosivo MoM sin publicidad.",
+    c1_m1:"Clics MoM", c1_m2:"KWs en Top 10", c1_m3:"Rankings #1",
+    c2_label:"Servicios IT Managed · Pittsburgh PA · SEO Local", c2_h:"Spera Partners — 2x Visibilidad, Supera Competidor con Mayor DA",
+    c2_p:"Diseñé estrategia hub-and-spoke de páginas geo (Pittsburgh, Murrysville, Monroeville). Integré keywords de IA en 5 páginas de servicios. Resultado: doble visibilidad vs competidor principal Wolf Consulting con menor domain authority.",
+    c2_m1:"Visibilidad", c2_m2:"Conversiones Clave",
+    c3_label:"Foundation Package · Múltiples Clientes · Sprint 3 Meses", c3_h:"Third Fox Referrals — 5 Clientes, Base Construida en 90 Días",
+    c3_p:"Entregué el Foundation Package a 5 clientes simultáneamente: 1331 Studios, RH Nature Reconnect, Electric Cat, Eisenwood, Enlightened Assessment. Cada uno recibió GBP, metadata completa, keyword optimization, schema y backlinks en 3 meses.",
+    c3_m1:"Clientes / Lote", c3_m2:"Entrega",
+    proc_tag:"Cómo Trabajo", proc_h2:"El Ciclo SEO Mensual", proc_desc:"Un sistema repetible de 4 pilares. Cada mes, cada cliente.",
+    s1n:"01 — Técnico", s1h:"Crawl y Corrección", s1p:"Crawl Screaming Frog, revisión de errores GSC, auditoría CWV, correcciones de indexación, enlazado interno, schema.",
+    s2n:"02 — On-Page", s2h:"Contenido y Keywords", s2p:"Keyword research con Moz/DataForSEO, optimización de metadata, actualización de contenido, mejoras E-E-A-T, nuevas landing pages.",
+    s3n:"03 — Autoridad", s3h:"Links y Citas", s3p:"Link building con Boostability, gestión de citas Moz Local, optimización GBP, estrategia de reseñas, consistencia NAP.",
+    s4n:"04 — Reporte", s4h:"Datos y Estrategia", s4p:"Dashboard Agency Analytics, análisis MoM GSC/GA4, seguimiento de rankings, prioridades del próximo mes. Ves todo.",
+    s5n:"+ Capa IA", s5h:"Automatización", s5p:"Los pipelines n8n corren monitoreo de competidores, alertas de rankings y oportunidades de contenido automáticamente.",
+    stack_tag:"Herramientas", stack_h2:"El Stack Completo", sg1:"SEO y Analítica", sg2:"CMS y Desarrollo", sg3:"IA y Automatización",
+    audit_tag:"Auditoría IA Gratis", audit_h1:"Obtén tu", audit_h2:"Auditoría SEO Gratis",
+    audit_p:"Ejecuto un análisis técnico y de visibilidad completo con IA en tu sitio web y entrego un reporte con tus 3 principales oportunidades de crecimiento. Powered by DataForSEO + Claude AI. Sin compromiso.",
+    ab1:"Problemas técnicos (errores de crawl, CWV, indexación, schema)",
+    ab2:"Brechas de keywords y oportunidades vs tus competidores",
+    ab3:"Análisis de perfil de backlinks y brechas de autoridad",
+    ab4:"Plan de crecimiento personalizado de 3 acciones para tu mercado",
+    audit_note:"Entregado a tu email en 24 horas. 100% gratis, sin compromisos.",
+    form_title:"Solicita tu Auditoría Gratis", form_sub:"Toma 30 segundos. Resultados en tu inbox en 24h.",
+    fl_name:"Tu Nombre", fl_biz:"Nombre del Negocio", fl_url:"URL del Sitio Web", fl_email:"Email", fl_goal:"Objetivo Principal SEO",
+    fg_ph:"Selecciona tu objetivo...", fg1:"Conseguir más leads locales", fg2:"Rankear keywords específicas", fg3:"Superar a un competidor", fg4:"Corregir problemas técnicos SEO", fg5:"Construir páginas de ubicación a escala",
+    form_btn:"Ejecutar mi Auditoría IA Gratis →",
+    form_loading:"Ejecutando tu auditoría… toma unos 30 segundos.",
+    form_ok:"¡Auditoría en proceso! Revisa tu inbox en las próximas 24 horas.",
+    form_err:"Algo salió mal. Escríbeme a armndigital@gmail.com",
+    cta_tag:"Trabajemos", cta_h1:"¿Listo para Rankear", cta_h2:"Sobre tus Competidores?",
+    cta_p:"Agenda una llamada estratégica de 30 minutos. Revisaré tus rankings actuales, identificaré tu mayor brecha SEO y te diré exactamente qué haría en el primer mes. Sin presentaciones. Solo estrategia.",
+    cta_btn1:"Agendar Llamada Estratégica →", cta_btn2:"Conectar en LinkedIn",
+    cta_sub:'O escríbeme: <a href="mailto:armndigital@gmail.com">armndigital@gmail.com</a>',
   }
 };
 
+// ── i18n ──
 function setLang(lang) {
-  const t = TRANSLATIONS[lang];
-  if (!t) return;
-
+  const t = T[lang]; if (!t) return;
   document.documentElement.setAttribute('lang', lang);
-
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) {
-      el.innerHTML = t[key];
-    }
+    const k = el.getAttribute('data-i18n');
+    if (t[k] !== undefined) el.innerHTML = t[k];
   });
-
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-
   localStorage.setItem('fp_lang', lang);
 }
-
 function detectLang() {
-  const saved = localStorage.getItem('fp_lang');
-  if (saved) return saved;
-  const browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-  return browserLang.startsWith('es') ? 'es' : 'en';
+  const s = localStorage.getItem('fp_lang'); if (s) return s;
+  return (navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en';
 }
 
-// Scroll reveal
-function initReveal() {
-  const els = document.querySelectorAll('.reveal');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        obs.unobserve(e.target);
-      }
+// ── AUDIT FORM ──
+document.getElementById('auditForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name   = document.getElementById('f_name').value.trim();
+  const biz    = document.getElementById('f_biz').value.trim();
+  const url    = document.getElementById('f_url').value.trim();
+  const email  = document.getElementById('f_email').value.trim();
+  const goal   = document.getElementById('f_goal').value;
+  const lang   = document.documentElement.getAttribute('lang') || 'en';
+  const t      = T[lang];
+
+  if (!name || !biz || !url || !email) {
+    showError(lang === 'es' ? 'Por favor completa todos los campos requeridos.' : 'Please fill in all required fields.');
+    return;
+  }
+  if (!url.startsWith('http')) {
+    showError(lang === 'es' ? 'Ingresa una URL válida (ej: https://tuwebsite.com)' : 'Enter a valid URL (e.g. https://yourwebsite.com)');
+    return;
+  }
+
+  setFormState('loading');
+
+  const payload = {
+    prospect_url:   url,
+    prospect_name:  biz,
+    contact_name:   name,
+    contact_email:  email,
+    seo_goal:       goal,
+    source:         'portfolio_form',
+    lang:           lang
+  };
+
+  try {
+    const res = await fetch('https://n8n.157.245.245.23.nip.io/webhook/seo-audit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  els.forEach(el => obs.observe(el));
+
+    if (res.ok || res.status === 200) {
+      setFormState('success');
+    } else {
+      throw new Error('HTTP ' + res.status);
+    }
+  } catch (err) {
+    setFormState('error');
+  }
+});
+
+function setFormState(state) {
+  const form    = document.getElementById('auditForm');
+  const btn     = document.getElementById('formBtn');
+  const loading = document.getElementById('formLoading');
+  const success = document.getElementById('formSuccess');
+  const error   = document.getElementById('formError');
+
+  form.style.display    = state === 'success' ? 'none' : 'block';
+  loading.style.display = state === 'loading' ? 'block' : 'none';
+  success.className     = 'form-status' + (state === 'success' ? ' success' : '');
+  error.className       = 'form-status' + (state === 'error' ? ' error' : '');
+  if (btn) btn.disabled = state === 'loading';
 }
 
-// Init
+function showError(msg) {
+  document.getElementById('errorMsg').textContent = msg;
+  setFormState('error');
+}
+
+// ── SCROLL REVEAL ──
+function initReveal() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -35px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   setLang(detectLang());
   initReveal();
