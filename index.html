@@ -12,23 +12,16 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
     :root {
-      /* Ultra-Minimalist Palette */
       --bg-white:      #FFFFFF;
       --bg-subtle:     #FAFAFA;
-      
-      /* Modern Gradients (Indigo to Rose) */
       --brand-1:       #4F46E5; 
       --brand-2:       #E11D48; 
       --grad-primary:  linear-gradient(135deg, var(--brand-1) 0%, var(--brand-2) 100%);
       --grad-text:     linear-gradient(90deg, var(--brand-1), #9333EA, var(--brand-2));
       --grad-subtle:   linear-gradient(135deg, rgba(79,70,229,0.05) 0%, rgba(225,29,72,0.05) 100%);
-      
-      /* Typography */
       --text-dark:     #09090B;
       --text-muted:    #52525B;
       --text-dim:      #A1A1AA;
-      
-      /* Soft UI */
       --shadow-sm:     0 4px 20px rgba(0,0,0,0.03);
       --shadow-md:     0 10px 40px rgba(0,0,0,0.06);
     }
@@ -36,7 +29,6 @@
     html { scroll-behavior: smooth; }
     body { background-color: var(--bg-white); color: var(--text-dark); font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-    /* Utilities */
     .text-grad { background: var(--grad-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .container { max-width: 1280px; margin: 0 auto; padding: 0 2.5rem; }
     .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.85rem 1.8rem; border-radius: 8px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.3s; cursor: pointer; border: none; letter-spacing: -0.01em; }
@@ -45,7 +37,6 @@
     .btn-secondary { background: var(--bg-white); color: var(--text-dark); border: 1px solid #E4E4E7; box-shadow: var(--shadow-sm); }
     .btn-secondary:hover { border-color: var(--brand-1); transform: translateY(-2px); }
 
-    /* CENTERED NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0,0,0,0.04); }
     .nav-inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 75px; }
     .nav-logo { justify-self: start; font-size: 1.25rem; font-weight: 800; color: var(--text-dark); text-decoration: none; letter-spacing: -0.04em; }
@@ -54,38 +45,29 @@
     .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--text-dark); }
     .nav-actions { justify-self: end; display: flex; align-items: center; gap: 1rem; }
-    
     .lang-toggle { display: flex; background: var(--bg-subtle); border-radius: 6px; padding: 2px; }
     .lang-btn { padding: 0.3rem 0.6rem; cursor: pointer; color: var(--text-muted); border: none; background: transparent; font-family: 'Inter',sans-serif; font-size: 0.75rem; font-weight: 600; border-radius: 4px; transition: all 0.2s; }
     .lang-btn.active { background: #fff; color: var(--text-dark); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
     @media (max-width: 900px) { .nav-links { display: none; } .nav-inner { grid-template-columns: 1fr auto; } .nav-actions { justify-self: end; } }
 
-    /* HERO (Rank Expand Left-Aligned Style) */
     .hero { padding: 11rem 0 6rem; background: var(--bg-white); position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -10%; right: -10%; width: 600px; height: 600px; background: var(--grad-primary); filter: blur(120px); opacity: 0.05; z-index: 0; pointer-events: none; border-radius: 50%; }
-    
     .hero-wrap { position: relative; z-index: 10; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
     @media (max-width: 960px) { .hero-wrap { grid-template-columns: 1fr; text-align: center; gap: 3rem; } }
-    
     .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--bg-subtle); color: var(--text-muted); padding: 0.35rem 0.85rem; border-radius: 100px; font-size: 0.7rem; font-weight: 600; margin-bottom: 1.5rem; border: 1px solid #E4E4E7; }
     .badge-dot { width: 6px; height: 6px; background: var(--brand-1); border-radius: 50%; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
-    
     .hero-text h1 { font-size: clamp(3rem, 5vw, 4.2rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1.2rem; color: var(--text-dark); }
     .hero-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 500px; }
     @media (max-width: 960px) { .hero-text p { margin: 0 auto 2.5rem auto; } }
-    
     .hero-actions { display: flex; gap: 1rem; }
     @media (max-width: 960px) { .hero-actions { justify-content: center; } }
-    
-    /* Media box placeholder */
     .hero-media { position: relative; aspect-ratio: 4/3; background: var(--bg-subtle); border-radius: 16px; border: 1px solid rgba(0,0,0,0.04); box-shadow: var(--shadow-md); display: flex; align-items: center; justify-content: center; overflow: hidden; }
     .hero-media::after { content: ''; position: absolute; inset: 0; background: var(--grad-subtle); opacity: 0.5; }
     .play-btn { width: 64px; height: 64px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s; z-index: 2; }
     .play-btn:hover { transform: scale(1.05); }
     .play-btn::before { content: ''; width: 0; height: 0; border-style: solid; border-width: 10px 0 10px 14px; border-color: transparent transparent transparent var(--brand-1); margin-left: 4px; }
 
-    /* SECTIONS */
     .section-pad { padding: 6rem 0; }
     .bg-subtle { background: var(--bg-subtle); }
     .sec-header { text-align: center; margin-bottom: 3.5rem; }
@@ -93,7 +75,6 @@
     .sec-header h2 { font-size: 2.2rem; font-weight: 800; color: var(--text-dark); letter-spacing: -0.03em; margin-bottom: 0.8rem; }
     .sec-header p { font-size: 1rem; color: var(--text-muted); max-width: 450px; margin: 0 auto; }
 
-    /* MINIMAL CARDS (Services) */
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; } }
     .service-card { background: var(--bg-white); border-radius: 12px; padding: 2rem 1.5rem; box-shadow: var(--shadow-sm); transition: transform 0.3s, box-shadow 0.3s; text-align: center; border: 1px solid transparent; }
@@ -102,7 +83,6 @@
     .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-dark); letter-spacing: -0.01em; }
     .service-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
 
-    /* RESULTS */
     .results-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
     @media (max-width: 768px) { .results-grid { grid-template-columns: 1fr; } }
     .result-card { background: var(--bg-white); border-radius: 12px; padding: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; gap: 1.5rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.03); }
@@ -112,35 +92,28 @@
     .result-stat h4 { font-size: 3rem; font-weight: 800; background: var(--grad-text); -webkit-background-clip: text; color: transparent; line-height: 1; letter-spacing: -0.04em; }
     .result-stat span { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
 
-    /* ABOUT ME */
     .about-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
     @media (max-width: 768px) { .about-wrap { grid-template-columns: 1fr; text-align: center; } }
     .about-text h2 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.03em; }
     .about-text p { font-size: 1rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.6; }
-    
     .about-visual { display: flex; gap: 1rem; justify-content: center; }
     .visual-box { width: 100px; height: 100px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
     .vb-1 { background: var(--grad-subtle); color: var(--brand-1); border: 1px solid rgba(0,0,0,0.03); }
     .vb-2 { background: var(--grad-text); color: #fff; transform: translateY(15px); box-shadow: var(--shadow-md); }
 
-    /* FORM (Clean) */
     .audit-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 960px; margin: 0 auto; }
     @media (max-width: 900px) { .audit-wrap { grid-template-columns: 1fr; gap: 3rem; text-align: center; } }
-    
     .audit-info h2 { font-size: 2.4rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.03em; }
     .audit-info p { font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; }
-    
     .form-box { background: var(--bg-white); border-radius: 12px; padding: 2.5rem; box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,0.03); }
     .form-group { margin-bottom: 1rem; text-align: left; }
     .form-group label { display: block; font-size: 0.75rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.3rem; }
     .form-group input, .form-group select { width: 100%; padding: 0.8rem; border: 1px solid #E4E4E7; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.9rem; outline: none; transition: border-color 0.2s; background: var(--bg-white); color: var(--text-dark); }
     .form-group input:focus, .form-group select:focus { border-color: var(--brand-1); box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
-    
     .form-status { display: none; padding: 0.8rem; border-radius: 6px; font-weight: 500; font-size: 0.85rem; margin-top: 1rem; text-align: center; }
     .msg-ok { background: #ECFDF5; color: #059669; }
     .msg-err { background: #FEF2F2; color: #DC2626; }
 
-    /* CTA STRIP */
     .cta-strip { background: var(--grad-primary); padding: 3.5rem 0; }
     .cta-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
     .cta-strip h2 { font-size: 1.7rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin-bottom: 0.3rem; }
@@ -148,7 +121,6 @@
     .btn-white { background: #fff; color: var(--brand-1); font-weight: 700; white-space: nowrap; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
 
-    /* INDUSTRIES */
     .industries-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 3rem; }
     @media (max-width: 900px) { .industries-grid { grid-template-columns: repeat(2,1fr); } }
     @media (max-width: 560px) { .industries-grid { grid-template-columns: 1fr; } }
@@ -164,7 +136,6 @@
     .perfect-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
     .perfect-item::before { content: '✓'; color: var(--brand-1); font-weight: 800; flex-shrink: 0; }
 
-    /* WHY ME */
     .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
     @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
     .why-card { padding: 2rem; border-radius: 12px; background: var(--bg-white); border: 1px solid #E4E4E7; }
@@ -172,7 +143,6 @@
     .why-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-dark); }
     .why-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
 
-    /* FOOTER */
     footer { background: var(--bg-white); padding: 3rem 0 2rem; text-align: center; border-top: 1px solid rgba(0,0,0,0.03); }
     .footer-logo { font-size: 1.1rem; font-weight: 800; color: var(--text-dark); text-decoration: none; display: inline-block; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
     .footer-logo span { color: var(--brand-2); }
@@ -181,18 +151,15 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="container nav-inner">
     <a href="#" class="nav-logo">FP<span>.</span></a>
-    
     <ul class="nav-links">
       <li><a href="#services" data-i18n="nav_svc">Services</a></li>
       <li><a href="#results" data-i18n="nav_res">Results</a></li>
       <li><a href="#why" data-i18n="nav_why">Why Me</a></li>
       <li><a href="#about" data-i18n="nav_about">About</a></li>
     </ul>
-
     <div class="nav-actions">
       <div class="lang-toggle">
         <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
@@ -203,7 +170,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container hero-wrap">
     <div class="hero-text">
@@ -243,7 +209,6 @@
   </div>
 </section>
 
-<!-- CTA STRIP -->
 <section class="cta-strip">
   <div class="container">
     <div class="cta-strip-inner">
@@ -256,7 +221,6 @@
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="section-pad bg-subtle">
   <div class="container">
     <div class="sec-header">
@@ -284,7 +248,6 @@
   </div>
 </section>
 
-<!-- INDUSTRIES -->
 <section id="industries" class="section-pad">
   <div class="container">
     <div class="sec-header">
@@ -293,36 +256,12 @@
       <p data-i18n="ind_p">From local service providers to e-commerce brands, SEO strategy adapts to your model and market.</p>
     </div>
     <div class="industries-grid">
-      <div class="industry-card">
-        <div class="ind-icon">📍</div>
-        <h3 data-i18n="i1_h">Local Businesses</h3>
-        <p data-i18n="i1_p">Restaurants, retail, stone & tile, contractors. Dominate the map pack and local search results in your area.</p>
-      </div>
-      <div class="industry-card">
-        <div class="ind-icon">💼</div>
-        <h3 data-i18n="i2_h">Professional Services</h3>
-        <p data-i18n="i2_p">Law firms, consulting, finance, real estate. High-intent keywords that bring in qualified leads ready to hire.</p>
-      </div>
-      <div class="industry-card">
-        <div class="ind-icon">🛒</div>
-        <h3 data-i18n="i3_h">E-Commerce</h3>
-        <p data-i18n="i3_p">Product pages, category architecture, and technical SEO for WooCommerce and Shopify stores at scale.</p>
-      </div>
-      <div class="industry-card">
-        <div class="ind-icon">🔧</div>
-        <h3 data-i18n="i4_h">HVAC & Home Services</h3>
-        <p data-i18n="i4_p">Service-area pages, GBP optimization, and seasonal keyword strategies that drive calls year-round.</p>
-      </div>
-      <div class="industry-card">
-        <div class="ind-icon">🏥</div>
-        <h3 data-i18n="i5_h">Healthcare & Wellness</h3>
-        <p data-i18n="i5_p">Dental, therapy, fitness, wellness studios. E-E-A-T optimized content that earns patient trust and ranks.</p>
-      </div>
-      <div class="industry-card">
-        <div class="ind-icon">💻</div>
-        <h3 data-i18n="i6_h">IT & Tech Services</h3>
-        <p data-i18n="i6_p">MSPs, SaaS, cybersecurity, staffing. Hub-and-spoke geo strategies that outrank bigger competitors locally.</p>
-      </div>
+      <div class="industry-card"><div class="ind-icon">📍</div><h3 data-i18n="i1_h">Local Businesses</h3><p data-i18n="i1_p">Restaurants, retail, stone & tile, contractors. Dominate the map pack and local search results in your area.</p></div>
+      <div class="industry-card"><div class="ind-icon">💼</div><h3 data-i18n="i2_h">Professional Services</h3><p data-i18n="i2_p">Law firms, consulting, finance, real estate. High-intent keywords that bring in qualified leads ready to hire.</p></div>
+      <div class="industry-card"><div class="ind-icon">🛒</div><h3 data-i18n="i3_h">E-Commerce</h3><p data-i18n="i3_p">Product pages, category architecture, and technical SEO for WooCommerce and Shopify stores at scale.</p></div>
+      <div class="industry-card"><div class="ind-icon">🔧</div><h3 data-i18n="i4_h">HVAC & Home Services</h3><p data-i18n="i4_p">Service-area pages, GBP optimization, and seasonal keyword strategies that drive calls year-round.</p></div>
+      <div class="industry-card"><div class="ind-icon">🏥</div><h3 data-i18n="i5_h">Healthcare & Wellness</h3><p data-i18n="i5_p">Dental, therapy, fitness, wellness studios. E-E-A-T optimized content that earns patient trust and ranks.</p></div>
+      <div class="industry-card"><div class="ind-icon">💻</div><h3 data-i18n="i6_h">IT & Tech Services</h3><p data-i18n="i6_p">MSPs, SaaS, cybersecurity, staffing. Hub-and-spoke geo strategies that outrank bigger competitors locally.</p></div>
     </div>
     <div class="perfect-box">
       <h3 data-i18n="perf_h">Perfect For Businesses That Want To:</h3>
@@ -338,7 +277,6 @@
   </div>
 </section>
 
-<!-- RESULTS -->
 <section id="results" class="section-pad bg-subtle">
   <div class="container">
     <div class="sec-header">
@@ -348,40 +286,21 @@
     </div>
     <div class="results-grid">
       <div class="result-card">
-        <div class="result-info">
-          <h3 data-i18n="r1_h">Stone & Surfaces Co. · South Florida</h3>
-          <p data-i18n="r1_p">Built a complete programmatic SEO architecture from scratch: 27 hub pages + 108 service pages covering every major city in South Florida. Optimized 56 pages of metadata sitewide. Fixed a critical rendering bug affecting 54 pages. Result in the first measured month: 50% of tracked keywords in the top 10, and 11 keywords at position #1.</p>
-        </div>
-        <div class="result-stat">
-          <h4>+140.6%</h4>
-          <span data-i18n="rm_clicks">Organic Clicks · Month-over-Month</span>
-        </div>
+        <div class="result-info"><h3 data-i18n="r1_h">Stone & Surfaces Co. · South Florida</h3><p data-i18n="r1_p">Built a complete programmatic SEO architecture from scratch: 27 hub pages + 108 service pages covering every major city in South Florida. Optimized 56 pages of metadata sitewide. Fixed a critical rendering bug affecting 54 pages. Result in the first measured month: 50% of tracked keywords in the top 10, and 11 keywords at position #1.</p></div>
+        <div class="result-stat"><h4>+140.6%</h4><span data-i18n="rm_clicks">Organic Clicks · Month-over-Month</span></div>
       </div>
       <div class="result-card">
-        <div class="result-info">
-          <h3 data-i18n="r2_h">IT Managed Services · Pittsburgh, PA</h3>
-          <p data-i18n="r2_p">Designed a hub-and-spoke geo-page structure across 3 service markets. Refreshed 5 core service pages targeting high-intent local queries. Secured #1 rankings for 'IT Support Staffing', 'Managed IT Services', and 'Cybersecurity' in the primary market — outranking a competitor with a significantly higher domain authority.</p>
-        </div>
-        <div class="result-stat">
-          <h4>3</h4>
-          <span data-i18n="rm_vis">Keywords at #1 in Primary Market</span>
-        </div>
+        <div class="result-info"><h3 data-i18n="r2_h">IT Managed Services · Pittsburgh, PA</h3><p data-i18n="r2_p">Designed a hub-and-spoke geo-page structure across 3 service markets. Refreshed 5 core service pages targeting high-intent local queries. Secured #1 rankings for 'IT Support Staffing', 'Managed IT Services', and 'Cybersecurity' in the primary market — outranking a competitor with a significantly higher domain authority.</p></div>
+        <div class="result-stat"><h4>3</h4><span data-i18n="rm_vis">Keywords at #1 in Primary Market</span></div>
       </div>
       <div class="result-card" style="grid-column: 1 / -1;">
-        <div class="result-info">
-          <h3 data-i18n="r3_h">Foundation Package · Multiple Industries</h3>
-          <p data-i18n="r3_p">Delivered complete SEO foundations for 5 businesses simultaneously across studios, wellness, services, retail, and consulting. Each received: GBP configuration, full metadata optimization, keyword-first content structure, schema markup, and initial backlink foundation. All moved from near-zero organic presence to consistent local rankings.</p>
-        </div>
-        <div class="result-stat">
-          <h4>5</h4>
-          <span data-i18n="rm_biz">Businesses Ranking Within 90 Days</span>
-        </div>
+        <div class="result-info"><h3 data-i18n="r3_h">Foundation Package · Multiple Industries</h3><p data-i18n="r3_p">Delivered complete SEO foundations for 5 businesses simultaneously across studios, wellness, services, retail, and consulting. Each received: GBP configuration, full metadata optimization, keyword-first content structure, schema markup, and initial backlink foundation. All moved from near-zero organic presence to consistent local rankings.</p></div>
+        <div class="result-stat"><h4>5</h4><span data-i18n="rm_biz">Businesses Ranking Within 90 Days</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY ME -->
 <section id="why" class="section-pad">
   <div class="container">
     <div class="sec-header">
@@ -389,26 +308,13 @@
       <h2 data-i18n="why_h">What Makes the Difference</h2>
     </div>
     <div class="why-grid">
-      <div class="why-card">
-        <div class="why-num" data-i18n="w1_n">6+</div>
-        <h3 data-i18n="w1_h">Active Monthly Clients</h3>
-        <p data-i18n="w1_p">I manage SEO for 6+ businesses every month — stone & countertops, IT services, HVAC, and power equipment. Every account gets full strategy and hands-on execution.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-num" data-i18n="w2_n">135</div>
-        <h3 data-i18n="w2_h">Location Pages Built in One Project</h3>
-        <p data-i18n="w2_p">When a client needed programmatic SEO at scale, I built 135 geo-targeted pages covering 27 cities — with custom content, images, and schema on every single page.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-num" data-i18n="w3_n">100%</div>
-        <h3 data-i18n="w3_h">Execution, Not Just Strategy</h3>
-        <p data-i18n="w3_p">I don't deliver a deck with recommendations. I write the actual implementation. Every change I recommend, I can execute myself — and every result is tracked in GSC before it ships.</p>
-      </div>
+      <div class="why-card"><div class="why-num" data-i18n="w1_n">6+</div><h3 data-i18n="w1_h">Active Monthly Clients</h3><p data-i18n="w1_p">I manage SEO for 6+ businesses every month — stone & countertops, IT services, HVAC, and power equipment. Every account gets full strategy and hands-on execution.</p></div>
+      <div class="why-card"><div class="why-num" data-i18n="w2_n">135</div><h3 data-i18n="w2_h">Location Pages Built in One Project</h3><p data-i18n="w2_p">When a client needed programmatic SEO at scale, I built 135 geo-targeted pages covering 27 cities — with custom content, images, and schema on every single page.</p></div>
+      <div class="why-card"><div class="why-num" data-i18n="w3_n">100%</div><h3 data-i18n="w3_h">Execution, Not Just Strategy</h3><p data-i18n="w3_p">I don't deliver a deck with recommendations. I write the actual implementation. Every change I recommend, I can execute myself — and every result is tracked in GSC before it ships.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT ME -->
 <section id="about" class="section-pad bg-subtle">
   <div class="container">
     <div class="about-wrap">
@@ -426,7 +332,6 @@
   </div>
 </section>
 
-<!-- N8N AUDIT FORM -->
 <section id="audit" class="section-pad">
   <div class="container">
     <div class="audit-wrap">
@@ -455,7 +360,7 @@
             <label data-i18n="l_email">Work Email</label>
             <input type="email" id="f_email" placeholder="john@acme.com" required />
           </div>
-          <div class="form-group" style="margin-bottom: 1.5rem;">
+          <div class="form-group">
             <label data-i18n="l_goal">Main Goal</label>
             <select id="f_goal">
               <option value="leads" data-i18n="o_leads">Scale B2B leads</option>
@@ -463,7 +368,22 @@
               <option value="local" data-i18n="o_local">Dominate local market</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;" id="fBtn" data-i18n="f_btn">Get Free Audit</button>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label data-i18n="l_country">Target Country</label>
+              <select id="f_country">
+                <option value="2840|en" data-i18n="o_us">🇺🇸 United States</option>
+                <option value="2218|es" data-i18n="o_ec">🇪🇨 Ecuador</option>
+                <option value="2484|es" data-i18n="o_mx">🇲🇽 México</option>
+                <option value="2724|es" data-i18n="o_es">🇪🇸 España</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-i18n="l_brand">Brand Name <span style="font-weight:400;opacity:0.6">(optional)</span></label>
+              <input type="text" id="f_brand" placeholder="e.g. Acme" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;" id="fBtn" data-i18n="f_btn">Get Free Audit</button>
           
           <div class="form-status msg-ok" id="fOk" data-i18n="f_ok">✓ ¡Motor de IA activado! Recibirás tu auditoría en breve.</div>
           <div class="form-status msg-err" id="fErr">✗ <span id="errMsg"></span></div>
@@ -473,13 +393,10 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <a href="#" class="footer-logo">FP<span>.</span></a>
-    <div class="footer-copy" data-i18n="ft_copy">
-      © 2026 Felipe Pinto.
-    </div>
+    <div class="footer-copy" data-i18n="ft_copy">© 2026 Felipe Pinto.</div>
   </div>
 </footer>
 
@@ -496,7 +413,6 @@ const T = {
     cta_hero: "Get Free Audit", cta_sec: "See Real Results",
     hs1_l: "Organic Clicks · MoM Growth", hs1_s: "Stone & Surfaces Co. · South Florida",
     hs2_l: "Keywords at #1", hs3_l: "Location Pages Built", hs4_l: "Visibility vs Competitor",
-
     ind_tag: "Who I Work With", ind_h: "All Types of Websites & Businesses",
     ind_p: "From local service providers to e-commerce brands, SEO strategy adapts to your model and market.",
     i1_h: "Local Businesses", i1_p: "Restaurants, retail, stone & tile, contractors. Dominate the map pack and local search results in your area.",
@@ -509,7 +425,6 @@ const T = {
     perf1: "Rank on the first page of Google", perf2: "Get more qualified organic traffic",
     perf3: "Fix technical issues hurting their rankings", perf4: "Stop paying for every single click",
     perf5: "Scale with programmatic page strategies", perf6: "Build a sustainable long-term search presence",
-
     why_tag: "Why Felipe", why_h: "What Makes the Difference",
     w1_n: "6+", w1_h: "Active Monthly Clients",
     w1_p: "I manage SEO for 6+ businesses every month — stone & countertops, IT services, HVAC, and power equipment. Every account gets full strategy and hands-on execution.",
@@ -517,16 +432,14 @@ const T = {
     w2_p: "When a client needed programmatic SEO at scale, I built 135 geo-targeted pages covering 27 cities — with custom content, images, and schema on every single page.",
     w3_n: "100%", w3_h: "Execution, Not Just Strategy",
     w3_p: "I don't deliver a deck with recommendations. I write the actual implementation. Every change I recommend, I can execute myself — and every result is tracked in GSC before it ships.",
-
     s_tag: "What I Do", s_h: "SEO That Compounds Month After Month",
     s_p: "I don't send reports and disappear. I build and maintain search systems that grow traffic, rankings, and revenue over time.",
     s1_h: "Technical SEO & Site Health",
     s1_p: "Full site crawls, Core Web Vitals analysis, indexation fixes, schema markup, internal linking architecture, and crawl error resolution — across WordPress, Wix, WooCommerce, and Shopify sites.",
     s2_h: "Local SEO & Programmatic Pages",
-    s2_p: "Google Business Profile setup, optimization, and citation management. Geo-targeted landing pages at scale — 135 location pages covering 27 cities, built for a single client in one project. Local signals that move rankings.",
+    s2_p: "Google Business Profile setup, optimization, and citation management. Geo-targeted landing pages at scale — 135 location pages covering 27 cities, built for a single client in one project.",
     s3_h: "On-Page & Keyword Strategy",
-    s3_p: "Keyword research tied to real commercial intent, sitewide metadata optimization, content refresh for E-E-A-T signals, hub-and-spoke page architecture, and monthly performance reports with ranking movement tracking.",
-
+    s3_p: "Keyword research tied to real commercial intent, sitewide metadata optimization, content refresh for E-E-A-T signals, hub-and-spoke page architecture, and monthly performance reports.",
     r_tag: "Case Studies", r_h: "Real Numbers. Real Clients.",
     r_p: "All results from live client accounts — verified via Google Search Console and rank trackers. No fabricated numbers.",
     r1_h: "Stone & Surfaces Co. · South Florida",
@@ -538,18 +451,17 @@ const T = {
     r3_h: "Foundation Package · Multiple Industries",
     r3_p: "Delivered complete SEO foundations for 5 businesses simultaneously across studios, wellness, services, retail, and consulting. Each received: GBP configuration, full metadata optimization, keyword-first content structure, schema markup, and initial backlink foundation. All moved from near-zero organic presence to consistent local rankings.",
     rm_biz: "Businesses Ranking Within 90 Days",
-
     f_tag: "About", f_h: "Felipe Pinto — Technical SEO Engineer",
     f_p1: "I run SEO for 6+ active monthly clients across stone & countertops, IT managed services, HVAC, power equipment, and professional services — delivering technical audits, programmatic page builds, schema markup, on-page optimization, link building, and monthly performance reports.",
     f_p2: "Every deliverable is verified in Google Search Console before it ships. I write the actual implementation — not just recommendations. If a site needs 135 new pages built to a spec, I build them. If metadata needs updating across 56 pages at once, I do it in bulk. Results are documented, tracked, and reported every month.",
-
     au_h: "Find Out What's <span class='text-grad'>Holding You Back</span>",
     au_p: "I run a full technical SEO analysis on your website — crawl health, keyword gaps, competitor comparison, backlink profile — and deliver a personalized report with your top 3 action items. Free, no strings attached.",
     l_name: "Your Name", l_biz: "Business Name", l_url: "Website URL", l_email: "Email Address", l_goal: "Biggest SEO Challenge",
     o_leads: "Getting more local leads", o_tech: "Fix technical SEO issues", o_local: "Rank for target keywords",
+    l_country: "Target Country", o_us: "🇺🇸 United States", o_ec: "🇪🇨 Ecuador", o_mx: "🇲🇽 México", o_es: "🇪🇸 España",
+    l_brand: "Brand Name",
     f_btn: "Analyze My Site →", f_ok: "✓ Motor de IA activado! Recibirás tu auditoría en breve.",
     err_fill: "Please fill in all fields.", err_url: "Enter a valid URL starting with https://",
-
     ft_copy: "© 2026 Felipe Pinto · Technical SEO Engineer"
   },
   es: {
@@ -563,7 +475,6 @@ const T = {
     cta_hero: "Auditoría Gratis", cta_sec: "Ver Resultados Reales",
     hs1_l: "Clics Orgánicos · Crecimiento MoM", hs1_s: "Empresa Stone & Surfaces · Sur de Florida",
     hs2_l: "Keywords en #1", hs3_l: "Páginas de Ubicación Construidas", hs4_l: "Visibilidad vs Competidor",
-
     ind_tag: "Con Quién Trabajo", ind_h: "Todo Tipo de Sitios y Negocios",
     ind_p: "Desde servicios locales hasta tiendas e-commerce, la estrategia SEO se adapta a tu modelo y mercado.",
     i1_h: "Negocios Locales", i1_p: "Restaurantes, retail, stone & tile, contratistas. Domina el map pack y los resultados de búsqueda local.",
@@ -576,7 +487,6 @@ const T = {
     perf1: "Aparecer en la primera página de Google", perf2: "Obtener más tráfico orgánico calificado",
     perf3: "Corregir problemas técnicos que afectan rankings", perf4: "Dejar de pagar por cada clic",
     perf5: "Escalar con estrategias de páginas programáticas", perf6: "Construir presencia de búsqueda sostenible a largo plazo",
-
     why_tag: "Por Qué Felipe", why_h: "Lo Que Hace la Diferencia",
     w1_n: "6+", w1_h: "Clientes Mensuales Activos",
     w1_p: "Gestiono SEO para 6+ negocios cada mes — stone & superficies, IT, HVAC y equipos industriales. Cada cuenta recibe estrategia completa e implementación directa.",
@@ -584,39 +494,36 @@ const T = {
     w2_p: "Cuando un cliente necesitó SEO programático a escala, construí 135 páginas geo-dirigidas cubriendo 27 ciudades — con contenido, imágenes y schema en cada una.",
     w3_n: "100%", w3_h: "Ejecución, No Solo Estrategia",
     w3_p: "No entrego un documento con recomendaciones. Escribo la implementación real. Cada cambio que recomiendo, lo ejecuto yo mismo — y cada resultado se verifica en GSC antes de enviarse.",
-
     s_tag: "Lo Que Hago", s_h: "SEO Que Se Acumula Mes a Mes",
     s_p: "No envío reportes y desaparezco. Construyo y mantengo sistemas de búsqueda que crecen en tráfico, rankings e ingresos con el tiempo.",
     s1_h: "SEO Técnico & Salud del Sitio",
-    s1_p: "Crawls completos del sitio, análisis de Core Web Vitals, correcciones de indexación, schema markup, arquitectura de enlazado interno y resolución de errores de crawl — en sitios WordPress, Wix, WooCommerce y Shopify.",
+    s1_p: "Crawls completos del sitio, análisis de Core Web Vitals, correcciones de indexación, schema markup, arquitectura de enlazado interno — en sitios WordPress, Wix, WooCommerce y Shopify.",
     s2_h: "SEO Local & Páginas Programáticas",
-    s2_p: "Configuración, optimización y gestión de citas en Google Business Profile. Páginas geo-targeted a escala — 135 páginas de ubicación cubriendo 27 ciudades, construidas para un solo cliente en un único proyecto.",
+    s2_p: "Configuración, optimización y gestión de citas en Google Business Profile. Páginas geo-targeted a escala — 135 páginas de ubicación cubriendo 27 ciudades, construidas para un solo cliente.",
     s3_h: "On-Page & Estrategia de Keywords",
-    s3_p: "Keyword research orientado a intención comercial real, optimización de metadata sitewide, actualización de contenido para señales E-E-A-T, arquitectura hub-and-spoke, y reportes mensuales de performance con seguimiento de rankings.",
-
+    s3_p: "Keyword research orientado a intención comercial real, optimización de metadata sitewide, actualización de contenido para señales E-E-A-T, arquitectura hub-and-spoke, y reportes mensuales.",
     r_tag: "Casos de Estudio", r_h: "Números Reales. Clientes Reales.",
     r_p: "Todos los resultados de cuentas activas — verificados vía Google Search Console y rastreadores de rankings. Sin números fabricados.",
     r1_h: "Empresa Stone & Surfaces · Sur de Florida",
     r1_p: "Construí una arquitectura SEO programática completa desde cero: 27 hub pages + 108 service pages cubriendo las principales ciudades del Sur de Florida. Optimicé metadata en 56 páginas del sitio. Corregí un bug crítico de renderizado en 54 páginas. Resultado en el primer mes: 50% de keywords monitoreadas en top 10, y 11 keywords en posición #1.",
     rm_clicks: "Clics Orgánicos · Mes a Mes",
     r2_h: "Servicios IT Managed · Pittsburgh, PA",
-    r2_p: "Diseñé una estructura hub-and-spoke de páginas geo para 3 mercados de servicio. Actualicé 5 páginas de servicios core con keywords de alta intención local. Resultado: rankings #1 para 'IT Support Staffing', 'Managed IT Services' y 'Cybersecurity' en el mercado principal — superando a un competidor con mayor domain authority.",
+    r2_p: "Diseñé una estructura hub-and-spoke de páginas geo para 3 mercados de servicio. Actualicé 5 páginas de servicios core con keywords de alta intención local. Resultado: rankings #1 para 'IT Support Staffing', 'Managed IT Services' y 'Cybersecurity' — superando a un competidor con mayor domain authority.",
     rm_vis: "Keywords en #1 en Mercado Principal",
     r3_h: "Foundation Package · Múltiples Industrias",
-    r3_p: "Entregué bases SEO completas para 5 negocios simultáneamente en estudios, bienestar, servicios, retail y consultoría. Cada uno recibió: configuración GBP, optimización completa de metadata, estructura de contenido orientada a keywords, schema markup y backlinks iniciales. Todos pasaron de casi cero a rankings locales consistentes.",
+    r3_p: "Entregué bases SEO completas para 5 negocios simultáneamente en estudios, bienestar, servicios, retail y consultoría. Cada uno recibió: configuración GBP, optimización completa de metadata, estructura de contenido orientada a keywords, schema markup y backlinks iniciales.",
     rm_biz: "Negocios Rankeando en 90 Días",
-
     f_tag: "Sobre Mí", f_h: "Felipe Pinto — Ingeniero SEO Técnico",
-    f_p1: "Gestiono SEO para 6+ clientes mensuales activos en stone & superficies, IT managed services, HVAC, equipos industriales y servicios profesionales — entregando auditorías técnicas, construcción programática de páginas, schema markup, optimización on-page, link building y reportes mensuales de performance.",
-    f_p2: "Cada entregable se verifica en Google Search Console antes de enviarse. Escribo la implementación real — no solo recomendaciones. Si un sitio necesita 135 páginas nuevas construidas a especificación, las construyo. Si la metadata hay que actualizar en 56 páginas a la vez, lo hago en masa. Los resultados se documentan, rastrean y reportan cada mes.",
-
+    f_p1: "Gestiono SEO para 6+ clientes mensuales activos en stone & superficies, IT managed services, HVAC, equipos industriales y servicios profesionales — entregando auditorías técnicas, construcción programática de páginas, schema markup, optimización on-page, link building y reportes mensuales.",
+    f_p2: "Cada entregable se verifica en Google Search Console antes de enviarse. Escribo la implementación real — no solo recomendaciones. Si un sitio necesita 135 páginas nuevas construidas a especificación, las construyo. Los resultados se documentan, rastrean y reportan cada mes.",
     au_h: "Descubre Qué <span class='text-grad'>Frena tu SEO</span>",
     au_p: "Ejecuto un análisis SEO técnico completo en tu sitio — salud del crawl, brechas de keywords, comparación vs competidores, perfil de backlinks — y entrego un reporte personalizado con tus 3 acciones principales. Gratis, sin compromisos.",
     l_name: "Tu Nombre", l_biz: "Nombre del Negocio", l_url: "URL del Sitio Web", l_email: "Email", l_goal: "Mayor Desafío SEO",
     o_leads: "Conseguir más leads locales", o_tech: "Corregir problemas técnicos SEO", o_local: "Rankear keywords objetivo",
+    l_country: "País Objetivo", o_us: "🇺🇸 Estados Unidos", o_ec: "🇪🇨 Ecuador", o_mx: "🇲🇽 México", o_es: "🇪🇸 España",
+    l_brand: "Nombre de Marca",
     f_btn: "Analizar mi Sitio →", f_ok: "✓ ¡Motor de IA activado! Recibirás tu auditoría en breve.",
     err_fill: "Por favor completa todos los campos.", err_url: "URL válida (https://...)",
-
     ft_copy: "© 2026 Felipe Pinto · Ingeniero SEO Técnico"
   }
 };
@@ -659,13 +566,17 @@ document.getElementById('seo-audit-form').addEventListener('submit', async funct
     err.style.display = 'block'; document.getElementById('errMsg').innerText = T[lang].err_url; return;
   }
 
+  const countryVal = document.getElementById('f_country').value;
+  const [locCode, langCode] = countryVal.split('|');
+  const brandInput = document.getElementById('f_brand').value.trim();
+
   btn.disabled = true; btn.innerText = "...";
 
   try {
     const res = await fetch('https://n8n.157.245.245.23.nip.io/webhook/sys1-universal-miner', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ url: url, prospect_url: url, prospect_name: biz, contact_name: name, contact_email: email, seo_goal: goal, source: 'portfolio', lang })
+      body: JSON.stringify({ url: url, location_code: parseInt(locCode), language_code: langCode, brand_name: brandInput || undefined, prospect_url: url, prospect_name: biz, contact_name: name, contact_email: email, seo_goal: goal, source: 'portfolio', lang })
     });
     if (res.ok) {
       ok.style.display = 'block'; document.getElementById('seo-audit-form').reset();
