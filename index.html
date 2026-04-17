@@ -436,7 +436,7 @@
       </div>
       
       <div class="form-box">
-        <form id="auditForm">
+        <form id="seo-audit-form">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div class="form-group">
               <label data-i18n="l_name">Name</label>
@@ -465,7 +465,7 @@
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%;" id="fBtn" data-i18n="f_btn">Get Free Audit</button>
           
-          <div class="form-status msg-ok" id="fOk" data-i18n="f_ok">✓ Request sent. Check your email soon!</div>
+          <div class="form-status msg-ok" id="fOk" data-i18n="f_ok">✓ ¡Motor de IA activado! Recibirás tu auditoría en breve.</div>
           <div class="form-status msg-err" id="fErr">✗ <span id="errMsg"></span></div>
         </form>
       </div>
@@ -547,7 +547,7 @@ const T = {
     au_p: "I run a full technical SEO analysis on your website — crawl health, keyword gaps, competitor comparison, backlink profile — and deliver a personalized report with your top 3 action items. Free, no strings attached.",
     l_name: "Your Name", l_biz: "Business Name", l_url: "Website URL", l_email: "Email Address", l_goal: "Biggest SEO Challenge",
     o_leads: "Getting more local leads", o_tech: "Fix technical SEO issues", o_local: "Rank for target keywords",
-    f_btn: "Analyze My Site →", f_ok: "✓ Done! Your report will be in your inbox within 24 hours.",
+    f_btn: "Analyze My Site →", f_ok: "✓ Motor de IA activado! Recibirás tu auditoría en breve.",
     err_fill: "Please fill in all fields.", err_url: "Enter a valid URL starting with https://",
 
     ft_copy: "© 2026 Felipe Pinto · Technical SEO Engineer"
@@ -614,7 +614,7 @@ const T = {
     au_p: "Ejecuto un análisis SEO técnico completo en tu sitio — salud del crawl, brechas de keywords, comparación vs competidores, perfil de backlinks — y entrego un reporte personalizado con tus 3 acciones principales. Gratis, sin compromisos.",
     l_name: "Tu Nombre", l_biz: "Nombre del Negocio", l_url: "URL del Sitio Web", l_email: "Email", l_goal: "Mayor Desafío SEO",
     o_leads: "Conseguir más leads locales", o_tech: "Corregir problemas técnicos SEO", o_local: "Rankear keywords objetivo",
-    f_btn: "Analizar mi Sitio →", f_ok: "✓ ¡Listo! Tu reporte estará en tu inbox en 24 horas.",
+    f_btn: "Analizar mi Sitio →", f_ok: "✓ ¡Motor de IA activado! Recibirás tu auditoría en breve.",
     err_fill: "Por favor completa todos los campos.", err_url: "URL válida (https://...)",
 
     ft_copy: "© 2026 Felipe Pinto · Ingeniero SEO Técnico"
@@ -638,7 +638,7 @@ function detectLang() {
   return (navigator.language||'en').toLowerCase().startsWith('es') ? 'es' : 'en';
 }
 
-document.getElementById('auditForm').addEventListener('submit', async function(e) {
+document.getElementById('seo-audit-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   const lang  = document.documentElement.getAttribute('lang') || 'en';
   const name  = document.getElementById('f_name').value.trim();
@@ -662,13 +662,13 @@ document.getElementById('auditForm').addEventListener('submit', async function(e
   btn.disabled = true; btn.innerText = "...";
 
   try {
-    const res = await fetch('https://n8n.157.245.245.23.nip.io/webhook/seo-audit', {
+    const res = await fetch('https://n8n.157.245.245.23.nip.io/webhook/sys1-universal-miner', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prospect_url: url, prospect_name: biz, contact_name: name, contact_email: email, seo_goal: goal, source: 'portfolio', lang })
+      body: JSON.stringify({ url: url, prospect_url: url, prospect_name: biz, contact_name: name, contact_email: email, seo_goal: goal, source: 'portfolio', lang })
     });
     if (res.ok) {
-      ok.style.display = 'block'; document.getElementById('auditForm').reset();
+      ok.style.display = 'block'; document.getElementById('seo-audit-form').reset();
     } else { throw new Error('API Error'); }
   } catch { 
     err.style.display = 'block'; document.getElementById('errMsg').innerText = "Network Error."; 
