@@ -258,6 +258,23 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
 .f-legal a:hover{color:var(--muted)}
 
 @keyframes spin{to{transform:rotate(360deg)}}
+
+/* WHITE SECTIONS */
+.section-white{background:#ffffff}
+.section-white .sec-head,.section-white .figures-text h2,.section-white .process-left h2{color:var(--card-text)}
+.section-white .sec-sub,.section-white .figures-text p,.section-white .process-left p{color:var(--card-muted)}
+.section-white .audit-info h2{color:var(--card-text)}
+.section-white .audit-info>p,.section-white .audit-bens li{color:var(--card-muted)}
+.section-white .fg label{color:#5A6B80}
+.section-white .figures-grid{border-color:rgba(0,0,0,.09)}
+.section-white .fig-item{border-right-color:rgba(0,0,0,.09);border-bottom-color:rgba(0,0,0,.09)}
+.section-white .fig-label{color:var(--card-text)}
+.section-white .btn-outline{border-color:rgba(0,0,0,.22);color:var(--card-text)}
+.section-white .btn-outline:hover{border-color:var(--brand);color:var(--brand)}
+.section-white .form-box{background:var(--card2);border-color:var(--border-card)}
+.section-white .fg input,.section-white .fg select{background:#ffffff;border-color:rgba(0,0,0,.13);color:var(--card-text)}
+.section-white .fg input::placeholder{color:#9AACBF}
+.section-white .fg select option{background:#ffffff;color:var(--card-text)}
 </style>
 </head>
 <body>
@@ -338,7 +355,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
 </section>
 
 <!-- IN FIGURES -->
-<section class="figures-section">
+<section class="figures-section section-white">
   <div class="container">
     <div class="figures-intro">
       <div class="figures-text">
@@ -476,7 +493,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="section">
+<section class="section section-white">
   <div class="container process-wrap">
     <div class="process-left">
       <span class="sec-tag" data-i18n="hw_tag">How It Works</span>
@@ -568,7 +585,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
 </section>
 
 <!-- RESOURCES -->
-<section class="section">
+<section class="section section-white">
   <div class="container">
     <div class="center">
       <span class="sec-tag" data-i18n="r_tag">Resources</span>
@@ -638,7 +655,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
 </section>
 
 <!-- AUDIT FORM -->
-<section id="audit" class="section">
+<section id="audit" class="section section-white">
   <div class="container">
     <div class="audit-wrap">
       <div class="audit-info">
@@ -668,6 +685,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
               <option value="Spain" data-i18n="oc_es">Spain</option>
               <option value="Mexico" data-i18n="oc_mx">Mexico</option>
               <option value="Colombia" data-i18n="oc_co">Colombia</option>
+              <option value="Ecuador" data-i18n="oc_ec">Ecuador</option>
               <option value="Argentina" data-i18n="oc_ar">Argentina</option>
               <option value="Chile" data-i18n="oc_cl">Chile</option>
               <option value="Other" data-i18n="oc_ot">Other</option>
@@ -799,7 +817,7 @@ en:{
   au_h:"Find out what's <span class='text-grad'>blocking your growth</span>",au_p:"I run a full technical SEO analysis on your site — no templates, no fluff. The real issues, ranked by impact, with the exact fixes that will move your rankings.",
   ab1:"Full technical crawl — every critical error ranked by revenue impact",ab2:"Keyword gap analysis vs. your top 3 competitors",ab3:"Top 3 priority actions — what to fix first for the fastest results",ab4:"Delivered within 24 hours — free, zero commitment",
   l_name:"Your Name",l_biz:"Business Name",l_url:"Website URL",l_email:"Email Address",l_country:"Business Location",l_goal:"Biggest SEO Challenge",
-  oc_us:"United States",oc_uk:"United Kingdom",oc_ca:"Canada",oc_au:"Australia",oc_es:"Spain",oc_mx:"Mexico",oc_co:"Colombia",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Other",
+  oc_us:"United States",oc_uk:"United Kingdom",oc_ca:"Canada",oc_au:"Australia",oc_es:"Spain",oc_mx:"Mexico",oc_co:"Colombia",oc_ec:"Ecuador",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Other",
   o1:"Not getting enough organic leads",o2:"Technical issues hurting rankings",o3:"Need to rank in local search",o4:"Want to scale to multiple cities",
   f_btn:"Analyze My Site →",f_note:"Free analysis. No spam. Response within 24 hours.",f_ok:"Report on the way — check your inbox within 24 hours.",
   err_fill:"Please fill in all fields.",err_url:"Please enter a valid URL (https://...)",err_email:"Please enter a valid email address.",
@@ -858,7 +876,7 @@ es:{
   au_h:"Descubre qué <span class='text-grad'>frena tu crecimiento</span>",au_p:"Ejecuto análisis SEO técnico completo de tu sitio — sin plantillas, sin relleno. Los problemas reales, clasificados por impacto, con las correcciones exactas que moverán tus rankings.",
   ab1:"Crawl técnico completo — cada error crítico clasificado por impacto en ingresos",ab2:"Análisis de keyword gap vs. tus 3 principales competidores",ab3:"Top 3 acciones prioritarias — qué corregir primero para resultados más rápidos",ab4:"Entregado en 24 horas — gratis, sin compromiso",
   l_name:"Tu Nombre",l_biz:"Nombre del Negocio",l_url:"URL del Sitio Web",l_email:"Email",l_country:"Ubicación del Negocio",l_goal:"Mayor Desafío SEO",
-  oc_us:"Estados Unidos",oc_uk:"Reino Unido",oc_ca:"Canadá",oc_au:"Australia",oc_es:"España",oc_mx:"México",oc_co:"Colombia",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Otro",
+  oc_us:"Estados Unidos",oc_uk:"Reino Unido",oc_ca:"Canadá",oc_au:"Australia",oc_es:"España",oc_mx:"México",oc_co:"Colombia",oc_ec:"Ecuador",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Otro",
   o1:"No consigo suficientes leads orgánicos",o2:"Problemas técnicos afectan rankings",o3:"Necesito rankear en búsqueda local",o4:"Quiero escalar a múltiples ciudades",
   f_btn:"Analizar mi Sitio →",f_note:"Análisis gratuito. Sin spam. Respuesta en 24 horas.",f_ok:"Reporte en camino — revisa tu inbox en las próximas 24 horas.",
   err_fill:"Por favor completa todos los campos.",err_url:"Ingresa una URL válida (https://...)",err_email:"Ingresa un email válido.",
