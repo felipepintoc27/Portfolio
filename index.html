@@ -655,6 +655,20 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
           </div>
           <div class="fg"><label for="f_url" data-i18n="l_url">Website URL</label><input type="url" id="f_url" placeholder="https://yourwebsite.com" autocomplete="url"/></div>
           <div class="fg"><label for="f_email" data-i18n="l_email">Email Address</label><input type="email" id="f_email" placeholder="john@acme.com" autocomplete="email"/></div>
+          <div class="fg"><label for="f_country" data-i18n="l_country">Business Location</label>
+            <select id="f_country">
+              <option value="United States" data-i18n="oc_us">United States</option>
+              <option value="United Kingdom" data-i18n="oc_uk">United Kingdom</option>
+              <option value="Canada" data-i18n="oc_ca">Canada</option>
+              <option value="Australia" data-i18n="oc_au">Australia</option>
+              <option value="Spain" data-i18n="oc_es">Spain</option>
+              <option value="Mexico" data-i18n="oc_mx">Mexico</option>
+              <option value="Colombia" data-i18n="oc_co">Colombia</option>
+              <option value="Argentina" data-i18n="oc_ar">Argentina</option>
+              <option value="Chile" data-i18n="oc_cl">Chile</option>
+              <option value="Other" data-i18n="oc_ot">Other</option>
+            </select>
+          </div>
           <div class="fg"><label for="f_goal" data-i18n="l_goal">Biggest SEO Challenge</label>
             <select id="f_goal">
               <option value="leads" data-i18n="o1">Not getting enough organic leads</option>
@@ -780,7 +794,8 @@ en:{
   amp_h:"Amplify your organic presence with data-driven SEO",amp_p:"A full technical SEO analysis — free. Real issues, ranked by impact, with the exact fixes that will move your rankings.",amp_cta1:"Get Free Audit",amp_cta2:"Contact directly",
   au_h:"Find out what's <span class='text-grad'>blocking your growth</span>",au_p:"I run a full technical SEO analysis on your site — no templates, no fluff. The real issues, ranked by impact, with the exact fixes that will move your rankings.",
   ab1:"Full technical crawl — every critical error ranked by revenue impact",ab2:"Keyword gap analysis vs. your top 3 competitors",ab3:"Top 3 priority actions — what to fix first for the fastest results",ab4:"Delivered within 24 hours — free, zero commitment",
-  l_name:"Your Name",l_biz:"Business Name",l_url:"Website URL",l_email:"Email Address",l_goal:"Biggest SEO Challenge",
+  l_name:"Your Name",l_biz:"Business Name",l_url:"Website URL",l_email:"Email Address",l_country:"Business Location",l_goal:"Biggest SEO Challenge",
+  oc_us:"United States",oc_uk:"United Kingdom",oc_ca:"Canada",oc_au:"Australia",oc_es:"Spain",oc_mx:"Mexico",oc_co:"Colombia",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Other",
   o1:"Not getting enough organic leads",o2:"Technical issues hurting rankings",o3:"Need to rank in local search",o4:"Want to scale to multiple cities",
   f_btn:"Analyze My Site →",f_note:"Free analysis. No spam. Response within 24 hours.",f_ok:"Report on the way — check your inbox within 24 hours.",
   err_fill:"Please fill in all fields.",err_url:"Please enter a valid URL (https://...)",err_email:"Please enter a valid email address.",
@@ -838,7 +853,8 @@ es:{
   amp_h:"Amplifica tu presencia orgánica con SEO orientado a datos",amp_p:"Análisis SEO técnico completo — gratis. Problemas reales, clasificados por impacto, con las correcciones exactas que moverán tus rankings.",amp_cta1:"Auditoría Gratis",amp_cta2:"Contacto directo",
   au_h:"Descubre qué <span class='text-grad'>frena tu crecimiento</span>",au_p:"Ejecuto análisis SEO técnico completo de tu sitio — sin plantillas, sin relleno. Los problemas reales, clasificados por impacto, con las correcciones exactas que moverán tus rankings.",
   ab1:"Crawl técnico completo — cada error crítico clasificado por impacto en ingresos",ab2:"Análisis de keyword gap vs. tus 3 principales competidores",ab3:"Top 3 acciones prioritarias — qué corregir primero para resultados más rápidos",ab4:"Entregado en 24 horas — gratis, sin compromiso",
-  l_name:"Tu Nombre",l_biz:"Nombre del Negocio",l_url:"URL del Sitio Web",l_email:"Email",l_goal:"Mayor Desafío SEO",
+  l_name:"Tu Nombre",l_biz:"Nombre del Negocio",l_url:"URL del Sitio Web",l_email:"Email",l_country:"Ubicación del Negocio",l_goal:"Mayor Desafío SEO",
+  oc_us:"Estados Unidos",oc_uk:"Reino Unido",oc_ca:"Canadá",oc_au:"Australia",oc_es:"España",oc_mx:"México",oc_co:"Colombia",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Otro",
   o1:"No consigo suficientes leads orgánicos",o2:"Problemas técnicos afectan rankings",o3:"Necesito rankear en búsqueda local",o4:"Quiero escalar a múltiples ciudades",
   f_btn:"Analizar mi Sitio →",f_note:"Análisis gratuito. Sin spam. Respuesta en 24 horas.",f_ok:"Reporte en camino — revisa tu inbox en las próximas 24 horas.",
   err_fill:"Por favor completa todos los campos.",err_url:"Ingresa una URL válida (https://...)",err_email:"Ingresa un email válido.",
@@ -890,6 +906,7 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
   const url=document.getElementById('f_url').value.trim();
   const email=document.getElementById('f_email').value.trim();
   const goal=document.getElementById('f_goal').value;
+  const country=document.getElementById('f_country').value;
   const btn=document.getElementById('fBtn');
   const fErr=document.getElementById('fErr');
   const fOk=document.getElementById('fOk');
@@ -902,7 +919,7 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
   try{
     const res=await fetch('https://n8n.157.245.245.23.nip.io/webhook/seo-audit',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({prospect_url:url,prospect_name:biz,contact_name:name,contact_email:email,seo_goal:goal,source:'portfolio',lang:l})
+      body:JSON.stringify({prospect_url:url,prospect_name:biz,contact_name:name,contact_email:email,seo_goal:goal,country:country,source:'portfolio',lang:l})
     });
     if(res.ok){fOk.style.display='block';this.reset()}
     else throw new Error('API '+res.status);
