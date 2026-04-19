@@ -676,7 +676,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
           <div class="fg"><label for="f_url" data-i18n="l_url">Website URL</label><input type="url" id="f_url" autocomplete="url"/></div>
           <div class="fg"><label for="f_email" data-i18n="l_email">Email Address</label><input type="email" id="f_email" autocomplete="email"/></div>
           <div class="fg"><label for="f_country" data-i18n="l_country">Business Location</label>
-            <select id="f_country">
+            <select id="f_country" required>
+              <option value="" disabled selected data-i18n="oc_ph">— Select your country —</option>
               <option value="United States" data-i18n="oc_us">United States</option>
               <option value="United Kingdom" data-i18n="oc_uk">United Kingdom</option>
               <option value="Canada" data-i18n="oc_ca">Canada</option>
@@ -691,12 +692,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
             </select>
           </div>
           <div class="fg"><label for="f_goal" data-i18n="l_goal">Biggest SEO Challenge</label>
-            <select id="f_goal">
+            <select id="f_goal" required onchange="toggleGoalOther(this.value)">
+              <option value="" disabled selected data-i18n="og_ph">— Select your challenge —</option>
               <option value="leads" data-i18n="o1">Not getting enough organic leads</option>
               <option value="tech" data-i18n="o2">Technical issues hurting rankings</option>
               <option value="local" data-i18n="o3">Need to rank in local search</option>
               <option value="scale" data-i18n="o4">Want to scale to multiple cities</option>
+              <option value="other" data-i18n="o5">Other — I'll describe it</option>
             </select>
+          </div>
+          <div class="fg" id="fg_goal_other" style="display:none">
+            <label for="f_goal_other" data-i18n="l_goal_other">Describe your challenge</label>
+            <input type="text" id="f_goal_other" autocomplete="off"/>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%" id="fBtn" data-i18n="f_btn">Analyze My Site →</button>
           <p class="form-note" data-i18n="f_note">Free analysis. No spam. Response within 24 hours.</p>
@@ -816,8 +823,9 @@ en:{
   au_h:"Find out what's <span class='text-grad'>holding back your rankings</span>",au_p:"I run a full technical SEO analysis of your site — no templates, no fluff. Real issues, ranked by revenue impact, with the specific fixes that will move your positions in Google.",
   ab1:"Full technical crawl — every critical error ranked by revenue impact",ab2:"Keyword gap analysis vs. your top 3 competitors",ab3:"Top 3 priority fixes — what to address first for the fastest results",ab4:"Delivered within 24 hours — free, no commitment required",
   l_name:"Your Name",l_biz:"Business Name",l_url:"Website URL",l_email:"Email Address",l_country:"Business Location",l_goal:"Biggest SEO Challenge",
-  oc_us:"United States",oc_uk:"United Kingdom",oc_ca:"Canada",oc_au:"Australia",oc_es:"Spain",oc_mx:"Mexico",oc_co:"Colombia",oc_ec:"Ecuador",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Other",
-  o1:"Not generating enough organic leads",o2:"Technical issues are hurting my rankings",o3:"I need to show up in local search results",o4:"I want to expand to more cities or markets",
+  oc_ph:"— Select your country —",oc_us:"United States",oc_uk:"United Kingdom",oc_ca:"Canada",oc_au:"Australia",oc_es:"Spain",oc_mx:"Mexico",oc_co:"Colombia",oc_ec:"Ecuador",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Other",
+  og_ph:"— Select your challenge —",o1:"Not generating enough organic leads",o2:"Technical issues are hurting my rankings",o3:"I need to show up in local search results",o4:"I want to expand to more cities or markets",o5:"Other — I'll describe it",
+  l_goal_other:"Describe your challenge",
   f_btn:"Analyze My Site →",f_note:"Free analysis. No spam. Response within 24 hours.",f_ok:"Your audit is on the way — check your inbox within 24 hours.",
   err_fill:"Please fill in all required fields.",err_url:"Please enter a valid URL (https://...)",err_email:"Please enter a valid email address.",
   ft_desc:"Technical SEO engineer — programmatic growth, local search, and automation. Data-first. Hands-on execution.",
@@ -875,8 +883,9 @@ es:{
   au_h:"Descubre qué está <span class='text-grad'>frenando tu crecimiento</span>",au_p:"Hago un análisis SEO técnico completo de tu sitio — sin plantillas, sin relleno. Los problemas reales, ordenados por impacto en ventas, con las correcciones específicas que mejorarán tus posiciones en Google.",
   ab1:"Rastreo técnico completo — cada error crítico ordenado por impacto en ventas",ab2:"Análisis de brecha de palabras clave frente a tus 3 principales competidores",ab3:"Las 3 correcciones prioritarias — qué resolver primero para ver resultados más rápido",ab4:"Entregado en 24 horas — gratuito, sin compromiso",
   l_name:"Tu nombre",l_biz:"Nombre de tu empresa",l_url:"URL de tu sitio web",l_email:"Correo electrónico",l_country:"País de tu empresa",l_goal:"Tu mayor desafío en Google",
-  oc_us:"Estados Unidos",oc_uk:"Reino Unido",oc_ca:"Canadá",oc_au:"Australia",oc_es:"España",oc_mx:"México",oc_co:"Colombia",oc_ec:"Ecuador",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Otro",
-  o1:"Mi sitio no atrae suficientes clientes",o2:"Tengo problemas técnicos que bajan mi posicionamiento",o3:"Quiero aparecer en búsquedas locales",o4:"Quiero expandirme a otras ciudades o mercados",
+  oc_ph:"— Selecciona tu país —",oc_us:"Estados Unidos",oc_uk:"Reino Unido",oc_ca:"Canadá",oc_au:"Australia",oc_es:"España",oc_mx:"México",oc_co:"Colombia",oc_ec:"Ecuador",oc_ar:"Argentina",oc_cl:"Chile",oc_ot:"Otro",
+  og_ph:"— Selecciona tu desafío —",o1:"Mi sitio no atrae suficientes clientes",o2:"Tengo problemas técnicos que bajan mi posicionamiento",o3:"Quiero aparecer en búsquedas locales",o4:"Quiero expandirme a otras ciudades o mercados",o5:"Otro — lo describo yo",
+  l_goal_other:"Describe tu desafío",
   f_btn:"Analizar mi sitio →",f_note:"Análisis gratuito. Sin spam. Respuesta en 24 horas.",f_ok:"Tu auditoría está en camino — revisa tu bandeja en las próximas 24 horas.",
   err_fill:"Por favor, completa todos los campos requeridos.",err_url:"Ingresa una URL válida (https://...)",err_email:"Ingresa una dirección de correo electrónico válida.",
   ft_desc:"Ingeniero de SEO técnico — posicionamiento programático, búsqueda local y automatización. Basado en datos. Ejecución directa.",
@@ -917,6 +926,11 @@ function setTab(id){
 // FORM
 function isValidEmail(v){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)}
 function isValidUrl(v){return/^https?:\/\/.{3,}/.test(v.trim())}
+function toggleGoalOther(val){
+  const el=document.getElementById('fg_goal_other');
+  el.style.display=val==='other'?'block':'none';
+  if(val!=='other')document.getElementById('f_goal_other').value='';
+}
 
 document.getElementById('auditForm').addEventListener('submit',async function(e){
   e.preventDefault();
@@ -927,25 +941,28 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
   const url=document.getElementById('f_url').value.trim();
   const email=document.getElementById('f_email').value.trim();
   const goal=document.getElementById('f_goal').value;
+  const goalOther=document.getElementById('f_goal_other').value.trim();
   const country=document.getElementById('f_country').value;
   const btn=document.getElementById('fBtn');
   const fErr=document.getElementById('fErr');
   const fOk=document.getElementById('fOk');
   fErr.style.display='none';fOk.style.display='none';
-  if(!name||!biz||!url||!email){document.getElementById('errMsg').innerText=t.err_fill;fErr.style.display='block';return}
+  if(!name||!biz||!url||!email||!goal||!country){document.getElementById('errMsg').innerText=t.err_fill;fErr.style.display='block';return}
   if(!isValidUrl(url)){document.getElementById('errMsg').innerText=t.err_url;fErr.style.display='block';return}
   if(!isValidEmail(email)){document.getElementById('errMsg').innerText=t.err_email;fErr.style.display='block';return}
+  if(goal==='other'&&!goalOther){document.getElementById('errMsg').innerText=t.err_fill;fErr.style.display='block';return}
   const LOCATION_CODES={'United States':2840,'United Kingdom':2826,'Canada':2124,'Australia':2036,'Spain':2724,'Mexico':2484,'Colombia':2170,'Ecuador':2218,'Argentina':2032,'Chile':2152};
   const location_code=LOCATION_CODES[country]||2840;
   const language_code=l==='es'?'es':'en';
+  const seo_goal=goal==='other'?goalOther:goal;
   btn.disabled=true;
   btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> '+(l==='es'?'Analizando...':'Analyzing...');
   try{
     const res=await fetch('https://n8n.157.245.245.23.nip.io/webhook/sys1-universal-miner',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({url:url,brand_name:biz,location_code:location_code,language_code:language_code,contact_name:name,contact_email:email,seo_goal:goal,country:country,source:'portfolio'})
+      body:JSON.stringify({url:url,brand_name:biz,location_code:location_code,language_code:language_code,contact_name:name,contact_email:email,seo_goal:seo_goal,country:country,source:'portfolio'})
     });
-    if(res.ok){fOk.style.display='block';this.reset()}
+    if(res.ok){fOk.style.display='block';this.reset();toggleGoalOther('');}
     else throw new Error('API '+res.status);
   }catch(err){
     document.getElementById('errMsg').innerText=l==='es'?'Error de conexión. Intenta de nuevo.':'Connection error. Please try again.';
