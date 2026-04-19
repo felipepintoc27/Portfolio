@@ -941,7 +941,7 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
   try{
     const res=await fetch('https://n8n.157.245.245.23.nip.io/webhook/seo-audit',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({prospect_url:url,prospect_name:biz,contact_name:name,contact_email:email,seo_goal:goal,country:country,source:'portfolio',lang:l})
+      body:JSON.stringify({url:url,company:biz,contact_name:name,contact_email:email,seo_goal:goal,country:country,source:'portfolio',lang:l})
     });
     if(res.ok){fOk.style.display='block';this.reset()}
     else throw new Error('API '+res.status);
