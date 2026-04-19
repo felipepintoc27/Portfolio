@@ -936,12 +936,15 @@ document.getElementById('auditForm').addEventListener('submit',async function(e)
   if(!name||!biz||!url||!email){document.getElementById('errMsg').innerText=t.err_fill;fErr.style.display='block';return}
   if(!isValidUrl(url)){document.getElementById('errMsg').innerText=t.err_url;fErr.style.display='block';return}
   if(!isValidEmail(email)){document.getElementById('errMsg').innerText=t.err_email;fErr.style.display='block';return}
+  const LOCATION_CODES={'United States':2840,'United Kingdom':2826,'Canada':2124,'Australia':2036,'Spain':2724,'Mexico':2484,'Colombia':2170,'Ecuador':2218,'Argentina':2032,'Chile':2152};
+  const location_code=LOCATION_CODES[country]||2840;
+  const language_code=l==='es'?'es':'en';
   btn.disabled=true;
   btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> '+(l==='es'?'Analizando...':'Analyzing...');
   try{
-    const res=await fetch('https://n8n.157.245.245.23.nip.io/webhook/seo-audit',{
+    const res=await fetch('https://n8n.157.245.245.23.nip.io/webhook/sys1-universal-miner',{
       method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({url:url,company:biz,contact_name:name,contact_email:email,seo_goal:goal,country:country,source:'portfolio',lang:l})
+      body:JSON.stringify({url:url,brand_name:biz,location_code:location_code,language_code:language_code,contact_name:name,contact_email:email,seo_goal:goal,country:country,source:'portfolio'})
     });
     if(res.ok){fOk.style.display='block';this.reset()}
     else throw new Error('API '+res.status);
