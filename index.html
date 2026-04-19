@@ -1,665 +1,699 @@
 <!DOCTYPE html>
 <html lang="en" data-lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Felipe Pinto — Technical SEO & Growth Engineer</title>
-  <meta name="description" content="Technical SEO engineer specializing in programmatic pages, local search, and organic growth. Real results: +140% traffic, position 51→#1, 90-day ranking timelines." />
-  <link rel="canonical" href="https://felipepintoc27.github.io/Portfolio/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Felipe Pinto — Technical SEO & Growth Engineer" />
-  <meta property="og:description" content="I build SEO systems that compound month after month. +140% organic traffic. Position 51→#1. Results verified in Google Search Console." />
-  <meta property="og:url" content="https://felipepintoc27.github.io/Portfolio/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Felipe Pinto — Technical SEO & Growth Engineer" />
-  <meta name="twitter:description" content="Programmatic SEO, local search, and organic growth systems that compound month after month." />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Felipe Pinto","jobTitle":"Technical SEO Engineer","url":"https://felipepintoc27.github.io/Portfolio/","email":"felipe.p27.2001@gmail.com","sameAs":["https://www.linkedin.com/in/felipepintocordova","https://www.upwork.com/freelancers/~01127f4ee6ab3d991e"],"knowsAbout":["Technical SEO","Local SEO","Programmatic SEO","Google Search Console","Schema Markup","Core Web Vitals","n8n Automation","DataForSEO"]}</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Felipe Pinto — SEO Growth Engineering for Data-Driven Businesses</title>
+<meta name="description" content="Technical SEO engineer specializing in programmatic pages, local search, and organic growth. Real results: +140% traffic, position 51→#1, 90-day ranking timelines."/>
+<link rel="canonical" href="https://felipepintoc27.github.io/Portfolio/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Felipe Pinto — SEO Growth Engineering"/>
+<meta property="og:description" content="+140% organic traffic. 51→#1 local ranking. Data-driven SEO systems that compound month after month."/>
+<meta property="og:url" content="https://felipepintoc27.github.io/Portfolio/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Felipe Pinto","jobTitle":"Technical SEO Engineer","url":"https://felipepintoc27.github.io/Portfolio/","email":"felipe.p27.2001@gmail.com","sameAs":["https://www.linkedin.com/in/felipepintocordova","https://www.upwork.com/freelancers/~01127f4ee6ab3d991e"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0B1120;--bg2:#111827;--bg3:#0D1830;
+  --card:#162032;--card2:#1C2B40;
+  --border:rgba(255,255,255,0.07);--border-hi:rgba(79,111,240,0.45);
+  --brand:#4F6FF0;--brand2:#818CF8;--brand-dim:rgba(79,111,240,0.12);
+  --green:#10B981;--green-dim:rgba(16,185,129,0.1);
+  --text:#F8FAFC;--muted:#94A3B8;--dim:#4B5E78;
+  --grad:linear-gradient(90deg,#6B7FF5,#A78BFA,#F472B6);
+  --grad-b:linear-gradient(135deg,#4F46E5,#7C3AED);
+  --shadow:0 4px 24px rgba(0,0,0,.45);--glow:0 0 40px rgba(79,111,240,.15);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{max-width:1180px;margin:0 auto;padding:0 2rem}
+.text-grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ANNOUNCE BAR */
+.ann-bar{background:var(--brand);padding:.55rem 1rem;text-align:center;font-size:.78rem;font-weight:600;letter-spacing:.01em}
+.ann-bar a{color:#fff;display:inline-flex;align-items:center;gap:.4rem}
+.ann-bar a:hover{opacity:.85}
 
-    :root {
-      --bg:        #060C18;
-      --bg-2:      #0C1628;
-      --bg-card:   #0F1D33;
-      --bg-card-2: #132040;
-      --border:    rgba(255,255,255,0.07);
-      --border-hi: rgba(99,102,241,0.4);
-      --brand:     #6366F1;
-      --brand-dim: rgba(99,102,241,0.12);
-      --green:     #10B981;
-      --green-dim: rgba(16,185,129,0.12);
-      --text:      #F1F5F9;
-      --text-muted:#94A3B8;
-      --text-dim:  #475569;
-      --grad-brand:linear-gradient(135deg, #4F46E5, #818CF8);
-      --grad-green:linear-gradient(135deg, #10B981, #34D399);
-      --grad-text: linear-gradient(90deg, #818CF8, #A78BFA, #F472B6);
-      --shadow:    0 4px 24px rgba(0,0,0,0.4);
-      --shadow-lg: 0 16px 48px rgba(0,0,0,0.6);
-      --glow:      0 0 40px rgba(99,102,241,0.15);
-    }
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(11,17,32,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;height:66px;gap:2.5rem}
+.nav-logo{font-size:1.05rem;font-weight:900;letter-spacing:-.04em;white-space:nowrap;flex-shrink:0}
+.nav-logo span{color:var(--brand)}
+.nav-links{display:flex;gap:2rem;list-style:none;flex:1}
+.nav-links a{color:var(--muted);font-size:.84rem;font-weight:500;transition:color .2s;white-space:nowrap}
+.nav-links a:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:.75rem;margin-left:auto;flex-shrink:0}
+.lang-toggle{display:flex;background:rgba(255,255,255,.05);border-radius:6px;padding:2px;border:1px solid var(--border)}
+.lang-btn{padding:.28rem .6rem;cursor:pointer;color:var(--muted);border:none;background:transparent;font-family:'Inter',sans-serif;font-size:.73rem;font-weight:600;border-radius:4px;transition:all .2s}
+.lang-btn.active{background:rgba(79,111,240,.2);color:var(--text)}
+@media(max-width:860px){.nav-links{display:none}.nav-inner{gap:1rem}}
 
-    html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.78rem 1.6rem;border-radius:6px;font-weight:600;font-size:.87rem;cursor:pointer;border:none;font-family:'Inter',sans-serif;letter-spacing:-.01em;transition:all .22s;white-space:nowrap}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 4px 18px rgba(79,111,240,.35)}
+.btn-primary:hover{background:#3d5cde;transform:translateY(-1px);box-shadow:0 8px 28px rgba(79,111,240,.45)}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.btn-outline{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.15)}
+.btn-outline:hover{border-color:var(--brand);color:var(--brand)}
+.btn-sm{padding:.42rem 1rem;font-size:.8rem}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:#0ea875;transform:translateY(-1px)}
 
-    .text-grad { background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-    .text-green { color: var(--green); }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+/* SECTION COMMON */
+.section{padding:6rem 0}
+.section-alt{background:var(--bg2)}
+.sec-tag{display:block;font-size:.68rem;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.7rem}
+.sec-head{font-size:2.1rem;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:.9rem}
+.sec-sub{color:var(--muted);font-size:.95rem;line-height:1.7;max-width:520px}
+.center{text-align:center}.center .sec-sub{margin:0 auto}
 
-    /* BUTTONS */
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.82rem 1.75rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all 0.25s; cursor: pointer; border: none; font-family: 'Inter', sans-serif; letter-spacing: -0.01em; white-space: nowrap; }
-    .btn-primary { background: var(--brand); color: #fff; box-shadow: 0 4px 20px rgba(99,102,241,0.35); }
-    .btn-primary:hover { background: #5558f0; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(99,102,241,0.45); }
-    .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-    .btn-green { background: var(--green); color: #fff; box-shadow: 0 4px 20px rgba(16,185,129,0.3); }
-    .btn-green:hover { background: #0ea875; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(16,185,129,0.4); }
-    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
-    .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+/* HERO */
+.hero{padding:7rem 0 5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-10%;left:40%;width:700px;height:600px;background:radial-gradient(ellipse,rgba(79,111,240,.1) 0%,transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:3rem;text-align:center}}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-dim);color:var(--green);padding:.3rem .9rem;border-radius:100px;font-size:.7rem;font-weight:700;margin-bottom:1.5rem;border:1px solid rgba(16,185,129,.25);text-transform:uppercase;letter-spacing:.02em}
+.badge-dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 6px var(--green);flex-shrink:0}
+.hero h1{font-size:clamp(2.2rem,4vw,3.6rem);font-weight:900;line-height:1.06;letter-spacing:-.04em;margin-bottom:1.3rem}
+.hero-sub{font-size:1rem;color:var(--muted);margin-bottom:2.5rem;line-height:1.75;max-width:480px}
+@media(max-width:900px){.hero-sub{margin:0 auto 2.5rem}}
+.hero-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+@media(max-width:900px){.hero-actions{justify-content:center}}
 
-    /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(6,12,24,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-    .nav-inner { display: grid; grid-template-columns: auto 1fr auto; align-items: center; height: 68px; gap: 2rem; }
-    .nav-logo { font-size: 1.1rem; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.04em; }
-    .nav-logo span { color: var(--brand); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; justify-content: center; }
-    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--text); }
-    .nav-actions { display: flex; align-items: center; gap: 0.75rem; justify-content: flex-end; }
-    .lang-toggle { display: flex; background: rgba(255,255,255,0.05); border-radius: 6px; padding: 2px; border: 1px solid var(--border); }
-    .lang-btn { padding: 0.28rem 0.6rem; cursor: pointer; color: var(--text-muted); border: none; background: transparent; font-family: 'Inter',sans-serif; font-size: 0.73rem; font-weight: 600; border-radius: 4px; transition: all 0.2s; }
-    .lang-btn.active { background: rgba(99,102,241,0.2); color: var(--text); }
-    @media (max-width: 860px) { .nav-links { display: none; } .nav-inner { grid-template-columns: auto auto; } }
+/* HERO PANEL */
+.hero-panel{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.75rem;box-shadow:var(--shadow),var(--glow);position:relative;overflow:hidden}
+.hero-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,#4F46E5,#A78BFA)}
+.panel-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem}
+.panel-label{font-size:.68rem;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.07em}
+.panel-badge{font-size:.65rem;font-weight:700;background:var(--green-dim);color:var(--green);padding:.2rem .55rem;border-radius:4px;border:1px solid rgba(16,185,129,.2)}
+.chart-svg{width:100%;height:68px}
+.big-num{font-size:2.8rem;font-weight:900;letter-spacing:-.04em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-top:.75rem}
+.big-lbl{font-size:.75rem;color:var(--muted);margin-top:.2rem}
+.panel-div{height:1px;background:var(--border);margin:1.2rem 0}
+.panel-mets{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+.pm-val{font-size:1.4rem;font-weight:800;color:var(--brand);letter-spacing:-.03em}
+.pm-lbl{font-size:.66rem;color:var(--dim);margin-top:.15rem}
+.panel-src{font-size:.62rem;color:var(--dim);text-align:right;margin-top:.9rem}
 
-    /* HERO */
-    .hero { padding: 9rem 0 6rem; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; top: -20%; left: 50%; transform: translateX(-50%); width: 800px; height: 500px; background: radial-gradient(ellipse, rgba(99,102,241,0.12) 0%, transparent 70%); pointer-events: none; }
-    .hero-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; position: relative; z-index: 1; }
-    @media (max-width: 920px) { .hero-wrap { grid-template-columns: 1fr; gap: 3rem; text-align: center; } }
+/* SOLUTIONS (2 big cards like DFS) */
+.solutions-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+@media(max-width:700px){.solutions-grid{grid-template-columns:1fr}}
+.sol-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2.5rem;transition:border-color .25s,box-shadow .25s;display:flex;flex-direction:column;gap:1.25rem}
+.sol-card:hover{border-color:var(--border-hi);box-shadow:var(--glow)}
+.sol-icon{width:52px;height:52px;background:var(--brand-dim);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--brand);border:1px solid rgba(79,111,240,.2);flex-shrink:0}
+.sol-icon svg{width:24px;height:24px}
+.sol-card h3{font-size:1.2rem;font-weight:800;letter-spacing:-.02em}
+.sol-card p{font-size:.9rem;color:var(--muted);line-height:1.7;flex:1}
+.sol-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.85rem;font-weight:700;color:var(--brand);margin-top:.5rem}
+.sol-link:hover{gap:.55rem}
 
-    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green-dim); color: var(--green); padding: 0.3rem 0.85rem; border-radius: 100px; font-size: 0.7rem; font-weight: 700; margin-bottom: 1.5rem; border: 1px solid rgba(16,185,129,0.25); letter-spacing: 0.02em; text-transform: uppercase; }
-    .badge-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; box-shadow: 0 0 6px var(--green); flex-shrink: 0; }
+/* FIGURES (DFS big numbers) */
+.figures-section{padding:6rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.figures-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:3.5rem}
+@media(max-width:760px){.figures-intro{flex-direction:column;align-items:flex-start}}
+.figures-text h2{font-size:2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.5rem}
+.figures-text p{color:var(--muted);font-size:.93rem;max-width:480px;line-height:1.65}
+.figures-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+@media(max-width:900px){.figures-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.figures-grid{grid-template-columns:1fr}}
+.fig-item{padding:2.5rem 2rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.fig-item:last-child{border-right:none}
+@media(max-width:900px){.fig-item:nth-child(2){border-right:none}.fig-item:nth-child(n+3){border-bottom:none}}
+.fig-num{font-size:2.6rem;font-weight:900;letter-spacing:-.04em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.5rem}
+.fig-label{font-size:.92rem;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.fig-sub{font-size:.78rem;color:var(--dim);line-height:1.4}
 
-    .hero-text h1 { font-size: clamp(2.5rem, 4.5vw, 3.8rem); font-weight: 900; line-height: 1.06; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
-    .hero-text p { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 2.5rem; max-width: 460px; line-height: 1.7; }
-    @media (max-width: 920px) { .hero-text p { margin: 0 auto 2.5rem; } }
-    .hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-    @media (max-width: 920px) { .hero-actions { justify-content: center; } }
+/* USE CASES TABS */
+.uc-tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.uc-tab{padding:.52rem 1.1rem;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:'Inter',sans-serif;font-size:.84rem;font-weight:600;cursor:pointer;transition:all .2s}
+.uc-tab.active{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 4px 16px rgba(79,111,240,.3)}
+.uc-tab:hover:not(.active){border-color:var(--brand);color:var(--text)}
+.uc-panel{display:none;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.uc-panel.active{display:grid}
+@media(max-width:800px){.uc-panel.active{grid-template-columns:1fr;gap:2rem}}
+.uc-content h3{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.85rem}
+.uc-content p{color:var(--muted);font-size:.92rem;line-height:1.75;margin-bottom:1.5rem}
+.uc-list{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.uc-list li{display:flex;align-items:flex-start;gap:.6rem;font-size:.88rem;color:var(--muted)}
+.uc-list li svg{flex-shrink:0;margin-top:2px;color:var(--green)}
+.uc-visual{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;min-height:280px;display:flex;flex-direction:column;gap:1rem}
+.uc-metric-row{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;background:var(--bg);border-radius:8px;border:1px solid var(--border)}
+.uc-kw{font-size:.82rem;font-weight:600;color:var(--text)}
+.uc-pos{font-size:.82rem;font-weight:700;color:var(--green)}
+.uc-vol{font-size:.78rem;color:var(--dim)}
 
-    /* Hero Dashboard */
-    .hero-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem; box-shadow: var(--shadow-lg), var(--glow); position: relative; overflow: hidden; }
-    .hero-panel::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--grad-brand); opacity: 0.6; }
-    .panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; }
-    .panel-title { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); }
-    .panel-badge { font-size: 0.65rem; font-weight: 700; background: var(--green-dim); color: var(--green); padding: 0.2rem 0.5rem; border-radius: 4px; border: 1px solid rgba(16,185,129,0.2); }
-    .chart-wrap { margin-bottom: 1.25rem; }
-    .chart-svg { width: 100%; height: 72px; }
-    .big-stat { font-size: 3rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-    .big-stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.25rem; }
-    .panel-divider { height: 1px; background: var(--border); margin: 1.25rem 0; }
-    .panel-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .panel-metric { }
-    .pm-val { font-size: 1.5rem; font-weight: 800; color: var(--brand); letter-spacing: -0.03em; line-height: 1; }
-    .pm-lbl { font-size: 0.68rem; color: var(--text-dim); margin-top: 0.2rem; font-weight: 500; }
-    .panel-source { font-size: 0.65rem; color: var(--text-dim); text-align: right; margin-top: 1rem; }
+/* PROCESS / HOW IT WORKS */
+.process-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:860px){.process-wrap{grid-template-columns:1fr;gap:3rem}}
+.process-left h2{font-size:2rem;font-weight:800;letter-spacing:-.03em;margin-bottom:1rem}
+.process-left p{color:var(--muted);font-size:.93rem;line-height:1.7;margin-bottom:1.5rem}
+.process-feats{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.pf{background:var(--card);padding:1.75rem 1.5rem}
+.pf-num{font-size:.68rem;font-weight:800;color:var(--brand);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.85rem}
+.pf h4{font-size:.92rem;font-weight:700;margin-bottom:.35rem}
+.pf p{font-size:.82rem;color:var(--muted);line-height:1.55}
 
-    /* STATS BAR */
-    .stats-bar { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2.5rem 0; }
-    .stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
-    @media (max-width: 768px) { .stats-inner { grid-template-columns: repeat(2,1fr); } }
-    .stat-num { font-size: 2.2rem; font-weight: 900; letter-spacing: -0.04em; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 0.3rem; }
-    .stat-lbl { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+/* CASE STUDIES */
+.cs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
+@media(max-width:900px){.cs-grid{grid-template-columns:1fr;max-width:480px;margin:3rem auto 0}}
+.cs-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,transform .25s}
+.cs-card:hover{border-color:var(--border-hi);transform:translateY(-2px)}
+.cs-head{background:var(--card2);padding:1.75rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-end;justify-content:space-between;min-height:110px}
+.cs-big{font-size:2.8rem;font-weight:900;letter-spacing:-.04em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.cs-sub{font-size:.72rem;color:var(--dim);margin-top:.2rem}
+.cs-ind{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand);background:var(--brand-dim);padding:.2rem .55rem;border-radius:4px;border:1px solid rgba(79,111,240,.2);align-self:flex-start}
+.cs-body{padding:1.75rem;flex:1;display:flex;flex-direction:column;gap:1rem}
+.cs-body h3{font-size:.95rem;font-weight:700;letter-spacing:-.01em}
+.cs-body p{font-size:.84rem;color:var(--muted);line-height:1.6;flex:1}
+.cs-tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.cs-tag{font-size:.7rem;font-weight:600;color:var(--dim);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:.16rem .5rem;border-radius:4px}
 
-    /* SECTIONS */
-    .section-pad { padding: 6rem 0; }
-    .sec-header { text-align: center; margin-bottom: 3.5rem; }
-    .sec-tag { font-size: 0.68rem; font-weight: 700; color: var(--brand); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; display: block; }
-    .sec-header h2 { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.8rem; }
-    .sec-header p { font-size: 0.95rem; color: var(--text-muted); max-width: 460px; margin: 0 auto; line-height: 1.65; }
+/* RESOURCES */
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
+@media(max-width:768px){.res-grid{grid-template-columns:1fr;max-width:400px;margin:3rem auto 0}}
+.res-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem;transition:border-color .25s}
+.res-card:hover{border-color:var(--border-hi)}
+.res-icon{width:44px;height:44px;background:var(--brand-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--brand);margin-bottom:1.25rem;border:1px solid rgba(79,111,240,.2)}
+.res-icon svg{width:20px;height:20px}
+.res-card h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
+.res-card p{font-size:.85rem;color:var(--muted);line-height:1.6;margin-bottom:1.25rem}
+.res-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.83rem;font-weight:700;color:var(--brand)}
+.res-link:hover{gap:.55rem}
 
-    /* SERVICES */
-    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
-    @media (max-width: 860px) { .services-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; } }
-    .service-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem 1.75rem; transition: border-color 0.25s, box-shadow 0.25s; }
-    .service-card:hover { border-color: var(--border-hi); box-shadow: var(--glow); }
-    .svc-icon { width: 44px; height: 44px; background: var(--brand-dim); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; color: var(--brand); border: 1px solid rgba(99,102,241,0.2); }
-    .svc-icon svg { width: 20px; height: 20px; }
-    .service-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
-    .service-card p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.65; }
+/* VISION / MISSION */
+.vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3.5rem}
+@media(max-width:760px){.vm-grid{grid-template-columns:1fr;gap:2.5rem}}
+.vm-block h3{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.9rem}
+.vm-block p{font-size:.92rem;color:var(--muted);line-height:1.75}
 
-    /* PROCESS */
-    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
-    @media (max-width: 768px) { .process-grid { grid-template-columns: repeat(2,1fr); } }
-    @media (max-width: 480px) { .process-grid { grid-template-columns: 1fr; } }
-    .process-step { background: var(--bg-card); padding: 2rem 1.75rem; }
-    .process-num { font-size: 0.68rem; font-weight: 800; color: var(--brand); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1rem; }
-    .process-step h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .process-step p { font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; }
+/* AMPLIFY STRIP */
+.amp-strip{background:linear-gradient(135deg,#0e1650,#0a1830);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 0;position:relative;overflow:hidden}
+.amp-strip::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(79,111,240,.1) 0%,transparent 70%)}
+.amp-inner{text-align:center;position:relative;z-index:1}
+.amp-inner h2{font-size:2.2rem;font-weight:900;letter-spacing:-.03em;margin-bottom:.75rem}
+.amp-inner p{color:var(--muted);font-size:.97rem;margin-bottom:2rem;max-width:440px;margin-left:auto;margin-right:auto}
+.amp-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
 
-    /* CASE STUDIES */
-    .results-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
-    @media (max-width: 768px) { .results-grid { grid-template-columns: 1fr; } }
-    .result-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; display: flex; flex-direction: column; gap: 1.5rem; transition: border-color 0.25s, box-shadow 0.25s; }
-    .result-card:hover { border-color: var(--border-hi); box-shadow: var(--glow); }
-    .result-card.full { grid-column: 1 / -1; flex-direction: row; gap: 3rem; align-items: center; }
-    @media (max-width: 768px) { .result-card.full { flex-direction: column; gap: 1.5rem; } }
-    .result-ind { display: inline-flex; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--brand); background: var(--brand-dim); padding: 0.22rem 0.65rem; border-radius: 100px; border: 1px solid rgba(99,102,241,0.2); margin-bottom: 0.85rem; }
-    .result-info h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; letter-spacing: -0.01em; }
-    .result-info p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; }
-    .result-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
-    .rtag { font-size: 0.72rem; font-weight: 600; color: var(--text-dim); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 0.18rem 0.55rem; border-radius: 5px; }
-    .result-metric { flex-shrink: 0; text-align: center; min-width: 140px; padding: 1.5rem; background: var(--bg-card-2); border-radius: 10px; border: 1px solid var(--border); }
-    .rm-val { font-size: 2.4rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-    .rm-lbl { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.35rem; line-height: 1.4; font-weight: 500; }
+/* STACK GRID */
+.stack-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+@media(max-width:860px){.stack-grid{max-width:360px;margin:0 auto}}
+.stack-item{display:flex;align-items:center;gap:.6rem;padding:.65rem .9rem;background:var(--card);border:1px solid var(--border);border-radius:7px;font-size:.8rem;font-weight:600;color:var(--muted);transition:border-color .2s,color .2s}
+.stack-item:hover{border-color:var(--border-hi);color:var(--text)}
+.sdot{width:5px;height:5px;background:var(--brand);border-radius:50%;flex-shrink:0}
 
-    /* INDUSTRIES GRID */
-    .industries-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin-bottom: 1.25rem; }
-    @media (max-width: 860px) { .industries-grid { grid-template-columns: repeat(2,1fr); } }
-    @media (max-width: 500px) { .industries-grid { grid-template-columns: 1fr; } }
-    .ind-card { background: var(--bg-card); padding: 1.6rem; transition: background 0.2s; }
-    .ind-card:hover { background: var(--bg-card-2); }
-    .ind-icon { width: 36px; height: 36px; background: var(--brand-dim); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.85rem; color: var(--brand); border: 1px solid rgba(99,102,241,0.15); }
-    .ind-icon svg { width: 16px; height: 16px; }
-    .ind-card h3 { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.3rem; }
-    .ind-card p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
-    .fit-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem 2.5rem; }
-    .fit-box h3 { font-size: 0.92rem; font-weight: 700; margin-bottom: 1.25rem; text-align: center; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.7rem; }
-    .fit-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 0.6rem; }
-    @media (max-width: 500px) { .fit-list { grid-template-columns: 1fr; } }
-    .fit-item { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.84rem; color: var(--text-muted); line-height: 1.45; }
-    .fit-item svg { flex-shrink: 0; margin-top: 2px; color: var(--green); }
+/* ABOUT WRAP */
+.about-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:center}
+@media(max-width:860px){.about-wrap{grid-template-columns:1fr;gap:3rem;text-align:center}}
 
-    /* WHY ME */
-    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
-    @media (max-width: 768px) { .why-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; } }
-    .why-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; transition: border-color 0.25s; }
-    .why-card:hover { border-color: var(--border-hi); }
-    .why-num { font-size: 2.4rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.75rem; }
-    .why-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
-    .why-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+/* AUDIT FORM */
+.audit-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:940px;margin:0 auto}
+@media(max-width:800px){.audit-wrap{grid-template-columns:1fr;gap:3rem}}
+.audit-info h2{font-size:1.9rem;font-weight:800;line-height:1.1;margin-bottom:1rem;letter-spacing:-.03em}
+.audit-info>p{font-size:.92rem;color:var(--muted);margin-bottom:1.75rem;line-height:1.65}
+.audit-bens{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.audit-bens li{display:flex;align-items:flex-start;gap:.65rem;font-size:.87rem;color:var(--muted);line-height:1.45}
+.audit-bens li svg{flex-shrink:0;margin-top:2px;color:var(--green)}
+.form-box{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem}
+@media(max-width:460px){.form-row{grid-template-columns:1fr}}
+.fg{margin-bottom:.75rem}
+.fg:last-of-type{margin-bottom:1.2rem}
+.fg label{display:block;font-size:.68rem;font-weight:700;color:var(--dim);margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.05em}
+.fg input,.fg select{width:100%;padding:.75rem .9rem;background:var(--bg2);border:1px solid var(--border);border-radius:7px;font-family:'Inter',sans-serif;font-size:.87rem;color:var(--text);outline:none;transition:border-color .2s,box-shadow .2s}
+.fg input::placeholder{color:var(--dim)}
+.fg input:focus,.fg select:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(79,111,240,.15)}
+.fg select option{background:var(--bg2)}
+.form-note{font-size:.72rem;color:var(--dim);text-align:center;margin-top:.7rem}
+.form-status{display:none;padding:.8rem 1rem;border-radius:7px;font-size:.83rem;font-weight:500;margin-top:.8rem}
+.msg-ok{background:rgba(16,185,129,.1);color:var(--green);border:1px solid rgba(16,185,129,.2)}
+.msg-err{background:rgba(239,68,68,.1);color:#F87171;border:1px solid rgba(239,68,68,.2)}
 
-    /* ABOUT */
-    .about-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
-    @media (max-width: 860px) { .about-wrap { grid-template-columns: 1fr; gap: 3rem; text-align: center; } }
-    .about-text h2 { font-size: 1.9rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.03em; }
-    .about-text p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.7; }
-    .stack-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-    @media (max-width: 860px) { .stack-grid { max-width: 380px; margin: 0 auto; } }
-    .stack-item { display: flex; align-items: center; gap: 0.6rem; padding: 0.7rem 0.9rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); transition: border-color 0.2s, color 0.2s; }
-    .stack-item:hover { border-color: var(--border-hi); color: var(--text); }
-    .sdot { width: 5px; height: 5px; background: var(--brand); border-radius: 50%; flex-shrink: 0; }
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:500px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand .nav-logo{font-size:1.1rem;display:inline-block;margin-bottom:.85rem}
+.footer-brand p{font-size:.83rem;color:var(--muted);line-height:1.6;margin-bottom:1.25rem;max-width:240px}
+.footer-socials{display:flex;gap:1rem}
+.f-social{font-size:.8rem;font-weight:600;color:var(--dim);transition:color .2s}
+.f-social:hover{color:var(--brand)}
+.footer-col h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);margin-bottom:1rem}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.footer-col ul li a{font-size:.83rem;color:var(--muted);transition:color .2s}
+.footer-col ul li a:hover{color:var(--text)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:1.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.f-copy{font-size:.75rem;color:var(--dim)}
+.f-legal{display:flex;gap:1.5rem}
+.f-legal a{font-size:.75rem;color:var(--dim);transition:color .2s}
+.f-legal a:hover{color:var(--muted)}
 
-    /* CTA STRIP */
-    .cta-strip { background: linear-gradient(135deg, #1a1152, #0f2042); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 4rem 0; position: relative; overflow: hidden; }
-    .cta-strip::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(99,102,241,0.1) 0%, transparent 70%); }
-    .cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; position: relative; }
-    .cta-inner h2 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.35rem; }
-    .cta-inner p { color: var(--text-muted); font-size: 0.95rem; }
-
-    /* AUDIT FORM */
-    .audit-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; max-width: 940px; margin: 0 auto; }
-    @media (max-width: 800px) { .audit-wrap { grid-template-columns: 1fr; gap: 3rem; } }
-    .audit-info h2 { font-size: 2rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; letter-spacing: -0.03em; }
-    .audit-info > p { font-size: 0.93rem; color: var(--text-muted); margin-bottom: 1.75rem; line-height: 1.65; }
-    .audit-benefits { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
-    .audit-benefits li { display: flex; align-items: flex-start; gap: 0.65rem; font-size: 0.88rem; color: var(--text-muted); line-height: 1.45; }
-    .audit-benefits li svg { flex-shrink: 0; margin-top: 2px; color: var(--green); }
-    .form-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 0.8rem; }
-    @media (max-width: 460px) { .form-row { grid-template-columns: 1fr; } }
-    .form-group { margin-bottom: 0.8rem; }
-    .form-group:last-of-type { margin-bottom: 1.25rem; }
-    .form-group label { display: block; font-size: 0.7rem; font-weight: 700; color: var(--text-dim); margin-bottom: 0.35rem; text-transform: uppercase; letter-spacing: 0.05em; }
-    .form-group input, .form-group select { width: 100%; padding: 0.78rem 0.9rem; background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.87rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; color: var(--text); }
-    .form-group input::placeholder { color: var(--text-dim); }
-    .form-group input:focus, .form-group select:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(99,102,241,0.15); }
-    .form-group select option { background: var(--bg-2); }
-    .form-note { font-size: 0.73rem; color: var(--text-dim); text-align: center; margin-top: 0.75rem; }
-    .form-status { display: none; padding: 0.8rem 1rem; border-radius: 8px; font-size: 0.84rem; font-weight: 500; margin-top: 0.85rem; }
-    .msg-ok { background: rgba(16,185,129,0.1); color: var(--green); border: 1px solid rgba(16,185,129,0.2); }
-    .msg-err { background: rgba(239,68,68,0.1); color: #F87171; border: 1px solid rgba(239,68,68,0.2); }
-
-    /* FOOTER */
-    footer { background: var(--bg-2); border-top: 1px solid var(--border); padding: 3rem 0 2rem; text-align: center; }
-    .footer-logo { font-size: 1rem; font-weight: 800; color: var(--text); text-decoration: none; display: inline-block; margin-bottom: 1rem; letter-spacing: -0.03em; }
-    .footer-logo span { color: var(--brand); }
-    .footer-social { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1rem; }
-    .social-link { font-size: 0.82rem; font-weight: 600; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
-    .social-link:hover { color: var(--brand); }
-    .footer-copy { font-size: 0.75rem; color: var(--text-dim); }
-
-    @keyframes spin { to { transform: rotate(360deg); } }
-  </style>
+@keyframes spin{to{transform:rotate(360deg)}}
+</style>
 </head>
 <body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar">
+  <a href="#audit">
+    <span data-i18n="ann">Free technical SEO audit — real issues, ranked by revenue impact →</span>
+  </a>
+</div>
 
 <!-- NAV -->
 <nav>
   <div class="container nav-inner">
-    <a href="#" class="nav-logo">FP<span>.</span></a>
+    <a href="#" class="nav-logo">Felipe Pinto<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#process" data-i18n="nav_proc">Process</a></li>
+      <li><a href="#solutions" data-i18n="nav_svc">Services</a></li>
+      <li><a href="#usecases" data-i18n="nav_uc">Use Cases</a></li>
       <li><a href="#results" data-i18n="nav_res">Results</a></li>
-      <li><a href="#services" data-i18n="nav_svc">Services</a></li>
       <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#audit" data-i18n="nav_contact">Contact</a></li>
     </ul>
-    <div class="nav-actions">
+    <div class="nav-right">
       <div class="lang-toggle">
         <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
         <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
       </div>
-      <a href="#audit" class="btn btn-primary" style="padding:0.42rem 1.1rem;font-size:0.82rem;" data-i18n="nav_cta">Free Audit</a>
+      <a href="#audit" class="btn btn-primary btn-sm" data-i18n="nav_cta">Free Audit</a>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container hero-wrap">
-    <div class="hero-text">
+  <div class="container hero-grid">
+    <div class="hero-left">
       <div class="hero-badge"><span class="badge-dot"></span><span data-i18n="badge">Available for new clients</span></div>
       <h1>
-        <span data-i18n="h1_l1">Technical SEO that</span><br>
-        <span class="text-grad" data-i18n="h1_l2">compounds.</span>
+        <span data-i18n="h1a">Powerful SEO Growth Engineering For</span><br>
+        <span class="text-grad" data-i18n="h1b">Data-Driven Businesses</span>
       </h1>
-      <p data-i18n="h_sub">I build SEO systems that grow month after month — from programmatic page architecture to technical fixes that stop silently killing your rankings.</p>
+      <p class="hero-sub" data-i18n="h_sub">We build search visibility systems that compound month after month — technical architecture, programmatic scale, and automation that keeps your competitors behind you.</p>
       <div class="hero-actions">
-        <a href="#audit" class="btn btn-green" data-i18n="cta_hero">Get Free Audit</a>
-        <a href="#results" class="btn btn-outline" data-i18n="cta_sec">See Results</a>
+        <a href="#audit" class="btn btn-primary" data-i18n="cta1">Get Free Audit</a>
+        <a href="#results" class="btn btn-outline" data-i18n="cta2">See Results</a>
       </div>
     </div>
-
     <div class="hero-panel">
-      <div class="panel-header">
-        <span class="panel-title" data-i18n="hs1_l">Organic Clicks — Month over Month</span>
+      <div class="panel-hdr">
+        <span class="panel-label" data-i18n="p_lbl">Organic Clicks — Month over Month</span>
         <span class="panel-badge">GSC Verified</span>
       </div>
-      <div class="chart-wrap">
-        <svg class="chart-svg" viewBox="0 0 320 72" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#4F46E5"/>
-              <stop offset="100%" stop-color="#A78BFA"/>
-            </linearGradient>
-            <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#6366F1" stop-opacity="0.2"/>
-              <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          <path d="M0,64 L40,62 L80,58 L120,50 L160,38 L200,22 L240,12 L280,7 L320,2 L320,72 L0,72 Z" fill="url(#ag)"/>
-          <polyline points="0,64 40,62 80,58 120,50 160,38 200,22 240,12 280,7 320,2" fill="none" stroke="url(#lg)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="320" cy="2" r="4" fill="#A78BFA"/>
-        </svg>
+      <svg class="chart-svg" viewBox="0 0 320 68" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#A78BFA"/>
+          </linearGradient>
+          <linearGradient id="ag1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#6366F1" stop-opacity="0.18"/><stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,62 L40,60 L80,55 L120,47 L160,35 L200,20 L240,11 L280,6 L320,2 L320,68 L0,68 Z" fill="url(#ag1)"/>
+        <polyline points="0,62 40,60 80,55 120,47 160,35 200,20 240,11 280,6 320,2" fill="none" stroke="url(#lg1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="320" cy="2" r="4" fill="#A78BFA"/>
+      </svg>
+      <div class="big-num">+140.6%</div>
+      <div class="big-lbl" data-i18n="p_sub">Stone &amp; Surfaces · South Florida</div>
+      <div class="panel-div"></div>
+      <div class="panel-mets">
+        <div><div class="pm-val">51→#1</div><div class="pm-lbl" data-i18n="pm1">Ranking Move</div></div>
+        <div><div class="pm-val">3×</div><div class="pm-lbl" data-i18n="pm2">Traffic Mult.</div></div>
+        <div><div class="pm-val">90d</div><div class="pm-lbl" data-i18n="pm3">First Results</div></div>
       </div>
-      <div class="big-stat">+140.6%</div>
-      <div class="big-stat-label" data-i18n="hs1_s">Stone & Surfaces · South Florida</div>
-      <div class="panel-divider"></div>
-      <div class="panel-metrics">
-        <div class="panel-metric">
-          <div class="pm-val">51→#1</div>
-          <div class="pm-lbl" data-i18n="hs2_l">Ranking Move</div>
-        </div>
-        <div class="panel-metric">
-          <div class="pm-val">3×</div>
-          <div class="pm-lbl" data-i18n="hs3_l">Traffic Multiplier</div>
-        </div>
-        <div class="panel-metric">
-          <div class="pm-val">90d</div>
-          <div class="pm-lbl" data-i18n="hs4_l">To First Results</div>
-        </div>
-      </div>
-      <div class="panel-source" data-i18n="panel_src">Source: Google Search Console · Moz Rank Tracker</div>
+      <div class="panel-src" data-i18n="p_src">Source: Google Search Console · Moz Rank Tracker</div>
     </div>
   </div>
 </section>
 
-<!-- STATS BAR -->
-<div class="stats-bar">
+<!-- ALL SOLUTIONS -->
+<section id="solutions" class="section section-alt">
   <div class="container">
-    <div class="stats-inner">
-      <div>
-        <div class="stat-num">+140%</div>
-        <div class="stat-lbl" data-i18n="st1">Organic Traffic Growth</div>
-      </div>
-      <div>
-        <div class="stat-num">51→#1</div>
-        <div class="stat-lbl" data-i18n="st2">Ranking Movement Achieved</div>
-      </div>
-      <div>
-        <div class="stat-num">90d</div>
-        <div class="stat-lbl" data-i18n="st3">Average Time to First Results</div>
-      </div>
-      <div>
-        <div class="stat-num">6</div>
-        <div class="stat-lbl" data-i18n="st4">Industries Served</div>
-      </div>
+    <div class="center">
+      <span class="sec-tag" data-i18n="sol_tag">Services</span>
+      <h2 class="sec-head" data-i18n="sol_h">All the SEO systems your business needs<br>are now in one place</h2>
     </div>
-  </div>
-</div>
-
-<!-- PROCESS -->
-<section id="process" class="section-pad">
-  <div class="container">
-    <div class="sec-header">
-      <span class="sec-tag" data-i18n="proc_tag">How It Works</span>
-      <h2 data-i18n="proc_h">A System, Not a One-Time Fix</h2>
-      <p data-i18n="proc_p">Every engagement runs on the same four-phase framework — data verified before each step, hands-on execution at every stage.</p>
-    </div>
-    <div class="process-grid">
-      <div class="process-step">
-        <div class="process-num">01 · Audit</div>
-        <h3 data-i18n="proc1_h">Technical Audit</h3>
-        <p data-i18n="proc1_p">Full site crawl, Core Web Vitals, indexation status, GSC data analysis, and competitor benchmark. Every issue ranked by revenue impact — not just technical severity.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-num">02 · Strategy</div>
-        <h3 data-i18n="proc2_h">Custom Roadmap</h3>
-        <p data-i18n="proc2_p">Keyword research tied to real commercial intent, page architecture plan, and a prioritized roadmap specific to your industry, market, and competitive landscape.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-num">03 · Execute</div>
-        <h3 data-i18n="proc3_h">Hands-On Execution</h3>
-        <p data-i18n="proc3_p">I write the code, build the pages, and push every change directly. No outsourcing. No junior hand-off. Every implementation verified in GSC before it closes.</p>
-      </div>
-      <div class="process-step">
-        <div class="process-num">04 · Track</div>
-        <h3 data-i18n="proc4_h">Monthly Reporting</h3>
-        <p data-i18n="proc4_p">Ranking movement, click data, and indexation pull directly from Google Search Console. Every report is data-first — no projections, no vanity metrics.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section-pad" style="background:var(--bg-2);">
-  <div class="container">
-    <div class="sec-header">
-      <span class="sec-tag" data-i18n="s_tag">Services</span>
-      <h2 data-i18n="s_h">What I Build and Maintain</h2>
-      <p data-i18n="s_p">Three core service lines — each designed to generate compounding returns, not a one-time spike.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="svc-icon">
+    <div class="solutions-grid">
+      <div class="sol-card">
+        <div class="sol-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         </div>
-        <h3 data-i18n="s1_h">Technical SEO & Site Health</h3>
-        <p data-i18n="s1_p">Full site crawls, Core Web Vitals analysis, indexation fixes, schema markup, internal linking architecture, and crawl error resolution — across WordPress, Wix, WooCommerce, and Shopify. Every fix verified in GSC before it closes.</p>
+        <h3 data-i18n="s1h">Technical &amp; On-Page SEO</h3>
+        <p data-i18n="s1p">Explore our full stack of technical SEO services — crawl audits, Core Web Vitals, schema markup, indexation fixes, and programmatic page architecture. Every fix verified in Google Search Console before it closes.</p>
+        <a href="#usecases" class="sol-link" data-i18n="s1a">Explore services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
-      <div class="service-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3 data-i18n="s2_h">Local SEO & Programmatic Pages</h3>
-        <p data-i18n="s2_p">Google Business Profile optimization, geo-targeted landing pages at scale, and local citation management. Hub-and-spoke architecture that gives every city in your market its own optimized page — built to rank, not just exist.</p>
-      </div>
-      <div class="service-card">
-        <div class="svc-icon">
+      <div class="sol-card">
+        <div class="sol-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
         </div>
-        <h3 data-i18n="s3_h">On-Page & Keyword Strategy</h3>
-        <p data-i18n="s3_p">Keyword research tied to commercial intent, sitewide metadata optimization, E-E-A-T content refresh, and monthly performance reports with ranking movement tracked per keyword — not just aggregate traffic.</p>
+        <h3 data-i18n="s2h">Growth Automation &amp; Scale</h3>
+        <p data-i18n="s2p">Get full access to programmatic content systems, local hub-and-spoke architecture, and SEO automation pipelines powered by DataForSEO API and n8n. Built for businesses that want to dominate entire markets — not just one keyword.</p>
+        <a href="#results" class="sol-link" data-i18n="s2a">View results <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IN FIGURES -->
+<section class="figures-section">
+  <div class="container">
+    <div class="figures-intro">
+      <div class="figures-text">
+        <span class="sec-tag" data-i18n="fig_tag">In Numbers</span>
+        <h2 data-i18n="fig_h">Felipe Pinto in Figures</h2>
+        <p data-i18n="fig_p">Real results tracked in Google Search Console and Moz, verified month over month across 6+ industries. No estimated numbers, no projections.</p>
+      </div>
+      <a href="#audit" class="btn btn-outline" data-i18n="fig_cta">Get Your Audit</a>
+    </div>
+    <div class="figures-grid">
+      <div class="fig-item">
+        <div class="fig-num">+140%</div>
+        <div class="fig-label" data-i18n="fn1l">Peak organic traffic growth</div>
+        <div class="fig-sub" data-i18n="fn1s">Stone &amp; surfaces · South Florida<br>Verified in GSC</div>
+      </div>
+      <div class="fig-item">
+        <div class="fig-num">51→#1</div>
+        <div class="fig-label" data-i18n="fn2l">Local ranking achieved</div>
+        <div class="fig-sub" data-i18n="fn2s">IT services · Pittsburgh metro<br>Moz rank tracking</div>
+      </div>
+      <div class="fig-item">
+        <div class="fig-num">90d</div>
+        <div class="fig-label" data-i18n="fn3l">Average to first results</div>
+        <div class="fig-sub" data-i18n="fn3s">Foundation package · No paid ads<br>5 businesses simultaneously</div>
+      </div>
+      <div class="fig-item">
+        <div class="fig-num">6+</div>
+        <div class="fig-label" data-i18n="fn4l">Industries with verified results</div>
+        <div class="fig-sub" data-i18n="fn4s">Stone · IT · Construction<br>Luxury · Healthcare · Equipment</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section id="usecases" class="section section-alt">
+  <div class="container">
+    <span class="sec-tag" data-i18n="uc_tag">Use Cases</span>
+    <h2 class="sec-head" data-i18n="uc_h">Amplify your capabilities with proven SEO systems</h2>
+    <p class="sec-sub" style="margin-bottom:2.5rem" data-i18n="uc_p">From local businesses to regional chains — strategy adapts to your market, competition, and model.</p>
+    <div class="uc-tabs">
+      <button class="uc-tab active" onclick="setTab('local')" data-i18n="ut1">Local Business</button>
+      <button class="uc-tab" onclick="setTab('ecom')" data-i18n="ut2">E-commerce</button>
+      <button class="uc-tab" onclick="setTab('services')" data-i18n="ut3">Professional Services</button>
+      <button class="uc-tab" onclick="setTab('agency')" data-i18n="ut4">Agency / White-Label</button>
+    </div>
+
+    <div class="uc-panel active" id="tab-local">
+      <div class="uc-content">
+        <h3 data-i18n="ul_h">Dominate your local market</h3>
+        <p data-i18n="ul_p">Hub-and-spoke page architecture, Google Business Profile optimization, and geo-targeted landing pages for every city in your service area. Built to outrank competitors with higher DA by targeting local search intent.</p>
+        <ul class="uc-list">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ul1">Hub page + dedicated geo-pages per city / service area</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ul2">GBP setup, Q&A, photos, NAP consistency</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ul3">Local schema markup — LocalBusiness + Service + FAQ</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ul4">Monthly ranking reports per keyword per city</span></li>
+        </ul>
+        <a href="#audit" class="btn btn-primary" style="margin-top:1.5rem" data-i18n="ul_cta">Start Local SEO</a>
+      </div>
+      <div class="uc-visual">
+        <div style="font-size:.68rem;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.5rem">Ranking Movement — IT Services · Pittsburgh</div>
+        <div class="uc-metric-row"><span class="uc-kw">it support pittsburgh</span><span class="uc-pos">#6 ↑ from #18</span><span class="uc-vol">1,300/mo</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">it support staffing monroeville</span><span class="uc-pos">#1 ↑ from 51+</span><span class="uc-vol">320/mo</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">managed it services pittsburgh</span><span class="uc-pos">#8 ↑ from #24</span><span class="uc-vol">880/mo</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">cybersecurity pittsburgh</span><span class="uc-pos">#12 ↑ from #31</span><span class="uc-vol">590/mo</span></div>
+        <div style="font-size:.68rem;color:var(--dim);margin-top:.5rem">Source: Moz Pro · Google Search Console</div>
+      </div>
+    </div>
+
+    <div class="uc-panel" id="tab-ecom">
+      <div class="uc-content">
+        <h3 data-i18n="ue_h">Scale organic revenue without paid ads</h3>
+        <p data-i18n="ue_p">Programmatic product and category page architecture, technical crawl optimization for large inventories, and keyword-first content that drives purchase intent traffic to your highest-margin products.</p>
+        <ul class="uc-list">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ue1">City × product programmatic page matrix</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ue2">WooCommerce / Shopify technical crawl fixes</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ue3">Product schema + review markup</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ue4">GSC indexation push for large catalogs</span></li>
+        </ul>
+        <a href="#audit" class="btn btn-primary" style="margin-top:1.5rem" data-i18n="ue_cta">Audit My Store</a>
+      </div>
+      <div class="uc-visual">
+        <div style="font-size:.68rem;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.5rem">Organic Growth — Stone Distributor · South Florida</div>
+        <div class="uc-metric-row"><span class="uc-kw">quartzite countertops miami</span><span class="uc-pos">#4 ↑ from 40+</span><span class="uc-vol">2,400/mo</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">marble slabs hialeah</span><span class="uc-pos">#2 ↑ from #18</span><span class="uc-vol">880/mo</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">granite countertops south florida</span><span class="uc-pos">#7 new</span><span class="uc-vol">1,900/mo</span></div>
+        <div class="uc-metric-row" style="background:rgba(16,185,129,.05);border-color:rgba(16,185,129,.2)"><span class="uc-kw" style="color:var(--green);font-weight:700">Total organic clicks</span><span class="uc-pos">+140.6% MoM</span><span class="uc-vol">GSC verified</span></div>
+      </div>
+    </div>
+
+    <div class="uc-panel" id="tab-services">
+      <div class="uc-content">
+        <h3 data-i18n="us_h">Build authority and generate qualified leads</h3>
+        <p data-i18n="us_p">E-E-A-T content architecture, service page optimization, and backlink campaigns that position your firm as the trusted choice in your niche. Designed for law, finance, healthcare, architecture, and consulting.</p>
+        <ul class="uc-list">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="us1">E-E-A-T content refresh + author markup</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="us2">Service page optimization per practice area</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="us3">Premium backlink acquisition (DA 40+)</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="us4">Monthly performance reports — keyword by keyword</span></li>
+        </ul>
+        <a href="#audit" class="btn btn-primary" style="margin-top:1.5rem" data-i18n="us_cta">Build My Authority</a>
+      </div>
+      <div class="uc-visual">
+        <div style="font-size:.68rem;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.5rem">Foundation Package — 5 Businesses · 90 Days</div>
+        <div class="uc-metric-row"><span class="uc-kw">Healthcare · Dental</span><span class="uc-pos">Local 3-pack ✓</span><span class="uc-vol">GBP + Schema</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">Wellness · Ecotherapy</span><span class="uc-pos">Page 1 ✓</span><span class="uc-vol">Content + Links</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">Arts · Studios</span><span class="uc-pos">Page 1 ✓</span><span class="uc-vol">Local SEO</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">Retail · Specialty</span><span class="uc-pos">Top 5 ✓</span><span class="uc-vol">Technical + GBP</span></div>
+        <div style="font-size:.68rem;color:var(--dim);margin-top:.5rem">0 paid ads · All results in GSC within 90 days</div>
+      </div>
+    </div>
+
+    <div class="uc-panel" id="tab-agency">
+      <div class="uc-content">
+        <h3 data-i18n="ua_h">White-label SEO execution for agencies</h3>
+        <p data-i18n="ua_p">Deliver consistent, verifiable SEO results to your clients without expanding your team. I handle the technical implementation, reporting, and GSC verification — you maintain the client relationship.</p>
+        <ul class="uc-list">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ua1">White-label implementation reports (.docx + .pdf)</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ua2">GSC data pull — no client dashboard access required</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ua3">Multi-client management across WordPress, Wix, Shopify</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ua4">Fixed monthly retainer — predictable cost, verified output</span></li>
+        </ul>
+        <a href="#audit" class="btn btn-primary" style="margin-top:1.5rem" data-i18n="ua_cta">Partner With Me</a>
+      </div>
+      <div class="uc-visual">
+        <div style="font-size:.68rem;font-weight:700;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.5rem">Active Retainer Clients — Monthly Delivery</div>
+        <div class="uc-metric-row"><span class="uc-kw">Stone &amp; Surfaces (FL)</span><span class="uc-pos">10 hrs/mo</span><span class="uc-vol">Off-page + Blog</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">IT Services (PGH)</span><span class="uc-pos">Hub/Geo build</span><span class="uc-vol">On-page + GBP</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">Power Equipment</span><span class="uc-pos">2 locations</span><span class="uc-vol">Local + Backlinks</span></div>
+        <div class="uc-metric-row"><span class="uc-kw">Luxury Design</span><span class="uc-pos">3 hrs/mo</span><span class="uc-vol">Blog + Backlinks</span></div>
+        <div style="font-size:.68rem;color:var(--dim);margin-top:.5rem">All deliverables include GSC-verified before/after data</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="container process-wrap">
+    <div class="process-left">
+      <span class="sec-tag" data-i18n="hw_tag">How It Works</span>
+      <h2 data-i18n="hw_h">Results in weeks, not quarters</h2>
+      <p data-i18n="hw_p">Every engagement runs on the same four-phase framework. Data verified before each step. Hands-on execution at every stage. No outsourcing, no junior hand-offs.</p>
+      <a href="#audit" class="btn btn-primary" data-i18n="hw_cta">Start Your Engagement</a>
+    </div>
+    <div class="process-feats">
+      <div class="pf">
+        <div class="pf-num">01 · Audit</div>
+        <h4 data-i18n="pf1h">Comprehensive Audit</h4>
+        <p data-i18n="pf1p">Full site crawl, Core Web Vitals, GSC data analysis, competitor benchmark. Every issue ranked by revenue impact.</p>
+      </div>
+      <div class="pf">
+        <div class="pf-num">02 · Strategy</div>
+        <h4 data-i18n="pf2h">Custom Roadmap</h4>
+        <p data-i18n="pf2p">Keyword research tied to commercial intent, page architecture plan, and prioritized fixes specific to your market.</p>
+      </div>
+      <div class="pf">
+        <div class="pf-num">03 · Execute</div>
+        <h4 data-i18n="pf3h">Hands-On Execution</h4>
+        <p data-i18n="pf3p">I write the code, build the pages, push every change. Every implementation verified in GSC before it closes.</p>
+      </div>
+      <div class="pf">
+        <div class="pf-num">04 · Report</div>
+        <h4 data-i18n="pf4h">Monthly GSC Reports</h4>
+        <p data-i18n="pf4p">Ranking movement and click data pulled directly from Google Search Console. No projections. No vanity metrics.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CASE STUDIES -->
-<section id="results" class="section-pad">
+<section id="results" class="section section-alt">
   <div class="container">
-    <div class="sec-header">
-      <span class="sec-tag" data-i18n="r_tag">Case Studies</span>
-      <h2 data-i18n="r_h">Results, Not Projections.</h2>
-      <p data-i18n="r_p">Every metric below is verified in Google Search Console or Moz rank tracking. No estimated numbers.</p>
+    <div class="center">
+      <span class="sec-tag" data-i18n="cs_tag">Results</span>
+      <h2 class="sec-head" data-i18n="cs_h">Customer success stories</h2>
+      <p class="sec-sub" data-i18n="cs_p">Every metric below is verified in Google Search Console or Moz rank tracking. No estimated numbers.</p>
     </div>
-    <div class="results-grid">
-
-      <div class="result-card">
-        <div>
-          <div class="result-ind" data-i18n="rc1_ind">Stone & Natural Surfaces</div>
-          <div class="result-info">
-            <h3 data-i18n="r1_h">Slab Distributor · South Florida</h3>
-            <p data-i18n="r1_p">Zero SEO presence to market leader in one measured month. Built a geo-targeted content architecture covering every major city in the region — unique pages for each market with keyword-specific metadata, schema markup, and internal linking. Diagnosed and fixed a critical JavaScript rendering bug that was blocking indexation across dozens of pages.</p>
-            <div class="result-tags">
-              <span class="rtag" data-i18n="t_prog">Programmatic Architecture</span>
-              <span class="rtag" data-i18n="t_tech">Technical Fixes</span>
-              <span class="rtag">WordPress / WooCommerce</span>
-            </div>
+    <div class="cs-grid">
+      <div class="cs-card">
+        <div class="cs-head">
+          <div><div class="cs-big">+140%</div><div class="cs-sub" data-i18n="c1s">Organic clicks · Month-over-Month</div></div>
+          <div class="cs-ind" data-i18n="c1i">Stone &amp; Surfaces</div>
+        </div>
+        <div class="cs-body">
+          <h3 data-i18n="c1h">Slab Distributor · South Florida</h3>
+          <p data-i18n="c1p">Zero SEO presence to market leader in one measured month. Built geo-targeted content architecture covering every major city in the region. Diagnosed and fixed a critical JavaScript rendering bug blocking indexation across dozens of pages.</p>
+          <div class="cs-tags">
+            <span class="cs-tag" data-i18n="ct1">Programmatic Architecture</span>
+            <span class="cs-tag" data-i18n="ct2">Technical Fixes</span>
+            <span class="cs-tag">WordPress / WooCommerce</span>
           </div>
         </div>
-        <div class="result-metric">
-          <div class="rm-val">+140.6%</div>
-          <div class="rm-lbl" data-i18n="rm1">Organic Clicks · Month-over-Month</div>
-        </div>
       </div>
-
-      <div class="result-card">
-        <div>
-          <div class="result-ind" data-i18n="rc2_ind">IT & Managed Services</div>
-          <div class="result-info">
-            <h3 data-i18n="r2_h">IT Managed Services Firm · Pittsburgh</h3>
-            <p data-i18n="r2_p">Outranked a competitor with significantly higher Domain Authority by focusing on search intent and geo-page depth instead of raw authority metrics. Designed a hub-and-spoke structure across three service markets. Key movement: IT Support Staffing from position 51+ to #1 in one local market, and the primary market from position 18 to #6.</p>
-            <div class="result-tags">
-              <span class="rtag" data-i18n="t_hub">Hub & Spoke</span>
-              <span class="rtag" data-i18n="t_local">Local SEO</span>
-              <span class="rtag">WordPress</span>
-            </div>
+      <div class="cs-card">
+        <div class="cs-head">
+          <div><div class="cs-big">51→#1</div><div class="cs-sub" data-i18n="c2s">Ranking movement · Target keyword</div></div>
+          <div class="cs-ind" data-i18n="c2i">IT &amp; Managed Services</div>
+        </div>
+        <div class="cs-body">
+          <h3 data-i18n="c2h">IT Managed Services · Pittsburgh</h3>
+          <p data-i18n="c2p">Outranked a competitor with significantly higher Domain Authority by focusing on search intent and geo-page depth. Designed hub-and-spoke structure across three service markets. Primary market moved from position 18 to #6 simultaneously.</p>
+          <div class="cs-tags">
+            <span class="cs-tag" data-i18n="ct3">Hub &amp; Spoke</span>
+            <span class="cs-tag" data-i18n="ct4">Local SEO</span>
+            <span class="cs-tag">WordPress</span>
           </div>
         </div>
-        <div class="result-metric">
-          <div class="rm-val">51→#1</div>
-          <div class="rm-lbl" data-i18n="rm2">Ranking Movement · Target Keyword</div>
-        </div>
       </div>
-
-      <div class="result-card">
-        <div>
-          <div class="result-ind" data-i18n="rc3_ind">Construction & Home Services</div>
-          <div class="result-info">
-            <h3 data-i18n="r3_h">Regional Contractor · Multi-Market</h3>
-            <p data-i18n="r3_p">Built a full programmatic page architecture for a regional contractor covering multiple service territories. Each city received its own optimized landing page with market-specific content, schema markup, and internal links — no duplicate content, no thin pages. Integrated organic lead capture with an AI-powered receptionist to close traffic into booked calls.</p>
-            <div class="result-tags">
-              <span class="rtag" data-i18n="t_prog">Programmatic Pages</span>
-              <span class="rtag" data-i18n="t_schema">Schema Markup</span>
-              <span class="rtag" data-i18n="t_hub">Hub & Spoke</span>
-            </div>
+      <div class="cs-card">
+        <div class="cs-head">
+          <div><div class="cs-big">90d</div><div class="cs-sub" data-i18n="c3s">From zero to ranking · No paid ads</div></div>
+          <div class="cs-ind" data-i18n="c3i">Multi-Industry Foundation</div>
+        </div>
+        <div class="cs-body">
+          <h3 data-i18n="c3h">5 Businesses · Healthcare, Wellness, Arts, Retail</h3>
+          <p data-i18n="c3p">Complete SEO foundations for five businesses simultaneously — from zero organic visibility to consistent local rankings. Full GBP configuration, metadata optimization, JSON-LD schema, and starter backlink base. All results in Search Console within 90 days.</p>
+          <div class="cs-tags">
+            <span class="cs-tag" data-i18n="ct5">GBP Setup</span>
+            <span class="cs-tag" data-i18n="ct6">Schema / JSON-LD</span>
+            <span class="cs-tag" data-i18n="ct7">Link Building</span>
           </div>
         </div>
-        <div class="result-metric">
-          <div class="rm-val" style="font-size:1.6rem;">Regional<br>Coverage</div>
-          <div class="rm-lbl" data-i18n="rm3">Full Market Penetration · Zero Thin Pages</div>
-        </div>
       </div>
-
-      <div class="result-card">
-        <div>
-          <div class="result-ind" data-i18n="rc4_ind">Multi-Industry · Foundation Package</div>
-          <div class="result-info">
-            <h3 data-i18n="r4_h">5 Businesses · Healthcare, Wellness, Arts, Retail</h3>
-            <p data-i18n="r4_p">Delivered complete SEO foundations for five businesses simultaneously — from zero organic visibility to consistent local rankings. Each engagement included full GBP configuration, sitewide metadata optimization, keyword-first content structure, JSON-LD schema, and a starter backlink base. No paid advertising. Results verified in Search Console within 90 days of launch.</p>
-            <div class="result-tags">
-              <span class="rtag" data-i18n="t_gbp">GBP Setup</span>
-              <span class="rtag" data-i18n="t_schema">Schema / JSON-LD</span>
-              <span class="rtag" data-i18n="t_meta">Metadata Optimization</span>
-              <span class="rtag" data-i18n="t_link">Link Building</span>
-            </div>
-          </div>
-        </div>
-        <div class="result-metric">
-          <div class="rm-val">90d</div>
-          <div class="rm-lbl" data-i18n="rm4">From Zero to Ranking · No Paid Ads</div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- INDUSTRIES -->
-<section id="industries" class="section-pad" style="background:var(--bg-2);">
+<!-- RESOURCES -->
+<section class="section">
   <div class="container">
-    <div class="sec-header">
-      <span class="sec-tag" data-i18n="ind_tag">Industries</span>
-      <h2 data-i18n="ind_h">Where I've Delivered Results</h2>
-      <p data-i18n="ind_p">SEO strategy adapts to your market, competition, and business model — not the other way around.</p>
+    <div class="center">
+      <span class="sec-tag" data-i18n="r_tag">Resources</span>
+      <h2 class="sec-head" data-i18n="r_h">Jumpstart your SEO journey</h2>
     </div>
-    <div class="industries-grid">
-      <div class="ind-card">
-        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-        <h3 data-i18n="i1_h">Stone & Natural Surfaces</h3>
-        <p data-i18n="i1_p">Distributors, fabricators, showrooms. City-level page architecture. +140.6% organic traffic in first measured month.</p>
+    <div class="res-grid">
+      <div class="res-card">
+        <div class="res-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <h3 data-i18n="res1h">Free SEO Audit</h3>
+        <p data-i18n="res1p">Full technical crawl of your site — every critical error ranked by revenue impact. Keyword gap vs. top 3 competitors. Delivered within 24 hours, zero commitment.</p>
+        <a href="#audit" class="res-link" data-i18n="res1a">Request free audit <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
-      <div class="ind-card">
-        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-        <h3 data-i18n="i2_h">IT & Managed Services</h3>
-        <p data-i18n="i2_p">MSPs, cybersecurity, staffing, cloud. Hub-and-spoke structures that beat higher-DA competitors on local intent.</p>
+      <div class="res-card">
+        <div class="res-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <h3 data-i18n="res2h">LinkedIn Profile</h3>
+        <p data-i18n="res2p">Case studies, SEO insights, and automation content published regularly. Connect to follow the work and see real-time results from active client engagements.</p>
+        <a href="https://www.linkedin.com/in/felipepintocordova" target="_blank" rel="noopener noreferrer" class="res-link" data-i18n="res2a">Connect on LinkedIn <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
-      <div class="ind-card">
-        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3 data-i18n="i3_h">Power Equipment & Industrial</h3>
-        <p data-i18n="i3_p">Multi-location dealers on restricted platforms. Local SEO across simultaneous markets with distinct targeting.</p>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></div>
-        <h3 data-i18n="i4_h">Luxury & Interior Design</h3>
-        <p data-i18n="i4_p">High-end studios serving architects and design-conscious buyers. E-E-A-T authority and high-intent keyword positioning.</p>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <h3 data-i18n="i5_h">Healthcare & Wellness</h3>
-        <p data-i18n="i5_p">Dental, psychology, ecotherapy, fitness. E-E-A-T content + GBP that builds patient trust and drives appointment bookings.</p>
-      </div>
-      <div class="ind-card">
-        <div class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3 data-i18n="i6_h">Construction & Home Services</h3>
-        <p data-i18n="i6_p">Contractors, HVAC, renovation. Regional coverage through programmatic architecture. GBP and seasonal keyword strategies.</p>
-      </div>
-    </div>
-    <div class="fit-box">
-      <h3 data-i18n="perf_h">The right fit if you want to</h3>
-      <div class="fit-list">
-        <div class="fit-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="perf1">Rank on page one and generate leads without paying per click</span></div>
-        <div class="fit-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="perf2">Scale local visibility across multiple cities or markets</span></div>
-        <div class="fit-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="perf3">Fix technical issues that are blocking your rankings right now</span></div>
-        <div class="fit-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="perf4">Outrank competitors with higher domain authority</span></div>
-        <div class="fit-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="perf5">Build a search presence that compounds — not a one-time boost</span></div>
-        <div class="fit-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="perf6">Work with someone who implements, not just recommends</span></div>
+      <div class="res-card">
+        <div class="res-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3 data-i18n="res3h">Upwork Profile</h3>
+        <p data-i18n="res3p">Hire directly through Upwork for transparent project management, milestone-based billing, and verified work history. $45/hr with fixed-price project options available.</p>
+        <a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" rel="noopener noreferrer" class="res-link" data-i18n="res3a">View Upwork profile <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY ME -->
-<section id="why" class="section-pad">
+<!-- VISION / ABOUT -->
+<section id="about" class="section section-alt">
   <div class="container">
-    <div class="sec-header">
-      <span class="sec-tag" data-i18n="why_tag">Why Felipe</span>
-      <h2 data-i18n="why_h">What Makes the Difference</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-num">+140%</div>
-        <h3 data-i18n="w1_h">Organic Traffic Growth</h3>
-        <p data-i18n="w1_p">The highest single-month result across active clients — verified in Google Search Console. Not an average, not a projection. A real result from a real account.</p>
+    <span class="sec-tag" data-i18n="ab_tag">About</span>
+    <h2 class="sec-head" data-i18n="ab_h">Felipe Pinto — Technical SEO Engineer</h2>
+    <div class="vm-grid">
+      <div class="vm-block">
+        <h3 data-i18n="vm1h">My Approach</h3>
+        <p data-i18n="vm1p">My work is data-first and implementation-heavy. I use custom Python scripts and n8n automation pipelines to audit sites at scale — running DataForSEO API, Lighthouse, and keyword tracking in automated workflows. Every deliverable is verified in Google Search Console before it ships. No slides. No projections. Just results in the data.</p>
       </div>
-      <div class="why-card">
-        <div class="why-num">51→#1</div>
-        <h3 data-i18n="w2_h">Ranking Movement in One Market</h3>
-        <p data-i18n="w2_p">From outside the top 50 to position #1 for a target keyword in a single local market — by focusing on page depth and search intent rather than domain authority alone.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-num">100%</div>
-        <h3 data-i18n="w3_h">Hands-On Execution</h3>
-        <p data-i18n="w3_p">I write the code, build the pages, and push every change myself. No subcontractors. No junior hand-offs. Every result is documented in GSC before delivery.</p>
+      <div class="vm-block">
+        <h3 data-i18n="vm2h">What I Stand For</h3>
+        <p data-i18n="vm2p">I manage SEO across active clients in stone & surfaces, IT managed services, power equipment, luxury design, healthcare, and construction — delivering technical audits, programmatic page builds, schema markup, on-page optimization, link building, and monthly GSC-verified reports. Every engagement runs on the same standard: if it's not in the data, it doesn't count.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CTA STRIP -->
-<section class="cta-strip">
-  <div class="container cta-inner">
-    <div>
-      <h2 data-i18n="strip_h">Ready to stop losing to weaker competitors?</h2>
-      <p data-i18n="strip_p">A full technical SEO analysis — free. Delivered to your inbox in 24 hours.</p>
-    </div>
-    <a href="#audit" class="btn btn-green" data-i18n="strip_btn">Get Free Audit →</a>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section-pad" style="background:var(--bg-2);">
-  <div class="container">
-    <div class="about-wrap">
-      <div class="stack-grid">
-        <div class="stack-item"><span class="sdot"></span>DataForSEO API</div>
-        <div class="stack-item"><span class="sdot"></span>Google Search Console</div>
-        <div class="stack-item"><span class="sdot"></span>n8n Automation</div>
-        <div class="stack-item"><span class="sdot"></span>Screaming Frog</div>
-        <div class="stack-item"><span class="sdot"></span>Python / pandas</div>
-        <div class="stack-item"><span class="sdot"></span>WordPress / WooCommerce</div>
-        <div class="stack-item"><span class="sdot"></span>Schema.org / JSON-LD</div>
-        <div class="stack-item"><span class="sdot"></span>Google Business Profile</div>
-        <div class="stack-item"><span class="sdot"></span>Yoast / RankMath</div>
-        <div class="stack-item"><span class="sdot"></span>Moz Pro</div>
-      </div>
-      <div class="about-text">
-        <span class="sec-tag" data-i18n="f_tag">About</span>
-        <h2 data-i18n="f_h">Felipe Pinto — Technical SEO Engineer</h2>
-        <p data-i18n="f_p1">I manage SEO across active clients in stone & surfaces, IT managed services, power equipment, luxury design, healthcare, and construction — delivering technical audits, programmatic page builds, schema markup, on-page optimization, link building, and monthly GSC-verified reports.</p>
-        <p data-i18n="f_p2">My work is data-first and implementation-heavy. I use custom Python scripts and n8n automation pipelines to audit sites at scale — running DataForSEO API, Lighthouse, and keyword tracking in automated workflows. Every deliverable is verified in Google Search Console before it ships. No slides. No projections. Just results in the data.</p>
-      </div>
+    <div class="stack-grid" style="margin-top:3rem">
+      <div class="stack-item"><span class="sdot"></span>DataForSEO API</div>
+      <div class="stack-item"><span class="sdot"></span>Google Search Console</div>
+      <div class="stack-item"><span class="sdot"></span>n8n Automation</div>
+      <div class="stack-item"><span class="sdot"></span>Screaming Frog</div>
+      <div class="stack-item"><span class="sdot"></span>Python / pandas</div>
+      <div class="stack-item"><span class="sdot"></span>WordPress / WooCommerce</div>
+      <div class="stack-item"><span class="sdot"></span>Schema.org / JSON-LD</div>
+      <div class="stack-item"><span class="sdot"></span>Google Business Profile</div>
+      <div class="stack-item"><span class="sdot"></span>Yoast / RankMath</div>
+      <div class="stack-item"><span class="sdot"></span>Moz Pro</div>
     </div>
   </div>
 </section>
 
-<!-- FORM -->
-<section id="audit" class="section-pad">
+<!-- AMPLIFY STRIP -->
+<section class="amp-strip">
+  <div class="container amp-inner">
+    <h2 data-i18n="amp_h">Amplify your organic presence<br>with data-driven SEO</h2>
+    <p data-i18n="amp_p">A full technical SEO analysis — free. Real issues, ranked by impact, with the exact fixes that will move your rankings.</p>
+    <div class="amp-btns">
+      <a href="#audit" class="btn btn-primary" data-i18n="amp_cta1">Get Free Audit</a>
+      <a href="mailto:felipe.p27.2001@gmail.com" class="btn btn-outline" data-i18n="amp_cta2">Contact directly</a>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT FORM -->
+<section id="audit" class="section">
   <div class="container">
     <div class="audit-wrap">
       <div class="audit-info">
         <h2 data-i18n="au_h">Find out what's <span class="text-grad">blocking your growth</span></h2>
         <p data-i18n="au_p">I run a full technical SEO analysis on your site — no templates, no fluff. The real issues, ranked by impact, with the exact fixes that will move your rankings.</p>
-        <ul class="audit-benefits">
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ab1">Full technical crawl — every critical error ranked by revenue impact</span></li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ab2">Keyword gap analysis vs. your top 3 competitors</span></li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ab3">Top 3 priority actions — what to fix first for the fastest results</span></li>
-          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ab4">Delivered within 24 hours — free, zero commitment</span></li>
+        <ul class="audit-bens">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ab1">Full technical crawl — every critical error ranked by revenue impact</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ab2">Keyword gap analysis vs. your top 3 competitors</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ab3">Top 3 priority actions — what to fix first for the fastest results</span></li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="ab4">Delivered within 24 hours — free, zero commitment</span></li>
         </ul>
       </div>
       <div class="form-box">
         <form id="auditForm" novalidate>
           <div class="form-row">
-            <div class="form-group">
-              <label for="f_name" data-i18n="l_name">Your Name</label>
-              <input type="text" id="f_name" placeholder="John Smith" autocomplete="name" />
-            </div>
-            <div class="form-group">
-              <label for="f_biz" data-i18n="l_biz">Business Name</label>
-              <input type="text" id="f_biz" placeholder="Acme Corp" autocomplete="organization" />
-            </div>
+            <div class="fg"><label for="f_name" data-i18n="l_name">Your Name</label><input type="text" id="f_name" placeholder="John Smith" autocomplete="name"/></div>
+            <div class="fg"><label for="f_biz" data-i18n="l_biz">Business Name</label><input type="text" id="f_biz" placeholder="Acme Corp" autocomplete="organization"/></div>
           </div>
-          <div class="form-group">
-            <label for="f_url" data-i18n="l_url">Website URL</label>
-            <input type="url" id="f_url" placeholder="https://yourwebsite.com" autocomplete="url" />
-          </div>
-          <div class="form-group">
-            <label for="f_email" data-i18n="l_email">Email Address</label>
-            <input type="email" id="f_email" placeholder="john@acme.com" autocomplete="email" />
-          </div>
-          <div class="form-group">
-            <label for="f_goal" data-i18n="l_goal">Biggest SEO Challenge</label>
+          <div class="fg"><label for="f_url" data-i18n="l_url">Website URL</label><input type="url" id="f_url" placeholder="https://yourwebsite.com" autocomplete="url"/></div>
+          <div class="fg"><label for="f_email" data-i18n="l_email">Email Address</label><input type="email" id="f_email" placeholder="john@acme.com" autocomplete="email"/></div>
+          <div class="fg"><label for="f_goal" data-i18n="l_goal">Biggest SEO Challenge</label>
             <select id="f_goal">
-              <option value="leads" data-i18n="o_leads">Not getting enough organic leads</option>
-              <option value="tech" data-i18n="o_tech">Technical issues hurting rankings</option>
-              <option value="local" data-i18n="o_local">Need to rank in local search</option>
-              <option value="scale" data-i18n="o_scale">Want to scale to multiple cities</option>
+              <option value="leads" data-i18n="o1">Not getting enough organic leads</option>
+              <option value="tech" data-i18n="o2">Technical issues hurting rankings</option>
+              <option value="local" data-i18n="o3">Need to rank in local search</option>
+              <option value="scale" data-i18n="o4">Want to scale to multiple cities</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-green" style="width:100%;" id="fBtn" data-i18n="f_btn">Analyze My Site →</button>
+          <button type="submit" class="btn btn-primary" style="width:100%" id="fBtn" data-i18n="f_btn">Analyze My Site →</button>
           <p class="form-note" data-i18n="f_note">Free analysis. No spam. Response within 24 hours.</p>
           <div class="form-status msg-ok" id="fOk" data-i18n="f_ok">Report on the way — check your inbox within 24 hours.</div>
           <div class="form-status msg-err" id="fErr"><span id="errMsg"></span></div>
@@ -672,201 +706,245 @@
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <a href="#" class="footer-logo">FP<span>.</span></a>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/felipepintocordova" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
-      <a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" rel="noopener noreferrer" class="social-link">Upwork</a>
-      <a href="mailto:felipe.p27.2001@gmail.com" class="social-link">Email</a>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">Felipe Pinto<span>.</span></a>
+        <p data-i18n="ft_desc">Technical SEO engineer specializing in programmatic growth, local search, and automation. Data-first. Implementation-heavy.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/felipepintocordova" target="_blank" rel="noopener noreferrer" class="f-social">LinkedIn</a>
+          <a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" rel="noopener noreferrer" class="f-social">Upwork</a>
+          <a href="mailto:felipe.p27.2001@gmail.com" class="f-social">Email</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="fc1h">Services</h4>
+        <ul>
+          <li><a href="#solutions" data-i18n="fc1l1">Technical SEO</a></li>
+          <li><a href="#solutions" data-i18n="fc1l2">Local SEO</a></li>
+          <li><a href="#solutions" data-i18n="fc1l3">Programmatic Pages</a></li>
+          <li><a href="#solutions" data-i18n="fc1l4">On-Page Optimization</a></li>
+          <li><a href="#solutions" data-i18n="fc1l5">Link Building</a></li>
+          <li><a href="#solutions" data-i18n="fc1l6">SEO Automation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="fc2h">Industries</h4>
+        <ul>
+          <li><a href="#usecases" data-i18n="fc2l1">Stone &amp; Surfaces</a></li>
+          <li><a href="#usecases" data-i18n="fc2l2">IT &amp; Managed Services</a></li>
+          <li><a href="#usecases" data-i18n="fc2l3">E-commerce</a></li>
+          <li><a href="#usecases" data-i18n="fc2l4">Healthcare &amp; Wellness</a></li>
+          <li><a href="#usecases" data-i18n="fc2l5">Construction</a></li>
+          <li><a href="#usecases" data-i18n="fc2l6">Luxury &amp; Design</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="fc3h">Resources</h4>
+        <ul>
+          <li><a href="#audit" data-i18n="fc3l1">Free SEO Audit</a></li>
+          <li><a href="#results" data-i18n="fc3l2">Case Studies</a></li>
+          <li><a href="#about" data-i18n="fc3l3">About</a></li>
+          <li><a href="https://www.linkedin.com/in/felipepintocordova" target="_blank" rel="noopener noreferrer" data-i18n="fc3l4">LinkedIn</a></li>
+          <li><a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" rel="noopener noreferrer" data-i18n="fc3l5">Upwork · $45/hr</a></li>
+          <li><a href="mailto:felipe.p27.2001@gmail.com" data-i18n="fc3l6">Email</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-copy" data-i18n="ft_copy">© 2026 Felipe Pinto · Technical SEO Engineer</div>
+    <div class="footer-bottom">
+      <p class="f-copy" data-i18n="ft_copy">© 2026 Felipe Pinto · Technical SEO Engineer</p>
+      <div class="f-legal">
+        <a href="mailto:felipe.p27.2001@gmail.com" data-i18n="ft_contact">Contact</a>
+      </div>
+    </div>
   </div>
 </footer>
 
 <script>
-const T = {
-  en: {
-    nav_proc:"Process", nav_res:"Results", nav_svc:"Services", nav_about:"About", nav_cta:"Free Audit",
-    badge:"Available for new clients",
-    h1_l1:"Technical SEO that", h1_l2:"compounds.",
-    h_sub:"I build SEO systems that grow month after month — from programmatic page architecture to technical fixes that stop silently killing your rankings.",
-    hs1_l:"Organic Clicks — Month over Month", hs1_s:"Stone & Surfaces · South Florida",
-    hs2_l:"Ranking Move", hs3_l:"Traffic Multiplier", hs4_l:"To First Results",
-    panel_src:"Source: Google Search Console · Moz Rank Tracker",
-    cta_hero:"Get Free Audit", cta_sec:"See Results",
-    st1:"Organic Traffic Growth", st2:"Ranking Movement Achieved", st3:"Average Time to First Results", st4:"Industries Served",
-    strip_h:"Ready to stop losing to weaker competitors?", strip_p:"A full technical SEO analysis — free. Delivered to your inbox in 24 hours.", strip_btn:"Get Free Audit →",
-    proc_tag:"How It Works", proc_h:"A System, Not a One-Time Fix",
-    proc_p:"Every engagement runs on the same four-phase framework — data verified before each step, hands-on execution at every stage.",
-    proc1_h:"Technical Audit", proc1_p:"Full site crawl, Core Web Vitals, indexation status, GSC data analysis, and competitor benchmark. Every issue ranked by revenue impact — not just technical severity.",
-    proc2_h:"Custom Roadmap", proc2_p:"Keyword research tied to real commercial intent, page architecture plan, and a prioritized roadmap specific to your industry, market, and competitive landscape.",
-    proc3_h:"Hands-On Execution", proc3_p:"I write the code, build the pages, and push every change directly. No outsourcing. No junior hand-off. Every implementation verified in GSC before it closes.",
-    proc4_h:"Monthly Reporting", proc4_p:"Ranking movement, click data, and indexation pull directly from Google Search Console. Every report is data-first — no projections, no vanity metrics.",
-    s_tag:"Services", s_h:"What I Build and Maintain", s_p:"Three core service lines — each designed to generate compounding returns, not a one-time spike.",
-    s1_h:"Technical SEO & Site Health", s1_p:"Full site crawls, Core Web Vitals analysis, indexation fixes, schema markup, internal linking architecture, and crawl error resolution — across WordPress, Wix, WooCommerce, and Shopify. Every fix verified in GSC before it closes.",
-    s2_h:"Local SEO & Programmatic Pages", s2_p:"Google Business Profile optimization, geo-targeted landing pages at scale, and local citation management. Hub-and-spoke architecture that gives every city in your market its own optimized page — built to rank, not just exist.",
-    s3_h:"On-Page & Keyword Strategy", s3_p:"Keyword research tied to commercial intent, sitewide metadata optimization, E-E-A-T content refresh, and monthly performance reports with ranking movement tracked per keyword — not just aggregate traffic.",
-    r_tag:"Case Studies", r_h:"Results, Not Projections.", r_p:"Every metric below is verified in Google Search Console or Moz rank tracking. No estimated numbers.",
-    rc1_ind:"Stone & Natural Surfaces",
-    r1_h:"Slab Distributor · South Florida",
-    r1_p:"Zero SEO presence to market leader in one measured month. Built a geo-targeted content architecture covering every major city in the region — unique pages for each market with keyword-specific metadata, schema markup, and internal linking. Diagnosed and fixed a critical JavaScript rendering bug that was blocking indexation across dozens of pages.",
-    rc2_ind:"IT & Managed Services",
-    r2_h:"IT Managed Services Firm · Pittsburgh",
-    r2_p:"Outranked a competitor with significantly higher Domain Authority by focusing on search intent and geo-page depth instead of raw authority metrics. Designed a hub-and-spoke structure across three service markets. Key movement: IT Support Staffing from position 51+ to #1 in one local market, and the primary market from position 18 to #6.",
-    rc3_ind:"Construction & Home Services",
-    r3_h:"Regional Contractor · Multi-Market",
-    r3_p:"Built a full programmatic page architecture for a regional contractor covering multiple service territories. Each city received its own optimized landing page with market-specific content, schema markup, and internal links — no duplicate content, no thin pages. Integrated organic lead capture with an AI-powered receptionist to close traffic into booked calls.",
-    rc4_ind:"Multi-Industry · Foundation Package",
-    r4_h:"5 Businesses · Healthcare, Wellness, Arts, Retail",
-    r4_p:"Delivered complete SEO foundations for five businesses simultaneously — from zero organic visibility to consistent local rankings. Each engagement included full GBP configuration, sitewide metadata optimization, keyword-first content structure, JSON-LD schema, and a starter backlink base. No paid advertising. Results verified in Search Console within 90 days of launch.",
-    t_prog:"Programmatic Architecture", t_tech:"Technical Fixes", t_hub:"Hub & Spoke", t_local:"Local SEO", t_schema:"Schema / JSON-LD", t_meta:"Metadata Optimization", t_link:"Link Building", t_gbp:"GBP Setup",
-    rm1:"Organic Clicks · Month-over-Month", rm2:"Ranking Movement · Target Keyword", rm3:"Full Market Penetration · Zero Thin Pages", rm4:"From Zero to Ranking · No Paid Ads",
-    ind_tag:"Industries", ind_h:"Where I've Delivered Results", ind_p:"SEO strategy adapts to your market, competition, and business model — not the other way around.",
-    i1_h:"Stone & Natural Surfaces", i1_p:"Distributors, fabricators, showrooms. City-level page architecture. +140.6% organic traffic in first measured month.",
-    i2_h:"IT & Managed Services", i2_p:"MSPs, cybersecurity, staffing, cloud. Hub-and-spoke structures that beat higher-DA competitors on local intent.",
-    i3_h:"Power Equipment & Industrial", i3_p:"Multi-location dealers on restricted platforms. Local SEO across simultaneous markets with distinct targeting.",
-    i4_h:"Luxury & Interior Design", i4_p:"High-end studios serving architects and design-conscious buyers. E-E-A-T authority and high-intent keyword positioning.",
-    i5_h:"Healthcare & Wellness", i5_p:"Dental, psychology, ecotherapy, fitness. E-E-A-T content + GBP that builds patient trust and drives appointment bookings.",
-    i6_h:"Construction & Home Services", i6_p:"Contractors, HVAC, renovation. Regional coverage through programmatic architecture. GBP and seasonal keyword strategies.",
-    perf_h:"The right fit if you want to",
-    perf1:"Rank on page one and generate leads without paying per click", perf2:"Scale local visibility across multiple cities or markets",
-    perf3:"Fix technical issues that are blocking your rankings right now", perf4:"Outrank competitors with higher domain authority",
-    perf5:"Build a search presence that compounds — not a one-time boost", perf6:"Work with someone who implements, not just recommends",
-    why_tag:"Why Felipe", why_h:"What Makes the Difference",
-    w1_h:"Organic Traffic Growth", w1_p:"The highest single-month result across active clients — verified in Google Search Console. Not an average, not a projection. A real result from a real account.",
-    w2_h:"Ranking Movement in One Market", w2_p:"From outside the top 50 to position #1 for a target keyword in a single local market — by focusing on page depth and search intent rather than domain authority alone.",
-    w3_h:"Hands-On Execution", w3_p:"I write the code, build the pages, and push every change myself. No subcontractors. No junior hand-offs. Every result is documented in GSC before delivery.",
-    f_tag:"About", f_h:"Felipe Pinto — Technical SEO Engineer",
-    f_p1:"I manage SEO across active clients in stone & surfaces, IT managed services, power equipment, luxury design, healthcare, and construction — delivering technical audits, programmatic page builds, schema markup, on-page optimization, link building, and monthly GSC-verified reports.",
-    f_p2:"My work is data-first and implementation-heavy. I use custom Python scripts and n8n automation pipelines to audit sites at scale — running DataForSEO API, Lighthouse, and keyword tracking in automated workflows. Every deliverable is verified in Google Search Console before it ships. No slides. No projections. Just results in the data.",
-    au_h:"Find out what's <span class='text-grad'>blocking your growth</span>",
-    au_p:"I run a full technical SEO analysis on your site — no templates, no fluff. The real issues, ranked by impact, with the exact fixes that will move your rankings.",
-    ab1:"Full technical crawl — every critical error ranked by revenue impact", ab2:"Keyword gap analysis vs. your top 3 competitors",
-    ab3:"Top 3 priority actions — what to fix first for the fastest results", ab4:"Delivered within 24 hours — free, zero commitment",
-    l_name:"Your Name", l_biz:"Business Name", l_url:"Website URL", l_email:"Email Address", l_goal:"Biggest SEO Challenge",
-    o_leads:"Not getting enough organic leads", o_tech:"Technical issues hurting rankings", o_local:"Need to rank in local search", o_scale:"Want to scale to multiple cities",
-    f_btn:"Analyze My Site →", f_note:"Free analysis. No spam. Response within 24 hours.",
-    f_ok:"Report on the way — check your inbox within 24 hours.",
-    err_fill:"Please fill in all fields.", err_url:"Please enter a valid URL (https://...)", err_email:"Please enter a valid email address.",
-    ft_copy:"© 2026 Felipe Pinto · Technical SEO Engineer"
-  },
-  es: {
-    nav_proc:"Proceso", nav_res:"Resultados", nav_svc:"Servicios", nav_about:"Sobre Mí", nav_cta:"Auditoría Gratis",
-    badge:"Disponible para nuevos clientes",
-    h1_l1:"SEO técnico que", h1_l2:"se acumula.",
-    h_sub:"Construyo sistemas SEO que crecen mes a mes — desde arquitectura programática hasta correcciones técnicas que dejan de frenar tus rankings silenciosamente.",
-    hs1_l:"Clics Orgánicos — Mes a Mes", hs1_s:"Stone & Surfaces · Sur de Florida",
-    hs2_l:"Movimiento de Ranking", hs3_l:"Multiplicador de Tráfico", hs4_l:"Primeros Resultados",
-    panel_src:"Fuente: Google Search Console · Moz Rank Tracker",
-    cta_hero:"Auditoría Gratis", cta_sec:"Ver Resultados",
-    st1:"Crecimiento de Tráfico Orgánico", st2:"Movimiento de Ranking Logrado", st3:"Tiempo Promedio a Primeros Resultados", st4:"Industrias Atendidas",
-    strip_h:"¿Listo para dejar de perder ante competidores más débiles?", strip_p:"Análisis SEO técnico completo — gratis. Entregado a tu inbox en 24 horas.", strip_btn:"Auditoría Gratis →",
-    proc_tag:"Cómo Funciona", proc_h:"Un Sistema, No una Solución Puntual",
-    proc_p:"Cada proyecto sigue el mismo marco de cuatro fases — datos verificados antes de cada paso, implementación directa en cada etapa.",
-    proc1_h:"Auditoría Técnica", proc1_p:"Crawl completo, Core Web Vitals, estado de indexación, análisis GSC y benchmark vs. competidores. Cada problema clasificado por impacto en ingresos.",
-    proc2_h:"Hoja de Ruta Personalizada", proc2_p:"Keyword research orientado a intención comercial real, plan de arquitectura de páginas y hoja de ruta priorizada — específica para tu industria y mercado.",
-    proc3_h:"Implementación Directa", proc3_p:"Escribo el código, construyo las páginas y ejecuto cada cambio yo mismo. Sin subcontratación. Sin delegación. Cada implementación verificada en GSC.",
-    proc4_h:"Reportes Mensuales", proc4_p:"Movimiento de rankings, datos de clics e indexación directamente de Google Search Console. Cada reporte es data-first — sin proyecciones ni métricas de vanidad.",
-    s_tag:"Servicios", s_h:"Lo Que Construyo y Mantengo", s_p:"Tres líneas de servicio — cada una diseñada para generar retornos acumulativos, no un pico puntual.",
-    s1_h:"SEO Técnico & Salud del Sitio", s1_p:"Crawls completos, Core Web Vitals, correcciones de indexación, schema markup, arquitectura de enlazado interno y resolución de errores — en WordPress, Wix, WooCommerce y Shopify. Cada corrección verificada en GSC.",
-    s2_h:"SEO Local & Páginas Programáticas", s2_p:"Optimización de Google Business Profile, páginas geo-targeted a escala y gestión de citaciones locales. Arquitectura hub-and-spoke que da a cada ciudad su propia página optimizada — para rankear, no solo existir.",
-    s3_h:"On-Page & Estrategia de Keywords", s3_p:"Keyword research orientado a intención comercial, optimización de metadata sitewide, actualización E-E-A-T y reportes mensuales con seguimiento de rankings por keyword — no solo tráfico agregado.",
-    r_tag:"Casos de Estudio", r_h:"Resultados, No Proyecciones.", r_p:"Cada métrica está verificada en Google Search Console o Moz rank tracking. Sin números estimados.",
-    rc1_ind:"Stone & Superficies Naturales",
-    r1_h:"Distribuidor de Losas · Sur de Florida",
-    r1_p:"De cero presencia SEO a líder de mercado en un mes medido. Construí arquitectura de contenido geo-targeted cubriendo cada ciudad principal de la región — páginas únicas con metadata específica por keyword, schema markup y enlazado interno. Diagnostiqué y corregí un bug crítico de renderizado JavaScript que bloqueaba la indexación de decenas de páginas.",
-    rc2_ind:"IT & Managed Services",
-    r2_h:"Empresa IT Managed Services · Pittsburgh",
-    r2_p:"Superé a un competidor con mayor Domain Authority enfocándome en intención de búsqueda y profundidad de páginas geo. Diseñé estructura hub-and-spoke en tres mercados de servicio. Movimiento clave: IT Support Staffing de posición 51+ a #1 en un mercado local, y el mercado principal de posición 18 a #6.",
-    rc3_ind:"Construcción & Servicios del Hogar",
-    r3_h:"Contratista Regional · Multi-Mercado",
-    r3_p:"Construí arquitectura programática completa para contratista regional cubriendo múltiples territorios. Cada ciudad recibió su propia página optimizada con contenido específico, schema markup y enlaces internos — sin contenido duplicado, sin páginas thin. Integré captura de leads orgánicos con recepcionista IA para convertir tráfico en llamadas agendadas.",
-    rc4_ind:"Multi-Industria · Foundation Package",
-    r4_h:"5 Negocios · Salud, Bienestar, Arte, Retail",
-    r4_p:"Entregué bases SEO completas para cinco negocios simultáneamente — de cero visibilidad a rankings locales consistentes. Cada proyecto incluyó: configuración completa GBP, optimización de metadata sitewide, estructura de contenido orientada a keywords, schema JSON-LD y backlinks iniciales. Sin publicidad pagada. Resultados verificados en Search Console en 90 días.",
-    t_prog:"Arquitectura Programática", t_tech:"Correcciones Técnicas", t_hub:"Hub & Spoke", t_local:"SEO Local", t_schema:"Schema / JSON-LD", t_meta:"Optimización de Metadata", t_link:"Link Building", t_gbp:"Configuración GBP",
-    rm1:"Clics Orgánicos · Mes a Mes", rm2:"Movimiento de Ranking · Keyword Objetivo", rm3:"Cobertura Total de Mercado · Cero Páginas Thin", rm4:"De Cero a Ranking · Sin Publicidad Pagada",
-    ind_tag:"Industrias", ind_h:"Donde He Entregado Resultados", ind_p:"La estrategia SEO se adapta a tu mercado, competencia y modelo de negocio — no al revés.",
-    i1_h:"Stone & Superficies Naturales", i1_p:"Distribuidores, fabricantes, showrooms. Arquitectura de páginas por ciudad. +140.6% tráfico orgánico en primer mes.",
-    i2_h:"IT & Managed Services", i2_p:"MSPs, ciberseguridad, staffing, cloud. Estructuras hub-and-spoke que superan competidores con mayor DA en búsqueda local.",
-    i3_h:"Equipos Industriales", i3_p:"Dealers multi-locación en plataformas restringidas. SEO local en mercados simultáneos con targeting diferenciado.",
-    i4_h:"Diseño de Interiores & Lujo", i4_p:"Estudios de alta gama para arquitectos y compradores exigentes. Autoridad E-E-A-T y posicionamiento de keywords de alta intención.",
-    i5_h:"Salud & Bienestar", i5_p:"Dental, psicología, ecoterapia, fitness. Contenido E-E-A-T + GBP que genera confianza y reservas de citas.",
-    i6_h:"Construcción & Servicios del Hogar", i6_p:"Contratistas, HVAC, renovación. Cobertura regional mediante arquitectura programática. GBP y estrategias de keywords estacionales.",
-    perf_h:"Ideal para ti si quieres",
-    perf1:"Rankear en primera página y generar leads sin pagar por clic", perf2:"Escalar visibilidad local en múltiples ciudades o mercados",
-    perf3:"Corregir problemas técnicos que bloquean tus rankings ahora mismo", perf4:"Superar a competidores con mayor domain authority",
-    perf5:"Construir presencia de búsqueda que se acumula — no un pico puntual", perf6:"Trabajar con alguien que implementa, no solo recomienda",
-    why_tag:"Por Qué Felipe", why_h:"Lo Que Hace la Diferencia",
-    w1_h:"Crecimiento de Tráfico Orgánico", w1_p:"El resultado más alto en un solo mes en cuentas activas — verificado en Google Search Console. No un promedio, no una proyección. Un resultado real de una cuenta real.",
-    w2_h:"Movimiento de Ranking en un Mercado", w2_p:"De fuera del top 50 a posición #1 para una keyword objetivo en un mercado local — enfocándose en profundidad de página e intención de búsqueda en lugar de domain authority.",
-    w3_h:"Implementación Directa", w3_p:"Escribo el código, construyo las páginas y ejecuto cada cambio yo mismo. Sin subcontratistas. Sin delegación. Cada resultado documentado en GSC antes de entregar.",
-    f_tag:"Sobre Mí", f_h:"Felipe Pinto — Ingeniero SEO Técnico",
-    f_p1:"Gestiono SEO en clientes activos en stone & superficies, IT managed services, equipos industriales, diseño de lujo, salud y construcción — entregando auditorías técnicas, construcción programática, schema markup, on-page, link building y reportes mensuales verificados en GSC.",
-    f_p2:"Mi trabajo es data-first e implementación-heavy. Uso scripts Python personalizados y pipelines n8n para auditar sitios a escala — ejecutando DataForSEO API, Lighthouse y seguimiento de keywords en flujos automatizados. Cada entregable verificado en Google Search Console antes de enviarse. Sin slides. Sin proyecciones. Solo resultados en los datos.",
-    au_h:"Descubre qué <span class='text-grad'>frena tu crecimiento</span>",
-    au_p:"Ejecuto análisis SEO técnico completo de tu sitio — sin plantillas, sin relleno. Los problemas reales, clasificados por impacto, con las correcciones exactas que moverán tus rankings.",
-    ab1:"Crawl técnico completo — cada error crítico clasificado por impacto en ingresos", ab2:"Análisis de keyword gap vs. tus 3 principales competidores",
-    ab3:"Top 3 acciones prioritarias — qué corregir primero para resultados más rápidos", ab4:"Entregado en 24 horas — gratis, sin compromiso",
-    l_name:"Tu Nombre", l_biz:"Nombre del Negocio", l_url:"URL del Sitio Web", l_email:"Email", l_goal:"Mayor Desafío SEO",
-    o_leads:"No consigo suficientes leads orgánicos", o_tech:"Problemas técnicos afectan rankings", o_local:"Necesito rankear en búsqueda local", o_scale:"Quiero escalar a múltiples ciudades",
-    f_btn:"Analizar mi Sitio →", f_note:"Análisis gratuito. Sin spam. Respuesta en 24 horas.",
-    f_ok:"Reporte en camino — revisa tu inbox en las próximas 24 horas.",
-    err_fill:"Por favor completa todos los campos.", err_url:"Ingresa una URL válida (https://...)", err_email:"Ingresa un email válido.",
-    ft_copy:"© 2026 Felipe Pinto · Ingeniero SEO Técnico"
-  }
+// TRANSLATIONS
+const T={
+en:{
+  ann:"Free technical SEO audit — real issues, ranked by revenue impact →",
+  nav_svc:"Services",nav_uc:"Use Cases",nav_res:"Results",nav_about:"About",nav_contact:"Contact",nav_cta:"Free Audit",
+  badge:"Available for new clients",
+  h1a:"Powerful SEO Growth Engineering For",h1b:"Data-Driven Businesses",
+  h_sub:"We build search visibility systems that compound month after month — technical architecture, programmatic scale, and automation that keeps your competitors behind you.",
+  cta1:"Get Free Audit",cta2:"See Results",
+  p_lbl:"Organic Clicks — Month over Month",p_sub:"Stone & Surfaces · South Florida",
+  pm1:"Ranking Move",pm2:"Traffic Mult.",pm3:"First Results",
+  p_src:"Source: Google Search Console · Moz Rank Tracker",
+  sol_tag:"Services",sol_h:"All the SEO systems your business needs are now in one place",
+  s1h:"Technical & On-Page SEO",s1p:"Explore our full stack of technical SEO services — crawl audits, Core Web Vitals, schema markup, indexation fixes, and programmatic page architecture. Every fix verified in Google Search Console before it closes.",s1a:"Explore services",
+  s2h:"Growth Automation & Scale",s2p:"Get full access to programmatic content systems, local hub-and-spoke architecture, and SEO automation pipelines powered by DataForSEO API and n8n. Built for businesses that want to dominate entire markets — not just one keyword.",s2a:"View results",
+  fig_tag:"In Numbers",fig_h:"Felipe Pinto in Figures",fig_p:"Real results tracked in Google Search Console and Moz, verified month over month across 6+ industries. No estimated numbers, no projections.",fig_cta:"Get Your Audit",
+  fn1l:"Peak organic traffic growth",fn1s:"Stone & surfaces · South Florida\nVerified in GSC",
+  fn2l:"Local ranking achieved",fn2s:"IT services · Pittsburgh metro\nMoz rank tracking",
+  fn3l:"Average to first results",fn3s:"Foundation package · No paid ads\n5 businesses simultaneously",
+  fn4l:"Industries with verified results",fn4s:"Stone · IT · Construction\nLuxury · Healthcare · Equipment",
+  uc_tag:"Use Cases",uc_h:"Amplify your capabilities with proven SEO systems",uc_p:"From local businesses to regional chains — strategy adapts to your market, competition, and model.",
+  ut1:"Local Business",ut2:"E-commerce",ut3:"Professional Services",ut4:"Agency / White-Label",
+  ul_h:"Dominate your local market",ul_p:"Hub-and-spoke page architecture, Google Business Profile optimization, and geo-targeted landing pages for every city in your service area. Built to outrank competitors with higher DA by targeting local search intent.",
+  ul1:"Hub page + dedicated geo-pages per city / service area",ul2:"GBP setup, Q&A, photos, NAP consistency",ul3:"Local schema markup — LocalBusiness + Service + FAQ",ul4:"Monthly ranking reports per keyword per city",ul_cta:"Start Local SEO",
+  ue_h:"Scale organic revenue without paid ads",ue_p:"Programmatic product and category page architecture, technical crawl optimization for large inventories, and keyword-first content that drives purchase intent traffic to your highest-margin products.",
+  ue1:"City × product programmatic page matrix",ue2:"WooCommerce / Shopify technical crawl fixes",ue3:"Product schema + review markup",ue4:"GSC indexation push for large catalogs",ue_cta:"Audit My Store",
+  us_h:"Build authority and generate qualified leads",us_p:"E-E-A-T content architecture, service page optimization, and backlink campaigns that position your firm as the trusted choice in your niche.",
+  us1:"E-E-A-T content refresh + author markup",us2:"Service page optimization per practice area",us3:"Premium backlink acquisition (DA 40+)",us4:"Monthly performance reports — keyword by keyword",us_cta:"Build My Authority",
+  ua_h:"White-label SEO execution for agencies",ua_p:"Deliver consistent, verifiable SEO results to your clients without expanding your team. I handle the technical implementation, reporting, and GSC verification.",
+  ua1:"White-label implementation reports (.docx + .pdf)",ua2:"GSC data pull — no client dashboard access required",ua3:"Multi-client management across WordPress, Wix, Shopify",ua4:"Fixed monthly retainer — predictable cost, verified output",ua_cta:"Partner With Me",
+  hw_tag:"How It Works",hw_h:"Results in weeks, not quarters",hw_p:"Every engagement runs on the same four-phase framework. Data verified before each step. Hands-on execution at every stage. No outsourcing, no junior hand-offs.",hw_cta:"Start Your Engagement",
+  pf1h:"Comprehensive Audit",pf1p:"Full site crawl, Core Web Vitals, GSC data analysis, competitor benchmark. Every issue ranked by revenue impact.",
+  pf2h:"Custom Roadmap",pf2p:"Keyword research tied to commercial intent, page architecture plan, and prioritized fixes specific to your market.",
+  pf3h:"Hands-On Execution",pf3p:"I write the code, build the pages, push every change. Every implementation verified in GSC before it closes.",
+  pf4h:"Monthly GSC Reports",pf4p:"Ranking movement and click data pulled directly from Google Search Console. No projections. No vanity metrics.",
+  cs_tag:"Results",cs_h:"Customer success stories",cs_p:"Every metric below is verified in Google Search Console or Moz rank tracking. No estimated numbers.",
+  c1s:"Organic clicks · Month-over-Month",c1i:"Stone & Surfaces",c1h:"Slab Distributor · South Florida",c1p:"Zero SEO presence to market leader in one measured month. Built geo-targeted content architecture covering every major city in the region. Diagnosed and fixed a critical JavaScript rendering bug blocking indexation across dozens of pages.",
+  c2s:"Ranking movement · Target keyword",c2i:"IT & Managed Services",c2h:"IT Managed Services · Pittsburgh",c2p:"Outranked a competitor with significantly higher Domain Authority by focusing on search intent and geo-page depth. Designed hub-and-spoke structure across three service markets. Primary market moved from position 18 to #6 simultaneously.",
+  c3s:"From zero to ranking · No paid ads",c3i:"Multi-Industry Foundation",c3h:"5 Businesses · Healthcare, Wellness, Arts, Retail",c3p:"Complete SEO foundations for five businesses simultaneously — from zero organic visibility to consistent local rankings. Full GBP configuration, metadata optimization, JSON-LD schema, and starter backlink base. All results in Search Console within 90 days.",
+  ct1:"Programmatic Architecture",ct2:"Technical Fixes",ct3:"Hub & Spoke",ct4:"Local SEO",ct5:"GBP Setup",ct6:"Schema / JSON-LD",ct7:"Link Building",
+  r_tag:"Resources",r_h:"Jumpstart your SEO journey",
+  res1h:"Free SEO Audit",res1p:"Full technical crawl of your site — every critical error ranked by revenue impact. Keyword gap vs. top 3 competitors. Delivered within 24 hours, zero commitment.",res1a:"Request free audit",
+  res2h:"LinkedIn Profile",res2p:"Case studies, SEO insights, and automation content published regularly. Connect to follow the work and see real-time results from active client engagements.",res2a:"Connect on LinkedIn",
+  res3h:"Upwork Profile",res3p:"Hire directly through Upwork for transparent project management, milestone-based billing, and verified work history. $45/hr with fixed-price project options.",res3a:"View Upwork profile",
+  ab_tag:"About",ab_h:"Felipe Pinto — Technical SEO Engineer",
+  vm1h:"My Approach",vm1p:"My work is data-first and implementation-heavy. I use custom Python scripts and n8n automation pipelines to audit sites at scale — running DataForSEO API, Lighthouse, and keyword tracking in automated workflows. Every deliverable is verified in Google Search Console before it ships. No slides. No projections. Just results in the data.",
+  vm2h:"What I Stand For",vm2p:"I manage SEO across active clients in stone & surfaces, IT managed services, power equipment, luxury design, healthcare, and construction — delivering technical audits, programmatic page builds, schema markup, on-page optimization, link building, and monthly GSC-verified reports. Every engagement runs on the same standard: if it's not in the data, it doesn't count.",
+  amp_h:"Amplify your organic presence with data-driven SEO",amp_p:"A full technical SEO analysis — free. Real issues, ranked by impact, with the exact fixes that will move your rankings.",amp_cta1:"Get Free Audit",amp_cta2:"Contact directly",
+  au_h:"Find out what's <span class='text-grad'>blocking your growth</span>",au_p:"I run a full technical SEO analysis on your site — no templates, no fluff. The real issues, ranked by impact, with the exact fixes that will move your rankings.",
+  ab1:"Full technical crawl — every critical error ranked by revenue impact",ab2:"Keyword gap analysis vs. your top 3 competitors",ab3:"Top 3 priority actions — what to fix first for the fastest results",ab4:"Delivered within 24 hours — free, zero commitment",
+  l_name:"Your Name",l_biz:"Business Name",l_url:"Website URL",l_email:"Email Address",l_goal:"Biggest SEO Challenge",
+  o1:"Not getting enough organic leads",o2:"Technical issues hurting rankings",o3:"Need to rank in local search",o4:"Want to scale to multiple cities",
+  f_btn:"Analyze My Site →",f_note:"Free analysis. No spam. Response within 24 hours.",f_ok:"Report on the way — check your inbox within 24 hours.",
+  err_fill:"Please fill in all fields.",err_url:"Please enter a valid URL (https://...)",err_email:"Please enter a valid email address.",
+  ft_desc:"Technical SEO engineer specializing in programmatic growth, local search, and automation. Data-first. Implementation-heavy.",
+  ft_copy:"© 2026 Felipe Pinto · Technical SEO Engineer",ft_contact:"Contact",
+  fc1h:"Services",fc1l1:"Technical SEO",fc1l2:"Local SEO",fc1l3:"Programmatic Pages",fc1l4:"On-Page Optimization",fc1l5:"Link Building",fc1l6:"SEO Automation",
+  fc2h:"Industries",fc2l1:"Stone & Surfaces",fc2l2:"IT & Managed Services",fc2l3:"E-commerce",fc2l4:"Healthcare & Wellness",fc2l5:"Construction",fc2l6:"Luxury & Design",
+  fc3h:"Resources",fc3l1:"Free SEO Audit",fc3l2:"Case Studies",fc3l3:"About",fc3l4:"LinkedIn",fc3l5:"Upwork · $45/hr",fc3l6:"Email"
+},
+es:{
+  ann:"Auditoría SEO técnica gratis — problemas reales, clasificados por impacto en ingresos →",
+  nav_svc:"Servicios",nav_uc:"Casos de Uso",nav_res:"Resultados",nav_about:"Sobre Mí",nav_contact:"Contacto",nav_cta:"Auditoría Gratis",
+  badge:"Disponible para nuevos clientes",
+  h1a:"Ingeniería SEO de Crecimiento Para",h1b:"Negocios Orientados a Datos",
+  h_sub:"Construimos sistemas de visibilidad en búsqueda que se acumulan mes a mes — arquitectura técnica, escala programática y automatización que mantiene a tus competidores atrás.",
+  cta1:"Auditoría Gratis",cta2:"Ver Resultados",
+  p_lbl:"Clics Orgánicos — Mes a Mes",p_sub:"Stone & Surfaces · Sur de Florida",
+  pm1:"Movimiento de Ranking",pm2:"Multiplicador",pm3:"Primeros Resultados",
+  p_src:"Fuente: Google Search Console · Moz Rank Tracker",
+  sol_tag:"Servicios",sol_h:"Todos los sistemas SEO que tu negocio necesita en un solo lugar",
+  s1h:"SEO Técnico y On-Page",s1p:"Explora nuestro stack completo de servicios SEO técnicos — auditorías de crawl, Core Web Vitals, schema markup, correcciones de indexación y arquitectura programática. Cada corrección verificada en GSC antes de cerrarse.",s1a:"Explorar servicios",
+  s2h:"Automatización de Crecimiento y Escala",s2p:"Accede a sistemas de contenido programático, arquitectura hub-and-spoke local y pipelines de automatización SEO. Construidos para negocios que quieren dominar mercados enteros — no solo una keyword.",s2a:"Ver resultados",
+  fig_tag:"En Números",fig_h:"Felipe Pinto en Cifras",fig_p:"Resultados reales rastreados en Google Search Console y Moz, verificados mes a mes en más de 6 industrias. Sin números estimados, sin proyecciones.",fig_cta:"Obtén tu Auditoría",
+  fn1l:"Pico de crecimiento de tráfico orgánico",fn1s:"Stone & surfaces · Sur de Florida\nVerificado en GSC",
+  fn2l:"Ranking local logrado",fn2s:"IT services · Pittsburgh metro\nMoz rank tracking",
+  fn3l:"Promedio a primeros resultados",fn3s:"Foundation package · Sin publicidad pagada\n5 negocios simultáneamente",
+  fn4l:"Industrias con resultados verificados",fn4s:"Stone · IT · Construcción\nLujo · Salud · Equipos",
+  uc_tag:"Casos de Uso",uc_h:"Amplifica tus capacidades con sistemas SEO probados",uc_p:"De negocios locales a cadenas regionales — la estrategia se adapta a tu mercado, competencia y modelo.",
+  ut1:"Negocio Local",ut2:"E-commerce",ut3:"Servicios Profesionales",ut4:"Agencia / White-Label",
+  ul_h:"Domina tu mercado local",ul_p:"Arquitectura hub-and-spoke, optimización de Google Business Profile y páginas geo-targeted para cada ciudad en tu área de servicio. Construido para superar competidores con mayor DA.",
+  ul1:"Hub page + geo-pages dedicadas por ciudad / área de servicio",ul2:"Configuración GBP, Q&A, fotos, consistencia NAP",ul3:"Schema markup local — LocalBusiness + Service + FAQ",ul4:"Reportes mensuales de ranking por keyword por ciudad",ul_cta:"Iniciar SEO Local",
+  ue_h:"Escala ingresos orgánicos sin publicidad pagada",ue_p:"Arquitectura programática de páginas de producto y categoría, optimización técnica de crawl para inventarios grandes y contenido keyword-first.",
+  ue1:"Matriz programática ciudad × producto",ue2:"Correcciones técnicas de crawl WooCommerce / Shopify",ue3:"Schema de producto + markup de reseñas",ue4:"Push de indexación GSC para catálogos grandes",ue_cta:"Auditar mi Tienda",
+  us_h:"Construye autoridad y genera leads calificados",us_p:"Arquitectura de contenido E-E-A-T, optimización de páginas de servicio y campañas de backlinks que posicionan tu firma como la opción de confianza.",
+  us1:"Actualización de contenido E-E-A-T + author markup",us2:"Optimización de página de servicio por área de práctica",us3:"Adquisición de backlinks premium (DA 40+)",us4:"Reportes mensuales de rendimiento — keyword por keyword",us_cta:"Construir mi Autoridad",
+  ua_h:"Ejecución SEO white-label para agencias",ua_p:"Entrega resultados SEO consistentes y verificables a tus clientes sin expandir tu equipo. Me encargo de la implementación técnica, reportes y verificación GSC.",
+  ua1:"Reportes de implementación white-label (.docx + .pdf)",ua2:"Pull de datos GSC — sin acceso al dashboard del cliente",ua3:"Gestión multi-cliente en WordPress, Wix, Shopify",ua4:"Retainer mensual fijo — costo predecible, output verificado",ua_cta:"Ser Partner",
+  hw_tag:"Cómo Funciona",hw_h:"Resultados en semanas, no trimestres",hw_p:"Cada proyecto sigue el mismo marco de cuatro fases. Datos verificados antes de cada paso. Implementación directa en cada etapa. Sin subcontratación.",hw_cta:"Iniciar Proyecto",
+  pf1h:"Auditoría Completa",pf1p:"Crawl completo, Core Web Vitals, análisis GSC, benchmark vs competidores. Cada problema clasificado por impacto en ingresos.",
+  pf2h:"Hoja de Ruta Personalizada",pf2p:"Keyword research orientado a intención comercial, plan de arquitectura y correcciones priorizadas específicas a tu mercado.",
+  pf3h:"Implementación Directa",pf3p:"Escribo el código, construyo las páginas, ejecuto cada cambio. Cada implementación verificada en GSC antes de cerrarse.",
+  pf4h:"Reportes Mensuales GSC",pf4p:"Movimiento de rankings y datos de clics directamente de Google Search Console. Sin proyecciones. Sin métricas de vanidad.",
+  cs_tag:"Resultados",cs_h:"Historias de éxito",cs_p:"Cada métrica está verificada en Google Search Console o Moz rank tracking. Sin números estimados.",
+  c1s:"Clics orgánicos · Mes a Mes",c1i:"Stone & Superficies",c1h:"Distribuidor de Losas · Sur de Florida",c1p:"De cero presencia SEO a líder de mercado en un mes medido. Construí arquitectura geo-targeted cubriendo cada ciudad principal de la región. Diagnostiqué y corregí un bug crítico de JavaScript que bloqueaba la indexación de decenas de páginas.",
+  c2s:"Movimiento de ranking · Keyword objetivo",c2i:"IT & Managed Services",c2h:"IT Managed Services · Pittsburgh",c2p:"Superé a un competidor con mayor Domain Authority enfocándome en intención de búsqueda y profundidad de páginas geo. Diseñé estructura hub-and-spoke en tres mercados de servicio. Mercado principal movió de posición 18 a #6 simultáneamente.",
+  c3s:"De cero a ranking · Sin publicidad pagada",c3i:"Foundation Multi-Industria",c3h:"5 Negocios · Salud, Bienestar, Arte, Retail",c3p:"Bases SEO completas para cinco negocios simultáneamente — de cero visibilidad a rankings locales consistentes. Configuración GBP, optimización de metadata, schema JSON-LD y backlinks iniciales. Todo en Search Console en 90 días.",
+  ct1:"Arquitectura Programática",ct2:"Correcciones Técnicas",ct3:"Hub & Spoke",ct4:"SEO Local",ct5:"Configuración GBP",ct6:"Schema / JSON-LD",ct7:"Link Building",
+  r_tag:"Recursos",r_h:"Comienza tu camino SEO",
+  res1h:"Auditoría SEO Gratis",res1p:"Crawl técnico completo — cada error crítico clasificado por impacto en ingresos. Keyword gap vs. top 3 competidores. Entregado en 24 horas, sin compromiso.",res1a:"Solicitar auditoría gratis",
+  res2h:"Perfil de LinkedIn",res2p:"Casos de estudio, insights SEO y contenido de automatización publicados regularmente. Conéctate para seguir el trabajo y ver resultados en tiempo real.",res2a:"Conectar en LinkedIn",
+  res3h:"Perfil de Upwork",res3p:"Contrátame directamente en Upwork para gestión transparente de proyectos, facturación por hitos y historial de trabajo verificado. $45/hr con opciones de precio fijo.",res3a:"Ver perfil Upwork",
+  ab_tag:"Sobre Mí",ab_h:"Felipe Pinto — Ingeniero SEO Técnico",
+  vm1h:"Mi Enfoque",vm1p:"Mi trabajo es data-first e implementación-heavy. Uso scripts Python personalizados y pipelines n8n para auditar sitios a escala — ejecutando DataForSEO API, Lighthouse y keyword tracking en flujos automatizados. Cada entregable verificado en Google Search Console antes de enviarse.",
+  vm2h:"Lo Que Defiendo",vm2p:"Gestiono SEO en clientes activos en stone & superficies, IT managed services, equipos industriales, diseño de lujo, salud y construcción — entregando auditorías técnicas, páginas programáticas, schema markup, on-page, link building y reportes mensuales verificados en GSC.",
+  amp_h:"Amplifica tu presencia orgánica con SEO orientado a datos",amp_p:"Análisis SEO técnico completo — gratis. Problemas reales, clasificados por impacto, con las correcciones exactas que moverán tus rankings.",amp_cta1:"Auditoría Gratis",amp_cta2:"Contacto directo",
+  au_h:"Descubre qué <span class='text-grad'>frena tu crecimiento</span>",au_p:"Ejecuto análisis SEO técnico completo de tu sitio — sin plantillas, sin relleno. Los problemas reales, clasificados por impacto, con las correcciones exactas que moverán tus rankings.",
+  ab1:"Crawl técnico completo — cada error crítico clasificado por impacto en ingresos",ab2:"Análisis de keyword gap vs. tus 3 principales competidores",ab3:"Top 3 acciones prioritarias — qué corregir primero para resultados más rápidos",ab4:"Entregado en 24 horas — gratis, sin compromiso",
+  l_name:"Tu Nombre",l_biz:"Nombre del Negocio",l_url:"URL del Sitio Web",l_email:"Email",l_goal:"Mayor Desafío SEO",
+  o1:"No consigo suficientes leads orgánicos",o2:"Problemas técnicos afectan rankings",o3:"Necesito rankear en búsqueda local",o4:"Quiero escalar a múltiples ciudades",
+  f_btn:"Analizar mi Sitio →",f_note:"Análisis gratuito. Sin spam. Respuesta en 24 horas.",f_ok:"Reporte en camino — revisa tu inbox en las próximas 24 horas.",
+  err_fill:"Por favor completa todos los campos.",err_url:"Ingresa una URL válida (https://...)",err_email:"Ingresa un email válido.",
+  ft_desc:"Ingeniero SEO técnico especializado en crecimiento programático, búsqueda local y automatización. Data-first. Implementación directa.",
+  ft_copy:"© 2026 Felipe Pinto · Ingeniero SEO Técnico",ft_contact:"Contacto",
+  fc1h:"Servicios",fc1l1:"SEO Técnico",fc1l2:"SEO Local",fc1l3:"Páginas Programáticas",fc1l4:"Optimización On-Page",fc1l5:"Link Building",fc1l6:"Automatización SEO",
+  fc2h:"Industrias",fc2l1:"Stone & Superficies",fc2l2:"IT & Managed Services",fc2l3:"E-commerce",fc2l4:"Salud & Bienestar",fc2l5:"Construcción",fc2l6:"Lujo & Diseño",
+  fc3h:"Recursos",fc3l1:"Auditoría SEO Gratis",fc3l2:"Casos de Estudio",fc3l3:"Sobre Mí",fc3l4:"LinkedIn",fc3l5:"Upwork · $45/hr",fc3l6:"Email"
+}
 };
 
-function setLang(lang) {
-  const t = T[lang]; if (!t) return;
-  document.documentElement.setAttribute('lang', lang);
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const k = el.getAttribute('data-i18n');
-    if (t[k] !== undefined) el.innerHTML = t[k];
+function setLang(l){
+  const t=T[l];if(!t)return;
+  document.documentElement.setAttribute('lang',l);
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(t[k]!==undefined)el.innerHTML=t[k];
   });
-  document.getElementById('btn-en').classList.toggle('active', lang==='en');
-  document.getElementById('btn-es').classList.toggle('active', lang==='es');
-  localStorage.setItem('fp_lang', lang);
+  document.getElementById('btn-en').classList.toggle('active',l==='en');
+  document.getElementById('btn-es').classList.toggle('active',l==='es');
+  localStorage.setItem('fp_lang',l);
 }
-function detectLang() {
-  const s = localStorage.getItem('fp_lang'); if (s) return s;
-  return (navigator.language||'en').toLowerCase().startsWith('es') ? 'es' : 'en';
+function detectLang(){
+  const s=localStorage.getItem('fp_lang');if(s)return s;
+  return(navigator.language||'en').toLowerCase().startsWith('es')?'es':'en';
 }
-function isValidEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-function isValidUrl(v){ return /^https?:\/\/.{3,}/.test(v.trim()); }
 
-document.getElementById('auditForm').addEventListener('submit', async function(e) {
+// USE CASE TABS
+function setTab(id){
+  document.querySelectorAll('.uc-tab').forEach((b,i)=>{
+    const ids=['local','ecom','services','agency'];
+    b.classList.toggle('active',ids[i]===id);
+  });
+  document.querySelectorAll('.uc-panel').forEach(p=>{
+    p.classList.toggle('active',p.id==='tab-'+id);
+  });
+}
+
+// FORM
+function isValidEmail(v){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)}
+function isValidUrl(v){return/^https?:\/\/.{3,}/.test(v.trim())}
+
+document.getElementById('auditForm').addEventListener('submit',async function(e){
   e.preventDefault();
-  const lang = document.documentElement.getAttribute('lang')||'en';
-  const t = T[lang];
-  const name  = document.getElementById('f_name').value.trim();
-  const biz   = document.getElementById('f_biz').value.trim();
-  const url   = document.getElementById('f_url').value.trim();
-  const email = document.getElementById('f_email').value.trim();
-  const goal  = document.getElementById('f_goal').value;
-  const btn   = document.getElementById('fBtn');
-  const fErr  = document.getElementById('fErr');
-  const fOk   = document.getElementById('fOk');
-  fErr.style.display='none'; fOk.style.display='none';
-  if (!name||!biz||!url||!email) { document.getElementById('errMsg').innerText=t.err_fill; fErr.style.display='block'; return; }
-  if (!isValidUrl(url)) { document.getElementById('errMsg').innerText=t.err_url; fErr.style.display='block'; return; }
-  if (!isValidEmail(email)) { document.getElementById('errMsg').innerText=t.err_email; fErr.style.display='block'; return; }
+  const l=document.documentElement.getAttribute('lang')||'en';
+  const t=T[l];
+  const name=document.getElementById('f_name').value.trim();
+  const biz=document.getElementById('f_biz').value.trim();
+  const url=document.getElementById('f_url').value.trim();
+  const email=document.getElementById('f_email').value.trim();
+  const goal=document.getElementById('f_goal').value;
+  const btn=document.getElementById('fBtn');
+  const fErr=document.getElementById('fErr');
+  const fOk=document.getElementById('fOk');
+  fErr.style.display='none';fOk.style.display='none';
+  if(!name||!biz||!url||!email){document.getElementById('errMsg').innerText=t.err_fill;fErr.style.display='block';return}
+  if(!isValidUrl(url)){document.getElementById('errMsg').innerText=t.err_url;fErr.style.display='block';return}
+  if(!isValidEmail(email)){document.getElementById('errMsg').innerText=t.err_email;fErr.style.display='block';return}
   btn.disabled=true;
-  btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> '+(lang==='es'?'Analizando...':'Analyzing...');
-  try {
-    const res = await fetch('https://n8n.157.245.245.23.nip.io/webhook/seo-audit', {
-      method:'POST', headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({prospect_url:url, prospect_name:biz, contact_name:name, contact_email:email, seo_goal:goal, source:'portfolio', lang})
+  btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> '+(l==='es'?'Analizando...':'Analyzing...');
+  try{
+    const res=await fetch('https://n8n.157.245.245.23.nip.io/webhook/seo-audit',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({prospect_url:url,prospect_name:biz,contact_name:name,contact_email:email,seo_goal:goal,source:'portfolio',lang:l})
     });
-    if (res.ok) { fOk.style.display='block'; this.reset(); }
+    if(res.ok){fOk.style.display='block';this.reset()}
     else throw new Error('API '+res.status);
-  } catch(err) {
-    document.getElementById('errMsg').innerText = lang==='es' ? 'Error de conexión. Intenta de nuevo.' : 'Connection error. Please try again.';
+  }catch(err){
+    document.getElementById('errMsg').innerText=l==='es'?'Error de conexión. Intenta de nuevo.':'Connection error. Please try again.';
     fErr.style.display='block';
-  } finally {
-    btn.disabled=false; btn.innerHTML=t.f_btn;
+  }finally{
+    btn.disabled=false;btn.innerHTML=t.f_btn;
   }
 });
-document.addEventListener('DOMContentLoaded', ()=>setLang(detectLang()));
+
+document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
 </script>
 </body>
 </html>
