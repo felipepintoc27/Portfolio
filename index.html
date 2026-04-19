@@ -76,8 +76,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(11,17,32,.92);backdrop-fil
 /* HERO */
 .hero{padding:7rem 0 5rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-10%;left:40%;width:700px;height:600px;background:radial-gradient(ellipse,rgba(79,111,240,.1) 0%,transparent 70%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:3rem;text-align:center}}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:0;align-items:center;position:relative;z-index:1;max-width:760px}
+.hero-sub{max-width:580px!important}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-dim);color:var(--green);padding:.3rem .9rem;border-radius:100px;font-size:.7rem;font-weight:700;margin-bottom:1.5rem;border:1px solid rgba(16,185,129,.25);text-transform:uppercase;letter-spacing:.02em}
 .badge-dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 6px var(--green);flex-shrink:0}
 .hero h1{font-size:clamp(2.2rem,4vw,3.6rem);font-weight:900;line-height:1.06;letter-spacing:-.04em;margin-bottom:1.3rem}
@@ -301,34 +301,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
         <a href="#audit" class="btn btn-primary" data-i18n="cta1">Get Free Audit</a>
         <a href="#results" class="btn btn-outline" data-i18n="cta2">See Results</a>
       </div>
-    </div>
-    <div class="hero-panel">
-      <div class="panel-hdr">
-        <span class="panel-label" data-i18n="p_lbl">Organic Clicks — Month over Month</span>
-        <span class="panel-badge">GSC Verified</span>
-      </div>
-      <svg class="chart-svg" viewBox="0 0 320 68" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#4F46E5"/><stop offset="100%" stop-color="#A78BFA"/>
-          </linearGradient>
-          <linearGradient id="ag1" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#6366F1" stop-opacity="0.18"/><stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <path d="M0,62 L40,60 L80,55 L120,47 L160,35 L200,20 L240,11 L280,6 L320,2 L320,68 L0,68 Z" fill="url(#ag1)"/>
-        <polyline points="0,62 40,60 80,55 120,47 160,35 200,20 240,11 280,6 320,2" fill="none" stroke="url(#lg1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="320" cy="2" r="4" fill="#A78BFA"/>
-      </svg>
-      <div class="big-num">+140.6%</div>
-      <div class="big-lbl" data-i18n="p_sub">Stone &amp; Surfaces · South Florida</div>
-      <div class="panel-div"></div>
-      <div class="panel-mets">
-        <div><div class="pm-val">51→#1</div><div class="pm-lbl" data-i18n="pm1">Ranking Move</div></div>
-        <div><div class="pm-val">3×</div><div class="pm-lbl" data-i18n="pm2">Traffic Mult.</div></div>
-        <div><div class="pm-val">90d</div><div class="pm-lbl" data-i18n="pm3">First Results</div></div>
-      </div>
-      <div class="panel-src" data-i18n="p_src">Source: Google Search Console · Moz Rank Tracker</div>
     </div>
   </div>
 </section>
