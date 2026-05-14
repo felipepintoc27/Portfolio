@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Felipe Pinto — Resume / CV</title>
+<meta name="description" content="Felipe Pinto — SEO &amp; Marketing Automation Specialist. Resume / CV with experience, achievements, technical stack, and certifications."/>
+<link rel="canonical" href="https://felipepintoc27.github.io/Portfolio/resume.html"/>
+<meta property="og:type" content="profile"/>
+<meta property="og:title" content="Felipe Pinto — Resume / CV"/>
+<meta property="og:description" content="SEO &amp; Marketing Automation Specialist. 10+ U.S. clients managed. Python · n8n · DataForSEO · Google Ads certified."/>
+<meta property="og:url" content="https://felipepintoc27.github.io/Portfolio/resume.html"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Felipe Pinto","jobTitle":"SEO & Marketing Automation Specialist","url":"https://felipepintoc27.github.io/Portfolio/resume.html","email":"felipe.p27.2001@gmail.com","sameAs":["https://www.linkedin.com/in/felipepintocordova","https://www.upwork.com/freelancers/~01127f4ee6ab3d991e"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0A1628;--bg2:#0D1E35;--bg3:#071020;
+  --card:#12213A;--card2:#162843;
+  --border:rgba(255,255,255,0.07);
+  --brand:#62B747;--brand2:#7DC55E;--brand-dim:rgba(98,183,71,0.12);
+  --text:#F8FAFC;--muted:#8B9BB5;--dim:#4B5E78;
+  --grad:linear-gradient(90deg,#62B747,#7DC55E);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.container{max-width:980px;margin:0 auto;padding:0 2rem}
+.text-grad{color:var(--brand)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(11,17,32,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;height:62px;gap:2rem}
+.nav-logo{font-size:1.05rem;font-weight:900;letter-spacing:-.04em;white-space:nowrap}
+.nav-logo span{color:var(--brand)}
+.nav-links{display:flex;gap:1.75rem;list-style:none;margin-left:2rem;flex:1}
+.nav-links a{color:var(--muted);font-size:.84rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:.6rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1.1rem;border-radius:5px;font-weight:700;font-size:.74rem;border:none;letter-spacing:.06em;text-transform:uppercase;transition:all .22s;cursor:pointer}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:#55a33e}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid rgba(255,255,255,.2)}
+.btn-outline:hover{border-color:var(--brand);color:var(--brand)}
+@media(max-width:780px){.nav-links{display:none}}
+
+/* HEADER */
+.cv-header{padding:5rem 0 3rem;background:var(--bg3);border-bottom:1px solid var(--border)}
+.cv-name{font-size:3rem;font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:.5rem}
+.cv-title{font-size:1.1rem;color:var(--brand);font-weight:600;letter-spacing:.04em;margin-bottom:1.5rem}
+.cv-contact{display:flex;flex-wrap:wrap;gap:1rem 1.6rem;color:var(--muted);font-size:.88rem;font-weight:500}
+.cv-contact a:hover{color:var(--brand)}
+.cv-contact span{display:inline-flex;align-items:center;gap:.4rem}
+.cv-contact svg{flex-shrink:0}
+.cv-summary{margin-top:1.8rem;max-width:780px;color:var(--text);font-size:.95rem;line-height:1.75;opacity:.92}
+
+/* SECTIONS */
+.cv-section{padding:3.5rem 0;border-bottom:1px solid var(--border)}
+.cv-section:last-child{border-bottom:none}
+.cv-section-tag{display:inline-block;font-size:.66rem;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.12em;padding-left:.85rem;border-left:3px solid var(--brand);margin-bottom:1rem}
+.cv-section-h{font-size:1.65rem;font-weight:800;letter-spacing:-.025em;margin-bottom:2rem}
+
+/* ACHIEVEMENTS GRID */
+.ach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.ach-tile{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.4rem 1.2rem;transition:all .22s}
+.ach-tile:hover{border-color:var(--brand);transform:translateY(-2px)}
+.ach-num{font-size:1.9rem;font-weight:900;color:var(--brand);letter-spacing:-.03em;margin-bottom:.25rem;line-height:1}
+.ach-label{font-size:.82rem;font-weight:700;color:var(--text);margin-bottom:.35rem;line-height:1.3}
+.ach-sub{font-size:.72rem;color:var(--muted);line-height:1.4}
+@media(max-width:780px){.ach-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* EXPERIENCE */
+.exp-item{margin-bottom:2.5rem;padding-left:1.5rem;border-left:2px solid var(--border);position:relative}
+.exp-item::before{content:'';position:absolute;left:-6px;top:.5rem;width:10px;height:10px;background:var(--brand);border-radius:50%}
+.exp-item:last-child{margin-bottom:0}
+.exp-head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:.5rem;margin-bottom:.35rem}
+.exp-role{font-size:1.05rem;font-weight:700;color:var(--text)}
+.exp-date{font-size:.78rem;color:var(--brand);font-weight:600;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.exp-org{font-size:.88rem;color:var(--muted);font-weight:500;margin-bottom:.9rem;font-style:italic}
+.exp-list{list-style:none;padding:0}
+.exp-list li{position:relative;padding-left:1.1rem;font-size:.9rem;color:var(--text);opacity:.88;margin-bottom:.55rem;line-height:1.55}
+.exp-list li::before{content:'›';position:absolute;left:0;top:0;color:var(--brand);font-weight:700}
+
+/* SKILLS */
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem 2rem}
+.skill-block{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.3rem}
+.skill-cat{font-size:.74rem;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.55rem}
+.skill-list{font-size:.86rem;color:var(--text);opacity:.88;line-height:1.6}
+@media(max-width:780px){.skill-grid{grid-template-columns:1fr}}
+
+/* CERTS / EDU / LANG */
+.bullet-row{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:.85rem 0;border-bottom:1px dashed var(--border)}
+.bullet-row:last-child{border-bottom:none}
+.bullet-left{flex:1}
+.bullet-title{font-size:.95rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
+.bullet-sub{font-size:.8rem;color:var(--muted)}
+.bullet-meta{font-size:.78rem;color:var(--brand);font-weight:600;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+
+/* FOOTER */
+footer{padding:2.5rem 0;background:var(--bg3);text-align:center;color:var(--muted);font-size:.82rem;border-top:1px solid var(--border)}
+footer a{color:var(--brand);font-weight:600}
+footer a:hover{text-decoration:underline}
+
+/* PRINT */
+@media print{
+  nav,footer{display:none}
+  body{background:#fff;color:#111}
+  .cv-header,.cv-section{background:#fff;color:#111;border-color:#ddd}
+  .ach-tile,.skill-block{background:#fafafa;border-color:#ddd;color:#111}
+  .ach-num,.cv-title,.exp-date,.skill-cat,.cv-section-tag,.bullet-meta{color:#1a7a1a}
+  .cv-name{color:#111}
+  .exp-item::before{background:#1a7a1a}
+  a{color:#111}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Felipe Pinto<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="index.html" class="btn btn-outline">Portfolio</a>
+        <a href="mailto:felipe.p27.2001@gmail.com" class="btn btn-primary">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="cv-header">
+  <div class="container">
+    <h1 class="cv-name">Felipe Pinto</h1>
+    <div class="cv-title">SEO &amp; Marketing Automation Specialist</div>
+    <div class="cv-contact">
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Quito, Ecuador
+      </span>
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        +593 99 671 5226
+      </span>
+      <a href="mailto:felipe.p27.2001@gmail.com"><span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        felipe.p27.2001@gmail.com
+      </span></a>
+      <a href="https://www.linkedin.com/in/felipepintocordova" target="_blank" rel="noopener noreferrer"><span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </span></a>
+      <a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" rel="noopener noreferrer"><span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        Upwork
+      </span></a>
+    </div>
+    <p class="cv-summary">
+      SEO &amp; AEO Growth Engineer with 2.5+ years in digital marketing and a Mechanical Engineering background.
+      Combines hands-on technical SEO, automation, and data engineering to deliver measurable organic growth for U.S.-based agency clients.
+      Built and maintains an end-to-end SEO pipeline (keyword tracking, on-page audits, competitor analysis, automated reporting) currently serving 10+ active accounts.
+      Bilingual (English/Spanish), Google Ads certified (Search, Display, Video), and continuously expanding into AI-assisted marketing workflows.
+    </p>
+  </div>
+</header>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="cv-section">
+  <div class="container">
+    <span class="cv-section-tag">In Numbers</span>
+    <h2 class="cv-section-h">Achievements at a glance</h2>
+    <div class="ach-grid">
+      <div class="ach-tile">
+        <div class="ach-num">+140%</div>
+        <div class="ach-label">Peak organic traffic growth</div>
+        <div class="ach-sub">Specialty retail · Local + regional<br>Verified in GSC</div>
+      </div>
+      <div class="ach-tile">
+        <div class="ach-num">51→#1</div>
+        <div class="ach-label">Local ranking achieved</div>
+        <div class="ach-sub">B2B IT services · Metro market<br>Position tracking verified</div>
+      </div>
+      <div class="ach-tile">
+        <div class="ach-num">10+</div>
+        <div class="ach-label">Active SEO retainers managed</div>
+        <div class="ach-sub">U.S.-based agency operations<br>Monthly GSC-verified reporting</div>
+      </div>
+      <div class="ach-tile">
+        <div class="ach-num">$15K/mo</div>
+        <div class="ach-label">Paid media managed in parallel</div>
+        <div class="ach-sub">Google Ads — Search · Display · Video<br>Daily pacing + ROAS reporting</div>
+      </div>
+      <div class="ach-tile">
+        <div class="ach-num">95%</div>
+        <div class="ach-label">Reporting workload automated</div>
+        <div class="ach-sub">Python + n8n + DataForSEO API<br>Replaced $3.8K/yr legacy stack</div>
+      </div>
+      <div class="ach-tile">
+        <div class="ach-num">80%+</div>
+        <div class="ach-label">Match vs. Moz Pro baseline</div>
+        <div class="ach-sub">Custom ranking pipeline<br>Country &amp; city-level accuracy</div>
+      </div>
+      <div class="ach-tile">
+        <div class="ach-num">90d</div>
+        <div class="ach-label">Average to first results</div>
+        <div class="ach-sub">Foundation package · No paid ads<br>5 businesses in parallel</div>
+      </div>
+      <div class="ach-tile">
+        <div class="ach-num">6+</div>
+        <div class="ach-label">Industries with verified results</div>
+        <div class="ach-sub">Stone · IT · Construction<br>Luxury · Healthcare · Equipment</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="cv-section">
+  <div class="container">
+    <span class="cv-section-tag">Experience</span>
+    <h2 class="cv-section-h">Professional history</h2>
+
+    <div class="exp-item">
+      <div class="exp-head">
+        <div class="exp-role">SEO &amp; Marketing Automation Specialist</div>
+        <div class="exp-date">2024 — Present</div>
+      </div>
+      <div class="exp-org">U.S.-Based Digital Marketing Agency · Remote (Quito → USA)</div>
+      <ul class="exp-list">
+        <li>Manage SEO operations for 10+ active U.S. clients across service, retail, B2B, and franchise verticals — owning keyword tracking, on-page optimization, technical audits, and monthly performance reporting.</li>
+        <li>Run keyword research and SERP analysis using DataForSEO API, SEMrush, Moz, and Screaming Frog; deliver country- and city-level ranking reports validated within 80%+ accuracy vs. Moz baselines.</li>
+        <li>Built a Python + n8n automation pipeline that replaces a $3.8K/yr Moz Pro stack with a $165/yr DataForSEO setup, improving data freshness and report fidelity.</li>
+        <li>Author monthly client deliverables (Performance, Approach, Implementation reports) combining DataForSEO, Google Search Console, GA4, and competitive scraping into a single causal narrative.</li>
+        <li>Execute technical SEO fixes at scale: indexation cleanup, sitemap and robots audits, schema markup, redirect consolidation, page-speed remediation, and Core Web Vitals tuning across WordPress, Wix, Duda, and custom stacks.</li>
+        <li>Coordinate content briefs and on-page rewrites mapped to keyword clusters, internal-link strategy, and intent-aligned URL structures; track ranking lift week-over-week.</li>
+        <li>Operate paid + organic alignment: manage U.S. Google Ads accounts totaling $15K+ in monthly spend, with daily pacing automation, conversion tracking, and ROAS reporting integrated with the SEO layer.</li>
+        <li>Design and maintain n8n automations that orchestrate scraping, ranking pulls, on-page checks, Google Sheets / Drive sync, and client reporting workflows end-to-end.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-head">
+        <div class="exp-role">Marketing Assistant</div>
+        <div class="exp-date">2023 — 2024</div>
+      </div>
+      <div class="exp-org">Autorex · Quito, Ecuador</div>
+      <ul class="exp-list">
+        <li>Planned and launched paid social campaigns (Meta, TikTok) for automotive products, supporting brand visibility and lead generation across the Ecuadorian market.</li>
+        <li>Built bilingual marketing assets (copy, video, static creative) and managed the editorial calendar end-to-end.</li>
+        <li>Analyzed campaign performance and translated data into recommendations for sales and operations, improving ROI on key promotions.</li>
+        <li>Coordinated with internal stakeholders to align marketing output with broader commercial goals.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-head">
+        <div class="exp-role">Customer Service Representative — Work &amp; Travel</div>
+        <div class="exp-date">2022 — 2023</div>
+      </div>
+      <div class="exp-org">Kings Island · Ohio, USA</div>
+      <ul class="exp-list">
+        <li>Delivered high-volume English-language guest service in a U.S. operational environment, sharpening cross-cultural communication and on-the-spot problem solving.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="cv-section">
+  <div class="container">
+    <span class="cv-section-tag">Technical Stack</span>
+    <h2 class="cv-section-h">Skills &amp; tooling</h2>
+
+    <div class="skill-grid">
+      <div class="skill-block">
+        <div class="skill-cat">SEO Tooling</div>
+        <div class="skill-list">Screaming Frog, SEMrush, Moz, Ahrefs (read-only), Google Search Console, Bing Webmaster Tools, DataForSEO API, PageSpeed Insights, Lighthouse, Schema.org markup.</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat">Analytics &amp; Reporting</div>
+        <div class="skill-list">Google Analytics 4, Looker Studio, Excel / Google Sheets (advanced), PowerPoint, custom Python dashboards, Monday.com.</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat">Automation</div>
+        <div class="skill-list">n8n (workflow design and orchestration), Python scripting, scheduled jobs, API integrations, Google Sheets / Drive sync, end-to-end reporting pipelines.</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat">Technical</div>
+        <div class="skill-list">Python (data pipelines, scraping, API integrations), HTML, CSS, basic JavaScript, Git, REST APIs, Markdown, OAuth2 flows.</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat">CMS &amp; Web</div>
+        <div class="skill-list">WordPress, Wix, Duda, Shopify (intro), Themify, basic page-builder hardening for SEO and Core Web Vitals.</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat">Paid Media</div>
+        <div class="skill-list">Google Ads (Search, Display, Video, Performance Max, Demand Gen), Meta Ads, TikTok Ads, Snapchat Ads, conversion tracking via GTM and platform-native pixels.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="cv-section">
+  <div class="container">
+    <span class="cv-section-tag">Certifications</span>
+    <h2 class="cv-section-h">Certifications &amp; credentials</h2>
+    <div class="bullet-row">
+      <div class="bullet-left">
+        <div class="bullet-title">Google Ads — Search Certification</div>
+        <div class="bullet-sub">Google Skillshop</div>
+      </div>
+      <div class="bullet-meta">Active</div>
+    </div>
+    <div class="bullet-row">
+      <div class="bullet-left">
+        <div class="bullet-title">Google Ads — Display Certification</div>
+        <div class="bullet-sub">Google Skillshop</div>
+      </div>
+      <div class="bullet-meta">Active</div>
+    </div>
+    <div class="bullet-row">
+      <div class="bullet-left">
+        <div class="bullet-title">Google Ads — Video Certification</div>
+        <div class="bullet-sub">Google Skillshop</div>
+      </div>
+      <div class="bullet-meta">Active</div>
+    </div>
+    <div class="bullet-row">
+      <div class="bullet-left">
+        <div class="bullet-title">Meta Digital Marketing Associate</div>
+        <div class="bullet-sub">Meta Blueprint</div>
+      </div>
+      <div class="bullet-meta">Active</div>
+    </div>
+    <div class="bullet-row">
+      <div class="bullet-left">
+        <div class="bullet-title">Additional SEO &amp; analytics coursework</div>
+        <div class="bullet-sub">Self-directed, ongoing</div>
+      </div>
+      <div class="bullet-meta">Ongoing</div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="cv-section">
+  <div class="container">
+    <span class="cv-section-tag">Education</span>
+    <h2 class="cv-section-h">Formal education</h2>
+    <div class="bullet-row">
+      <div class="bullet-left">
+        <div class="bullet-title">Bachelor of Science in Mechanical Engineering</div>
+        <div class="bullet-sub">Universidad Internacional del Ecuador (UIDE) · Quito, Ecuador</div>
+      </div>
+      <div class="bullet-meta">2020 — 2024</div>
+    </div>
+    <div class="bullet-row">
+      <div class="bullet-left">
+        <div class="bullet-title">High School Diploma · German-language program</div>
+        <div class="bullet-sub">Gutenberg Schule · Quito, Ecuador</div>
+      </div>
+      <div class="bullet-meta">2016 — 2019</div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section id="languages" class="cv-section">
+  <div class="container">
+    <span class="cv-section-tag">Languages</span>
+    <h2 class="cv-section-h">Languages</h2>
+    <div class="bullet-row">
+      <div class="bullet-left">
+        <div class="bullet-title">English</div>
+        <div class="bullet-sub">Professional working proficiency — daily U.S. client communication</div>
+      </div>
+      <div class="bullet-meta">Fluent</div>
+    </div>
+    <div class="bullet-row">
+      <div class="bullet-left">
+        <div class="bullet-title">Spanish</div>
+        <div class="bullet-sub">Native</div>
+      </div>
+      <div class="bullet-meta">Native</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2026 Felipe Pinto · SEO &amp; Marketing Automation Specialist</p>
+    <p style="margin-top:.4rem">
+      <a href="index.html">Portfolio</a> ·
+      <a href="https://www.linkedin.com/in/felipepintocordova" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+      <a href="https://www.upwork.com/freelancers/~01127f4ee6ab3d991e" target="_blank" rel="noopener noreferrer">Upwork</a> ·
+      <a href="mailto:felipe.p27.2001@gmail.com">Email</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
