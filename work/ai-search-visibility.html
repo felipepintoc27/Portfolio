@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Are You Invisible to ChatGPT? — Felipe Pinto</title>
+<meta name="description" content="How I measure whether AI assistants recommend a brand, using statistics instead of screenshots.">
+<style>
+  :root{
+    --bg:#0d0f14; --panel:#14171f; --line:#262b36; --line2:#1e2330;
+    --text:#eef1f6; --mut:#9aa4b2; --mut2:#6b7480; --acc:#3ddc97; --blue:#5aa9ff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
+  a{color:var(--acc);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .back{display:inline-block;margin:34px 0 0;color:var(--mut);font-size:14px;font-weight:600;letter-spacing:.3px}
+  .back:hover{color:var(--acc);text-decoration:none}
+  .hero{padding:46px 0 40px;border-bottom:1px solid var(--line2);
+    background-image:radial-gradient(760px 340px at 12% -20%,rgba(61,220,151,.12),transparent),radial-gradient(700px 340px at 100% 0%,rgba(90,169,255,.06),transparent)}
+  .tag{color:var(--acc);font-size:13px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+  h1{font-size:clamp(32px,6vw,54px);line-height:1.04;letter-spacing:-1.4px;margin:16px 0 0;font-weight:800}
+  h1 em{font-style:normal;color:var(--acc)}
+  .lede{color:var(--mut);font-size:20px;margin-top:20px;max-width:60ch}
+  .who{margin-top:24px;font-size:14px;color:var(--mut2);font-weight:600;letter-spacing:.3px}
+  .who b{color:var(--text)}
+  section{padding:38px 0;border-bottom:1px solid var(--line2)}
+  h2{font-size:14px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--mut2)}
+  section p{margin-top:16px;font-size:17px;color:#d7dce4}
+  section p b{color:var(--text)}
+  .big{margin:30px 0 6px;font-size:clamp(64px,14vw,120px);font-weight:800;color:var(--acc);letter-spacing:-4px;line-height:.9}
+  .big small{font-size:.36em;letter-spacing:-1px;color:var(--acc)}
+  .bigcap{color:var(--text);font-size:19px;font-weight:600}
+  .bigcap span{display:block;color:var(--mut);font-size:16px;margin-top:6px}
+  .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .chip{background:var(--panel);border:1px solid var(--line);color:#c7cedb;padding:11px 18px;border-radius:999px;font-size:15px;font-weight:600}
+  .chip b{color:var(--acc);font-weight:800}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:22px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .card .n{color:var(--acc);font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+  .card p{margin-top:9px;font-size:15px;color:#cdd4de}
+  .quote{margin-top:22px;border-left:2px solid var(--acc);padding:6px 0 6px 20px;color:var(--mut);font-size:16px;font-style:italic}
+  .cta{padding:44px 0 60px}
+  .cta h3{font-size:26px;letter-spacing:-.5px}
+  .cta p{color:var(--mut);margin-top:12px;font-size:17px}
+  .btn{display:inline-block;margin-top:22px;background:var(--acc);color:#08130d;font-weight:800;padding:14px 26px;border-radius:12px;font-size:16px}
+  .btn:hover{text-decoration:none;filter:brightness(1.06)}
+  .foot{padding:26px 0 50px;color:var(--mut2);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">&larr; Felipe Pinto</a>
+</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="tag">AI Search Visibility</div>
+    <h1>Are you invisible <em>to ChatGPT?</em></h1>
+    <p class="lede">Buyers now ask AI assistants who to hire before they ever open Google. If your brand is not in that answer, you never make the shortlist. Most people selling this hand you one screenshot. That proves nothing.</p>
+    <p class="who">Applied for <b>a B2B IT services firm</b>, <b>a staffing company</b>, and live prospects across home services.</p>
+  </div>
+</div>
+
+<section class="wrap">
+  <h2>The problem with a screenshot</h2>
+  <p>These models do not return a ranking. They return a <b>sample</b>. Ask ChatGPT the same buying question twice and you can get two different answers. So a report built on a single check is not a measurement, it is one roll of the dice presented as a fact. The moment your client tries it themselves and sees something different, the whole report loses credibility.</p>
+</section>
+
+<section class="wrap">
+  <h2>What I built</h2>
+  <p>I wrote my own measurement tool in Python because the commercial ones were selling screenshots. It runs the real questions a buyer types, <b>25 times per question, per engine</b>, across ChatGPT, Gemini and Perplexity, and reports visibility as a <b>percentage with a 95% confidence interval</b>. When the number moves, you know it actually moved and did not just land on a different roll.</p>
+  <div class="chips">
+    <div class="chip"><b>25</b>&nbsp; runs per question</div>
+    <div class="chip"><b>3</b>&nbsp; engines</div>
+    <div class="chip">Reported with a <b>confidence interval</b></div>
+    <div class="chip">Built in <b>Python</b></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>A real baseline</h2>
+  <div class="big">0<small> of 36</small></div>
+  <p class="bigcap">buyer questions where a B2B client was mentioned at all
+    <span>Twelve buying questions across three engines. The brand did not appear in a single one. Competitors were named instead.</span></p>
+  <p>On a live home-services prospect I ran the same test across three cities. The brand showed up in <b>4 of 9</b> searches, never in the top three, and in <b>zero</b> of the pet-turf searches, even though the company sells exactly that. The machines simply did not know it. Those buyers went entirely to competitors.</p>
+</section>
+
+<section class="wrap">
+  <h2>Why it matters now</h2>
+  <div class="grid">
+    <div class="card"><div class="n">The shift</div><p>AI Overviews and assistants increasingly answer before the user ever scrolls a results page.</p></div>
+    <div class="card"><div class="n">The fix</div><p>Schema and entity clarity, llms.txt, AI crawler access, and structured answers the models can quote with confidence.</p></div>
+    <div class="card"><div class="n">The proof</div><p>The baseline is the starting line. Re-measuring the same way is how you prove the work moved anything.</p></div>
+  </div>
+  <div class="quote">The result is the starting point, not the deliverable. It tells you exactly which questions to win and what on the site is stopping you.</div>
+</section>
+
+<div class="cta wrap">
+  <h3>Want to know where you stand?</h3>
+  <p>Send me your domain and I will run the baseline before you commit to anything.</p>
+  <a class="btn" href="../index.html">See more work &rarr;</a>
+</div>
+
+<div class="foot wrap">Felipe Pinto &middot; Technical SEO &amp; AEO &middot; Client names withheld for confidentiality</div>
+</body>
+</html>
