@@ -1,79 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Google Couldn't See 85% of the Site — Felipe Pinto</title>
-<meta name="description" content="A window company was told it needed more content. The real problem was that Google could not see most of the site it already had.">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Technical SEO — Google Couldn't See 85% of the Site — Felipe Pinto</title>
+<meta name="description" content="A window company was told it needed more content. The real problem was that Google could not see most of the site it already had."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
-  :root{--bg:#0d0f14;--panel:#14171f;--line:#262b36;--line2:#1e2330;--text:#eef1f6;--mut:#9aa4b2;--mut2:#6b7480;--acc:#3ddc97;--red:#ff6b6b}
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
-  a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
-  .back{display:inline-block;margin:34px 0 0;color:var(--mut);font-size:14px;font-weight:600}
-  .back:hover{color:var(--acc);text-decoration:none}
-  .hero{padding:46px 0 40px;border-bottom:1px solid var(--line2);background-image:radial-gradient(760px 340px at 12% -20%,rgba(61,220,151,.12),transparent)}
-  .tag{color:var(--acc);font-size:13px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
-  h1{font-size:clamp(32px,6vw,54px);line-height:1.04;letter-spacing:-1.4px;margin:16px 0 0;font-weight:800}
-  h1 em{font-style:normal;color:var(--acc)}
-  .lede{color:var(--mut);font-size:20px;margin-top:20px;max-width:60ch}
-  .who{margin-top:24px;font-size:14px;color:var(--mut2);font-weight:600}
-  .who b{color:var(--text)}
-  section{padding:38px 0;border-bottom:1px solid var(--line2)}
-  h2{font-size:14px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--mut2)}
-  section p{margin-top:16px;font-size:17px;color:#d7dce4} section p b{color:var(--text)}
-  .big{margin:26px 0 6px;font-size:clamp(60px,13vw,110px);font-weight:800;color:var(--acc);letter-spacing:-4px;line-height:.9}
-  .big small{font-size:.34em;letter-spacing:-1px}
-  .bigcap{color:var(--text);font-size:19px;font-weight:600}
-  .bigcap span{display:block;color:var(--mut);font-size:16px;margin-top:6px}
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
-  @media(max-width:560px){.split{grid-template-columns:1fr}}
-  .box{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
-  .box .h{font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
-  .box.fix .h{color:var(--acc)} .box.skip .h{color:var(--mut2)}
-  .box ul{margin:12px 0 0;padding-left:18px} .box li{margin-bottom:6px;font-size:14.5px;color:#cdd4de}
-  .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-  .chip{background:var(--panel);border:1px solid var(--line);color:#c7cedb;padding:11px 18px;border-radius:999px;font-size:15px;font-weight:600}
-  .chip b{color:var(--acc);font-weight:800}
-  .quote{margin-top:22px;border-left:2px solid var(--acc);padding:6px 0 6px 20px;color:var(--mut);font-size:16px;font-style:italic}
-  .cta{padding:44px 0 60px} .cta h3{font-size:26px;letter-spacing:-.5px} .cta p{color:var(--mut);margin-top:12px;font-size:17px}
-  .btn{display:inline-block;margin-top:22px;background:var(--acc);color:#08130d;font-weight:800;padding:14px 26px;border-radius:12px;font-size:16px}
-  .btn:hover{text-decoration:none;filter:brightness(1.06)}
-  .foot{padding:26px 0 50px;color:var(--mut2);font-size:13px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0A1628;--bg2:#0D1E35;--bg3:#071020;--card:#ffffff;--card-text:#0D1A2E;--card-muted:#5A6B80;--border:rgba(255,255,255,0.07);--brand:#62B747;--brand-dim:rgba(98,183,71,0.12);--blue2:#1976D2;--text:#F8FAFC;--muted:#8B9BB5;--dim:#4B5E78;--grad:linear-gradient(90deg,#62B747,#7DC55E);--shadow-card:0 4px 24px rgba(0,0,0,.13);--glow:0 0 40px rgba(98,183,71,.12)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.container{max-width:820px;margin:0 auto;padding:0 2rem}
+.ann-bar{background:var(--brand);padding:.5rem 1rem;text-align:center;font-size:.76rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#fff}
+nav{position:sticky;top:0;z-index:200;background:rgba(11,17,32,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:820px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;height:64px}
+.nav-logo{font-size:1.05rem;font-weight:900;letter-spacing:-.04em} .nav-logo span{color:var(--brand)}
+.nav-back{margin-left:auto;color:var(--muted);font-size:.82rem;font-weight:600} .nav-back:hover{color:var(--brand)}
+.hero{padding:5rem 0 3.5rem;position:relative;overflow:hidden;background:var(--bg3)}
+.hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 18% 20%,rgba(98,183,71,.10),transparent 40%),radial-gradient(circle at 82% 0%,rgba(25,118,210,.08),transparent 45%);pointer-events:none}
+.hero .container{position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--brand-dim);color:var(--brand);padding:.3rem .9rem;border-radius:100px;font-size:.7rem;font-weight:700;margin-bottom:1.4rem;border:1px solid rgba(98,183,71,.3);text-transform:uppercase;letter-spacing:.04em}
+.badge-dot{width:6px;height:6px;background:var(--brand);border-radius:50%;box-shadow:0 0 8px var(--brand)}
+h1{font-size:clamp(2rem,4.5vw,3.1rem);font-weight:900;line-height:1.08;letter-spacing:-.04em} h1 .g{color:var(--brand)}
+.hero-sub{font-size:1.05rem;color:var(--muted);margin-top:1.3rem;line-height:1.7;max-width:60ch}
+.who{margin-top:1.4rem;font-size:.82rem;color:var(--dim);font-weight:600} .who b{color:var(--muted)}
+.section{padding:3rem 0;border-bottom:1px solid var(--border)}
+.sec-tag{display:block;font-size:.68rem;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:.09em;margin-bottom:1rem;padding-left:.85rem;border-left:3px solid var(--brand)}
+.section p{color:#C6D0DD;font-size:1rem;line-height:1.75} .section p+p{margin-top:1rem} .fixlist+p,.card+p{margin-top:1.2rem} .section p b{color:#fff;font-weight:650}
+.card{background:var(--card);border-radius:12px;padding:2rem 2.2rem;box-shadow:var(--shadow-card),var(--glow);margin:.4rem 0}
+.card .num{font-size:3.4rem;font-weight:900;letter-spacing:-.04em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.card .lbl{color:var(--card-text);font-size:1.05rem;font-weight:650;margin-top:.6rem;line-height:1.4}
+.card .sub{color:var(--card-muted);font-size:.9rem;margin-top:.4rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:.4rem}
+@media(max-width:620px){.split{grid-template-columns:1fr}}
+.wcard{background:var(--card);border-radius:12px;padding:1.6rem 1.7rem;box-shadow:var(--shadow-card)}
+.wcard .h{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.9rem}
+.wcard.fix .h{color:var(--brand)} .wcard.skip .h{color:var(--card-muted)}
+.wcard ul{list-style:none} .wcard li{color:var(--card-text);font-size:.92rem;padding:.32rem 0 .32rem 1.1rem;position:relative;line-height:1.4}
+.wcard.fix li::before{content:'';position:absolute;left:0;top:.62rem;width:6px;height:6px;border-radius:50%;background:var(--brand)}
+.wcard.skip li{color:var(--card-muted)} .wcard.skip li::before{content:'\00d7';position:absolute;left:0;top:.28rem;color:#b6c0cc;font-weight:700}
+.tools{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.4rem}
+.chip{background:var(--bg2);border:1px solid var(--border);color:#C6D0DD;padding:.5rem 1rem;border-radius:6px;font-size:.82rem;font-weight:600} .chip b{color:var(--brand)}
+.quote{margin-top:1.4rem;border-left:3px solid var(--brand);padding:.2rem 0 .2rem 1.1rem;color:var(--muted);font-size:1rem;font-style:italic}
+.cta{padding:3.5rem 0} .cta h3{font-size:1.5rem;font-weight:800;letter-spacing:-.02em} .cta p{color:var(--muted);margin-top:.7rem;font-size:1rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;margin-top:1.4rem;background:var(--brand);color:#fff;font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;padding:.8rem 1.7rem;border-radius:5px;box-shadow:0 4px 16px rgba(98,183,71,.3)}
+.btn:hover{background:#55a33e;transform:translateY(-1px)}
+footer{padding:2rem 0 3.5rem;color:var(--dim);font-size:.78rem}
 </style>
 </head>
 <body>
-<div class="wrap"><a class="back" href="../index.html">&larr; Felipe Pinto</a></div>
+<div class="ann-bar">Free SEO audit &mdash; the exact issues holding your site back &rarr;</div>
+<nav><div class="nav-inner"><a href="../index.html" class="nav-logo">Felipe Pinto<span>.</span></a><a href="../index.html" class="nav-back">&larr; Back to home</a></div></nav>
 
-<div class="hero">
-  <div class="wrap">
-    <div class="tag">Technical SEO</div>
-    <h1>Google couldn't see <em>85% of the site.</em></h1>
-    <p class="lede">A window and door company kept being told it needed more content. That was never the problem. The problem was that Google could not see most of the site it already had.</p>
-    <p class="who">For <b>a regional window &amp; door company</b> ranking 1,600+ keywords but leaking most of its own visibility.</p>
+<div class="hero"><div class="container">
+  <div class="badge"><span class="badge-dot"></span>Technical SEO</div>
+  <h1>Google couldn't see <span class="g">85% of the site.</span></h1>
+  <p class="hero-sub">A window and door company kept being told it needed more content. That was never the problem. Google could not see most of the site it already had.</p>
+  <p class="who">For <b>a regional window &amp; door company</b> ranking 1,600+ keywords but leaking most of its own visibility.</p>
+</div></div>
+
+<div class="section"><div class="container">
+  <span class="sec-tag">The hidden problem</span>
+  <p>On paper the site looked healthy: it ranked over <b>1,600 keywords</b> and scored 97 out of 100 on-page. But the sitemap declared only <b>32 URLs while the site actually had 226</b>. Google was being told most of the site did not exist.</p>
+  <div class="card">
+    <div class="num">85%</div>
+    <div class="lbl">of the company's own pages were invisible to Google</div>
+    <div class="sub">Not from missing content. The map that tells Google what exists was pointing at a fraction of it.</div>
   </div>
-</div>
+</div></div>
 
-<section class="wrap">
-  <h2>The hidden problem</h2>
-  <p>On paper the site looked healthy: it ranked over <b>1,600 keywords</b> and its on-page score was 97 out of 100. But the sitemap declared only <b>32 URLs while the site actually had 226</b>. Google was being told most of the site did not exist.</p>
-  <div class="big">85<small>%</small></div>
-  <p class="bigcap">of the company's own pages were effectively invisible to Google
-    <span>Not because of missing content. Because the map that tells Google what exists was pointing at a fraction of it.</span></p>
-</section>
+<div class="section"><div class="container">
+  <span class="sec-tag">The other leaks</span>
+  <p>The site had <b>zero structured data</b> across every page, while competitors had it. And it ranked <b>#4 for its most valuable search term but was missing from the local map pack</b>, which drives three to five times the leads of an organic listing. That one gap was the largest revenue lever in the engagement.</p>
+</div></div>
 
-<section class="wrap">
-  <h2>The other leaks</h2>
-  <p>Alongside the sitemap, the site had <b>zero structured data</b> across every page, while its competitors had it. And it ranked <b>#4 for its single most valuable search term but was missing from the local map pack</b>, which drives three to five times the leads of an organic listing. That one gap was the largest revenue lever in the whole engagement.</p>
-</section>
-
-<section class="wrap">
-  <h2>The part most audits get wrong</h2>
-  <p>The crawl flagged <b>30+ types of issues</b>. Most SEO reports hand the client that whole list and call it thorough. I did the opposite: I triaged it.</p>
+<div class="section"><div class="container">
+  <span class="sec-tag">The part most audits get wrong</span>
+  <p>The crawl flagged <b>30+ types of issues</b>. Most SEO reports hand the client that whole list and call it thorough. I triaged it instead.</p>
   <div class="split">
-    <div class="box fix">
+    <div class="wcard fix">
       <div class="h">Fixed first &mdash; 80% of the impact</div>
       <ul>
         <li>Rebuilt the sitemap to include all 226 pages</li>
@@ -83,37 +92,36 @@
         <li>Trimmed titles on the top ranking pages</li>
       </ul>
     </div>
-    <div class="box skip">
+    <div class="wcard skip">
       <div class="h">Deliberately skipped &mdash; noise</div>
       <ul>
         <li>Render-blocking flags on a 97/100 site</li>
         <li>Cosmetic title-attribute warnings</li>
-        <li>False-positive "thin content" on visual pages</li>
+        <li>False-positive thin content on visual pages</li>
         <li>URL-format flags that were already fine</li>
         <li>Deprecated-tag warnings Google ignores</li>
       </ul>
     </div>
   </div>
-  <div class="quote">Spending a quarter of a small budget on 5% of the growth is how most SEO money gets wasted. The judgment is knowing which five things matter and having the discipline to skip the other thirty.</div>
-</section>
+  <div class="quote">Spending a quarter of a small budget on 5% of the growth is how most SEO money gets wasted. The judgment is knowing which five things matter and skipping the other thirty.</div>
+</div></div>
 
-<section class="wrap">
-  <h2>How I found it</h2>
-  <div class="chips">
-    <div class="chip">Google Search Console</div>
-    <div class="chip">Screaming Frog</div>
-    <div class="chip">DataForSEO API</div>
-    <div class="chip">Live SERP inspection</div>
-    <div class="chip">Direct HTML audit</div>
+<div class="section"><div class="container">
+  <span class="sec-tag">How I found it</span>
+  <div class="tools">
+    <span class="chip">Google Search Console</span>
+    <span class="chip">Screaming Frog</span>
+    <span class="chip">DataForSEO API</span>
+    <span class="chip">Live SERP inspection</span>
   </div>
-</section>
+</div></div>
 
-<div class="cta wrap">
+<div class="cta"><div class="container">
   <h3>What is quietly broken on your site?</h3>
   <p>Send me your domain and I will tell you the few things holding it back, and which flags to ignore.</p>
   <a class="btn" href="../index.html">See more work &rarr;</a>
-</div>
+</div></div>
 
-<div class="foot wrap">Felipe Pinto &middot; Technical SEO &amp; AEO &middot; Client names withheld for confidentiality</div>
+<footer><div class="container">Felipe Pinto &middot; Technical SEO &amp; AEO &middot; Client names withheld for confidentiality</div></footer>
 </body>
 </html>
