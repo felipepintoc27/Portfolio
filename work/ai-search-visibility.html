@@ -21,7 +21,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(11,17,32,.92);backdrop-fil
 .nav-logo{font-size:1.05rem;font-weight:900;letter-spacing:-.04em} .nav-logo span{color:var(--brand)}
 .nav-back{margin-left:auto;color:var(--muted);font-size:.82rem;font-weight:600} .nav-back:hover{color:var(--brand)}
 .hero{padding:5rem 0 3.5rem;position:relative;overflow:hidden;background:var(--bg3)}
-.hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 18% 20%,rgba(98,183,71,.10),transparent 40%),radial-gradient(circle at 82% 0%,rgba(25,118,210,.08),transparent 45%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 18% 20%,rgba(98,183,71,.10),transparent 40%),radial-gradient(circle at 82% 0%,rgba(25,118,210,.08),transparent 45%);pointer-events:none;z-index:0}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
 .hero .container{position:relative;z-index:1}
 .badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--brand-dim);color:var(--brand);padding:.3rem .9rem;border-radius:100px;font-size:.7rem;font-weight:700;margin-bottom:1.4rem;border:1px solid rgba(98,183,71,.3);text-transform:uppercase;letter-spacing:.04em}
 .badge-dot{width:6px;height:6px;background:var(--brand);border-radius:50%;box-shadow:0 0 8px var(--brand)}
@@ -52,7 +53,7 @@ footer{padding:2rem 0 3.5rem;color:var(--dim);font-size:.78rem}
 <div class="ann-bar">Free AI visibility baseline &mdash; see if ChatGPT recommends your business &rarr;</div>
 <nav><div class="nav-inner"><a href="../index.html" class="nav-logo">Felipe Pinto<span>.</span></a><a href="../index.html" class="nav-back">&larr; Back to home</a></div></nav>
 
-<div class="hero"><div class="container">
+<div class="hero"><canvas id="heroCanvas" aria-hidden="true"></canvas><div class="container">
   <div class="badge"><span class="badge-dot"></span>AI Search &middot; AEO</div>
   <h1>Does ChatGPT <span class="g">recommend you?</span></h1>
   <p class="hero-sub">Buyers ask ChatGPT, Gemini and Perplexity for recommendations before they open Google. If a brand is not in that answer, it is not on the shortlist.</p>
@@ -101,5 +102,6 @@ footer{padding:2rem 0 3.5rem;color:var(--dim);font-size:.78rem}
 </div></div>
 
 <footer><div class="container">Felipe Pinto &middot; Technical SEO &amp; AEO &middot; Client names withheld for confidentiality</div></footer>
+<script>(function(){const c=document.getElementById('heroCanvas');if(!c)return;const x=c.getContext('2d');let pts=[],W,H;const N=60,D=130;function rz(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;}function P(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.5+.5};}function dr(){x.clearRect(0,0,W,H);for(let i=0;i<pts.length;i++){const a=pts[i];for(let j=i+1;j<pts.length;j++){const b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<D){x.beginPath();x.strokeStyle='rgba(255,255,255,'+(.12*(1-d/D))+')';x.lineWidth=.6;x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}}}pts.forEach(p=>{x.beginPath();x.fillStyle='rgba(255,255,255,.45)';x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fill();p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;});requestAnimationFrame(dr);}window.addEventListener('resize',rz);rz();pts=Array.from({length:N},P);dr();})();</script>
 </body>
 </html>
