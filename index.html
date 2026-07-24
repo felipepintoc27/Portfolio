@@ -231,6 +231,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(11,17,32,.92);backdrop-fil
 .fg input,.fg select{width:100%;padding:.85rem 1rem;background:var(--bg2);border:1.5px solid var(--border);border-radius:8px;font-family:'Inter',sans-serif;font-size:.9rem;color:var(--text);outline:none;transition:border-color .2s,box-shadow .2s}
 .fg input:focus,.fg select:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(98,183,71,.12)}
 .fg select option{background:var(--bg2)}
+.fg select{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235A6B80' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .95rem center;background-size:14px;padding-right:2.6rem;text-overflow:ellipsis}
 .form-note{font-size:.72rem;color:var(--dim);text-align:center;margin-top:.7rem}
 .form-status{display:none;padding:.8rem 1rem;border-radius:7px;font-size:.83rem;font-weight:500;margin-top:.8rem}
 .msg-ok{background:rgba(16,185,129,.1);color:var(--green);border:1px solid rgba(16,185,129,.2)}
@@ -271,8 +272,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
 .section-white .btn-outline{border-color:rgba(0,0,0,.22);color:var(--card-text)}
 .section-white .btn-outline:hover{border-color:var(--brand);color:var(--brand)}
 .section-white .form-box{background:#ffffff;border:1.5px solid rgba(0,0,0,.09);box-shadow:0 4px 32px rgba(0,0,0,.07)}
-.section-white .fg input,.section-white .fg select{background:#f7f9fc;border-color:rgba(0,0,0,.12);color:var(--card-text)}
-.section-white .fg input:focus,.section-white .fg select:focus{border-color:var(--brand);background:#ffffff;box-shadow:0 0 0 3px rgba(98,183,71,.12)}
+.section-white .fg input,.section-white .fg select{background-color:#f7f9fc;border-color:rgba(0,0,0,.12);color:var(--card-text)}
+.section-white .fg input:focus,.section-white .fg select:focus{border-color:var(--brand);background-color:#ffffff;box-shadow:0 0 0 3px rgba(98,183,71,.12)}
 .section-white .fg select option{background:#ffffff;color:var(--card-text)}
 </style>
 </head>
@@ -688,15 +689,20 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
         </ul>
       </div>
       <div class="form-box">
-        <form id="auditForm" novalidate>
+        <form id="auditForm" action="https://formsubmit.co/felipe.p27.2001@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Free Audit request - Portfolio"/>
+          <input type="hidden" name="_template" value="table"/>
+          <input type="hidden" name="_captcha" value="false"/>
+          <input type="hidden" name="_next" value="https://felipepintoc27.github.io/Portfolio/?sent=1"/>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
           <div class="form-row">
-            <div class="fg"><label for="f_name" data-i18n="l_name">Your Name</label><input type="text" id="f_name" autocomplete="name"/></div>
-            <div class="fg"><label for="f_biz" data-i18n="l_biz">Business Name</label><input type="text" id="f_biz" autocomplete="organization"/></div>
+            <div class="fg"><label for="f_name" data-i18n="l_name">Your Name</label><input type="text" id="f_name" name="Name" autocomplete="name" required/></div>
+            <div class="fg"><label for="f_biz" data-i18n="l_biz">Business Name</label><input type="text" id="f_biz" name="Business" autocomplete="organization" required/></div>
           </div>
-          <div class="fg"><label for="f_url" data-i18n="l_url">Website URL</label><input type="url" id="f_url" autocomplete="url"/></div>
-          <div class="fg"><label for="f_email" data-i18n="l_email">Email Address</label><input type="email" id="f_email" autocomplete="email"/></div>
+          <div class="fg"><label for="f_url" data-i18n="l_url">Website URL</label><input type="text" id="f_url" name="Website" autocomplete="url" placeholder="yoursite.com" required/></div>
+          <div class="fg"><label for="f_email" data-i18n="l_email">Email Address</label><input type="email" id="f_email" name="Email" autocomplete="email" required/></div>
           <div class="fg"><label for="f_country" data-i18n="l_country">Business Location</label>
-            <select id="f_country" required>
+            <select id="f_country" name="Country" required>
               <option value="" disabled selected data-i18n="oc_ph">— Select your country —</option>
               <option value="United States" data-i18n="oc_us">United States</option>
               <option value="United Kingdom" data-i18n="oc_uk">United Kingdom</option>
@@ -712,23 +718,22 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:4rem 0 2
             </select>
           </div>
           <div class="fg"><label for="f_goal" data-i18n="l_goal">Biggest SEO Challenge</label>
-            <select id="f_goal" required onchange="toggleGoalOther(this.value)">
+            <select id="f_goal" name="Challenge" required onchange="toggleGoalOther(this.value)">
               <option value="" disabled selected data-i18n="og_ph">— Select your challenge —</option>
-              <option value="leads" data-i18n="o1">Not getting enough organic leads</option>
-              <option value="tech" data-i18n="o2">Technical issues hurting rankings</option>
-              <option value="local" data-i18n="o3">Need to rank in local search</option>
-              <option value="scale" data-i18n="o4">Want to scale to multiple cities</option>
+              <option value="Not getting enough organic leads" data-i18n="o1">Not getting enough organic leads</option>
+              <option value="Technical issues hurting rankings" data-i18n="o2">Technical issues hurting rankings</option>
+              <option value="Need to rank in local search" data-i18n="o3">Need to rank in local search</option>
+              <option value="Want to scale to multiple cities" data-i18n="o4">Want to scale to multiple cities</option>
               <option value="other" data-i18n="o5">Other — I'll describe it</option>
             </select>
           </div>
           <div class="fg" id="fg_goal_other" style="display:none">
             <label for="f_goal_other" data-i18n="l_goal_other">Describe your challenge</label>
-            <input type="text" id="f_goal_other" autocomplete="off"/>
+            <input type="text" id="f_goal_other" name="Challenge details" autocomplete="off"/>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%" id="fBtn" data-i18n="f_btn">Analyze My Site →</button>
           <p class="form-note" data-i18n="f_note">Free analysis. No spam. Response within 24 hours.</p>
           <div class="form-status msg-ok" id="fOk" data-i18n="f_ok">Report on the way — check your inbox within 24 hours.</div>
-          <div class="form-status msg-err" id="fErr"><span id="errMsg"></span></div>
         </form>
       </div>
     </div>
@@ -951,66 +956,20 @@ function setTab(id){
   });
 }
 
-// FORM → emails the submission to Felipe via FormSubmit
-function isValidEmail(v){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)}
-function isValidUrl(v){return/^https?:\/\/.{3,}/.test(v.trim())}
+// FORM — conditional "other" field + post-submit thank-you
 function toggleGoalOther(val){
   const el=document.getElementById('fg_goal_other');
   el.style.display=val==='other'?'block':'none';
   if(val!=='other')document.getElementById('f_goal_other').value='';
 }
 
-document.getElementById('auditForm').addEventListener('submit',async function(e){
-  e.preventDefault();
-  const l=document.documentElement.getAttribute('lang')||'en';
-  const t=T[l];
-  const name=document.getElementById('f_name').value.trim();
-  const biz=document.getElementById('f_biz').value.trim();
-  const url=document.getElementById('f_url').value.trim();
-  const email=document.getElementById('f_email').value.trim();
-  const goal=document.getElementById('f_goal').value;
-  const goalOther=document.getElementById('f_goal_other').value.trim();
-  const country=document.getElementById('f_country').value;
-  const btn=document.getElementById('fBtn');
-  const fErr=document.getElementById('fErr');
-  const fOk=document.getElementById('fOk');
-  fErr.style.display='none';fOk.style.display='none';
-  if(!name||!biz||!url||!email||!goal||!country){document.getElementById('errMsg').innerText=t.err_fill;fErr.style.display='block';return}
-  if(!isValidUrl(url)){document.getElementById('errMsg').innerText=t.err_url;fErr.style.display='block';return}
-  if(!isValidEmail(email)){document.getElementById('errMsg').innerText=t.err_email;fErr.style.display='block';return}
-  if(goal==='other'&&!goalOther){document.getElementById('errMsg').innerText=t.err_fill;fErr.style.display='block';return}
-  const seo_goal=goal==='other'?goalOther:goal;
-  btn.disabled=true;
-  btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> '+(l==='es'?'Enviando...':'Sending...');
-  try{
-    const res=await fetch('https://formsubmit.co/ajax/felipe.p27.2001@gmail.com',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({
-        name:name,
-        business:biz,
-        website:url,
-        email:email,
-        country:country,
-        challenge:seo_goal,
-        source:'portfolio-free-audit',
-        _subject:'New Free Audit request — '+biz,
-        _template:'table',
-        _captcha:'false'
-      })
-    });
-    const data=await res.json().catch(()=>({}));
-    if(res.ok&&(data.success==='true'||data.success===true)){fOk.style.display='block';this.reset();toggleGoalOther('');}
-    else throw new Error('Form '+res.status);
-  }catch(err){
-    document.getElementById('errMsg').innerText=l==='es'?'Error de conexión. Intenta de nuevo.':'Connection error. Please try again.';
-    fErr.style.display='block';
-  }finally{
-    btn.disabled=false;btn.innerHTML=t.f_btn;
+document.addEventListener('DOMContentLoaded',()=>{
+  setLang(detectLang());
+  if(/[?&]sent=1/.test(location.search)){
+    const ok=document.getElementById('fOk');
+    if(ok){ok.style.display='block';const a=document.getElementById('audit');if(a)a.scrollIntoView({behavior:'smooth'});}
   }
 });
-
-document.addEventListener('DOMContentLoaded',()=>setLang(detectLang()));
 
 // PARTICLE NETWORK ANIMATION
 (function(){
